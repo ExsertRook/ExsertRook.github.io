@@ -69,11 +69,11 @@ function report() {
 	let robbersinside = document.getElementById('robbersinside').value;
 	let robbersoutside = document.getElementById('robbersoutside').value;
 	buffer.push(`After setting up the perimeter around the area, we began negotiations. During the negotiations, we learned that there were:`);
-	buffer.push(` - ${robbersinside} unidentified suspect(s) on the inside`);
-	buffer.push(` - ${robbersoutside} unidentified suspect(s) on the outside ready to assist`);
-	buffer.push(` - ${hostages} hostage(s) being held at gunpoint`);
+	buffer.push(`[ROBBERS INSIDE]: ${robbersinside}`);
+	buffer.push(`[ROBBERS OUTSIDE]: ${robbersoutside}`);
+	buffer.push(`[HOSTAGES]: ${hostages}`);
 	buffer.push('');
-
+	
 	let demands = [];
 	let demandsText = '';
 	if (document.getElementById('fpassage').checked) demands.push("free passage");
