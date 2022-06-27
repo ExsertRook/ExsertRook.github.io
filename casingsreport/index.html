@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Casings Report Generator</title>
+	<title>Casings Found Report Generator</title>
 	<link rel="shortcut icon" href="images/favicon.ico" />
 	<link rel="stylesheet" href="index.css" />
 	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> </head>
@@ -21,6 +21,29 @@
 				<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
 			</div>
 		</div>
+		<div class="form-group">
+			<label>How were the casings found?:</label>
+			Heard / Responded to:
+			<select id="found">
+				<option>Heard</option>
+				<option>Responded to</option>
+		</div>
+		<div class="form-group">
+			<label>Location:</label>
+			Location: <input type="text" id="location" name="location">
+		</div>	
+		<div class="form-group">
+			<label>Processed at...</label><br />
+			<select id="processedat">
+				<option selected>MRPD</option>
+				<option>Blaine County Sheriff's Office</option>
+				<option>Davis PD</option>
+				<option>Paleto PD</option>
+				<option>Highway PD</option>
+				<option>Pier PD</option>
+				<option>Rockford PD</option>
+			</select>
+		</div>	
 	</div>
 	<textarea class="wide" id="reportBody">[report will automatically generate as you fill out the form to the left]&#10;&#10;(Note: the generated report will be editable, but once you edit it you can no longer update it based on the form)</textarea>
 	<!--<pre id="reportBody">[report will automatically generate as you fill out the form to the left]</pre> -->
