@@ -19,10 +19,12 @@ function report() {
 
 	let scenecommand = document.getElementById('scenecommand').value;
 	let negotiator = document.getElementById('negotiator').value;
+	let hostagestayer = document.getElementById('hostagestayer').value;
 	if (scenecommand || negotiator) buffer.push('');
 
 	if (scenecommand) buffer.push(`[SCENE COMMAND]: ${scenecommand}`);
 	if (negotiator) buffer.push(`[NEGOTIATOR]: ${negotiator}`);
+	if (hostagestayer) buffer.push(`[STAYED BACK FOR HOSTAGE]: ${hostagestayer}`);
 	buffer.push('');
 
 	let robbery = document.getElementById('robberytype').value;
@@ -89,7 +91,7 @@ function report() {
 		demandsText = demands;
 	}
 
-	let hostagestayer = document.getElementById('hostagestayer').value;
+	
 	let stayedBack = (hostagestayer ? hostagestayer.trim() : 'a unit');
 	buffer.push(`The ${robbersinside} unidentified suspect(s) demanded ${demandsText} for the safety of the ${hostages} hostage(s).` +
 		` Once they were ready on the inside, scene command prepared a lineup for the pursuit. Scene command assigned ${stayedBack} to stay back for the hostage and collect their contact information.`);
