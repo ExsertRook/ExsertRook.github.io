@@ -98,8 +98,9 @@ function report() {
 	buffer.push(`[VEHICLE | CHASE]:`);
 	let plate = document.getElementById('vehicleplate').value;
 	let vehicledesc = document.getElementById('vehicledesc').value;
-	if (vehicledesc) vehicledesc = ` which was a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
-	buffer.push(`We then let them get into their vehicle${vehicledesc}. Once everyone was ready, the chase started and they attempted to evade from police recklessly.`);
+	let vehicleregistration = document.getElementById('vehiclereg').value;
+	if (vehicledesc) vehicledesc = ` which was a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}${(vehicleregistration ? ' Vehicle was registered to an individual named: ' + vehicleregistration + ' . '`)};
+	buffer.push(`We then let them get into their vehicle${vehicledesc}. The vehicle was registered to an individual namedOnce everyone was ready, the chase started and they attempted to evade from police recklessly.`);
 	buffer.push(`The chase lasted for a bit of time until `);
 	buffer.push('');
 
