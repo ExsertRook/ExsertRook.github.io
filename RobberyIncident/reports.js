@@ -20,6 +20,7 @@ function report() {
 	let scenecommand = document.getElementById('scenecommand').value;
 	let negotiator = document.getElementById('negotiator').value;
 	let hostagestayer = document.getElementById('hostagestayer').value;
+	
 	let primary = document.getElementById('primary').value;
 	let secondary = document.getElementById('secondary').value;
 	let tertiary = document.getElementById('tertiary').value;
@@ -114,7 +115,7 @@ function report() {
 	let vehiclereg = document.getElementById('vehiclereg').value
 	if (vehicledesc) vehicledesc = ` which was a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
 	buffer.push(`We then let them get into their vehicle${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}. Once everyone was ready, the chase started and they attempted to evade from police recklessly.`);
-	buffer.push(`The chase lasted for a bit of time until `);
+	buffer.push(`The chase lasted for a bit of time until (write later how it ended)`);
 	buffer.push('');
 
 	let medicalSelected = document.getElementById('medicalattention');
