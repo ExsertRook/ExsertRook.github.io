@@ -63,14 +63,14 @@ function report() {
 	*/
 
 	buffer.push(`[DETAILS | DEMANDS]:`);
-	buffer.push(`During normal patrol, we had received a report from dispatch of an alarm going off at the ${robberyString}. Once scene command was established, they assigned ${callsign} to create an incident report.`);
+	buffer.push(`During normal patrol, we had a report of a robbery (10-90) alarm going off at a/the ${robberyString}. Once scene command was established, they assigned ${callsign} to create an incident report.`);
 	buffer.push('');
 	let hostages = document.getElementById('hostages').value;
 	let robbersinside = document.getElementById('robbersinside').value;
 	let robbersoutside = document.getElementById('robbersoutside').value;
-	buffer.push(`After setting up the perimeter around the area, we began negotiations. During the negotiations, we learned that there were:`);
+	buffer.push(`After setting up the perimeter around the area, we began negotiations. During the negotiations, we learned there were:`);
 	buffer.push(` - ${robbersinside} unidentified suspect(s) on the inside`);
-	buffer.push(` - ${robbersoutside} unidentified suspect(s) on the outside ready to assist`);
+	buffer.push(` - ${robbersoutside} unidentified suspect(s) on the outside assisting (allegedly)`);
 	buffer.push(` - ${hostages} hostage(s) being held at gunpoint`);
 	buffer.push('');
 
@@ -100,7 +100,6 @@ function report() {
 	let vehicledesc = document.getElementById('vehicledesc').value;
 	if (vehicledesc) vehicledesc = ` which was a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
 	buffer.push(`We then let them get into their vehicle${vehicledesc}. Once everyone was ready, the chase started and they attempted to evade from police recklessly.`);
-	buffer.push(`The chase lasted for a bit of time until `);
 	buffer.push('');
 
 	let medicalSelected = document.getElementById('medicalattention');
