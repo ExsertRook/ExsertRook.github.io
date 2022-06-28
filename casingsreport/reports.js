@@ -19,6 +19,12 @@ function report() {
 
 	let location = document.getElementById('location').value;
 	let processedat = document.getElementById('processedat').value;
+	buffer.push('');
+	
+	buffer.push(`[DETAILS | DEMANDS]:`);
+	if (location) buffer.push(`While being out on regular patrol, we responded to shots fired dispatch calls near ${location}. `);
+	if (processedat) buffer.push(`Once we arrived on scene we started to look for casings in the general area. Upon successfully finding casings on the ground, we collected them in evidence bags and took them to ${processedat} and processed them for further information.`);
+	buffer.push('');
 	
 	let weaponname1 = document.getElementById('weaponname1').value;
 	let serial1 = document.getElementById('serial1').value;
@@ -28,11 +34,7 @@ function report() {
 	let serial3 = document.getElementById('serial3').value;
 	buffer.push('');
 	
-	buffer.push(`[DETAILS | DEMANDS]:`);
-	if (location) buffer.push(`While being out on regular patrol, we responded to shots fired dispatch calls near ${location}. `);
-	if (processedat) buffer.push(`Once we arrived on scene we started to look for casings in the general area. Upon successfully finding casings on the ground, we collected them in evidence bags and took them to ${processedat} and processed them for further information.`);
-	buffer.push('');
-	
+	if (weaponname1) buffer.push(`${weaponname1}`)
 	
 
 	let curDarkmode = document.getElementById('darkmode').checked;
