@@ -19,6 +19,7 @@ function report() {
 
 	let location = document.getElementById('location').value;
 	let processedat = document.getElementById('processedat').value;
+	let found = document.getElementById('found').value;
 	
 	let weaponname1 = document.getElementById('weaponname1').value;
 	let serial1 = document.getElementById('serial1').value;
