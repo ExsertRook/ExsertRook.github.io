@@ -17,9 +17,15 @@ function report() {
 	buffer.push("[REPORTING OFFICER]:");
 	buffer.push(callsign);	
 
-
+	let location = document.getElementById('location').value;
+	let processedat = document.getElementById('processedat').value;
 	
-	
+	let weaponname1 = document.getElementById('weaponname1').value;
+	let serial1 = document.getElementById('serial1').value;
+	let weaponname2 = document.getElementById('weaponname2').value;
+	let serial2 = document.getElementById('serial2').value;
+	let weaponname3 = document.getElementById('weaponname3').value;
+	let serial3 = document.getElementById('serial3').value;
 	
 
 
