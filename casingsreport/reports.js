@@ -28,7 +28,11 @@ function report() {
 	let weaponname3 = document.getElementById('weaponname3').value;
 	let serial3 = document.getElementById('serial3').value;
 	
-
+	buffer.push(`[DETAILS | DEMANDS]:`);
+	buffer.push(`During normal patrol, we had a report of a robbery (10-90) alarm going off at a/the ${robberyString}. Once scene command was established, they assigned ${callsign} to create an incident report.`);
+	buffer.push('');
+	
+	
 
 	let curDarkmode = document.getElementById('darkmode').checked;
 	if (curDarkmode) {
