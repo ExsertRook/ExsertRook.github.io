@@ -29,7 +29,7 @@ function report() {
 	buffer.push('');
 	
 	buffer.push(`[DETAILS | DEMANDS]:`);
-	buffer.push(`While being out on regular patrol, we responded to shots fired dispatch calls near ${location}. `);
+	if (location) buffer.push(`While being out on regular patrol, we responded to shots fired dispatch calls near ${location}. `);
 	buffer.push(`Once we arrived on scene we started to look for casings in the general area. Upon successfully finding casings on the ground, we collected them in evidence bags and took them to a police department and processed them for further information.`);
 	buffer.push('');
 	
