@@ -94,6 +94,7 @@ function report() {
 	if (document.getElementById('nspikes').checked) demands.push("no spike strips");
 	if (document.getElementById('nair').checked) demands.push("no helicopter/air1");
 	if (document.getElementById('nspeed').checked) demands.push("no speed unit");
+	if (document.getElementById('nbike').checked) demands.push("no bike unit");
 	let otherDemands = document.getElementById('otherdemands').value.trim();
 	if (otherDemands) demands.push(...otherDemands.split(','));
 	if (demands.length > 1) {
