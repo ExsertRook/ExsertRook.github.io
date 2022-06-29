@@ -97,7 +97,7 @@ input[type="checkbox"] + label {
 }
 
 input[type="text"] {
-    width: 200px;
+    width: 180px;
     padding: 3px;
 }
 input[type="number"] {
