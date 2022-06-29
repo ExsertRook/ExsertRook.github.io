@@ -16,21 +16,13 @@ function report() {
 	buffer = [];
 	buffer.push("[REPORTING OFFICER]:");
 	buffer.push(callsign);	
-
-	let scenecommand = document.getElementById('scenecommand').value;
-	let negotiator = document.getElementById('negotiator').value;
-	let hostagestayer = document.getElementById('hostagestayer').value;
 	
 	let primary = document.getElementById('primary').value;
 	let secondary = document.getElementById('secondary').value;
 	let tertiary = document.getElementById('tertiary').value;
 	let parallel = document.getElementById('parallel').value;
 	let airunit = document.getElementById('airunit').value;
-	if (scenecommand || negotiator) buffer.push('');
-
-	if (scenecommand) buffer.push(`[SCENE COMMAND]: ${scenecommand}`);
-	if (negotiator) buffer.push(`[NEGOTIATOR]: ${negotiator}`);
-	if (hostagestayer) buffer.push(`[STAYED BACK FOR HOSTAGE]: ${hostagestayer}`);
+	buffer.push('');
 	
 	if (primary) buffer.push(`[PRIMARY]: ${primary}`);
 	if (secondary) buffer.push(`[SECONDARY]: ${secondary}`);
