@@ -61,18 +61,12 @@
 		</div>
 		<div class="form-group">
 			<label>How did the chase end?:</label>
-			<input type="checkbox" id="caught" name="caught" value="caught"/>
-			<label for="caught">All suspects caught</label><br />
-			<input type="checkbox" id="escape" name="escape" value="escape"/>
-			<label for="escape">All suspects escaped</label><br />
-			<input type="checkbox" id="nair" name="nair" value="nair" />
-			<label for="nair">no helicopter</label><br />
-			<input type="checkbox" id="nspeed" name="nspeed" value="nspeed" />
-			<label for="nspeed">no speed unit</label><br />
-			<input type="checkbox" id="nbike" name="nbike" value="nbike" />
-			<label for="nbike">no bike unit</label><br />
+			<select id="chaseend">
+				<option value="caught" selected>Suspects got caught</option>
+				<option value="escaped">Suspects got away</option>
+			</select>
 			Other:<br />
-			<textarea id="otherdemands" name="otherdemands" placeholder="Anything else they demanded, or if they dropped a weapon for a demand"></textarea>
+			<textarea id="otherresult" name="otherresult" placeholder="Different way the chase concluded"></textarea>
 		</div>
 		<div class="form-group">
 			<label>Vehicle Information:</label>
