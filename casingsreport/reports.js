@@ -41,7 +41,7 @@ function report() {
 	
 	let charge = document.getElementById('charge').value;
 	
-	buffer.push(`[CHARGES]:`)
+	buffer.push(`[CHARGES]:`);
 	if (charge) buffer.push(`Once a suspect is apprehended and they are in possessions of those weapons with the same serial numbers, they are to be brought to the interrogation room and questioned about the situation`)
 	if (charge) buffer.push(`If the interrogation verdict allows to, the suspect is to be charged with:`);
 	if (charge) buffer.push(`${charge}`);
