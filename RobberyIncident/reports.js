@@ -32,6 +32,7 @@ function report() {
 	if (negotiator) buffer.push(`[NEGOTIATOR]: ${negotiator}`);
 	if (hostagestayer) buffer.push(`[STAYED BACK FOR HOSTAGE]: ${hostagestayer}`);
 	
+	buffer.push('');
 	buffer.push(`[INVOLVED IN PURSUIT]:`);
 	if (primary) buffer.push(`Primary: ${primary}`);
 	if (secondary) buffer.push(`Secondary: ${secondary}`);
