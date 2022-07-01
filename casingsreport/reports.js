@@ -40,11 +40,14 @@ function report() {
 	buffer.push('');
 	
 	let charge = document.getElementById('charge').value;
+	let charge2 = document.getElementById('2nd charge').value;
 	
 	buffer.push(`[CHARGES]:`);
 	if (charge) buffer.push(`Once a suspect is apprehended and they are in possessions of those weapons with the same serial numbers, they are to be brought to the interrogation room and questioned about the situation`);
 	if (charge) buffer.push(`If the interrogation verdict allows to, the suspect is to be charged with:`);
+	buffer.push('');
 	if (charge) buffer.push(`${charge}`);
+	if (charge2) buffer.push(`${charge2}`); 
 	
 	let curDarkmode = document.getElementById('darkmode').checked;
 	if (curDarkmode) {
