@@ -125,6 +125,7 @@ function report() {
 	if (gotcaught.trim() === 'Did not get Caught') {
 		document.getElementById('medicalattention').style.display = 'block';
 		document.getElementById('processedat').style.display = 'block';
+		let caughtspecific = document.getElementById('caught').value;
 	}	
 		
 	let medicalSelected = document.getElementById('medicalattention');
