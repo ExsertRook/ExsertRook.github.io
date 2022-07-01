@@ -35,7 +35,7 @@ function report() {
 	let locationstart = document.getElementById('start').value;
 	let locationend = document.getElementById('end').value;
 	
-	buffer.push(`[LOCATION]`);
+	buffer.push(`[LOCATION]:`);
 	if (locationstart) buffer.push(`Started: ${locationstart}`);
 	if (locationend) buffer.push(`Ended: ${locationend}`);
 	buffer.push('');
