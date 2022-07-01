@@ -22,6 +22,7 @@ function report() {
 	let tertiary = document.getElementById('tertiary').value;
 	let parallel = document.getElementById('parallel').value;
 	let airunit = document.getElementById('airunit').value;
+	let bikeunit = document.getElementById('bikeunit').value;
 	buffer.push('');
 	
 	buffer.push(`[INVOLVED IN PURSUIT]:`);
@@ -30,6 +31,7 @@ function report() {
 	if (tertiary) buffer.push(`Tertiary: ${tertiary}`);
 	if (parallel) buffer.push(`Parallel: ${parallel}`);
 	if (airunit) buffer.push(`Air-1: ${airunit}`);
+	if (bikeunit) buffer.push(`Bike-Unit: ${bikeunit}`);
 	buffer.push('');
 	
 	let locationstart = document.getElementById('start').value;
