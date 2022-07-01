@@ -43,7 +43,6 @@ function report() {
 	buffer.push('');
 
 	
-
 	let pursuitSelected = document.getElementById('pursuittype');
 	let pursuitInformation = {
 		'Refusing to pull over': {
@@ -69,7 +68,7 @@ function report() {
 		},
 		'BOLO Vehicle': {
 			text: 'test7',
-		},
+		}
 	};
 	let pursuit = pursuitSelected.options[pursuitSelected.selectedIndex].text;
 	buffer.push(`[REASON FOR PURSUIT]:`);
