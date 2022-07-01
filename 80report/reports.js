@@ -89,7 +89,7 @@ function report() {
 	
 	
 	
-	buffer.push(`[REASON FOR PURSUIT]:`);
+	buffer.push(`[PURSUIT INFORMATION]:`);
 	buffer.push(pursuitInformation[pursuit].text);
 	buffer.push('');
 	
@@ -124,7 +124,11 @@ function report() {
 	buffer.push(chaseInformation[chase].text);
 	buffer.push('');
 	
-	buffer.push(`[VEHICLE | CHASE]:`);
+	let occupantscaught = document.getElementById('occupantscaught').value;
+	if (occupantscaught) buffer.push(`${occupantscaught} of the suspects were apprehended by the end of the pursuit.`);
+	buffer.push('');
+	
+	buffer.push(`[VEHICLE INFORMATION]:`);
 	let plate = document.getElementById('vehicleplate').value;
 	let vehicledesc = document.getElementById('vehicledesc').value;
 	let vehiclereg = document.getElementById('vehiclereg').value;
