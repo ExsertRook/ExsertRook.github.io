@@ -6,7 +6,7 @@
 html, body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Ubuntu", "Roboto", "Noto Sans", "Droid Sans", sans-serif;
     font-size: 15px;
-    color: #5c6266;
+    color: #242729;
     margin: 0;
     line-height: 22.5px;
 }
@@ -55,7 +55,7 @@ textarea {
     padding: 3px;
     resize: none;
     width: 300px;
-    height: 100px;
+    height: 50px;
 }
 
 .narrow {
@@ -97,7 +97,7 @@ input[type="checkbox"] + label {
 }
 
 input[type="text"] {
-    width: 160px;
+    width: 180px;
     padding: 3px;
 }
 input[type="number"] {
