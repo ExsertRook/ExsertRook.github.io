@@ -25,17 +25,17 @@ function report() {
 	buffer.push('');
 	
 	buffer.push(`[INVOLVED IN PURSUIT]:`);
-	if (primary) buffer.push(`[PRIMARY]: ${primary}`);
-	if (secondary) buffer.push(`[SECONDARY]: ${secondary}`);
-	if (tertiary) buffer.push(`[TERTIARY]: ${tertiary}`);
-	if (parallel) buffer.push(`[PARALLEL]: ${parallel}`);
-	if (airunit) buffer.push(`[AIR-1]: ${airunit}`);
+	if (primary) buffer.push(`Primary: ${primary}`);
+	if (secondary) buffer.push(`Secondary: ${secondary}`);
+	if (tertiary) buffer.push(`Tertiary: ${tertiary}`);
+	if (parallel) buffer.push(`Parallel: ${parallel}`);
+	if (airunit) buffer.push(`Air-1: ${airunit}`);
 	buffer.push('');
 
 	buffer.push(`[VEHICLE | CHASE]:`);
 	let plate = document.getElementById('vehicleplate').value;
 	let vehicledesc = document.getElementById('vehicledesc').value;
-	let vehiclereg = document.getElementById('vehiclereg').value
+	let vehiclereg = document.getElementById('vehiclereg').value;
 	if (vehicledesc) vehicledesc = ` which was a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
 	buffer.push(`We then let them get into their vehicle${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}. Once everyone was ready, the chase started and they attempted to evade from police recklessly.`);
 	buffer.push(`The chase lasted for a bit of time until (write later how it ended)`);
