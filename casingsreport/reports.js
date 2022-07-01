@@ -34,7 +34,8 @@ function report() {
 	let serial3 = document.getElementById('serial3').value;
 	buffer.push('');
 	
-	if (weaponname1) buffer.push(`${weaponname1}`);
+	buffer.push(`[WEAPON INFORMATION]:`)
+	if (weaponname1 || serial1) buffer.push(`Weapon: ${weaponname1} | Serial Number: ${serial1}`);
 	
 
 	let curDarkmode = document.getElementById('darkmode').checked;
