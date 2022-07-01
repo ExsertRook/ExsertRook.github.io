@@ -51,8 +51,8 @@ function report() {
 	let plate = document.getElementById('vehicleplate').value;
 	let vehicledesc = document.getElementById('vehicledesc').value;
 	let vehiclereg = document.getElementById('vehiclereg').value;
-	if (vehicledesc) vehicledesc = ` which was a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
-	buffer.push(`We then let them get into their vehicle${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}. Once everyone was ready, the chase started and they attempted to evade from police recklessly.`);
+	if (vehicledesc) vehicledesc = ` was a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
+	buffer.push(`The vehicle we were pursuing${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}.`);
 	buffer.push('');
 	buffer.push(`The chase lasted for a bit of time until (write later how it ended)`);
 	buffer.push('');
