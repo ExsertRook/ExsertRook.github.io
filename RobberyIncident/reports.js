@@ -32,11 +32,12 @@ function report() {
 	if (negotiator) buffer.push(`[NEGOTIATOR]: ${negotiator}`);
 	if (hostagestayer) buffer.push(`[STAYED BACK FOR HOSTAGE]: ${hostagestayer}`);
 	
-	if (primary) buffer.push(`[PRIMARY]: ${primary}`);
-	if (secondary) buffer.push(`[SECONDARY]: ${secondary}`);
-	if (tertiary) buffer.push(`[TERTIARY]: ${tertiary}`);
-	if (parallel) buffer.push(`[PARALLEL]: ${parallel}`);
-	if (airunit) buffer.push(`[AIR-1]: ${airunit}`);
+	buffer.push(`[INVOLVED IN PURSUIT]:`);
+	if (primary) buffer.push(`Primary: ${primary}`);
+	if (secondary) buffer.push(`Secondary: ${secondary}`);
+	if (tertiary) buffer.push(`Tertiary: ${tertiary}`);
+	if (parallel) buffer.push(`Parallel: ${parallel}`);
+	if (airunit) buffer.push(`Air-1: ${airunit}`);
 	buffer.push('');
 
 	let robbery = document.getElementById('robberytype').value;
