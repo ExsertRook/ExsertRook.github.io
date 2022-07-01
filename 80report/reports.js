@@ -24,6 +24,7 @@ function report() {
 	let airunit = document.getElementById('airunit').value;
 	buffer.push('');
 	
+	buffer.push(`[INVOLVED IN PURSUIT]:`);
 	if (primary) buffer.push(`[PRIMARY]: ${primary}`);
 	if (secondary) buffer.push(`[SECONDARY]: ${secondary}`);
 	if (tertiary) buffer.push(`[TERTIARY]: ${tertiary}`);
