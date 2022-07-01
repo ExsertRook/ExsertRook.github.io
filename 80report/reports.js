@@ -42,12 +42,41 @@ function report() {
 	if (locationend) buffer.push(`Ended: ${locationend}`);
 	buffer.push('');
 
-	let pursuittype = document.getElementById('pursuittype').value;
+	
 
-	
-	buffer.push(`[REASON FOR 10-80]:`);
-	
+	let pursuitSelected = document.getElementById('pursuittype');
+	let pursuitInformation = {
+		'Refusing to pull over': {
+			text: '',
+		},
+		'Excessive Speeding': {
+			text: 'test1',
+		},
+		'Drug-Sales': {
+			text: 'test2',
+		},
+		'10-11': {
+			text: 'test3',
+		},
+		'10-11 (Code 5)': {
+			text: 'test4',
+		},
+		'House Burglary': {
+			text: 'test5',
+		},
+		'10-66': {
+			text: 'test6',
+		},
+		'BOLO Vehicle': {
+			text: 'test7',
+		},
+	};
+	let pursuit = pursuitSelected.options[pursuitSelected.selectedIndex].text;
+	buffer.push(`[REASON FOR PURSUIT]:`);
+	buffer.push(pursuitInformation[pursuit].text);
 	buffer.push('');
+	
+	
 	
 	buffer.push(`[VEHICLE | CHASE]:`);
 	let plate = document.getElementById('vehicleplate').value;
