@@ -46,28 +46,31 @@ function report() {
 	let pursuitSelected = document.getElementById('pursuittype');
 	let pursuitInformation = {
 		'Refusing to pull over': {
-			text: '',
+			text: 'During regular patrol, we noticed that there was a vehicle breaking traffic laws. Upon attempting to pull them over, they refused to do so. With that they initiated a 10-80A.',
 		},
 		'Excessive Speeding': {
-			text: 'test1',
+			text: 'During regular patrol, we noticed that there was a vehicle who excessively sped past us. In an attempt to pull the vehicle over for a welfare check, they did not even pull over, initating a 10-80A.',
 		},
 		'Drug-Sales': {
-			text: 'test2',
+			text: 'During regular patrol, we responded to some drug sale calls. Upon arrival, an individual that was in the area noticed the patrol vehicle and decided to get into their car and flee, initiating a 10-80A.',
+		},
+		'Drug-Sales (Confirmed Handoff)': {
+			text: 'During regular patrol, we responded to some drug sale calls. Upon arrival, we notice and confirm an individual doing a handoff to a pedestrian. Once we made a move to go up to the suspect, they got into their vehicle and ran, initiating a 10-80A.',
 		},
 		'10-11': {
-			text: 'test3',
+			text: 'During regular patrol, we pulled over a vehicle that had broken a traffic law. While questioning the suspect, they decided to turn their vehicle back on and evade from us, initiating a 10-80A.',
 		},
 		'10-11 (Code 5)': {
-			text: 'test4',
+			text: 'During regular patrol, we pulled over vehicle. Later realizing that the vehicle had a BOLO on it, we performed a Code 5 felony stop on them. The moment the occupants in the vehicle noticed the weapons being drawn at them, they quickly switched the engine on and fled the scene, initiating a 10-80A.',
 		},
 		'House Burglary': {
-			text: 'test5',
+			text: 'During regular patrol, we responded to 10-31 house burglary calls. Upon arrival, an individual ran from a house that was in question into their vehicle and fled the scene, initiating a 10-80A.',
 		},
 		'10-66': {
-			text: 'test6',
+			text: 'During regular patrol, we responded to some 10-66 calls. Once arriving there, we noticed an individual acting suspicious so we approached them for further investigation. Upon approaching them, they decided to flee, initiating a 10-80A.',
 		},
 		'BOLO Vehicle': {
-			text: 'test7',
+			text: 'During regular patrol, we had eyes on a vehicle that was marked down as a "BOLO Vehicle". Once we attempted to stop the vehicle, they had increased their speed and initiated a 10-80A.',
 		}
 	};
 	let pursuit = pursuitSelected.options[pursuitSelected.selectedIndex].text;
