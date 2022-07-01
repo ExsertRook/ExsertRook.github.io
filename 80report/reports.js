@@ -83,6 +83,9 @@ function report() {
 		},
 		'911 Call': {
 			text: 'During regular patrol, we responded to a 911 text from an individual in need of assistance. When we got to the scene of the 911 call, the person that was in question of commiting a crime decided to evade from the police in their vehicle, initiating a 10-80A.',
+		},
+		'GTA (HoldUp)': {
+			text: 'During regular patrol, we noticed an individual holding up a driver of a vehicle for the keys. The suspect then grabbed the keys to the vehicle and initiated a 10-80A.',
 		}
 	};
 	let pursuit = pursuitSelected.options[pursuitSelected.selectedIndex].text;
@@ -118,6 +121,12 @@ function report() {
 		},
 		'Vehicle ran out of fuel': {
 			text: 'The chase lasted for a bit of time until their vehicle had ran out of fuel and they got out on foot. Eventually the suspects were apprehended and placed under police custody.',
+		},
+		'Vehicle turtled | Ran on foot': {
+			text: 'The chase lasted for a bit of time until their car had flipped and landed on their roof from crashing it. From there they got out of the turtled vehicle and ran on foot in hopes of getting away. The suspects were apprehended and placed under police custody.',
+		},
+		'Vehicle turtled | Surrendered': {
+			text: 'The chase lasted for a bit of time until their car had flipped and landed on their roof from crashing it. From there they were smart enough to surrender and not flee on foot. The suspects were apprehended and placed under police custody.',
 		}
 	};
 	let chase = chaseSelected.options[chaseSelected.selectedIndex].text;
