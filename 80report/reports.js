@@ -138,11 +138,11 @@ function report() {
 	let medicalInformation = {
 		'Was requested by multiple suspects': {
 			label: 'WAS REQUESTED',
-			text: 'After we apprehended the suspects, they requested medical attention. We then transported them to Saint Fiacre where they got further medical attention.',
+			text: 'After we apprehended the suspects, they requested or needed medical attention due to the injuries they have sustained. We then transported them to Saint Fiacre Medical where they got further medical attention.',
 		},
 		'Was requested by one suspect': {
 			label: 'ONE REQUESTED',
-			text: 'After we apprehended the suspects, one of them requested or needed medical attention. We then transported that suspect to Saint Fiacre where they got further medical attention.',
+			text: 'After we apprehended the suspects, one of them requested or needed medical attention due to sustaining injuries. We then transported that suspect to Saint Fiacre Medical where they got further medical attention.',
 		},
 		'Was not requested or needed': {
 			label: 'WAS NOT REQUESTED',
