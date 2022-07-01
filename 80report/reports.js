@@ -43,10 +43,10 @@ function report() {
 	buffer.push('');
 
 	let pursuittype = document.getElementById('pursuittype').value;
-	let refuse = document.getElementById('refuse').value;
+
 	
 	buffer.push(`[REASON FOR 10-80]:`);
-	if (pursuittype) refuse buffer.push(`${refuse}`);
+	
 	buffer.push('');
 	
 	buffer.push(`[VEHICLE | CHASE]:`);
