@@ -33,7 +33,7 @@ function report() {
 	let airunitp = document.getElementById('airunitp').value;
 	if (scenecommand || negotiator) buffer.push('');
 	
-	if (primary) buffer.push(`[PRIMARY]: ${primary});
+	if (primary) buffer.push(`[PRIMARY]: ${primary} & ${primaryp}`);
 	if (secondary) buffer.push(`[SECONDARY]: ${secondary}`);
 	if (tertiary) buffer.push(`[TERTIARY]: ${tertiary}`);
 	if (parallel) buffer.push(`[PARALLEL]: ${parallel}`);
