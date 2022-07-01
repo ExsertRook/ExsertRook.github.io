@@ -71,6 +71,18 @@ function report() {
 		},
 		'BOLO Vehicle': {
 			text: 'During regular patrol, we had eyes on a vehicle that was marked down as a "BOLO Vehicle". Once we attempted to stop the vehicle, they had increased their speed and initiated a 10-80A.',
+		},
+		'Kidnapping': {
+			text: 'During regular patrol, we had a 10-72 situation occur. The hostage was placed into the vehicle and the drove off with the hostage, initiating a 10-80A.',
+		},
+		'10-67': {
+			text: 'During regular patrol, we responded to a 10-67 (Grand Theft Auto) call of a car being stolen. Once we got on scene, and had eyes on the vehicle, the driver then decided to evade from us, initiating a 10-80A.',
+		},
+		'Brandishing a weapon': {
+			text: 'During regular patrol, we had noticed an individual brandishing a weapon in a public area. Upon approaching the individual, they decided to get into a vehicle and evade from police, initiating a 10-80A.',
+		},
+		'911 Call': {
+			text: 'During regular patrol, we responded to a 911 text from an individual in need of assistance. When we got to the scene of the 911 call, the person that was in question of commiting a crime decided to evade from the police in their vehicle, initiating a 10-80A.',
 		}
 	};
 	let pursuit = pursuitSelected.options[pursuitSelected.selectedIndex].text;
