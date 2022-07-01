@@ -42,6 +42,11 @@ function report() {
 	if (locationend) buffer.push(`Ended: ${locationend}`);
 	buffer.push('');
 
+	let pursuittype = document.getElementById('pursuittype').value;
+	
+	buffer.push(`[REASON FOR 10-80]:`);
+	
+	
 	buffer.push(`[VEHICLE | CHASE]:`);
 	let plate = document.getElementById('vehicleplate').value;
 	let vehicledesc = document.getElementById('vehicledesc').value;
