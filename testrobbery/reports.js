@@ -27,10 +27,6 @@ function report() {
 	let parallel = document.getElementById('parallel').value;
 	let airunit = document.getElementById('airunit').value;
 	if (scenecommand || negotiator) buffer.push('');
-
-	if (scenecommand) buffer.push(`[SCENE COMMAND]: ${scenecommand}`);
-	if (negotiator) buffer.push(`[NEGOTIATOR]: ${negotiator}`);
-	if (hostagestayer) buffer.push(`[STAYED BACK FOR HOSTAGE]: ${hostagestayer}`);
 	
 	if (primary) buffer.push(`[PRIMARY]: ${primary}`);
 	if (secondary) buffer.push(`[SECONDARY]: ${secondary}`);
