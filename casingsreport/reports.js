@@ -37,7 +37,8 @@ function report() {
 	if (weaponname1 || serial1) buffer.push(`Weapon: ${weaponname1} | Serial Number: ${serial1}`);
 	if (weaponname2 || serial2) buffer.push(`Weapon: ${weaponname2} | Serial Number: ${serial2}`);
 	if (weaponname3 || serial3) buffer.push(`Weapon: ${weaponname3} | Serial Number: ${serial3}`);
-
+	buffer.push('');
+	
 	let curDarkmode = document.getElementById('darkmode').checked;
 	if (curDarkmode) {
 		if (darkmodeState === 'false') updateDarkmode();
