@@ -89,8 +89,8 @@ function report() {
 	buffer.push(`[REASON FOR PURSUIT]:`);
 	buffer.push(pursuitInformation[pursuit].text);
 	buffer.push('');
-	
-	
+	buffer.push(`The chase lasted for a bit of time until (write later how it ended)`);
+	buffer.push('');
 	
 	buffer.push(`[VEHICLE | CHASE]:`);
 	let plate = document.getElementById('vehicleplate').value;
@@ -100,8 +100,7 @@ function report() {
 	if (vehicledesc) vehicledesc = ` was a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
 	buffer.push(`The vehicle we were pursuing${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}. There were a total of ${occupants} occupants inside of the vehicle.`);
 	buffer.push('');
-	buffer.push(`The chase lasted for a bit of time until (write later how it ended)`);
-	buffer.push('');
+	
 
 	let medicalSelected = document.getElementById('medicalattention');
 	let medicalInformation = {
