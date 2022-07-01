@@ -22,13 +22,18 @@ function report() {
 	let hostagestayer = document.getElementById('hostagestayer').value;
 	
 	let primary = document.getElementById('primary').value;
+	let primaryp = document.getElementById('primaryp').value;
 	let secondary = document.getElementById('secondary').value;
+	let secondaryp = document.getElementById('secondaryp').value;
 	let tertiary = document.getElementById('tertiary').value;
+	let tertiaryp = document.getElementById('tertiaryp').value;
 	let parallel = document.getElementById('parallel').value;
+	let parallelp = document.getElementById('parallelp').value;
 	let airunit = document.getElementById('airunit').value;
+	let airunitp = document.getElementById('airunitp').value;
 	if (scenecommand || negotiator) buffer.push('');
 	
-	if (primary) buffer.push(`[PRIMARY]: ${primary}`);
+	if (primary) buffer.push(`[PRIMARY]: ${primary} & ${primaryp});
 	if (secondary) buffer.push(`[SECONDARY]: ${secondary}`);
 	if (tertiary) buffer.push(`[TERTIARY]: ${tertiary}`);
 	if (parallel) buffer.push(`[PARALLEL]: ${parallel}`);
