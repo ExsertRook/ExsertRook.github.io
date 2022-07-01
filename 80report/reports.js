@@ -38,7 +38,7 @@ function report() {
 	let locationend = document.getElementById('end').value;
 	
 	buffer.push(`[LOCATION]:`);
-	if (locationstart) buffer.push(`Pursuit Began: ${locationstart}`);
+	if (locationstart) buffer.push(`Pursuit Began / Initial Location: ${locationstart}`);
 	if (locationend) buffer.push(`Pursuit Ended: ${locationend}`);
 	buffer.push('');
 
@@ -55,25 +55,25 @@ function report() {
 			text: 'During regular patrol, we responded to some drug sale calls. Upon arrival, an individual that was in the area noticed the patrol vehicle and decided to get into their car and flee, initiating a 10-80A.',
 		},
 		'Drug-Sales (Confirmed Handoff)': {
-			text: 'During regular patrol, we responded to some drug sale calls. Upon arrival, we notice and confirm an individual doing a handoff to a pedestrian. Once we made a move to go up to the suspect, they got into their vehicle and ran, initiating a 10-80A.',
+			text: 'During regular patrol, we responded to some drug sale calls. Upon arrival, we notice and confirm an individual doing a handoff to a pedestrian passing by. Once we made a move and go up to the suspect, they got into their vehicle and fled, initiating a 10-80A.',
 		},
 		'10-11': {
 			text: 'During regular patrol, we pulled over a vehicle that had broken a traffic law. While questioning the suspect, they decided to turn their vehicle back on and evade from us, initiating a 10-80A.',
 		},
 		'10-11 (Code 5)': {
-			text: 'During regular patrol, we pulled over vehicle. Later realizing that the vehicle had a BOLO on it, we performed a Code 5 felony stop on them. The moment the occupants in the vehicle noticed the weapons being drawn at them, they quickly switched the engine on and fled the scene, initiating a 10-80A.',
+			text: 'During regular patrol, we pulled over vehicle. Later realizing that the vehicle had a BOLO (Be On the Look Out) on it, we performed a Code 5 felony stop on them. The moment the occupants in the vehicle noticed that weapons are being drawn at them by the police, they quickly switched the engine on and fled the scene, initiating a 10-80A.',
 		},
 		'House Burglary': {
-			text: 'During regular patrol, we responded to 10-31 house burglary calls. Upon arrival, an individual ran from a house that was in question into their vehicle and fled the scene, initiating a 10-80A.',
+			text: 'During regular patrol, we responded to 10-31 house burglary calls at the location mentioned earlier. Upon arrival, an individual ran from a house that was in the area into their vehicle and fled the scene, initiating a 10-80A.',
 		},
 		'10-66': {
-			text: 'During regular patrol, we responded to some 10-66 calls. Once arriving there, we noticed an individual acting suspicious so we approached them for further investigation. Upon approaching them, they decided to flee, initiating a 10-80A.',
+			text: 'During regular patrol, we responded to some 10-66 calls. Once arriving there, we noticed an individual acting suspicious so we approached them for further investigation. Upon approaching them, they then decided to get into their vehicle and flee, initiating a 10-80A.',
 		},
 		'BOLO Vehicle': {
 			text: 'During regular patrol, we had eyes on a vehicle that was marked down as a "BOLO Vehicle". Once we attempted to stop the vehicle, they had increased their speed and initiated a 10-80A.',
 		},
 		'Kidnapping': {
-			text: 'During regular patrol, we had a 10-72 situation occur. The hostage was placed into the vehicle and the drove off with the hostage, initiating a 10-80A.',
+			text: 'During regular patrol, we had a 10-72 situation occur at the location mentioned above. The hostage was placed into the vehicle and the drove off with the hostage, initiating a 10-80A.',
 		},
 		'10-67': {
 			text: 'During regular patrol, we responded to a 10-67 (Grand Theft Auto) call of a car being stolen. Once we got on scene, and had eyes on the vehicle, the driver then decided to evade from us, initiating a 10-80A.',
