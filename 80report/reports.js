@@ -38,8 +38,8 @@ function report() {
 	let locationend = document.getElementById('end').value;
 	
 	buffer.push(`[LOCATION]:`);
-	if (locationstart) buffer.push(`Started: ${locationstart}`);
-	if (locationend) buffer.push(`Ended: ${locationend}`);
+	if (locationstart) buffer.push(`Pursuit Began: ${locationstart}`);
+	if (locationend) buffer.push(`Pursuit Ended: ${locationend}`);
 	buffer.push('');
 
 	
