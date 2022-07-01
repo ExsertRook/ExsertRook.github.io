@@ -31,6 +31,14 @@ function report() {
 	if (parallel) buffer.push(`Parallel: ${parallel}`);
 	if (airunit) buffer.push(`Air-1: ${airunit}`);
 	buffer.push('');
+	
+	let locationstart = document.getElementById('start').value;
+	let locationend = document.getElementById('end').value;
+	
+	buffer.push(`[LOCATION]`);
+	if (locationstart) buffer.push(`Started: ${locationstart}`);
+	if (locationend) buffer.push(`Ended: ${locationend}`);
+	buffer.push('');
 
 	buffer.push(`[VEHICLE | CHASE]:`);
 	let plate = document.getElementById('vehicleplate').value;
