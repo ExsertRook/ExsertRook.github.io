@@ -34,10 +34,10 @@ function report() {
 	if (scenecommand || negotiator) buffer.push('');
 	
 	if (primary) buffer.push(`[PRIMARY]: ${primary} & ${primaryp}`);
-	if (secondary) buffer.push(`[SECONDARY]: ${secondary}`);
-	if (tertiary) buffer.push(`[TERTIARY]: ${tertiary}`);
-	if (parallel) buffer.push(`[PARALLEL]: ${parallel}`);
-	if (airunit) buffer.push(`[AIR-1]: ${airunit}`);
+	if (secondary) buffer.push(`[SECONDARY]: ${secondary} & ${secondaryp}`);
+	if (tertiary) buffer.push(`[TERTIARY]: ${tertiary} & ${tertiaryp}`);
+	if (parallel) buffer.push(`[PARALLEL]: ${parallel} & ${parallelp}`);
+	if (airunit) buffer.push(`[AIR-1]: ${airunit} & ${airunitp}`);
 	buffer.push('');
 
 	let robbery = document.getElementById('robberytype').value;
