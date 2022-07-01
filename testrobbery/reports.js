@@ -119,6 +119,14 @@ function report() {
 	buffer.push(`The chase lasted for a bit of time until (write later how it ended)`);
 	buffer.push('');
 
+	let gotcaught = document.getElementById('caught');
+	let gotcaughtstring = '';
+	
+	if (gotcaught.trim() === 'Did not get Caught') {
+		document.getElementById('medicalattention').style.display = 'block';
+		document.getElementById('processedat').style.display = 'block';
+	}	
+		
 	let medicalSelected = document.getElementById('medicalattention');
 	let medicalInformation = {
 		'Was requested by multiple suspects': {
