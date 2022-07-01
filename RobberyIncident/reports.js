@@ -82,7 +82,7 @@ function report() {
 	let hostages = document.getElementById('hostages').value;
 	let robbersinside = document.getElementById('robbersinside').value;
 	let robbersoutside = document.getElementById('robbersoutside').value;
-	buffer.push(`After setting up the perimeter around the area, we began negotiations. During the negotiations, we learned that there were:`);
+	buffer.push(`After setting up the perimeter around the area, we began negotiations. During the negotiations, we learned that there were a total of:`);
 	buffer.push(`[ROBBERS INSIDE]: ${robbersinside}`);
 	buffer.push(`[ROBBERS OUTSIDE]: ${robbersoutside}`);
 	buffer.push(`[HOSTAGES]: ${hostages}`);
