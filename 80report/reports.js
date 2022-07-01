@@ -45,14 +45,16 @@ function report() {
 	let pursuittype = document.getElementById('pursuittype').value;
 	
 	buffer.push(`[REASON FOR 10-80]:`);
-	
+	if (pursuittype) buffer.push 
+	buffer.push('');
 	
 	buffer.push(`[VEHICLE | CHASE]:`);
 	let plate = document.getElementById('vehicleplate').value;
 	let vehicledesc = document.getElementById('vehicledesc').value;
 	let vehiclereg = document.getElementById('vehiclereg').value;
+	let occupants = document.getElementById('occupants').value;
 	if (vehicledesc) vehicledesc = ` was a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
-	buffer.push(`The vehicle we were pursuing${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}.`);
+	buffer.push(`The vehicle we were pursuing${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}. There were a total of ${occupants} occupants inside of the vehicle.`);
 	buffer.push('');
 	buffer.push(`The chase lasted for a bit of time until (write later how it ended)`);
 	buffer.push('');
