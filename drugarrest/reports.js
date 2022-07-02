@@ -55,6 +55,30 @@ function report() {
 	if (charge) buffer.push(`${charge}`);
 	if (charge2) buffer.push(`${charge2}`); 
 	
+		let medicalSelected = document.getElementById('medicalattention');
+	let medicalInformation = {
+		'Was requested by multiple suspects': {
+			label: 'WAS REQUESTED',
+			text: 'After we apprehended the suspects, they requested medical attention. We then transported them to Saint Fiacre where they got further medical attention.',
+		},
+		'Was requested by one suspect': {
+			label: 'ONE REQUESTED',
+			text: 'After we apprehended the suspects, one of them requested or needed medical attention. We then transported that suspect to Saint Fiacre where they got further medical attention.',
+		},
+		'Was not requested or needed': {
+			label: 'WAS NOT REQUESTED',
+			text: 'After we apprehended the suspects, they did not request or need any medical attention.',
+		}
+	};
+	let medical = medicalSelected.options[medicalSelected.selectedIndex].text;
+	buffer.push(`[MEDICAL ATTENTION | ${medicalInformation[medical].label}]:`);
+	buffer.push(medicalInformation[medical].text);
+	buffer.push('');
+
+	let processed = document.getElementById('processedat').value;
+	buffer.push('[PROCESSED]:');
+	buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
+	
 	let curDarkmode = document.getElementById('darkmode').checked;
 	if (curDarkmode) {
 		if (darkmodeState === 'false') updateDarkmode();
