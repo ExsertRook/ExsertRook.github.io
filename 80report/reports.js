@@ -86,6 +86,9 @@ function report() {
 		},
 		'GTA (HoldUp)': {
 			text: 'During regular patrol, we noticed an individual holding up a driver of a vehicle for the keys. The suspect then grabbed the keys to the vehicle and initiated a 10-80A.',
+		},
+		'10-99': {
+			text: 'During regular patrol we had an officer call out a 10-99 situation. After we arrived on scene of the 99 call, suspects fled immediately, initiating a 10-80A.',
 		}
 	};
 	let pursuit = pursuitSelected.options[pursuitSelected.selectedIndex].text;
@@ -127,6 +130,9 @@ function report() {
 		},
 		'Vehicle turtled | Surrendered': {
 			text: 'The chase lasted for a bit of time until their car had flipped and landed on their roof from crashing it. From there they were smart enough to surrender and not flee on foot. The suspects were apprehended and placed under police custody.',
+		},
+		'Vehicle was sent into water': {
+			text: 'The chase lasted for a bit of time until they had drove their vehicle into the water. Eventually after pursuing the suspects in the water, they were all apprehended and placed under police custody.',
 		}
 	};
 	let chase = chaseSelected.options[chaseSelected.selectedIndex].text;
