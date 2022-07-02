@@ -59,7 +59,7 @@ function report() {
 		robberyString = `${robbery} at ${specific}`;
 		ROBBERY_STATE = '24/7';
 	} 
-	if (robbery.trim() === 'Jewlery Store') {
+	if (robbery.trim() === 'Jewelry Store') {
 		document.getElementById('whatFleeca').style.display = 'none';
 		document.getElementById('whatStore').style.display = 'none';
 		robberyString = robbery;
