@@ -102,13 +102,19 @@ function report() {
 	let chaseSelected = document.getElementById('chaseend');
 	let chaseInformation = {
 		'Vehicle disabled | Ran on foot': {
-			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they got out of the disabled vehicle and ran on foot in hopes of getting away. The suspects were apprehended and placed under police custody.',
+			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they got out of the disabled vehicle and ran on foot in hopes of getting away. The suspects were eventually apprehended and placed under police custody.',
 		},
 		'Vehicle disabled | Surrendered': {
-			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they were smart enough to surrender and not flee on foot. The suspects were apprehended and placed under police custody.',
+			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they were smart enough to surrender and not flee on foot. The suspects were eventually apprehended and placed under police custody.',
 		},
 		'Vehicle disabled | Vehicle swap': {
 			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they hopped out and got into a swap/transfer vehicle and the chase continued from there. Eventually after that pickup vehicle, the suspects were apprehended and placed under police custody.',
+		},
+		'Vehicle boxed in | Ran on foot': {
+			text: 'The chase lasted for a bit of time until our pursuing ground units managed to pin the vehicle and box it in to where they could not move anymore. From there they got out of the boxed in vehicle and ran on foot in hopes of getting away. The suspects were eventually apprehended and placed under police custody.',
+		},
+		'Vehicle boxed in | Surrendered': {
+			text: 'The chase lasted for a bit of time until our pursuing ground units managed to pin the vehicle and box it in to where they could not move anymore. From there they were smart enough to surrender and not flee on foot. The suspects were eventually apprehended and placed under police custody.',
 		},
 		'Attempted Vehicle swap': {
 			text: 'The chase lasted for a bit of time until they attempted to swap into a different vehicle but failed in the process. Shortly after the fleeing suspects had been apprehended and placed under police custody.',
@@ -126,10 +132,10 @@ function report() {
 			text: 'The chase lasted for a bit of time until their vehicle had ran out of fuel and they got out on foot. Eventually the suspects were apprehended and placed under police custody.',
 		},
 		'Vehicle turtled | Ran on foot': {
-			text: 'The chase lasted for a bit of time until their car had flipped and landed on their roof from crashing it. From there they got out of the turtled vehicle and ran on foot in hopes of getting away. The suspects were apprehended and placed under police custody.',
+			text: 'The chase lasted for a bit of time until their car had flipped and landed on their roof from crashing it. From there they got out of the turtled vehicle and ran on foot in hopes of getting away. The suspects were eventually apprehended and placed under police custody.',
 		},
 		'Vehicle turtled | Surrendered': {
-			text: 'The chase lasted for a bit of time until their car had flipped and landed on their roof from crashing it. From there they were smart enough to surrender and not flee on foot. The suspects were apprehended and placed under police custody.',
+			text: 'The chase lasted for a bit of time until their car had flipped and landed on their roof from crashing it. From there they were smart enough to surrender and not flee on foot. The suspects were eventually apprehended and placed under police custody.',
 		},
 		'Vehicle was sent into water': {
 			text: 'The chase lasted for a bit of time until they had drove their vehicle into the water. Eventually after pursuing the suspects in the water, they were all apprehended and placed under police custody.',
