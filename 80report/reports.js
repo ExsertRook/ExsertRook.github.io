@@ -49,7 +49,7 @@ function report() {
 			text: 'During regular patrol, we noticed that there was a vehicle breaking traffic laws. Upon attempting to pull them over, they did not even acknowledge it and refused to pull over their vehicle. With that they initiated a 10-80A with us pursuing the vehicle.',
 		},
 		'Excessive Speeding': {
-			text: 'During regular patrol, we noticed that there was a vehicle who excessively sped past us. In an attempt to pull the vehicle over for a welfare check, they did not even pull over, initating a 10-80A.',
+			text: 'During regular patrol, we noticed that there was a vehicle who excessively sped past us. In an attempt to pull the vehicle over for a welfare check, they did not even pull over, initiating a 10-80A.',
 		},
 		'Drug-Sales': {
 			text: 'During regular patrol, we responded to some drug sale calls. Upon arrival, an individual that was in the area noticed the patrol vehicle and decided to get into their car and flee, initiating a 10-80A.',
