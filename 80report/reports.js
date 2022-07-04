@@ -92,6 +92,9 @@ function report() {
 		},
 		'10-99': {
 			text: 'During regular patrol we had an officer call out a 10-99 situation. After we arrived on scene of the 99 call, suspects fled immediately, initiating a 10-80A.',
+		},
+		'Jaywalking': {
+			text: 'During regular patrol, we noticed an individual crossing a 4 lane road. We saw him doing it and deemed it as jaywalking. Once we approached the individual to detain and question them, they evaded and ran into a vehicle, taking off in it and initiating a 10-80A.',
 		}
 	};
 	let pursuit = pursuitSelected.options[pursuitSelected.selectedIndex].text;
