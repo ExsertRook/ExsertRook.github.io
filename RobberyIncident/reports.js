@@ -79,7 +79,7 @@ function report() {
 	*/
 
 	buffer.push(`[DETAILS | DEMANDS]:`);
-	buffer.push(`During normal patrol, we had received a report from dispatch of an alarm going off at the ${robberyString}. Once scene command was established, they assigned ${callsign} to create an incident report.`);
+	buffer.push(`During normal patrol, we had received a report from dispatch of an alarm going off at the ${robberyString}. Once scene command was established, they assigned officer ${callsign} to create an incident report.`);
 	buffer.push('');
 	let hostages = document.getElementById('hostages').value;
 	let robbersinside = document.getElementById('robbersinside').value;
@@ -109,7 +109,7 @@ function report() {
 	
 	let stayedBack = (hostagestayer ? hostagestayer.trim() : 'a unit');
 	buffer.push(`The ${robbersinside} unidentified suspect(s) demanded ${demandsText} for the safety of the ${hostages} hostage(s).` +
-		` Once they were ready on the inside, scene command prepared a lineup for the pursuit. Scene command assigned ${stayedBack} to stay back for the hostage and collect their contact information.`);
+		` Once they were ready on the inside, scene command prepared a lineup for the pursuit. Scene command assigned officer ${stayedBack} to stay back for the hostage and collect their contact information.`);
 	buffer.push('');
 
 	buffer.push(`[VEHICLE | CHASE]:`);
