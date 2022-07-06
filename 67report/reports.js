@@ -45,6 +45,15 @@ function report() {
 	if (weaponname5 || serial5) buffer.push(`Weapon: ${weaponname5} | Serial Number: ${serial5}`);
 	buffer.push('');
 	
+	buffer.push(`[VEHICLE INFORMATION]:`);
+	let plate = document.getElementById('vehicleplate').value;
+	let vehicledesc = document.getElementById('vehicledesc').value;
+	let vehiclereg = document.getElementById('vehiclereg').value;
+	let occupants = document.getElementById('occupants').value;
+	if (vehicledesc) vehicledesc = ` was a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
+	buffer.push(`The vehicle we were pursuing${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}. There were a total of ${occupants} occupants inside of the vehicle.`);
+	buffer.push('');
+	
 	let charge = document.getElementById('charge').value;
 	let charge2 = document.getElementById('2nd charge').value;
 	
