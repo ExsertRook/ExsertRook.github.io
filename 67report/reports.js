@@ -18,12 +18,10 @@ function report() {
 	buffer.push(callsign);	
 
 	let location = document.getElementById('location').value;
-	let processedat = document.getElementById('processedat').value;
 	buffer.push('');
 	
 	buffer.push(`[DETAILS OF THE INCIDENT]:`);
 	if (location) buffer.push(`While being out on regular patrol, we responded to shots fired dispatch calls near ${location}. `);
-	if (processedat) buffer.push(`Once we arrived on scene we started to look for casings in the general area. Upon successfully finding casings on the ground, we collected them in evidence bags and took them to ${processedat} and processed them for further information.`);
 	buffer.push('');
 	
 	buffer.push(`[VEHICLE INFORMATION]:`);
@@ -35,6 +33,29 @@ function report() {
 	buffer.push(`The vehicle we were pursuing${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}. There were a total of ${occupants} occupants inside of the vehicle.`);
 	buffer.push('');
 
+	let medicalSelected = document.getElementById('medicalattention');
+	let medicalInformation = {
+		'Was requested by multiple suspects': {
+			label: 'WAS REQUESTED',
+			text: 'After we apprehended the suspects, they requested or needed medical attention due to the injuries they have sustained. We then transported them to Saint Fiacre Medical where they got further medical attention.',
+		},
+		'Was requested by one suspect': {
+			label: 'ONE REQUESTED',
+			text: 'After we apprehended the suspects, one of them requested or needed medical attention due to sustaining injuries. We then transported that suspect to Saint Fiacre Medical where they got further medical attention.',
+		},
+		'Was not requested or needed': {
+			label: 'WAS NOT REQUESTED',
+			text: 'After we apprehended the suspects, they did not request or need any medical attention.',
+		}
+	};
+	let medical = medicalSelected.options[medicalSelected.selectedIndex].text;
+	buffer.push(`[MEDICAL ATTENTION | ${medicalInformation[medical].label}]:`);
+	buffer.push(medicalInformation[medical].text);
+	buffer.push('');
+
+	let processed = document.getElementById('processedat').value;
+	buffer.push('[PROCESSED]:');
+	buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
 	
 	let curDarkmode = document.getElementById('darkmode').checked;
 	if (curDarkmode) {
