@@ -30,7 +30,7 @@ function report() {
 	let vehicledesc = document.getElementById('vehicledesc').value;
 	let vehiclereg = document.getElementById('vehiclereg').value;
 	if (vehicledesc) vehicledesc = ` was a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
-	buffer.push(`The vehicle we were pursuing${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}.`);
+	buffer.push(`The vehicle in question was a${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}.`);
 	buffer.push('');
 	
 
