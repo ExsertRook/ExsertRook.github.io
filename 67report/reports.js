@@ -16,11 +16,10 @@ function report() {
 	buffer = [];
 	buffer.push("[REPORTING OFFICER]:");
 	buffer.push(callsign);	
-
-	let location = document.getElementById('location').value;
 	buffer.push('');
 	
 	buffer.push(`[DETAILS OF THE INCIDENT]:`);
+	let location = document.getElementById('location').value;
 	if (location) buffer.push(`While being out on regular patrol, we responded to shots fired dispatch calls near ${location}. `);
 	buffer.push('');
 	
