@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>10-67 Incident Report Generator</title>
+	<title>Casings Found Report Generator</title>
 	<link rel="shortcut icon" href="images/favicon.ico" />
 	<link rel="stylesheet" href="index.css" />
 	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> </head>
@@ -11,7 +11,7 @@
 <body onLoad="loadDarkmode()">
 	<div id="form">
 		<div class="form-group">
-			<span style="font-weight: bold;">10-67 Incident Report Generator</span> | 
+			<span style="font-weight: bold;">Casings Found Report Generator</span> | 
 			<input type="checkbox" id="darkmode" name="darkmode" value="darkmode" />
 			<label for="darkmode">Darkmode</label>
 			<br />
@@ -23,34 +23,50 @@
 		</div>
 		<div class="form-group">
 			<label>Location:</label>
-			Where was the car being stolen?: <input type="text" id="location" name="location" placeholder="e.g. Hawick Ave">
-		</div>
+			Location of the casings: <input type="text" id="location" name="location" placeholder="e.g. Hawick Ave">
+		</div>	
 		<div class="form-group">
-			<label>Vehicle Information:</label>
-			Description: <input type="text" id="vehicledesc" name="vehicledesc" placeholder="e.g. Blue Sultan"><br />
-			Plate: <input type="text" id="vehicleplate" name="vehicleplate" placeholder="12ABC345"><br />
-			Registered To: <input type="text" id="vehiclereg" name="vehiclereg" placeholder="FirstName LastName">
-		</div>
-		<div class="form-group">
-			<label>Medical Attention...</label>
-			<select id="medicalattention">
-				<option>Was requested by multiple suspects</option>
-				<option>Was requested by one suspect</option>
-				<option selected>Was not requested or needed</option>
-			</select>
-		</div>
-		<div clsas="form-group">
-			<label>Processed at...</label><br />
+			<label>Casings Were Processed at...</label>
 			<select id="processedat">
 				<option selected>MRPD</option>
-				<option>Sandy Shores Sheriff's Office</option>
+				<option>Blaine County Sheriff's Office</option>
 				<option>Davis PD</option>
 				<option>Paleto PD</option>
 				<option>Highway PD</option>
-				<option>Del Perro Pier PD</option>
+				<option>Pier PD</option>
 				<option>Rockford PD</option>
 			</select>
 		</div>
+		<div class="form-group">
+			<label>Weapon Information:</label>
+			Weapon #1: <input type="text" id="weaponname1" name="weaponname1" placeholder="e.g. Pistol .45">
+			Serial Number #1: <input type="text" id="serial1" name="serial1" placeholder="e.g. 12345678"><br />
+			(Optional) Weapon #2: <input type="text" id="weaponname2" name="weaponname2" placeholder="e.g. Gardone Pistol">
+			Serial Number #2: <input type="text" id="serial2" name="serial2" placeholder="e.g. 12345678"><br />
+			(Optional) Weapon #3: <input type="text" id="weaponname3" name="weaponname3" placeholder="e.g. SIG Sauer P226">
+			Serial Number #3: <input type="text" id="serial3" name="serial3" placeholder="e.g. 12345678"><br />
+			(Optional) Weapon #4: <input type="text" id="weaponname4" name="weaponname4" placeholder="e.g. Pistol .50">
+			Serial Number #4: <input type="text" id="serial4" name="serial4" placeholder="e.g. 12345678"><br />
+			(Optional) Weapon #5: <input type="text" id="weaponname5" name="weaponname5" placeholder="e.g. Carbine Rifle">
+			Serial Number #5: <input type="text" id="serial5" name="serial5" placeholder="e.g. 12345678">
+		</div>
+		<div class="form-group">
+			<label>Charges:</label>
+			<select id="charge">
+				<option selected>P.C. 904 - Felony Weapons Discharge Violation</option>
+				<option>P.C. 903 - Weapons Discharge Violation</option>
+				<option>P.C. 207 - Attempted Murder</option>
+				<option>P.C. 203 - Aggravated Assault and Battery</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label>(Optional) 2nd Charge:</label>
+			<select id="2nd charge">
+				<option selected> </option>
+				<option>P.C. 903 - Weapons Discharge Violation</option>
+				<option>P.C. 207 - Attempted Murder</option>
+				<option>P.C. 203 - Aggravated Assault and Battery</option>	
+			</select>
 	</div>
 	<textarea class="wide" id="reportBody">[report will automatically generate as you fill out the form to the left]&#10;&#10;(Note: the generated report will be editable, but once you edit it you can no longer update it based on the form)</textarea>
 	<!--<pre id="reportBody">[The report will automatically generate as you fill out the form to the left]</pre> -->
