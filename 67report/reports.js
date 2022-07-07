@@ -21,18 +21,10 @@ function report() {
 	buffer.push('');
 	
 	buffer.push(`[DETAILS OF THE INCIDENT]:`);
-	if (location) buffer.push(`While being out on regular patrol, we responded to shots fired dispatch calls near ${location}. `);
+	if (location) buffer.push(`While being out on regular patrol, we responded to a 10-67 dispatch call of a carjacking near ${location}. `);
 	buffer.push('');
-		
-	let charge = document.getElementById('charge').value;
-	let charge2 = document.getElementById('2nd charge').value;
+
 	
-	buffer.push(`[CHARGES]:`);
-	if (charge) buffer.push(`Once a suspect is apprehended and they are in possessions of those weapons with the same serial numbers, they are to be brought to the interrogation room and questioned about the situation.`);
-	if (charge) buffer.push(`If the interrogation verdict allows to, the suspect is to be charged with (alongside the obvious possession charge):`);
-	buffer.push('');
-	if (charge) buffer.push(`${charge}`);
-	if (charge2) buffer.push(`${charge2}`); 
 	
 	let curDarkmode = document.getElementById('darkmode').checked;
 	if (curDarkmode) {
