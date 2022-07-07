@@ -22,9 +22,42 @@ function report() {
 	
 	buffer.push(`[DETAILS OF THE INCIDENT]:`);
 	if (location) buffer.push(`While being out on regular patrol, we responded to a 10-67 dispatch call of a carjacking near ${location}. `);
+	buffer.push(`Upon arriving there, we noticed an individual inside of the vehicle tampering with the wires below the steering wheel. After asking them to step out of the vehicle, they eventually did comply. From there the individual was detained and placed into handcuffs. We read them their miranda rights and transported them to a police station for processing.`);
 	buffer.push('');
 
+	buffer.push(`[VEHICLE INFORMATION]:`);
+	let plate = document.getElementById('vehicleplate').value;
+	let vehicledesc = document.getElementById('vehicledesc').value;
+	let vehiclereg = document.getElementById('vehiclereg').value;
+	let occupants = document.getElementById('occupants').value;
+	if (vehicledesc) vehicledesc = ` was a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
+	buffer.push(`The vehicle we were pursuing${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}. There were a total of ${occupants} occupants inside of the vehicle.`);
+	buffer.push('');
 	
+
+	let medicalSelected = document.getElementById('medicalattention');
+	let medicalInformation = {
+		'Was requested by multiple suspects': {
+			label: 'WAS REQUESTED',
+			text: 'After we apprehended the suspects, they requested or needed medical attention due to the injuries they have sustained. We then transported them to Saint Fiacre Medical where they got further medical attention.',
+		},
+		'Was requested by one suspect': {
+			label: 'ONE REQUESTED',
+			text: 'After we apprehended the suspects, one of them requested or needed medical attention due to sustaining injuries. We then transported that suspect to Saint Fiacre Medical where they got further medical attention.',
+		},
+		'Was not requested or needed': {
+			label: 'WAS NOT REQUESTED',
+			text: 'After we apprehended the suspects, they did not request or need any medical attention.',
+		}
+	};
+	let medical = medicalSelected.options[medicalSelected.selectedIndex].text;
+	buffer.push(`[MEDICAL ATTENTION | ${medicalInformation[medical].label}]:`);
+	buffer.push(medicalInformation[medical].text);
+	buffer.push('');
+
+	let processed = document.getElementById('processedat').value;
+	buffer.push('[PROCESSED]:');
+	buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
 	
 	let curDarkmode = document.getElementById('darkmode').checked;
 	if (curDarkmode) {
