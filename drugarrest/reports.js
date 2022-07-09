@@ -26,25 +26,6 @@ function report() {
 	if (processedat) buffer.push(`Once we arrived on scene we started to look for casings in the general area. Upon successfully finding casings on the ground, we collected them in evidence bags and took them to ${processedat} and processed them for further information.`);
 	buffer.push('');
 	
-	let weaponname1 = document.getElementById('weaponname1').value;
-	let serial1 = document.getElementById('serial1').value;
-	let weaponname2 = document.getElementById('weaponname2').value;
-	let serial2 = document.getElementById('serial2').value;
-	let weaponname3 = document.getElementById('weaponname3').value;
-	let serial3 = document.getElementById('serial3').value;
-	let weaponname4 = document.getElementById('weaponname4').value;
-	let serial4 = document.getElementById('serial4').value;
-	let weaponname5 = document.getElementById('weaponname5').value;
-	let serial5 = document.getElementById('serial5').value;
-	
-	buffer.push(`[WEAPON INFORMATION]:`);
-	if (weaponname1 || serial1) buffer.push(`Weapon: ${weaponname1} | Serial Number: ${serial1}`);
-	if (weaponname2 || serial2) buffer.push(`Weapon: ${weaponname2} | Serial Number: ${serial2}`);
-	if (weaponname3 || serial3) buffer.push(`Weapon: ${weaponname3} | Serial Number: ${serial3}`);
-	if (weaponname4 || serial4) buffer.push(`Weapon: ${weaponname4} | Serial Number: ${serial4}`);
-	if (weaponname5 || serial5) buffer.push(`Weapon: ${weaponname5} | Serial Number: ${serial5}`);
-	buffer.push('');
-	
 	let charge = document.getElementById('charge').value;
 	let charge2 = document.getElementById('2nd charge').value;
 	
