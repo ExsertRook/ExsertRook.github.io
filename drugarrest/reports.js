@@ -23,20 +23,11 @@ function report() {
 	
 	buffer.push(`[DETAILS OF THE INCIDENT]:`);
 	if (location) buffer.push(`While being out on regular patrol, we responded to shots fired dispatch calls near ${location}. `);
-	if (processedat) buffer.push(`Once we arrived on scene we started to look for casings in the general area. Upon successfully finding casings on the ground, we collected them in evidence bags and took them to ${processedat} and processed them for further information.`);
 	buffer.push('');
 	
-	let charge = document.getElementById('charge').value;
-	let charge2 = document.getElementById('2nd charge').value;
 	
-	buffer.push(`[CHARGES]:`);
-	if (charge) buffer.push(`Once a suspect is apprehended and they are in possessions of those weapons with the same serial numbers, they are to be brought to the interrogation room and questioned about the situation.`);
-	if (charge) buffer.push(`If the interrogation verdict allows to, the suspect is to be charged with:`);
-	buffer.push('');
-	if (charge) buffer.push(`${charge}`);
-	if (charge2) buffer.push(`${charge2}`); 
 	
-		let medicalSelected = document.getElementById('medicalattention');
+	let medicalSelected = document.getElementById('medicalattention');
 	let medicalInformation = {
 		'Was requested by multiple suspects': {
 			label: 'WAS REQUESTED',
