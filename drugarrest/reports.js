@@ -82,9 +82,6 @@ function report() {
 	buffer.push(`[MEDICAL ATTENTION | ${medicalInformation[medical].label}]:`);
 	buffer.push(medicalInformation[medical].text);
 	buffer.push('');
-	
-	buffer.push(`The suspect did not make an attempt to run and we managed to talk to them. Once we swabbed their hands for any possible drug residue and ran it through a test, the results came back positive for drug residue.`);
-	buffer.push('');
 
 	let processed = document.getElementById('processedat').value;
 	buffer.push('[PROCESSED]:');
