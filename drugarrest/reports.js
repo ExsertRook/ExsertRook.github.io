@@ -37,6 +37,31 @@ function report() {
 	let pospicresult = pospicSelected.options[pospicSelected.selectedIndex].text;
 	buffer.push(pospicInformation[pospicresult].text);
 	buffer.push('');
+
+	buffer.push('The suspect did not make an attempt to run and we managed to talk to them. Once we swabbed their hands for any possible drug residue and ran it through a test, the results came back positive for drug residue.');	
+
+	let drugSelected = document.getElementById('drugtype');
+	let drugInformation = {
+		'Weed': {
+			text: 'The drug specifically in question was weed.',
+		},
+		'Cocaine': {
+			text: 'The drug specifically in question was cocaine.',
+		},
+		'Oxy': {
+			text: 'The drug specifically in question was oxy.',
+		},
+		'Acid': {
+			text: 'The drug specifically in question was acid.',
+		},
+		'Meth': {
+			text: 'The drug specifically in question was meth.',
+		}
+	};
+	
+	let drugresult = drugSelected.options[drugSelected.selectedIndex].text;
+	buffer.push(drugInformation[drugresult].text);
+	buffer.push('');
 	
 	let medicalSelected = document.getElementById('medicalattention');
 	let medicalInformation = {
@@ -56,6 +81,9 @@ function report() {
 	let medical = medicalSelected.options[medicalSelected.selectedIndex].text;
 	buffer.push(`[MEDICAL ATTENTION | ${medicalInformation[medical].label}]:`);
 	buffer.push(medicalInformation[medical].text);
+	buffer.push('');
+	
+	buffer.push(`The suspect did not make an attempt to run and we managed to talk to them. Once we swabbed their hands for any possible drug residue and ran it through a test, the results came back positive for drug residue.`);
 	buffer.push('');
 
 	let processed = document.getElementById('processedat').value;
