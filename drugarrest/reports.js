@@ -22,7 +22,8 @@ function report() {
 	buffer.push('');
 	
 	buffer.push(`[DETAILS OF THE INCIDENT]:`);
-	if (location) buffer.push(`While being out on regular patrol, we responded to shots fired dispatch calls near ${location}. `);
+	if (location) buffer.push(`While being out on regular patrol, we responded to 10-66 dispatch calls at ${location}. `);
+	buffer.push(`Upon arriving on scene, we saw an individual doing handoffs.`);
 	buffer.push('');
 	
 	
