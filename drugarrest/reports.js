@@ -22,11 +22,21 @@ function report() {
 	buffer.push('');
 	
 	buffer.push(`[DETAILS OF THE INCIDENT]:`);
-	if (location) buffer.push(`While being out on regular patrol, we responded to 10-66 dispatch calls at ${location}. `);
-	buffer.push(`Upon arriving on scene, we saw an individual doing handoffs.`);
+	if (location) buffer.push(`While being out on regular patrol, we responded to 10-66 dispatch calls at ${location}. When we arrived at the general vicinity, we started looking for anybody that was doing any sort of suspicious activities.`);
+	
+	let pospicSelected = document.getElementById('pospic');
+	let pospicInformation = {
+		'Yes': {
+			text: 'After some time had passed, we managed to witness an individual walking up to the pedestrians passing by and handing something over to them. Once we managed to take a picture of the positive handoff, we moved in to approach the suspect in question.',
+		},
+		'No': {
+			text: 'After some time had passed, we managed to witness an individual walking up to the pedestrians passing by and handing something over to them. Fearing that the suspect may leave the area, we moved in quickly without taking a picture of the positive handoff.',
+		}
+	};
+	
+	let pospicresult = pospicSelected.options[pospicSelected.selectedIndex].text;
+	buffer.push(pospicInformation[pospicresult].text);
 	buffer.push('');
-	
-	
 	
 	let medicalSelected = document.getElementById('medicalattention');
 	let medicalInformation = {
