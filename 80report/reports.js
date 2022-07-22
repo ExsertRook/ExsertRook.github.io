@@ -30,10 +30,10 @@ function report() {
 	buffer.push('');
 	
 	buffer.push(`[INVOLVED IN PURSUIT]:`);
-	if (primary || primaryp) buffer.push(`Primary: ${primary} & ${primaryp}`);
-	if (secondary || secondaryp) buffer.push(`Secondary: ${secondary} & ${secondaryp}`);
-	if (tertiary || tertiaryp) buffer.push(`Tertiary: ${tertiary} & ${tertiaryp}`);
-	if (parallel || parallelp) buffer.push(`Parallel: ${parallel} & ${parallelp}`);
+	if (primary || primaryp) buffer.push(`Primary: ${primary} ${primaryp}`);
+	if (secondary || secondaryp) buffer.push(`Secondary: ${secondary} ${secondaryp}`);
+	if (tertiary || tertiaryp) buffer.push(`Tertiary: ${tertiary} ${tertiaryp}`);
+	if (parallel || parallelp) buffer.push(`Parallel: ${parallel} ${parallelp}`);
 	if (airunit) buffer.push(`Air-1: ${airunit}`);
 	if (bikeunit) buffer.push(`Bike-Unit: ${bikeunit}`);
 	buffer.push('');
