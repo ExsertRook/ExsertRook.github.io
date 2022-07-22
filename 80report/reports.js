@@ -18,18 +18,22 @@ function report() {
 	buffer.push(callsign);	
 	
 	let primary = document.getElementById('primary').value;
+	let primaryp = document.getElementById('primaryp').value;
 	let secondary = document.getElementById('secondary').value;
+	let secondaryp = document.getElementById('secondaryp').value;
 	let tertiary = document.getElementById('tertiary').value;
+	let tertiaryp = document.getElementById('tertiaryp').value;
 	let parallel = document.getElementById('parallel').value;
+	let parallelp = document.getElementById('parallelp').value;
 	let airunit = document.getElementById('airunit').value;
 	let bikeunit = document.getElementById('bikeunit').value;
 	buffer.push('');
 	
 	buffer.push(`[INVOLVED IN PURSUIT]:`);
-	if (primary) buffer.push(`Primary: ${primary}`);
-	if (secondary) buffer.push(`Secondary: ${secondary}`);
-	if (tertiary) buffer.push(`Tertiary: ${tertiary}`);
-	if (parallel) buffer.push(`Parallel: ${parallel}`);
+	if (primary || primaryp) buffer.push(`Primary: ${primary} & ${primaryp}`);
+	if (secondary || secondaryp) buffer.push(`Secondary: ${secondary} & ${secondaryp}`);
+	if (tertiary || tertiaryp) buffer.push(`Tertiary: ${tertiary} & ${tertiaryp}`);
+	if (parallel || parallelp) buffer.push(`Parallel: ${parallel} & ${parallelp}`);
 	if (airunit) buffer.push(`Air-1: ${airunit}`);
 	if (bikeunit) buffer.push(`Bike-Unit: ${bikeunit}`);
 	buffer.push('');
