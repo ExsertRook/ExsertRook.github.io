@@ -91,6 +91,9 @@ function report() {
 		'Brandishing a weapon': {
 			text: 'During regular patrol, we had noticed an individual brandishing a weapon in a public area. Upon approaching the individual, they decided to get into a vehicle and evade from police, initiating a 10-80A.',
 		},
+		'2 Handed Weapon In Mount Zonah': {
+			text: 'During regular patrol, we had payed a visit to Mount Zonah. While we were there, we noticed an individual who had a two handed weapon on their back roaming around the hospital. In an attempt to detain the individual, they ran for their vehicle and initiated a 10-80A.',
+		},
 		'911 Call': {
 			text: 'During regular patrol, we responded to a 911 text from an individual in need of assistance. When we got to the scene of the 911 call, the person that was in question of commiting a crime decided to evade from the police in their vehicle, initiating a 10-80A.',
 		},
