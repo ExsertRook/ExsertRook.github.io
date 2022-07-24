@@ -167,6 +167,9 @@ function report() {
 		},
 		'Vehicle blew up': {
 			text: 'The chase lasted for a bit of time until they had drove so recklessly to the point where they had accidentally hit an explosive and blew up their vehicle. After recieving medical attention, the suspects were apprehended and placed under police custody.',
+		},
+		'Shot at officers': {
+			text: 'The chase lasted for a bit of time until they had began opening fire on units pursuing them. A short exchange of gunfire had lasted and the suspects were incapacitated. After recieving medical attention, the suspects were placed under police custody.',
 		}
 	};
 	let chase = chaseSelected.options[chaseSelected.selectedIndex].text;
