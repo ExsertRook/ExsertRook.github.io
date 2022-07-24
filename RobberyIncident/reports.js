@@ -27,10 +27,11 @@ function report() {
 	let parallel = document.getElementById('parallel').value;
 	let airunit = document.getElementById('airunit').value;
 	if (scenecommand || negotiator) buffer.push('');
-
-	if (scenecommand) buffer.push(`[SCENE COMMAND]: ${scenecommand}`);
-	if (negotiator) buffer.push(`[NEGOTIATOR]: ${negotiator}`);
-	if (hostagestayer) buffer.push(`[STAYED BACK FOR HOSTAGE]: ${hostagestayer}`);
+	
+	buffer.push(`[SCENE ASSIGNMENT]:`);
+	if (scenecommand) buffer.push(`Scene Command: ${scenecommand}`);
+	if (negotiator) buffer.push(`Negotiator: ${negotiator}`);
+	if (hostagestayer) buffer.push(`Stayed Back For Hostage: ${hostagestayer}`);
 	
 	buffer.push('');
 	buffer.push(`[INVOLVED IN PURSUIT]:`);
