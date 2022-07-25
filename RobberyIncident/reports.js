@@ -119,9 +119,96 @@ function report() {
 	let vehiclereg = document.getElementById('vehiclereg').value
 	if (vehicledesc) vehicledesc = ` which was a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
 	buffer.push(`We then let them get into their vehicle${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}. Once everyone was ready, the chase started and they attempted to evade from police recklessly.`);
-	buffer.push(`The chase lasted for a bit of time until (write later how it ended)`);
 	buffer.push('');
 
+	let chaseSelected = document.getElementById('chaseend');
+	let chaseInformation = {
+		'Vehicle disabled | Ran on foot | Caught': {
+			text: '',
+		},
+		'Vehicle disabled | Ran on foot | Escaped': {
+			text: '',
+		},
+		'Vehicle disabled | Vehicle swap | Caught': {
+			text: '',
+		},
+		'Vehicle disabled | Vehicle swap | Escaped': {
+			text: '',
+		},
+		'Vehicle disabled | Surrendered': {
+			text: '',
+		},
+		'Vehicle boxed in | Ran on foot | Caught': {
+			text: '',
+		},
+		'Vehicle boxed in | Ran on foot | Escaped': {
+			text: '',
+		},
+		'Vehicle boxed in | Surrendered': {
+			text: '',
+		},
+		'Attempted Vehicle swap | Caught': {
+			text: '',
+		},
+		'Vehicle swap x1': {
+			text: '',
+		},
+		'Vehicle swap x2': {
+			text: '',
+		},
+		'Bike swap | Caught': {
+			text: '',
+		},
+		'Bike swap | Escaped': {
+			text: '',
+		},
+		'Vehicle ran out of fuel | Ran on foot | Transfer vehicle | Caught': {
+			text: '',
+		},
+		'Vehicle ran out of fuel | Ran on foot | Transfer vehicle | Escaped': {
+			text: '',
+		},
+		'Vehicle ran out of fuel | Ran on foot | Caught': {
+			text: '',
+		},
+		'Vehicle ran out of fuel | Ran on foot | Escaped': {
+			text: '',
+		},
+		'Vehicle ran out of fuel | Surrendered': {
+			text: '',
+		},
+		'Vehicle turtled | Ran on foot | Transfer vehicle | Caught': {
+			text: '',
+		},
+		'Vehicle turtled | Ran on foot | Transfer vehicle | Escaped': {
+			text: '',
+		},
+		'Vehicle turtled | Ran on foot | Caught': {
+			text: '',
+		},
+		'Vehicle turtled | Ran on foot | Escaped': {
+			text: '',
+		},
+		'Vehicle turtled | Surrendered': {
+			text: '',
+		},
+		'Vehicle was sent into water | Caught': {
+			text: '',
+		},
+		'Vehicle was sent into water | Escaped': {
+			text: '',
+		},
+		'Vehicle blew up': {
+			text: '',
+		},
+		'Vehicle took a jump | Escaped': {
+			text: '',
+		}
+	};
+	let chase = chaseSelected.options[chaseSelected.selectedIndex].text;
+	buffer.push(chaseInformation[chase].text);
+	buffer.push('');
+	
 	let medicalSelected = document.getElementById('medicalattention');
 	let medicalInformation = {
 		'Was requested by multiple suspects': {
