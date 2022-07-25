@@ -93,8 +93,8 @@ function report() {
 	
 	let demands = [];
 	let demandsText = '';
-	if (document.getElementById('fpassage').checked) demands.push("free passage");
-	if (document.getElementById('nspikes').checked) demands.push("no spike strips");
+	if (document.getElementById('fpassagensp').checked) demands.push("free passage with no spike strips on the perimeter");
+	if (document.getElementById('fpassagensf').checked) demands.push("free passage with no spike strips on the whole chase");
 	if (document.getElementById('nair').checked) demands.push("no helicopter/air1");
 	if (document.getElementById('nspeed').checked) demands.push("no speed unit");
 	if (document.getElementById('nbike').checked) demands.push("no bike unit");
