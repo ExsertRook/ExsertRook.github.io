@@ -123,6 +123,9 @@ function report() {
 
 	let chaseSelected = document.getElementById('chaseend');
 	let chaseInformation = {
+		'To Be Due': {
+			text: 'Chase still ongoing',
+		},
 		'Vehicle disabled | Ran on foot | Caught': {
 			text: '',
 		},
