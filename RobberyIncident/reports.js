@@ -127,10 +127,10 @@ function report() {
 			text: 'Chase still ongoing',
 		},
 		'Vehicle disabled | Ran on foot | Caught': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they got out of the disabled vehicle and ran on foot in hopes of getting away. The suspects were eventually apprehended and placed under police custody.',
 		},
 		'Vehicle disabled | Ran on foot | Escaped': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they got out of the disabled vehicle and ran on foot in hopes of getting away. The suspects then managed to out maneuver our ground units and eventually escape police custody.',
 		},
 		'Vehicle disabled | Vehicle swap | Caught': {
 			text: 'The chase lasted for a bit of time until',
