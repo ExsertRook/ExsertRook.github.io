@@ -127,85 +127,85 @@ function report() {
 			text: 'Chase still ongoing',
 		},
 		'Vehicle disabled | Ran on foot | Caught': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle disabled | Ran on foot | Escaped': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle disabled | Vehicle swap | Caught': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle disabled | Vehicle swap | Escaped': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle disabled | Surrendered': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle boxed in | Ran on foot | Caught': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle boxed in | Ran on foot | Escaped': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle boxed in | Surrendered': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Attempted Vehicle swap | Caught': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle swap x1': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle swap x2': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Bike swap | Caught': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Bike swap | Escaped': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle ran out of fuel | Ran on foot | Transfer vehicle | Caught': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle ran out of fuel | Ran on foot | Transfer vehicle | Escaped': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle ran out of fuel | Ran on foot | Caught': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle ran out of fuel | Ran on foot | Escaped': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle ran out of fuel | Surrendered': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle turtled | Ran on foot | Transfer vehicle | Caught': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle turtled | Ran on foot | Transfer vehicle | Escaped': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle turtled | Ran on foot | Caught': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle turtled | Ran on foot | Escaped': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle turtled | Surrendered': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle was sent into water | Caught': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle was sent into water | Escaped': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle blew up': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle took a jump | Escaped': {
-			text: '',
+			text: 'The chase lasted for a bit of time until',
 		}
 	};
 	let chase = chaseSelected.options[chaseSelected.selectedIndex].text;
