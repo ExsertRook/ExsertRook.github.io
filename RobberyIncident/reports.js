@@ -123,8 +123,8 @@ function report() {
 
 	let chaseSelected = document.getElementById('chaseend');
 	let chaseInformation = {
-		'To Be Due': {
-			text: 'Chase still ongoing',
+		'Write Custom Ending': {
+			text: 'The chase lasted for a bit of time until ...',
 		},
 		'Vehicle disabled | Ran on foot | Caught': {
 			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they got out of the disabled vehicle and ran on foot in hopes of getting away. The suspects were eventually apprehended and placed under police custody.',
