@@ -136,7 +136,7 @@ function report() {
 			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they got out of the disabled vehicle and made a run for a vehicle that attempted to pick them up and assist them. Both the vehicle that attempted to pick them up and the original suspects were eventually apprehended and placed under police custody.',
 		},
 		'Vehicle disabled | Vehicle swap | Escaped': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they got out of the disabled vehicle and made a run for a vehicle that attempted to pick them up and assist them. After us losing eyes on them and performing a Code 6 of the general vicinity, both the vehicle that attempted to pick them up and the original suspects eventually escaped police custody.',
 		},
 		'Vehicle disabled | Surrendered': {
 			text: 'The chase lasted for a bit of time until',
