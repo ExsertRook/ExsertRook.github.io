@@ -139,46 +139,46 @@ function report() {
 			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they got out of the disabled vehicle and made a run for a vehicle that attempted to pick them up and assist them. After us losing eyes on them and performing a Code 6 of the general vicinity, both the vehicle that attempted to pick them up and the original suspects eventually escaped police custody.',
 		},
 		'Vehicle disabled | Surrendered': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until their vehicle had disabled from crashing it too many times. From there they were smart enough to surrender and not flee on foot. The suspects were eventually apprehended and placed under police custody.',
 		},
 		'Vehicle boxed in | Ran on foot | Caught': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until our pursuing ground units managed to pin the vehicle and box it in to where they could not move anymore. From there they got out of the boxed in vehicle and ran on foot in hopes of getting away. The suspects were eventually apprehended and placed under police custody.',
 		},
 		'Vehicle boxed in | Ran on foot | Escaped': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until our pursuing ground units managed to pin the vehicle and box it in to where they could not move anymore. From there they got out of the boxed in vehicle and ran on foot in hopes of getting away. After us losing eyes on them and performing a Code 6 of the general vicinity, the suspects eventually escaped police custody.',
 		},
 		'Vehicle boxed in | Surrendered': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until our pursuing ground units managed to pin the vehicle and box it in to where they could not move anymore. From there they were smart enough to surrender and not flee on foot. The suspects were eventually apprehended and placed under police custody.',
 		},
 		'Attempted Vehicle swap | Caught': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until they attempted to swap into a different vehicle but failed in the process. Shortly after the fleeing suspects had been apprehended and placed under police custody.',
 		},
 		'Vehicle swap x1': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until they hopped out and got into a swap/transfer vehicle and the chase continued from there. Eventually after that pickup vehicle, the suspects were apprehended and placed under police custody.',
 		},
 		'Vehicle swap x2': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until they hopped out and got into a swap/transfer vehicle and the chase continued from there. Eventually after that pickup vehicle, the suspects had another vehicle swap/transfer and the chase continued from there on. Eventually after that pickup vehicle, the suspects were apprehended and placed under police custody.',
 		},
 		'Bike swap | Caught': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until the hopped out of the car and got onto a bike that was set ready for them. The bike was then pursued and eventually the occupants fell off of the bike. The suspects were apprehended and placed under police custody.',
 		},
 		'Bike swap | Escaped': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until the hopped out of the car and got onto a bike that was set ready for them. The bike was then pursued and eventually our ground units had lost eyes on them. After a Code 6 was performed, we did not manage to find the suspects and called the pursuit Code 4.',
 		},
 		'Vehicle ran out of fuel | Ran on foot | Transfer vehicle | Caught': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until their vehicle had ran out of fuel and they got out on foot. Eventually the suspects got into a vehicle that had picked them up. From there another pursuit was initiated. Shortly after those suspects were apprehended and placed under police custody.',
 		},
 		'Vehicle ran out of fuel | Ran on foot | Transfer vehicle | Escaped': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until their vehicle had ran out of fuel and they got out on foot. Eventually the suspects got into a vehicle that had picked them up. From there another pursuit was initiated. After some time had passed and us losing eyes on them, we performed a Code 6 of the general vicinity. Since we didn't manage to find them, the suspects eventually escaped police custody and we called the situation Code 4.',
 		},
 		'Vehicle ran out of fuel | Ran on foot | Caught': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until their vehicle had ran out of fuel and they got out on foot. Eventually the suspects were apprehended and placed under police custody.',
 		},
 		'Vehicle ran out of fuel | Ran on foot | Escaped': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until their vehicle had ran out of fuel and they got out on foot. After us losing eyes on them and performing a Code 6 of the general vicinity, the suspects eventually escaped police custody.',
 		},
 		'Vehicle ran out of fuel | Surrendered': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until their vehicle had ran out of fuel and they got out on foot. From there they were smart enough to surrender and not flee on foot. The suspects were eventually apprehended and placed under police custody.',
 		},
 		'Vehicle turtled | Ran on foot | Transfer vehicle | Caught': {
 			text: 'The chase lasted for a bit of time until',
