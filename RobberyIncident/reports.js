@@ -133,7 +133,7 @@ function report() {
 			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they got out of the disabled vehicle and ran on foot in hopes of getting away. The suspects then managed to out maneuver our ground units and eventually escape police custody.',
 		},
 		'Vehicle disabled | Vehicle swap | Caught': {
-			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they got out of the disabled vehicle and made a run for a vehicle that attempted to pick them up and assist them. Both the vehicle that attempted to pick them up and the original suspects were eventuall apprehended and placed under police custody.',
+			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they got out of the disabled vehicle and made a run for a vehicle that attempted to pick them up and assist them. Both the vehicle that attempted to pick them up and the original suspects were eventually apprehended and placed under police custody.',
 		},
 		'Vehicle disabled | Vehicle swap | Escaped': {
 			text: 'The chase lasted for a bit of time until',
