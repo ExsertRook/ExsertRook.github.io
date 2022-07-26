@@ -153,10 +153,10 @@ function report() {
 		'Attempted Vehicle swap | Caught': {
 			text: 'The chase lasted for a bit of time until they attempted to swap into a different vehicle but failed in the process. Shortly after the fleeing suspects had been apprehended and placed under police custody.',
 		},
-		'Vehicle swap x1': {
+		'Vehicle swap x1 | Caught': {
 			text: 'The chase lasted for a bit of time until they hopped out and got into a swap/transfer vehicle and the chase continued from there. Eventually after that pickup vehicle, the suspects were apprehended and placed under police custody.',
 		},
-		'Vehicle swap x2': {
+		'Vehicle swap x2 | Caught': {
 			text: 'The chase lasted for a bit of time until they hopped out and got into a swap/transfer vehicle and the chase continued from there. Eventually after that pickup vehicle, the suspects had another vehicle swap/transfer and the chase continued from there on. Eventually after that pickup vehicle, the suspects were apprehended and placed under police custody.',
 		},
 		'Bike swap | Caught': {
