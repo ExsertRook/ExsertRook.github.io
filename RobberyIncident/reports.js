@@ -126,6 +126,9 @@ function report() {
 		'Write Custom Ending': {
 			text: 'The chase lasted for a bit of time until ...',
 		},
+		'Units lost eyes | Escaped': {
+			text: 'The chase lasted for a bit of time until our pursuing units lost eyes on the suspects vehicle. After performing a search near the area where we lost eyes, we did not manage to find them.',
+		},	
 		'Vehicle disabled | Ran on foot | Caught': {
 			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they got out of the disabled vehicle and ran on foot in hopes of getting away. The suspects were eventually apprehended and placed under police custody.',
 		},
