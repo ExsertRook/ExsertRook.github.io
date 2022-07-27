@@ -202,7 +202,7 @@ function report() {
 			text: 'The chase lasted for a bit of time until they had drove their vehicle into the water. Eventually after pursuing the suspects in the water, we lost eyes on all the fleeing suspects and they have escaped under police custody.',
 		},
 		'Vehicle blew up': {
-			text: 'The chase lasted for a bit of time until they had drove so recklessly to the point where they had accidentally hit an explosive and blew up their vehicle. After recieving medical attention, the suspects were apprehended and placed under police custody.',
+			text: 'The chase lasted for a bit of time until they had drove so recklessly to the point where they had accidentally hit an explosive and blew up their vehicle. After receiving medical attention, the suspects were apprehended and placed under police custody.',
 		},
 		'Vehicle took a jump | Escaped': {
 			text: 'The chase lasted for a bit of time until',
