@@ -208,7 +208,7 @@ function report() {
 			text: 'The chase lasted for a bit of time until they had drove so recklessly to the point where they had accidentally hit an explosive and blew up their vehicle. After receiving medical attention, the suspects were apprehended and placed under police custody.',
 		},
 		'Vehicle took a jump | Escaped': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until we lost eyes on the suspects because they took a jump. Our pursuing vehicles failed to do the jump and we called the chase VCB.',
 		}
 	};
 	let chase = chaseSelected.options[chaseSelected.selectedIndex].text;
