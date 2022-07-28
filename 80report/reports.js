@@ -114,6 +114,9 @@ function report() {
 		},
 		'EMS to PD Call': {
 			text: 'During regular patrol, we had EMS contact us through our radio requesting assistance at the location mentioned above. Once we arrived, the individual that matched the description EMS pointed out began fleeing, initiating a 10-80A.',
+		},
+		'Evading a Parking Ticket': {
+			text: 'During regular patrol, we were dealing with a vehicle that was illegally parked. When talking to the drive of the vehicle and asking them to sign the parking citation, they decided to flee, initiating a 10-80A.',
 		}
 	};
 	let pursuit = pursuitSelected.options[pursuitSelected.selectedIndex].text;
