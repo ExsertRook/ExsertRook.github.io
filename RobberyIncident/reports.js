@@ -196,7 +196,7 @@ function report() {
 			text: 'The chase lasted for a bit of time until',
 		},
 		'Vehicle turtled | Surrendered': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until their vehicle had gotten stuck on the roof, turtling. The suspects then climbed out of the vehicle and were smart enough not to run but instead surrender. From there, the suspects were apprehended and placed under police custody.',
 		},
 		'Vehicle was sent into water | Caught': {
 			text: 'The chase lasted for a bit of time until they had drove their vehicle into the water. Eventually after pursuing the suspects in the water, they were all apprehended and placed under police custody.',
