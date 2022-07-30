@@ -15,7 +15,8 @@ function report() {
 
 	buffer = [];
 	buffer.push("[REPORTING OFFICER]:");
-	buffer.push(callsign);	
+	buffer.push(callsign);
+	buffer.push('');
 
 	buffer.push(`[VEHICLE | CHASE]:`);
 	let plate = document.getElementById('vehicleplate').value;
