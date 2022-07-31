@@ -190,7 +190,6 @@ function report() {
 	let occupants = document.getElementById('occupants').value;
 	if (vehicledesc) vehicledesc = ` was a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
 	buffer.push(`The vehicle we were pursuing${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}. There were a total of ${occupants} occupants inside of the vehicle.`);
-	buffer.push('');
 	
 	let flaggedSelected = document.getElementById('flaggedquestion');
 	let flaggedInformation = {
