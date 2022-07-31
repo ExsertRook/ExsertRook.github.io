@@ -192,6 +192,18 @@ function report() {
 	buffer.push(`The vehicle we were pursuing${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}. There were a total of ${occupants} occupants inside of the vehicle.`);
 	buffer.push('');
 	
+	let flaggedSelected = document.getElementById('flaggedquestion');
+	let flaggedInformation = {
+		'Yes': {
+			text: 'After running the plate of the vehicle used in crime, it came back as flagged stolen.',
+		},
+		'No': {
+			text: 'After running the plate of the vehicle used in crime, it came back as not flagged stolen.',
+		}
+	};
+	let flagged = flaggedSelected.options[flaggedSelected.selectedIndex].text;
+	buffer.push(flaggedInformation[flagged].text);
+	buffer.push('');
 
 	let medicalSelected = document.getElementById('medicalattention');
 	let medicalInformation = {
