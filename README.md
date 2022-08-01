@@ -4,5 +4,8 @@
     Here are all of the incident report generators that I have made so far:<br />
     https://exsertrook.github.io/RobberyIncident/<br />
     https://exsertrook.github.io/80report/<br />
-    https://exsertrook.github.io/casingsreport/
+    https://exsertrook.github.io/casingsreport/<br />
+    https://exsertrook.github.io/67report/<br />
+    https://exsertrook.github.io/drugarrest/<br />
+    https://exsertrook.github.io/vehicleholdreport/
 </p>
