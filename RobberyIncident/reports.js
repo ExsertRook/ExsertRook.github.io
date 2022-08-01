@@ -184,16 +184,16 @@ function report() {
 			text: 'The chase lasted for a bit of time until their vehicle had ran out of fuel and they got out on foot. From there they were smart enough to surrender and not flee on foot. The suspects were eventually apprehended and placed under police custody.',
 		},
 		'Vehicle turtled | Ran on foot | Transfer vehicle | Caught': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until they managed to drive so recklessly to the point that their car had ended up turtling. The suspects then climbed out of the vehicle and began fleeing on foot.',
 		},
 		'Vehicle turtled | Ran on foot | Transfer vehicle | Escaped': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until they managed to drive so recklessly to the point that their car had ended up turtling. The suspects then climbed out of the vehicle and began fleeing on foot.',
 		},
 		'Vehicle turtled | Ran on foot | Caught': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until they managed to drive so recklessly to the point that their car had ended up turtling. The suspects then climbed out of the vehicle and began fleeing on foot. Eventually our pursuing units managed to detain the running suspects and place them under police custody.',
 		},
 		'Vehicle turtled | Ran on foot | Escaped': {
-			text: 'The chase lasted for a bit of time until',
+			text: 'The chase lasted for a bit of time until they managed to drive so recklessly to the point that their car had ended up turtling. The suspects then climbed out of the vehicle and began fleeing on foot. Eventually our pursuing units managed to lose eyes on the suspects and we called the chase VCB.',
 		},
 		'Vehicle turtled | Surrendered': {
 			text: 'The chase lasted for a bit of time until their vehicle had gotten stuck on the roof, turtling. The suspects then climbed out of the vehicle and were smart enough not to run but instead surrender. From there, the suspects were apprehended and placed under police custody.',
