@@ -26,6 +26,7 @@ function report() {
 	let tertiary = document.getElementById('tertiary').value;
 	let parallel = document.getElementById('parallel').value;
 	let airunit = document.getElementById('airunit').value;
+	let bikeunit = document.getElementById('bikeunit').value;
 	if (scenecommand || negotiator) buffer.push('');
 	
 	buffer.push(`[SCENE ASSIGNMENT]:`);
@@ -40,6 +41,7 @@ function report() {
 	if (tertiary) buffer.push(`Tertiary: ${tertiary}`);
 	if (parallel) buffer.push(`Parallel: ${parallel}`);
 	if (airunit) buffer.push(`Air-1: ${airunit}`);
+	if (bikeunit) buffer.push(`Bike-Unit: ${bikeunit}`);
 	buffer.push('');
 
 	let robbery = document.getElementById('robberytype').value;
