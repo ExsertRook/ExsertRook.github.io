@@ -19,37 +19,64 @@ function report() {
 	buffer.push('');
 	
 	let incident = document.getElementById('incidentnr').value;
-	if (incident) incident = ``;
+	if (incident) incident = `Incident Report Nr: ${incident}`;
 	buffer.push('');
-
-	buffer.push(`[VEHICLE | CHASE]:`);
-	let plate = document.getElementById('vehicleplate').value;
-	let vehicledesc = document.getElementById('vehicledesc').value;
-	let vehiclereg = document.getElementById('vehiclereg').value
-	if (vehicledesc) vehicledesc = ` which was a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
-	buffer.push(`We then let them get into their vehicle${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}. Once everyone was ready, the chase started and they attempted to evade from police recklessly.`);
-	buffer.push(`The chase lasted for a bit of time until (write later how it ended)`);
-	buffer.push('');
-
-	let medicalSelected = document.getElementById('medicalattention');
-	let medicalInformation = {
-		'Was requested by multiple suspects': {
-			label: 'WAS REQUESTED',
-			text: 'After we apprehended the suspects, they requested medical attention. We then transported them to Saint Fiacre where they got further medical attention.',
+	
+	let holdtypeSelected = document.getElementById('holdtype');
+	let holdtypeInformation = {
+		'A': {
+			text: 'Hold Class Type: A',
 		},
-		'Was requested by one suspect': {
-			label: 'ONE REQUESTED',
-			text: 'After we apprehended the suspects, one of them requested or needed medical attention. We then transported that suspect to Saint Fiacre where they got further medical attention.',
+		'B': {
+			text: 'Hold Class Type: B',
 		},
-		'Was not requested or needed': {
-			label: 'WAS NOT REQUESTED',
-			text: 'After we apprehended the suspects, they did not request or need any medical attention.',
+		'C': {
+			text: 'Hold Class Type: C',
+		},
+		'D': {
+			text: 'Hold Class Type: D',
 		}
 	};
-	let medical = medicalSelected.options[medicalSelected.selectedIndex].text;
-	buffer.push(`[MEDICAL ATTENTION | ${medicalInformation[medical].label}]:`);
-	buffer.push(medicalInformation[medical].text);
+	let holdtype = holdtypeSelected.options[holdtypeSelected.selectedIndex].text;
+	buffer.push(holdtypeInformation[holdtype].text);
 	buffer.push('');
+	
+	let holdtimeSelected = document.getElementById('holdtime');
+	let holdtimeInformation = {
+		'12 Hours': {
+			text: 'Hold Time: 12 Hours',
+		},
+		'90 Minutes': {
+			text: 'Hold Time: 90 Minutes',
+		},
+		'60 Minutes': {
+			text: 'Hold Time: 60 Minutes',
+		},
+		'30 Minutes': {
+			text: 'Hold Time: 30 Minutes',
+		}
+	};
+	let holdtime = holdtimeSelected.options[holdtimeSelected.selectedIndex].text;
+	buffer.push(holdtimeInformation[holdtime].text);
+	buffer.push('');
+	
+	let vin = document.getElementById('vin').value;
+	if (vin) vin = `Vehicle VIN Nr: ${vin}`;
+	buffer.push('');
+	
+	let plate = document.getElementById('plate').value;
+	if (plate) plate = `Vehicle Plate Nr: ${plate}`;
+	buffer.push('');
+	
+	let owner = document.getElementById('owner').value;
+	if (owner) owner = `Vehicle Owner: ${owner}`;
+	buffer.push('');
+
+	let vehicle = document.getElementById('vehiclename').value;
+	if (vehicle) vehicle = `Vehicle Model/Name: ${vehicle}`;
+	buffer.push('');
+
+	
 	
 	let curDarkmode = document.getElementById('darkmode').checked;
 	if (curDarkmode) {
