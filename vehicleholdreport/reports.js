@@ -15,7 +15,12 @@ function report() {
 
 	buffer = [];
 	buffer.push("[REPORTING OFFICER]:");
-	buffer.push(callsign);	
+	buffer.push(callsign);
+	buffer.push('');
+	
+	let incident = document.getElementById('incidentnr').value;
+	if (incident) incident = ``;
+	buffer.push('');
 
 	buffer.push(`[VEHICLE | CHASE]:`);
 	let plate = document.getElementById('vehicleplate').value;
@@ -45,10 +50,6 @@ function report() {
 	buffer.push(`[MEDICAL ATTENTION | ${medicalInformation[medical].label}]:`);
 	buffer.push(medicalInformation[medical].text);
 	buffer.push('');
-
-	let processed = document.getElementById('processedat').value;
-	buffer.push('[PROCESSED]:');
-	buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
 	
 	let curDarkmode = document.getElementById('darkmode').checked;
 	if (curDarkmode) {
