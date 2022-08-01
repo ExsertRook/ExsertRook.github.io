@@ -184,10 +184,10 @@ function report() {
 			text: 'The chase lasted for a bit of time until their vehicle had ran out of fuel and they got out on foot. From there they were smart enough to surrender and not flee on foot. The suspects were eventually apprehended and placed under police custody.',
 		},
 		'Vehicle turtled | Ran on foot | Transfer vehicle | Caught': {
-			text: 'The chase lasted for a bit of time until they managed to drive so recklessly to the point that their car had ended up turtling. The suspects then climbed out of the vehicle and began fleeing on foot.',
+			text: 'The chase lasted for a bit of time until they managed to drive so recklessly to the point that their car had ended up turtling. The suspects then climbed out of the vehicle and began fleeing on foot. Eventually the fleeing suspects then managed to get into a vehicle that was ready to pick them up. Our ground units eventually managed to apprehend the suspects and place them under police custody.',
 		},
 		'Vehicle turtled | Ran on foot | Transfer vehicle | Escaped': {
-			text: 'The chase lasted for a bit of time until they managed to drive so recklessly to the point that their car had ended up turtling. The suspects then climbed out of the vehicle and began fleeing on foot.',
+			text: 'The chase lasted for a bit of time until they managed to drive so recklessly to the point that their car had ended up turtling. The suspects then climbed out of the vehicle and began fleeing on foot. Eventually the fleeing suspects then managed to get into a vehicle that was ready to pick them up. Our ground units eventually lost eyes on the pickup vehicle.',
 		},
 		'Vehicle turtled | Ran on foot | Caught': {
 			text: 'The chase lasted for a bit of time until they managed to drive so recklessly to the point that their car had ended up turtling. The suspects then climbed out of the vehicle and began fleeing on foot. Eventually our pursuing units managed to detain the running suspects and place them under police custody.',
