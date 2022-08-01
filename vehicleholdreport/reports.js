@@ -19,7 +19,7 @@ function report() {
 	buffer.push('');
 	
 	let incident = document.getElementById('incidentnr').value;
-	if (incident) incident = `Incident Report Nr: ${incident}`;
+	if (incident) buffer.push(`Incident Report Nr: ${incident}`);
 	buffer.push('');
 	
 	let holdtypeSelected = document.getElementById('holdtype');
@@ -61,19 +61,19 @@ function report() {
 	buffer.push('');
 	
 	let vin = document.getElementById('vin').value;
-	if (vin) vin = `Vehicle VIN Nr: ${vin}`;
+	if (vin) buffer.push(`Vehicle VIN Nr: ${vin}`);
 	buffer.push('');
 	
 	let plate = document.getElementById('plate').value;
-	if (plate) plate = `Vehicle Plate Nr: ${plate}`;
+	if (plate) buffer.push(`Vehicle Plate Nr: ${plate}`);
 	buffer.push('');
 	
 	let owner = document.getElementById('owner').value;
-	if (owner) owner = `Vehicle Owner: ${owner}`;
+	if (owner) buffer.push(`Vehicle Owner: ${owner}`);
 	buffer.push('');
 
 	let vehicle = document.getElementById('vehiclename').value;
-	if (vehicle) vehicle = `Vehicle Model/Name: ${vehicle}`;
+	if (vehicle) buffer.push(`Vehicle Model/Name: ${vehicle}`);
 	buffer.push('');
 
 	
