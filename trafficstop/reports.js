@@ -17,12 +17,12 @@ function report() {
 	buffer.push("[REPORTING OFFICER]:");
 	buffer.push(callsign);
 	buffer.push('');
-
+	
+	buffer.push(`[STOP INFORMATION]:`);
 	let location = document.getElementById('location').value;
 	if (location) buffer.push(`During routine patrol, we pulled over a vehicle next to ${location}.`);
 	buffer.push('');
 	
-	buffer.push(`[STOP INFORMATION]:`);
 	let stopreasonSelected = document.getElementById('stopreason');
 	let stopreasonInformation = {
 		'Excessive Speeding (30Mph Over Limit)': {
