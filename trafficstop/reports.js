@@ -42,6 +42,9 @@ function report() {
 	};
 	let stopreason = stopreasonSelected.options[stopreasonSelected.selectedIndex].text;
 	buffer.push(stopreasonInformation[stopreason].text);
+	
+	let speed = document.getElementById('speed').value;
+	if (speed) buffer.push(`The exact speed that the vehicle we clocked at was travelling at ${speed}.`);
 	buffer.push('');
 	
 	buffer.push(`[VEHICLE DESCRIPTION]:`);
