@@ -44,7 +44,7 @@ function report() {
 	buffer.push(stopreasonInformation[stopreason].text);
 	
 	let speed = document.getElementById('speed').value;
-	if (speed) buffer.push(`The exact speed that the vehicle we clocked at was travelling at ${speed}.`);
+	if (speed) buffer.push(`The exact speed we clocked the vehicle travelling at was ${speed}.`);
 	buffer.push('');
 	
 	buffer.push(`[VEHICLE DESCRIPTION]:`);
