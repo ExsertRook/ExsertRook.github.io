@@ -20,8 +20,7 @@ function report() {
 	
 	buffer.push(`[STOP INFORMATION]:`);
 	let location = document.getElementById('location').value;
-	if (location) buffer.push(`During routine patrol, we pulled over a vehicle next to ${location}.`);
-	buffer.push('');
+	if (location) buffer.push(`During routine patrol, we pulled over a vehicle next to ${location}.`);\
 	
 	let stopreasonSelected = document.getElementById('stopreason');
 	let stopreasonInformation = {
