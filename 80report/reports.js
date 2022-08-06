@@ -138,6 +138,12 @@ function report() {
 		'Vehicle disabled | Vehicle swap': {
 			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they hopped out and got into a swap/transfer vehicle and the chase continued from there. Eventually after that pickup vehicle, the suspects were apprehended and placed under police custody.',
 		},
+		'Got out of vehicle | Ran on foot | Caught': {
+			text: 'The chase lasted for a bit of time until they had stopped their car and stepped out of it. The suspects initiated a 10-80B and attempted to evade on foot. Our pursuing units eventually managed to apprehend the suspects and place them under police custody.',
+		},
+		'Got out of vehicle | Ran on foot | Escaped': {
+			text: 'The chase lasted for a bit of time until they had stopped their car and stepped out of it. The suspects initiated a 10-80B and attempted to evade on foot.',
+		},
 		'Vehicle boxed in | Ran on foot': {
 			text: 'The chase lasted for a bit of time until our pursuing ground units managed to pin the vehicle and box it in to where they could not move anymore. From there they got out of the boxed in vehicle and ran on foot in hopes of getting away. The suspects were eventually apprehended and placed under police custody.',
 		},
