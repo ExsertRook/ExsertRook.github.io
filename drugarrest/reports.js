@@ -41,17 +41,31 @@ function report() {
 	let susranSelected = document.getElementById('susran');
 	let susranInformation = {
 		'Yes': {
-			text: 'Once we moved in to talk to the suspect, they made an attempt to run but they were eventually apprehended and placed under police custody.',
+			text: 'Once we moved in to talk to the suspect, they made an attempt to run but they were eventually apprehended and placed under police detainment.',
 		},
 		'No': {
-			text: 'Once we moved in to talk to the suspect, they did not make an attempt to run and we placed them under police custody.',
+			text: 'Once we moved in to talk to the suspect, they did not make an attempt to run and we had them detained for the time being until we gained more information about the scene.',
 		}
 	};
 	
 	let susranresult = susranSelected.options[susranSelected.selectedIndex].text;
 	buffer.push(susranInformation[susranresult].text);
 	
-	buffer.push('Once we swabbed their hands for any possible drug residue and ran it through a test, the results came back positive for drug residue. The suspect was then placed into handcuffs.');
+	let testresultsSelected = document.getElementById('testresults');
+	let testresultsInformation = {
+		'Negative': {
+			text: 'Once we swabbed their hands for any possible drug residue and ran it through a test, the results came back negative for any drug residue.',
+		},
+		'Minor amounts': {
+			text: 'Once we swabbed their hands for any possible drug residue and ran it through a test, the results came back positive for minor amounts of drug residue.',
+		},
+		'Moderate amounts': {
+			text: 'Once we swabbed their hands for any possible drug residue and ran it through a test, the results came back positive for moderate amounts of drug residue.',
+		}
+	};
+	
+	let testresultsresult = testresultsSelected.options[testresultsSelected.selectedIndex].text;
+	buffer.push(testresultsInformation[testresultsresult].text);
 
 	let drugSelected = document.getElementById('drugtype');
 	let drugInformation = {
