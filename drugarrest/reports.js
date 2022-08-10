@@ -38,7 +38,20 @@ function report() {
 	buffer.push(pospicInformation[pospicresult].text);
 	buffer.push('');
 
-	buffer.push('The suspect did not make an attempt to run and we managed to talk to them. Once we swabbed their hands for any possible drug residue and ran it through a test, the results came back positive for drug residue. The suspect was then placed into handcuffs.');
+	let susranSelected = document.getElementById('susran');
+	let susranInformation = {
+		'Yes': {
+			text: 'Once we moved in to talk to the suspect, they made an attempt to run but they were eventually apprehended and placed under police custody.',
+		},
+		'No': {
+			text: 'Once we moved in to talk to the suspect, they did not make an attempt to run and we placed them under police custody.',
+		}
+	};
+	
+	let susranresult = susranSelected.options[susranSelected.selectedIndex].text;
+	buffer.push(susranInformation[susranresult].text);
+	
+	buffer.push('Once we swabbed their hands for any possible drug residue and ran it through a test, the results came back positive for drug residue. The suspect was then placed into handcuffs.');
 
 	let drugSelected = document.getElementById('drugtype');
 	let drugInformation = {
