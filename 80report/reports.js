@@ -73,6 +73,9 @@ function report() {
 		'10-66': {
 			text: 'During regular patrol, we responded to some 10-66 calls. Once arriving there, we noticed an individual acting suspicious so we approached them for further investigation. Upon approaching them, they then decided to get into their vehicle and flee, initiating a 10-80A.',
 		},
+		'Stolen PD Car': {
+			text: 'During regular patrol, we noticed a PD vehicle roaming around with no tracker on. As we came closer to investigate, the person then decided to run, initiating a 10-80A.',
+		},
 		'10-71': {
 			text: 'During regular patrol, we responded to some 10-71 calls. Once arriving there, we noticed an individual that was fleeing the immediate area of the shots fired calls. We then chased after them, initiating a 10-80A.',
 		},
