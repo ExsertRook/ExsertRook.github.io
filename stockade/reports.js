@@ -18,9 +18,9 @@ function report() {
 	buffer.push(callsign);
 	buffer.push('');
 	
-	buffer.push(`[STOP INFORMATION]:`);
+	buffer.push(`[DESCRIBE INCIDENT]:`);
 	let location = document.getElementById('location').value;
-	if (location) buffer.push(`During routine patrol, we pulled over a vehicle next to ${location}.`);
+	if (location) buffer.push(`During routine patrol, we had a dispatch call come in from a Stockade Armored Truck requesting immediate assitance over by ${location}.`);
 	buffer.push('');
 	
 	buffer.push(`[VEHICLE DESCRIPTION]:`);
