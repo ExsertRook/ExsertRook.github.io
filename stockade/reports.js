@@ -22,27 +22,6 @@ function report() {
 	let location = document.getElementById('location').value;
 	if (location) buffer.push(`During routine patrol, we pulled over a vehicle next to ${location}.`);
 	
-	let stopreasonSelected = document.getElementById('stopreason');
-	let stopreasonInformation = {
-		'Excessive Speeding (30Mph Over Limit)': {
-			text: 'The reason for us pulling over the vehicle was because we caught them excessively speeding.',
-		},
-		'Flagged Plate': {
-			text: 'The reason for us pulling over the vehicle was because after running the plate of the vehicle, it came back as flagged.',
-		},
-		'On-Going BOLO': {
-			text: 'The reason for us pulling over the vehicle was because the vehicle matched the description of a vehicle that had an active BOLO on it.',
-		},
-		'Reckless Driving': {
-			text: 'The reason for us pulling over the vehicle was because we caught the driver of the vehicle driving really recklessly and we wanted to check their well-being.',
-		},
-		'Stolen Vehicle (10-31)': {
-			text: 'The reason for us pulling over the vehicle was because we witnessed the vehicle being stolen by the individual that was the driver of the vehicle.',
-		}
-	};
-	let stopreason = stopreasonSelected.options[stopreasonSelected.selectedIndex].text;
-	buffer.push(stopreasonInformation[stopreason].text);
-	
 	let speed = document.getElementById('speed').value;
 	if (speed) buffer.push(`The exact speed we clocked the vehicle travelling at was ${speed}.`);
 	buffer.push('');
