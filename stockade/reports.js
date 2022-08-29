@@ -22,36 +22,6 @@ function report() {
 	let location = document.getElementById('location').value;
 	if (location) buffer.push(`During routine patrol, we pulled over a vehicle next to ${location}.`);
 	
-	let speed = document.getElementById('speed').value;
-	if (speed) buffer.push(`The exact speed we clocked the vehicle travelling at was ${speed}.`);
-	buffer.push('');
-	
-	let arrestreasonSelected = document.getElementById('arrestreason');
-	let arrestreasonInformation = {
-		'Suspended License': {
-			text: 'After analyzing the whole situation and checking the drivers license, we realised that the driver of the vehicle was driving the vehicle with a suspecnded license. We asked them to step out of the car and they complied. From there the driver was placed in handcuffs and under police custody.',
-		},
-		'Driving Under Influence (DUI)': {
-			text: 'After analyzing the whole situation, we noticed that the driver did not seem as sober as they should be. We politely asked them to step out and performed a breathalyzer test on the driver. The results of the test came back and it showed that the driver was not completely sober. We came to the conclusion that the driver was driving under the influence of alcohol and placed them in handcuffs and under police custody.',
-		},
-		'Excessive Speeding': {
-			text: 'After analyzing the whole situation and also taking into account that the driver was exceeding the speed limit enough to get arrested, we asked the driver to step out of the vehicle. From there the driver was placed in handcuffs and under police custody.',
-		},
-		'Vehicle Flagged Stolen': {
-			text: 'After analyzing the whole situation, we came to a realization that after running the plate of the vehicle, the vehicle was flagged as stolen. From there we escalated the situation and asked the vehicle occupants to step out one at a time. From there the driver was placed in handcuffs and under police custody.',
-		},
-		'Vehicle Flagged by Other Officer': {
-			text: 'After analyzing the whole situation, we came to a realization that after running the plate of the vehicle, the vehicle was flagged by another officer for a situation from earlier that the vehicle had fled from. From there we escalated the situation and asked the vehicle occupants to step out one at a time. From there the driver was placed in handcuffs and under police custody.',
-		},
-		'Joyriding': {
-			text: 'After analyzing the whole situation, we came to a realization that after running the plate of the vehicle, the name of the owner of the vehicle did not match the name on the driving license we were provided. We asked the driver to step out of the vehicle and from there the driver was placed in handcuffs and under police custody for joyriding.',
-		}
-	};
-	let arrestreason = arrestreasonSelected.options[arrestreasonSelected.selectedIndex].text;
-	buffer.push(`[ARREST INFORMATION]:`);
-	buffer.push(arrestreasonInformation[arrestreason].text);
-	buffer.push('');
-	
 	buffer.push(`[VEHICLE DESCRIPTION]:`);
 	let plate = document.getElementById('vehicleplate').value;
 	let vehicledesc = document.getElementById('vehicledesc').value;
