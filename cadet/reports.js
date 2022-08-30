@@ -18,7 +18,7 @@ function report() {
 	buffer.push(callsign);
 	buffer.push('');
 	
-	buffer.push(`[CADET]:`);
+	buffer.push("[CADET]:");
 	let cadet = document.getElementById('cadet').value;
 	buffer.push(`${cadet}`);
 	buffer.push('');
@@ -30,79 +30,6 @@ function report() {
 	let robberstotal = document.getElementById('robberstotal').value;
 	buffer.push(`Upon arriving on scene, we immediately counted a total of ${robberstotal} armed individuals looking to rob the Stockade Truck. Accompanying them were a total of ${hostages} hostages they had held at gunpoint.`);
 	buffer.push('');
-	
-	let coderedselected = document.getElementById('codered');
-	let coderedInformation = {
-		'Yes': {
-			text: 'After assessing the active robbery scene, we had came to a conclusion and deemed the suspects code red, reason being they had shot the armored Stockade security guards.',
-		},
-		'No': {
-			text: 'After assessing the active robbery scene, we had come to a conclusion and did not deem the suspects code red because at the time, they did not shoot any of the armored Stockade security guards.',
-		}
-	};
-	let codered = coderedselected.options[coderedselected.selectedIndex].text;
-	buffer.push(coderedInformation[codered].text);
-	
-	let resultsSelected = document.getElementById('results');
-	let resultsInformation = {
-		'All suspects downed': {
-			text: 'Once they were deemed code red, we had opened fire upon them. Eventually after a gunfight between the suspects and officers occured, our officers managed to incapacitate all of the suspects.',
-		},
-		'One suspect escaped': {
-			text: 'Once they were deemed code red, we had opened fire upon them. Eventually after a gunfight between the suspects and officers occured, our officers managed to incapacitate all exept for one of the suspects. The one suspect who was not caught managed to sneak out of the area.',
-		},
-		'All Surrendered': {
-			text: 'After some convincing, and offering the suspects a good deal, they decided to surrender. All the suspects were placed under police custody and no one was harmed.',
-		}
-	};
-	let results = resultsSelected.options[resultsSelected.selectedIndex].text;
-	buffer.push(resultsInformation[results].text);
-	buffer.push('');
-
-	buffer.push(`[VEHICLE DESCRIPTION]:`);
-	let plate = document.getElementById('vehicleplate').value;
-	let vehicledesc = document.getElementById('vehicledesc').value;
-	let vehiclereg = document.getElementById('vehiclereg').value;
-	if (vehicledesc) vehicledesc = ` a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
-	buffer.push(`The vehicle they were planning on using for getaway was${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}.`);
-	buffer.push('');
-
-	let towSelected = document.getElementById('tow');
-	let towInformation = {
-		'Normal Tow': {
-			text: 'Once the scene was secured enough, we texted the mechanic and tow line to see if there was an available tow truck that could come and tow the armored truck. Eventually one did came and a police escort was provided until the Stockade had reached an impound lot.',
-		},
-		'Local Tow': {
-			text: 'Once the scene was secured enough, we texted the mechanic and tow line to see if there was an available tow truck that could come and tow the armored truck. After waiting for a bit of time, we got no response back and had called a local tow instead.',
-		}
-	};
-	let tow = towSelected.options[towSelected.selectedIndex].text;
-	buffer.push(towInformation[tow].text);
-	buffer.push('');
-
-	let medicalSelected = document.getElementById('medicalattention');
-	let medicalInformation = {
-		'Was requested by multiple suspects': {
-			label: 'WAS REQUESTED',
-			text: 'After we apprehended the suspects, they requested medical attention due to the injuries they had sustained. EMS were called and we transported them to Saint Fiacre Hospital where they got further medical attention.',
-		},
-		'Was requested by one suspect': {
-			label: 'ONE REQUESTED',
-			text: 'After we apprehended the suspects, one of them requested or needed medical attention due to the injuries they had sustained. EMS were called and then we transported that suspect to Saint Fiacre where they got further medical attention.',
-		},
-		'Was not requested or needed': {
-			label: 'WAS NOT REQUESTED',
-			text: 'After we apprehended the suspects, they did not request or need any medical attention.',
-		}
-	};
-	let medical = medicalSelected.options[medicalSelected.selectedIndex].text;
-	buffer.push(`[MEDICAL ATTENTION | ${medicalInformation[medical].label}]:`);
-	buffer.push(medicalInformation[medical].text);
-	buffer.push('');
-
-	let processed = document.getElementById('processedat').value;
-	buffer.push('[PROCESSED]:');
-	buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
 	
 	let curDarkmode = document.getElementById('darkmode').checked;
 	if (curDarkmode) {
