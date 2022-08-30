@@ -33,6 +33,9 @@ function report() {
 	buffer.push(`${hours}`);
 	buffer.push('');
 
+	
+	buffer.push("**Cadet Logger - UPDATED ON THE GO**");
+	
 	let curDarkmode = document.getElementById('darkmode').checked;
 	if (curDarkmode) {
 		if (darkmodeState === 'false') updateDarkmode();
