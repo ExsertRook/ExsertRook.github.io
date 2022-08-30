@@ -29,13 +29,13 @@ function report() {
 	
 	let activities = [];
 	let activitiesText = '';
-	if (document.getElementbyId('10-11').checked) buffer.push("10-11");
-	if (document.getElementbyId('10-80').checked) buffer.push("10-80");
-	if (document.getElementbyId('10-90').checked) buffer.push("10-90");
-	if (document.getElementbyId('negotiations').checked) buffer.push("Negotiations");
-	if (document.getElementbyId('911').checked) buffer.push("911");
-	if (document.getElementbyId('Arrest').checked) buffer.push("Arrest");
-	if (document.getElementbyId('PIT').checked) buffer.push("PIT");
+	if (document.getElementbyId('10-11').checked) activities.push("10-11");
+	if (document.getElementbyId('10-80').checked) activities.push("10-80");
+	if (document.getElementbyId('10-90').checked) activities.push("10-90");
+	if (document.getElementbyId('negotiations').checked) activities.push("Negotiations");
+	if (document.getElementbyId('911').checked) activities.push("911");
+	if (document.getElementbyId('Arrest').checked) activities.push("Arrest");
+	if (document.getElementbyId('PIT').checked) activities.push("PIT");
 	
 	if (activities.length > 1) {
 		const lastDemand = activities.pop();
