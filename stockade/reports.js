@@ -31,6 +31,9 @@ function report() {
 	buffer.push(`The vehicle was${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}. Once everyone was ready, the chase started and they attempted to evade from police recklessly.`);
 	buffer.push('');
 
+	let hostages = document.getElementById('hostages').value;
+	let robberstotal = document.getElementById('robberstotal').value;
+
 	let medicalSelected = document.getElementById('medicalattention');
 	let medicalInformation = {
 		'Was requested by multiple suspects': {
