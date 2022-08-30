@@ -20,15 +20,11 @@ function report() {
 	
 	buffer.push("[CADET]:");
 	let cadet = document.getElementById('cadet').value;
-	buffer.push(`${cadet}`);
+	buffer.push(`Test${cadet}`);
 	buffer.push('');
 	
 	let phase = document.getElementById('phase').value;
-	buffer.push(`${phase}`);
-	
-	let hostages = document.getElementById('hostages').value;
-	let robberstotal = document.getElementById('robberstotal').value;
-	buffer.push(`Upon arriving on scene, we immediately counted a total of ${robberstotal} armed individuals looking to rob the Stockade Truck. Accompanying them were a total of ${hostages} hostages they had held at gunpoint.`);
+	buffer.push(`Test${phase}`);
 	buffer.push('');
 	
 	let curDarkmode = document.getElementById('darkmode').checked;
