@@ -20,7 +20,7 @@ function report() {
 	
 	buffer.push(`[DESCRIBE INCIDENT]:`);
 	let location = document.getElementById('location').value;
-	if (location) buffer.push(`During routine patrol, we had a dispatch call come in from a Stockade Armored Truck requesting immediate assitance over by ${location}.`);
+	if (location) buffer.push(`During routine patrol, we had a dispatch call come in from an Armored Stockade Bank Truck requesting immediate assitance over by ${location}.`);
 	
 	let hostages = document.getElementById('hostages').value;
 	let robberstotal = document.getElementById('robberstotal').value;
