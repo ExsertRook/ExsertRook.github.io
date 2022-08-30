@@ -27,23 +27,7 @@ function report() {
 	let hours = document.getElementById('hours').value;
 	buffer.push(`**Hours:** ${hours}`);
 	
-	let activities = [];
-	let activitiesText = '';
-	if (document.getElementbyId('10-11').checked) activities.push("10-11");
-	if (document.getElementbyId('10-80').checked) activities.push("10-80");
-	if (document.getElementbyId('10-90').checked) activities.push("10-90");
-	if (document.getElementbyId('negotiations').checked) activities.push("Negotiations");
-	if (document.getElementbyId('911').checked) activities.push("911");
-	if (document.getElementbyId('Arrest').checked) activities.push("Arrest");
-	if (document.getElementbyId('PIT').checked) activities.push("PIT");
 	
-	if (activities.length > 1) {
-		const lastDemand = activities.pop();
-		activitiesText += `${activities.join(', ')} and ${lastDemand}`;
-	} else {
-		activitiesText = activities;
-	}
-	buffer.push(`${activitiesText}`);
 	
 	buffer.push('');
 	buffer.push("**Cadet Logger - UPDATED ON THE GO**");
