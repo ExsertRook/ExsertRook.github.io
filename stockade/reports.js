@@ -37,6 +37,7 @@ function report() {
 		}
 	};
 	let codered = coderedselected.options[coderedselected.selectedIndex].text;
+	buffer.push(coderedInformation[codered].text);
 	buffer.push('');
 
 	buffer.push(`[VEHICLE DESCRIPTION]:`);
@@ -57,6 +58,7 @@ function report() {
 		}
 	};
 	let tow = towSelected.options[towSelected.selectedIndex].text;
+	buffer.push(towInformation[tow].text);
 	buffer.push('');
 
 	let medicalSelected = document.getElementById('medicalattention');
