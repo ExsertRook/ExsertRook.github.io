@@ -14,23 +14,20 @@ function report() {
 	let date = new Date().toLocaleDateString('en-US');
 
 	buffer = [];
-	buffer.push("**[FIELD TRAINING OFFICER]:**");
+	buffer.push("**FTO:**");
 	buffer.push(callsign);
 	buffer.push('');
 	
-	buffer.push("**[CADET]:**");
 	let cadet = document.getElementById('cadet').value;
-	buffer.push(`${cadet}`);
+	buffer.push(`**Cadet:** ${cadet}`);
 	buffer.push('');
 	
-	buffer.push("**[PHASE]:**");
 	let phase = document.getElementById('phase').value;
-	buffer.push(`${phase}`);
+	buffer.push(`**Phase:** ${phase}`);
 	buffer.push('');
 	
-	buffer.push("**[HOURS]:**");
 	let hours = document.getElementById('hours').value;
-	buffer.push(`${hours}`);
+	buffer.push(`**Hours:** ${hours}`);
 	buffer.push('');
 
 	
