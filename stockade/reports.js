@@ -37,7 +37,8 @@ function report() {
 		}
 	};
 	let codered = coderedselected.options[coderedselected.selectedIndex].text;
-	
+	buffer.push('');
+
 	buffer.push(`[VEHICLE DESCRIPTION]:`);
 	let plate = document.getElementById('vehicleplate').value;
 	let vehicledesc = document.getElementById('vehicledesc').value;
@@ -49,14 +50,15 @@ function report() {
 	let towSelected = document.getElementById('tow');
 	let towInformation = {
 		'Normal Tow': {
-			text: '',
+			text: 'Once the scene was secured enough, we texted the mechanic and tow line to see if there was an available tow truck that could come and tow the armored truck. Eventually one did came and a police escort was provided until the Stockade had reached an impound lot.',
 		},
 		'Local Tow': {
-			text: '',
+			text: 'Once the scene was secured enough, we texted the mechanic and tow line to see if there was an available tow truck that could come and tow the armored truck. After waiting for a bit of time, we got no response back and had called a local tow instead.',
 		}
 	};
 	let tow = towSelected.options[towSelected.selectedIndex].text;
-	
+	buffer.push('');
+
 	let medicalSelected = document.getElementById('medicalattention');
 	let medicalInformation = {
 		'Was requested by multiple suspects': {
