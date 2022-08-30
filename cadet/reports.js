@@ -21,6 +21,10 @@ function report() {
 	buffer.push(`[CADET]:`);
 	let cadet = document.getElementById('cadet').value;
 	buffer.push(`${cadet}`);
+	buffer.push('');
+	
+	let phase = document.getElementById('phase').value;
+	buffer.push(`${phase}`);
 	
 	let hostages = document.getElementById('hostages').value;
 	let robberstotal = document.getElementById('robberstotal').value;
