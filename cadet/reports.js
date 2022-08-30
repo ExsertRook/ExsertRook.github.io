@@ -14,11 +14,11 @@ function report() {
 	let date = new Date().toLocaleDateString('en-US');
 
 	buffer = [];
-	buffer.push("[REPORTING OFFICER]:");
+	buffer.push("[FIELD TRAINING OFFICER]:");
 	buffer.push(callsign);
 	buffer.push('');
 	
-	buffer.push(`[DESCRIBE INCIDENT]:`);
+	buffer.push(`[CADET]:`);
 	let location = document.getElementById('location').value;
 	if (location) buffer.push(`During routine patrol, we had a dispatch call come in about an Armored Stockade Bank Truck requesting immediate assitance over by their location which was ${location}.`);
 	
