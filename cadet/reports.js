@@ -14,21 +14,17 @@ function report() {
 	let date = new Date().toLocaleDateString('en-US');
 
 	buffer = [];
-	buffer.push("**FTO:**");
-	buffer.push(callsign);
+	buffer.push(`**FTO:**` callsign);
 	buffer.push('');
 	
 	let cadet = document.getElementById('cadet').value;
 	buffer.push(`**Cadet:** ${cadet}`);
-	buffer.push('');
 	
 	let phase = document.getElementById('phase').value;
 	buffer.push(`**Phase:** ${phase}`);
-	buffer.push('');
 	
 	let hours = document.getElementById('hours').value;
 	buffer.push(`**Hours:** ${hours}`);
-	buffer.push('');
 
 	
 	buffer.push("**Cadet Logger - UPDATED ON THE GO**");
