@@ -39,6 +39,22 @@ function report() {
 	let codered = coderedselected.options[coderedselected.selectedIndex].text;
 	buffer.push(coderedInformation[codered].text);
 	buffer.push('');
+	
+	let resultsSelected = document.getElementById('results');
+	let resultsInformation = {
+		'All suspects downed': {
+			text: '',
+		},
+		'One suspect escaped': {
+			text: '',
+		},
+		'All Surrendered': {
+			text: '',
+		}
+	};
+	let results = resultsSelected.options[resultsSelected.selectedIndex].text;
+	buffer.push(resultsInformation[results].text);
+	buffer.push('');
 
 	buffer.push(`[VEHICLE DESCRIPTION]:`);
 	let plate = document.getElementById('vehicleplate').value;
