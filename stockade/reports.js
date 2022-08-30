@@ -27,8 +27,16 @@ function report() {
 	buffer.push(`Upon arriving on scene, we immediately counted a total of ${robberstotal} armed robbers. Accompanying them were a total of ${hostages} hostages.`);
 	buffer.push('');
 	
-	let codered = document.getElementById('codered').value;
-	
+	let coderedselected = document.getElementById('codered');
+	let coderedInformation = {
+		'Yes': {
+			text: '',
+		},
+		'No': {
+			text: '',
+		}
+	};
+	let codered = coderedselected.options[coderedselected.selectedIndex].text;
 	
 	buffer.push(`[VEHICLE DESCRIPTION]:`);
 	let plate = document.getElementById('vehicleplate').value;
