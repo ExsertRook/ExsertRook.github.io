@@ -30,10 +30,10 @@ function report() {
 	let coderedselected = document.getElementById('codered');
 	let coderedInformation = {
 		'Yes': {
-			text: '',
+			text: 'After assessing the active robbery scene, we had came to a conclusion and deemed the suspects code red, reason being they had shot the armored Stockade security guards.',
 		},
 		'No': {
-			text: '',
+			text: 'After assessing the active robbery scene, we had come to a conclusion and did not deem the suspects code red because at the time, they did not shoot any of the armored Stockade security guards.',
 		}
 	};
 	let codered = coderedselected.options[coderedselected.selectedIndex].text;
