@@ -14,19 +14,25 @@ function report() {
 	let date = new Date().toLocaleDateString('en-US');
 
 	buffer = [];
-	buffer.push("[FIELD TRAINING OFFICER]:");
+	buffer.push("**[FIELD TRAINING OFFICER]:**");
 	buffer.push(callsign);
 	buffer.push('');
 	
-	buffer.push("[CADET]:");
+	buffer.push("**[CADET]:**");
 	let cadet = document.getElementById('cadet').value;
-	buffer.push(`Test${cadet}`);
+	buffer.push(`${cadet}`);
 	buffer.push('');
 	
+	buffer.push("**[PHASE]:**");
 	let phase = document.getElementById('phase').value;
-	buffer.push(`Test${phase}`);
+	buffer.push(`${phase}`);
 	buffer.push('');
 	
+	buffer.push("**[HOURS]:**");
+	let hours = document.getElementById('hours').value;
+	buffer.push(`${hours}`);
+	buffer.push('');
+
 	let curDarkmode = document.getElementById('darkmode').checked;
 	if (curDarkmode) {
 		if (darkmodeState === 'false') updateDarkmode();
