@@ -43,7 +43,7 @@ function report() {
 	} else {
 		activitiesText = activities;
 	}
-	
+	buffer.push(`${activitiesText}`);
 	
 	buffer.push('');
 	buffer.push("**Cadet Logger - UPDATED ON THE GO**");
