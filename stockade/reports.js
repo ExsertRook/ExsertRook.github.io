@@ -38,7 +38,6 @@ function report() {
 	};
 	let codered = coderedselected.options[coderedselected.selectedIndex].text;
 	buffer.push(coderedInformation[codered].text);
-	buffer.push('');
 	
 	let resultsSelected = document.getElementById('results');
 	let resultsInformation = {
@@ -61,7 +60,7 @@ function report() {
 	let vehicledesc = document.getElementById('vehicledesc').value;
 	let vehiclereg = document.getElementById('vehiclereg').value;
 	if (vehicledesc) vehicledesc = ` a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
-	buffer.push(`The vehicle was${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}.`);
+	buffer.push(`The vehicle they were planning on using for getaway was${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}.`);
 	buffer.push('');
 
 	let towSelected = document.getElementById('tow');
