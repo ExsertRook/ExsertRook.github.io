@@ -43,13 +43,13 @@ function report() {
 	let resultsSelected = document.getElementById('results');
 	let resultsInformation = {
 		'All suspects downed': {
-			text: '',
+			text: 'Once they were deemed code red, we had opened fire upon them. Eventually after a gunfight between the suspects and officers occured, our officers managed to incapacitate all of the suspects.',
 		},
 		'One suspect escaped': {
-			text: '',
+			text: 'Once they were deemed code red, we had opened fire upon them. Eventually after a gunfight between the suspects and officers occured, our officers managed to incapacitate all exept for one of the suspects. The one suspect who was not caught managed to sneak out of the area.',
 		},
 		'All Surrendered': {
-			text: '',
+			text: 'After some convincing, and offering the suspects a good deal, they decided to surrender. All the suspects were placed under police custody and no one was harmed.',
 		}
 	};
 	let results = resultsSelected.options[resultsSelected.selectedIndex].text;
