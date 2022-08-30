@@ -23,6 +23,11 @@ function report() {
 	if (location) buffer.push(`During routine patrol, we had a dispatch call come in from a Stockade Armored Truck requesting immediate assitance over by ${location}.`);
 	buffer.push('');
 	
+	let hostages = document.getElementById('hostages').value;
+	let robberstotal = document.getElementById('robberstotal').value;
+	buffer.push(`Upon arriving on scene, we immediately counted a total of ${robberstotal} armed robbers. Accompanying them were a total of ${hostages} hostages.`);
+	buffer.push('');
+	
 	buffer.push(`[VEHICLE DESCRIPTION]:`);
 	let plate = document.getElementById('vehicleplate').value;
 	let vehicledesc = document.getElementById('vehicledesc').value;
@@ -30,9 +35,6 @@ function report() {
 	if (vehicledesc) vehicledesc = ` a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
 	buffer.push(`The vehicle was${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}. Once everyone was ready, the chase started and they attempted to evade from police recklessly.`);
 	buffer.push('');
-
-	let hostages = document.getElementById('hostages').value;
-	let robberstotal = document.getElementById('robberstotal').value;
 
 	let medicalSelected = document.getElementById('medicalattention');
 	let medicalInformation = {
