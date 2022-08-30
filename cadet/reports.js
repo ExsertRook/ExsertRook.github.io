@@ -26,7 +26,17 @@ function report() {
 	
 	let hours = document.getElementById('hours').value;
 	buffer.push(`**Hours:** ${hours}`);
-
+	
+	let activities = [];
+	let activitiesText = '';
+	if (document.getElementbyId('10-11').checked) buffer.push("10-11");
+	if (document.getElementbyId('10-80').checked) buffer.push("10-80");
+	if (document.getElementbyId('10-90').checked) buffer.push("10-90");
+	if (document.getElementbyId('negotiations').checked) buffer.push("Negotiations");
+	if (document.getElementbyId('911').checked) buffer.push("911");
+	if (document.getElementbyId('Arrest').checked) buffer.push("Arrest");
+	if (document.getElementbyId('PIT').checked) buffer.push("PIT");
+	buffer.push('');
 	
 	buffer.push("**Cadet Logger - UPDATED ON THE GO**");
 	
