@@ -36,8 +36,16 @@ function report() {
 	if (document.getElementbyId('911').checked) buffer.push("911");
 	if (document.getElementbyId('Arrest').checked) buffer.push("Arrest");
 	if (document.getElementbyId('PIT').checked) buffer.push("PIT");
-	buffer.push('');
 	
+	if (activities.length > 1) {
+		const lastDemand = activities.pop();
+		activitiesText += `${activities.join(', ')} and ${lastDemand}`;
+	} else {
+		activitiesText = activities;
+	}
+	
+	
+	buffer.push('');
 	buffer.push("**Cadet Logger - UPDATED ON THE GO**");
 	
 	let curDarkmode = document.getElementById('darkmode').checked;
