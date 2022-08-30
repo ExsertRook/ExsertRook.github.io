@@ -14,7 +14,8 @@ function report() {
 	let date = new Date().toLocaleDateString('en-US');
 
 	buffer = [];
-	buffer.push(`**FTO:**` callsign);
+	buffer.push(`**FTO:**`);
+	buffer.push(callsign);
 	buffer.push('');
 	
 	let cadet = document.getElementById('cadet').value;
