@@ -17,8 +17,6 @@ function report() {
 	buffer.push("[REPORTING OFFICER]:");
 	buffer.push(callsign);	
 
-	let location = document.getElementById('location').value;
-	let processedat = document.getElementById('processedat').value;
 	buffer.push('');
 	
 	buffer.push(`[DETAILS OF THE INCIDENT]:`);
