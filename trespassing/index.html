@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Drug Sales Arrest Report Generator</title>
+	<title>Trespassing Arrest Report Generator</title>
 	<link rel="shortcut icon" href="images/favicon.ico" />
 	<link rel="stylesheet" href="index.css" />
 	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> </head>
@@ -11,7 +11,7 @@
 <body onLoad="loadDarkmode()">
 	<div id="form">
 		<div class="form-group">
-			<span style="font-weight: bold;">Drug Sales Arrest Report Generator</span> | 
+			<span style="font-weight: bold;">Trespassing Arrest Report Generator</span> | 
 			<input type="checkbox" id="darkmode" name="darkmode" value="darkmode" />
 			<label for="darkmode">Darkmode</label>
 			<br />
@@ -22,39 +22,27 @@
 			</div>
 		</div>
 		<div class="form-group">
-			<label>Location:</label>
-			Location of the 10-66 / 10-38 calls: <input type="text" id="location" name="location" placeholder="e.g. Hawick Ave">
+			<label>Where were they trespassing:</label>
+			<select id="location">
+				<option>Inside MRPD</option>
+				<option>Roof</option>
+				<option>Side Parking Lot</option>
+				<option>Carpool</option>
+				<option>Back Parking Lot</option>
+			</select>
 		</div>
 		<div class="form-group">
-			<label>Did you manage to get pictures of positive handoffs?</label>
-			<select id="pospic">
-				<option>Yes</option>
+			<label>Was the suspect warned to leave?</label>
+			<select id="warned">
+				<option selected>Yes</option>
 				<option>No</option>
 			</select>
 		</div>
 		<div class="form-group">
-			<label>Did the suspect attempt to flee?</label>
+			<label>Did the suspect attempt to run?</label>
 			<select id="susran">
 				<option>Yes</option>
 				<option selected>No</option>
-			</select>
-		</div>
-		<div class="form-group">
-			<label>Drugtest Results?</label>
-			<select id="testresults">
-				<option>Negative</option>
-				<option selected>Minor amounts</option>
-				<option>Moderate amounts</option>
-			</select>
-		</div>
-		<div class="form-group">
-			<label>Type of drug:</label>
-			<select id="drugtype">
-				<option>Weed</option>
-				<option selected>Cocaine</option>
-				<option>Oxy</option>
-				<option>Acid</option>
-				<option>Meth</option>
 			</select>
 		</div>
 		<div class="form-group">
@@ -63,18 +51,6 @@
 				<option>Was requested by multiple suspects</option>
 				<option>Was requested by one suspect</option>
 				<option selected>Was not requested or needed</option>
-			</select>
-		</div>
-		<div clsas="form-group">
-			<label>Processed at...</label><br />
-			<select id="processedat">
-				<option selected>MRPD</option>
-				<option>Sandy Shores Sheriff's Office</option>
-				<option>Davis PD</option>
-				<option>Paleto PD</option>
-				<option>Highway PD</option>
-				<option>Del Perro Pier PD</option>
-				<option>Rockford PD</option>
 			</select>
 		</div>
 	</div>
