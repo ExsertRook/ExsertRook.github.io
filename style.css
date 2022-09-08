@@ -39,7 +39,7 @@
 body {
 	margin-right: 15%;
 	margin-left: 15%;
-	background: linear-gradient(90deg, #7d7e7d 0%, #0e0e0e 100%);
+	background: gray;
 }
 button {
 	background-color: #ffab23;
