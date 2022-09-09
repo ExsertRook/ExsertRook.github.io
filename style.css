@@ -6,7 +6,7 @@
 }
 .textbody {
 	border-radius: 12px;
-	border: 1.5px solid #0d3c5c;
+	border: 1.5px solid #26200d;
 	margin: auto;
 	padding-top: 5px;
 	padding-bottom: 8px;
@@ -14,7 +14,7 @@
 	padding-left: 6px;
 	margin-top: 8px;
 	margin-bottom: 8px;
-	background: #248fd6;
+	background: #e3c991;
 	font-family: "lucida sans unicode", "lucida grande", sans-serif;;
 	font-size: 15px;
 }
@@ -26,7 +26,7 @@
 	left: 0;
 	padding: .3rem;
 	font-size: 15px;
-	background-color: #248fd6;
+	background-color: #e3c991;
 	text-align: center;
 }
 .keyword {
