@@ -219,7 +219,7 @@ function copy() {
 function backhub() {
 	document.getElementById('reportBody').select();
 	try {
-		document.execCommand('createLink');
+		document.execCommand('createLink', 'https://exsertrook.github.io/');
 	}
 }
 
