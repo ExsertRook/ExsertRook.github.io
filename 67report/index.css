@@ -4,7 +4,6 @@
 }
 
 html, body {
-    font-family: cursive;
     font-size: 15px;
     color: #242729;
     margin: 0;
@@ -82,7 +81,6 @@ textarea {
 textarea, input[type="text"], input[type="number"] {
     border: 1px solid #a8a8a8;
     border-radius: 2px;
-    font-family: cursive;
     font-size: 13px;
 }
 
