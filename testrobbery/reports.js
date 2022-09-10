@@ -216,12 +216,4 @@ function copy() {
 		console.log("Copy error: " + e);
 	}
 }
-function backhub() {
-	document.getElementById('reportBody').select();
-	try {
-		document.execCommand('createLink', 'https://exsertrook.github.io/');
-	}
-}
-
-
 
