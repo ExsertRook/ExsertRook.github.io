@@ -91,23 +91,23 @@ function report() {
 	buffer.push(`[MEDICAL ATTENTION | ${medicalInformation[medical].label}]:`);
 	buffer.push(medicalInformation[medical].text);
 	
-	let hospitalSelected = document.getElementById('hospital');
-	let hospitalInformation = {
-		'Saint Fiacre': {
-			text: 'The hospital the suspect was transported to was Saint Fiacre.',
-		},
-		'Mount Zonah': {
-			text: 'The hospital the suspect was transported to was Mount Zonah.',
-		},
-		'Sandy Shores': {
-			text: 'The hospital the suspect was transported to was in Sandy Shores.',
-		},
-		'Paleto Hospital': {
-			text: 'The hospital the suspect was transported to was in Paleto Bay.',
-		},
-	};
-	let hospitalresult = hospitalSelected.options[hospitalSelected.selectedIndex].text;
-	buffer.push(hospitalInformation[hospitalresult].text);
+	//let hospitalSelected = document.getElementById('hospital');
+	//let hospitalInformation = {
+	//	'Saint Fiacre': {
+	//		text: 'The hospital the suspect was transported to was Saint Fiacre.',
+	//	},
+	//	'Mount Zonah': {
+	//		text: 'The hospital the suspect was transported to was Mount Zonah.',
+	//	},
+	//	'Sandy Shores': {
+	//		text: 'The hospital the suspect was transported to was in Sandy Shores.',
+	//	},
+	//	'Paleto Hospital': {
+	//		text: 'The hospital the suspect was transported to was in Paleto Bay.',
+	//	},
+	//};
+	//let hospitalresult = hospitalSelected.options[hospitalSelected.selectedIndex].text;
+	//buffer.push(hospitalInformation[hospitalresult].text);
 	
 	
 	let curDarkmode = document.getElementById('darkmode').checked;
