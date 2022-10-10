@@ -44,57 +44,20 @@ function report() {
 	};
 	let discovery = discoveryselected.options[discoveryselected.selectedIndex].text;
 	buffer.push('');
-	
-	let hostages = document.getElementById('hostages').value;
-	let robberstotal = document.getElementById('robberstotal').value;
-	buffer.push(`Upon arriving on scene, we immediately counted a total of ${robberstotal} armed robbers. Accompanying them were a total of ${hostages} hostages.`);
-	buffer.push('');
-	
-	let coderedselected = document.getElementById('codered');
-	let coderedInformation = {
-		'Yes': {
-			text: 'After assessing the active robbery scene, we had came to a conclusion and deemed the suspects code red, reason being they had shot the armored Stockade security guards.',
-		},
-		'No': {
-			text: 'After assessing the active robbery scene, we had come to a conclusion and did not deem the suspects code red because at the time, they did not shoot any of the armored Stockade security guards.',
-		}
-	};
-	let codered = coderedselected.options[coderedselected.selectedIndex].text;
-	buffer.push('');
-
-	buffer.push(`[VEHICLE DESCRIPTION]:`);
-	let plate = document.getElementById('vehicleplate').value;
-	let vehicledesc = document.getElementById('vehicledesc').value;
-	let vehiclereg = document.getElementById('vehiclereg').value;
-	if (vehicledesc) vehicledesc = ` a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
-	buffer.push(`The vehicle was${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}. Once everyone was ready, the chase started and they attempted to evade from police recklessly.`);
-	buffer.push('');
-
-	let towSelected = document.getElementById('tow');
-	let towInformation = {
-		'Normal Tow': {
-			text: 'Once the scene was secured enough, we texted the mechanic and tow line to see if there was an available tow truck that could come and tow the armored truck. Eventually one did came and a police escort was provided until the Stockade had reached an impound lot.',
-		},
-		'Local Tow': {
-			text: 'Once the scene was secured enough, we texted the mechanic and tow line to see if there was an available tow truck that could come and tow the armored truck. After waiting for a bit of time, we got no response back and had called a local tow instead.',
-		}
-	};
-	let tow = towSelected.options[towSelected.selectedIndex].text;
-	buffer.push('');
 
 	let medicalSelected = document.getElementById('medicalattention');
 	let medicalInformation = {
-		'Was requested by multiple suspects': {
-			label: 'WAS REQUESTED',
-			text: 'After we apprehended the suspects, they requested medical attention. We then transported them to Saint Fiacre where they got further medical attention.',
+		'All recieved at Saint Fiacre': {
+			label: 'ALL SAINT FIACRE',
+			text: 'After we collected enough initial evidence, we collected the suspects and then transported all of them to Saint Fiacre where they got further medical attention.',
 		},
-		'Was requested by one suspect': {
-			label: 'ONE REQUESTED',
-			text: 'After we apprehended the suspects, one of them requested or needed medical attention. We then transported that suspect to Saint Fiacre where they got further medical attention.',
+		'All recieved at Mount Zonah': {
+			label: 'ALL MOUNT ZONAH',
+			text: 'After we collected enough initial evidence, we collected the suspects and then transported all of them to Saint Fiacre where they got further medical attention.',
 		},
-		'Was not requested or needed': {
-			label: 'WAS NOT REQUESTED',
-			text: 'After we apprehended the suspects, they did not request or need any medical attention.',
+		'1 Gang at Saint Fiacre, other at Mount Zonah': {
+			label: 'SEPERATED',
+			text: 'After we collected enough initial evidence, we collected the suspects and then transported them to 2 different hospitals where they got further medical attention. One gang got transported to Saint Fiacre and the other gang was transported to Mount Zonah. We seperated them to avoid any potential conflict between the 2 gangs at the hospital.',
 		}
 	};
 	let medical = medicalSelected.options[medicalSelected.selectedIndex].text;
