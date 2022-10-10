@@ -43,6 +43,7 @@ function report() {
 		}
 	};
 	let discovery = discoveryselected.options[discoveryselected.selectedIndex].text;
+	buffer.push(discoveryInformation[discovery].text);
 	buffer.push('');
 
 	let medicalSelected = document.getElementById('medicalattention');
