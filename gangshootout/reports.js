@@ -18,7 +18,33 @@ function report() {
 	buffer.push(callsign);
 	buffer.push('');
 	
+	let location = document.getElementById('location').value;
+	buffer.push(`[LOCATION]:`)
+	if (location) buffer.push(`${location}`);
+	buffer.push('');
+	
 	buffer.push(`[DESCRIBE INCIDENT]:`);
+	let discoveryselected = document.getElementById('discovery');
+	let discoveryInformation = {
+		'10-32 Calls': {
+			text: 'During routine patrol, we had recieved a few 10-32 (Person with a gun) dispatch calls.',
+		},
+		'10-71 / 31 Calls': {
+			text: 'During routine patrol, we had recieved a few 10-71 / 31 Calls (Reported Shots Fired) dispatch calls.',
+		},
+		'10-66 Calls': {
+			text: 'During routine patrol, we had recieved a few 10-66 (Suspicious Person) dispatch calls.',
+		},
+		'Audible shots': {
+			text: 'During routine patrol, we had heard some audible automatic shots fired.',
+		},
+		'911 Call': {
+			text: 'During routine patrol, we had recieved a 911 call from an individual stating that there are people actively shooting at eachother.',
+		}
+	};
+	let discovery = discoveryselected.options[discoveryselected.selectedIndex].text;
+	
+	
 	let location = document.getElementById('location').value;
 	if (location) buffer.push(`During routine patrol, we had a dispatch call come in from an Armored Stockade Bank Truck requesting immediate assitance over by ${location}.`);
 	
