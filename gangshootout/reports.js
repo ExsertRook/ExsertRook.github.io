@@ -27,26 +27,23 @@ function report() {
 	let discoveryselected = document.getElementById('discovery');
 	let discoveryInformation = {
 		'10-32 Calls': {
-			text: 'During routine patrol, we had recieved a few 10-32 (Person with a gun) dispatch calls.',
+			text: 'During routine patrol, we had recieved a few 10-32 (Person with a gun) dispatch calls over by the location mentioned above.',
 		},
 		'10-71 / 31 Calls': {
-			text: 'During routine patrol, we had recieved a few 10-71 / 31 Calls (Reported Shots Fired) dispatch calls.',
+			text: 'During routine patrol, we had recieved a few 10-71 / 31 Calls (Reported Shots Fired) dispatch calls over by the location mentioned above.',
 		},
 		'10-66 Calls': {
-			text: 'During routine patrol, we had recieved a few 10-66 (Suspicious Person) dispatch calls.',
+			text: 'During routine patrol, we had recieved a few 10-66 (Suspicious Person) dispatch calls over by the location mentioned above.',
 		},
 		'Audible shots': {
-			text: 'During routine patrol, we had heard some audible automatic shots fired.',
+			text: 'During routine patrol, we had heard some audible automatic shots fired over by the location mentioned above.',
 		},
 		'911 Call': {
-			text: 'During routine patrol, we had recieved a 911 call from an individual stating that there are people actively shooting at eachother.',
+			text: 'During routine patrol, we had recieved a 911 call from an individual stating that there are people actively shooting at eachother over by the location mentioned above.',
 		}
 	};
 	let discovery = discoveryselected.options[discoveryselected.selectedIndex].text;
-	
-	
-	let location = document.getElementById('location').value;
-	if (location) buffer.push(`During routine patrol, we had a dispatch call come in from an Armored Stockade Bank Truck requesting immediate assitance over by ${location}.`);
+	buffer.push('');
 	
 	let hostages = document.getElementById('hostages').value;
 	let robberstotal = document.getElementById('robberstotal').value;
