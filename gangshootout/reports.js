@@ -19,7 +19,7 @@ function report() {
 	buffer.push('');
 	
 	let location = document.getElementById('location').value;
-	buffer.push(`[LOCATION]:`)
+	buffer.push(`[LOCATION]:`);
 	if (location) buffer.push(`${location}`);
 	buffer.push('');
 	
