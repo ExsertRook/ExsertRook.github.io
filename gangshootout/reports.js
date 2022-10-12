@@ -48,7 +48,7 @@ function report() {
 	buffer.push(discoveryInformation[discovery].text);
 	buffer.push('');
 	
-	buffer.push(`At first glance, we noticed that the two gangs who were fighting eachother were wearing the following colors: ${colors}`);
+	if (colors) buffer.push(`At first glance, we noticed that the two gangs who were fighting eachother were wearing the following colors: ${colors}`);
 	buffer.push('');
 	
 	let medicalSelected = document.getElementById('medicalattention');
