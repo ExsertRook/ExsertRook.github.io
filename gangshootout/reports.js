@@ -75,6 +75,35 @@ function report() {
 	buffer.push('[PROCESSED]:');
 	buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
 	
+	buffer.push('');
+	buffer.push('[BLANKET CHARGES]:');
+	buffer.push('After we got them into the cells, we went with blanket charges on all of them. The charges we ended up giving them all were:');
+	let bchargesselected = document.getElementById('charges');
+	let bchargesInformation = {
+		'Aggravated Assault And Battery x2 | Any Possession Charges': {
+			text: 'Aggravated Assault And Battery x2',
+			text: 'Any Possession Charges',
+		},
+		'Aggravated Assault And Battery x3 | Any Possession Charges': {
+			text: 'Aggravated Assault And Battery x3',
+			text: 'Any Possession Charges',
+		},
+		'Aggravated Assault And Battery x4 | Any Possession Charges': {
+			text: 'Aggravated Assault And Battery x4',
+			text: 'Any Possession Charges',
+		},
+		'Aggravated Assault And Battery x5 | Any Possession Charges': {
+			text: 'Aggravated Assault And Battery x5',
+			text: 'Any Possession Charges',
+		},
+		'Aggravated Assault And Battery x6 | Any Possession Charges': {
+			text: 'Aggravated Assault And Battery x6',
+			text: 'Any Possession Charges',
+		}
+	};
+	let bcharges = bchargesselected.options[bchargesselected.selectedIndex].text;
+	buffer.push(bchargesInformation[bcharges].text);
+	
 	let curDarkmode = document.getElementById('darkmode').checked;
 	if (curDarkmode) {
 		if (darkmodeState === 'false') updateDarkmode();
