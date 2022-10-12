@@ -81,24 +81,19 @@ function report() {
 	let bchargesselected = document.getElementById('charges');
 	let bchargesInformation = {
 		'Aggravated Assault And Battery x2 | Any Possession Charges': {
-			text: 'Aggravated Assault And Battery x2',
-			text: 'Any Possession Charges',
+			text: 'Aggravated Assault And Battery x2 | Any Possession Charges',
 		},
 		'Aggravated Assault And Battery x3 | Any Possession Charges': {
-			text: 'Aggravated Assault And Battery x3',
-			text: 'Any Possession Charges',
+			text: 'Aggravated Assault And Battery x3 | Any Possession Charges',
 		},
 		'Aggravated Assault And Battery x4 | Any Possession Charges': {
-			text: 'Aggravated Assault And Battery x4',
-			text: 'Any Possession Charges',
+			text: 'Aggravated Assault And Battery x4 | Any Possession Charges',
 		},
 		'Aggravated Assault And Battery x5 | Any Possession Charges': {
-			text: 'Aggravated Assault And Battery x5',
-			text: 'Any Possession Charges',
+			text: 'Aggravated Assault And Battery x5 | Any Possession Charges',
 		},
 		'Aggravated Assault And Battery x6 | Any Possession Charges': {
-			text: 'Aggravated Assault And Battery x6',
-			text: 'Any Possession Charges',
+			text: 'Aggravated Assault And Battery x6 | Any Possession Charges',
 		}
 	};
 	let bcharges = bchargesselected.options[bchargesselected.selectedIndex].text;
