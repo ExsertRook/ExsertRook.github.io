@@ -12,7 +12,9 @@ function report() {
 	if (!callsign) callsign = '[missing]';
 	const ind = "        ";
 	let date = new Date().toLocaleDateString('en-US');
-
+	
+	let colors = document.getElementById('colors').value;
+	
 	buffer = [];
 	buffer.push("[REPORTING OFFICER]:");
 	buffer.push(callsign);
@@ -45,7 +47,10 @@ function report() {
 	let discovery = discoveryselected.options[discoveryselected.selectedIndex].text;
 	buffer.push(discoveryInformation[discovery].text);
 	buffer.push('');
-
+	
+	buffer.push(`At first glance, we noticed that the two gangs who were fighting eachother were wearing the following colors: ${colors}`);
+	buffer.push('');
+	
 	let medicalSelected = document.getElementById('medicalattention');
 	let medicalInformation = {
 		'All recieved at Saint Fiacre': {
