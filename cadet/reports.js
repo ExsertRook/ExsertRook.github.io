@@ -30,7 +30,6 @@ function report() {
 	if (document.getElementById('10-80c').checked) activities.push("**10-80 - Tertiary**");
 	if (document.getElementById('10-80d').checked) activities.push("**10-80 - Parallel**");
 	if (document.getElementById('10-11').checked) activities.push("**10-11**");
-	if (document.getElementById('10-80').checked) activities.push("**10-80**");
 	if (document.getElementById('10-90').checked) activities.push("**10-90**");
 	if (document.getElementById('negotiations').checked) activities.push("**Negotiations**");
 	if (document.getElementById('PIT').checked) activities.push("**PIT**");
