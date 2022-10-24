@@ -14,7 +14,7 @@ function report() {
 	let date = new Date().toLocaleDateString('en-US');
 
 	buffer = [];
-	buffer.push(`**(callsign)**`);
+	buffer.push(`**${callsign}**`);
 	buffer.push('');
 	
 	let phase = document.getElementById('phase').value;
