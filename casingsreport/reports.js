@@ -36,6 +36,8 @@ function report() {
 	let serial4 = document.getElementById('serial4').value;
 	let weaponname5 = document.getElementById('weaponname5').value;
 	let serial5 = document.getElementById('serial5').value;
+	let weaponname6 = document.getElementById('weaponname6').value;
+	let serial6 = document.getElementById('serial6').value;
 	
 	buffer.push(`[WEAPON INFORMATION]:`);
 	if (weaponname1 || serial1) buffer.push(`Weapon: ${weaponname1} | Serial Number: ${serial1}`);
@@ -43,6 +45,7 @@ function report() {
 	if (weaponname3 || serial3) buffer.push(`Weapon: ${weaponname3} | Serial Number: ${serial3}`);
 	if (weaponname4 || serial4) buffer.push(`Weapon: ${weaponname4} | Serial Number: ${serial4}`);
 	if (weaponname5 || serial5) buffer.push(`Weapon: ${weaponname5} | Serial Number: ${serial5}`);
+	if (weaponname6 || serial6) buffer.push(`Weapon: ${weaponname6} | Serial Number: ${serial6}`);
 	buffer.push('');
 	
 	let charge = document.getElementById('charge').value;
