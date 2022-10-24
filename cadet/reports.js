@@ -25,18 +25,24 @@ function report() {
 	
 	let activities = [];
 	let activitiesText = '';
-	if (document.getElementById('10-80a').checked) demands.push("**10-80 - Primary**");
-	if (document.getElementById('10-80b').checked) demands.push("**10-80 - Secondary**");
-	if (document.getElementById('10-80c').checked) demands.push("**10-80 - Tertiary**");
-	if (document.getElementById('10-80d').checked) demands.push("**10-80 - Parallel**");
-	if (document.getElementById('10-11').checked) demands.push("**10-11**");
-	if (document.getElementById('10-80').checked) demands.push("**10-80**");
-	if (document.getElementById('10-90').checked) demands.push("**10-90**");
-	if (document.getElementById('negotiations').checked) demands.push("**Negotiations**");
-	if (document.getElementById('PIT').checked) demands.push("**PIT**");
-	if (document.getElementById('911').checked) demands.push("**911 Call**");
-	if (document.getElementById('code5').checked) demands.push("**Code 5**");
-	if (document.getElementById('arrest').checked) demands.push("**Arrest**");
+	if (document.getElementById('10-80a').checked) activities.push("**10-80 - Primary**");
+	if (document.getElementById('10-80b').checked) activities.push("**10-80 - Secondary**");
+	if (document.getElementById('10-80c').checked) activities.push("**10-80 - Tertiary**");
+	if (document.getElementById('10-80d').checked) activities.push("**10-80 - Parallel**");
+	if (document.getElementById('10-11').checked) activities.push("**10-11**");
+	if (document.getElementById('10-80').checked) activities.push("**10-80**");
+	if (document.getElementById('10-90').checked) activities.push("**10-90**");
+	if (document.getElementById('negotiations').checked) activities.push("**Negotiations**");
+	if (document.getElementById('PIT').checked) activities.push("**PIT**");
+	if (document.getElementById('911').checked) activities.push("**911 Call**");
+	if (document.getElementById('code5').checked) activities.push("**Code 5**");
+	if (document.getElementById('arrest').checked) activities.push("**Arrest**");
+	if (activities.length > 1) {
+		const lastActivity = activities.pop();
+		activitiesText += `${activities.join(', ')} and ${lastActivity}`;
+	} else {
+		activitiesText = activities;
+	}
 	
 	buffer.push('');
 	buffer.push("**Cadet Logger - UPDATED ON THE GO**");
