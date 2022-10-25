@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>FTP Cadet Operation Generator</title>
-	<link rel="shortcut icon" href="images/favicon.ico" />
+	<link rel="shortcut icon" href="ezpez.png" />
 	<link rel="stylesheet" href="index.css" />
 	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
 	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> </head>
@@ -63,7 +63,7 @@
 			</select>
 		</div>
 		<div class="form-group">
-			<label>Activities ticked off (Cadet Logger, 1 per day):</label>
+			<label>Successfully completed activities ticked off (Cadet Logger, 1 per day):</label>
 			<input type="checkbox" id="10-80a" name="10-80a" value="10-80a" />
 			<label for="10-80a">10-80 - Primary</label><br />
 			<input type="checkbox" id="10-80b" name="10-80b" value="10-80b" />
@@ -87,11 +87,14 @@
 			<input type="checkbox" id="arrest" name="arrest" value="arrest" />
 			<label for="arrest">Arrest</label><br />
 		</div>
+        <div class="form-group">
+            <label>Notes</label>
+            <textarea id="notes" name="notes" placeholder="Describe here in depth how the cadet did on duty and if any mistakes were made"></textarea>
+        </div>
 	</div>
 	<textarea class="wide" id="reportBody">[report will automatically generate as you fill out the form to the left]&#10;&#10;(Note: this is just a base for the written operations. It is still required for you to write in more depth on how the cadet did.)</textarea>
 	<!--<pre id="reportBody">[report will automatically generate as you fill out the form to the left]</pre> -->
 	
 	<script src="reports.js"></script>
 </body>
-
 </html>
