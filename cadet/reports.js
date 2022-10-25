@@ -14,7 +14,7 @@ function report() {
 	let date = new Date().toLocaleDateString('en-US');
 
 	buffer = [];
-	buffer.push(callsign);
+	buffer.push(`**${callsign}**`);
 	buffer.push('');
 	
 	let phase = document.getElementById('phase').value;
@@ -36,16 +36,21 @@ function report() {
 	if (document.getElementById('911').checked) activities.push("911 Call");
 	if (document.getElementById('code5').checked) activities.push("Code 5");
 	if (document.getElementById('arrest').checked) activities.push("Arrest");
-	
-	//if (activities.length > 1) {
-	//	const lastActivity = activities.pop();
-	//	activitiesText += `${activities.join(', ')} and ${lastActivity}`;
-	//} else {
-	//	activitiesText = activities;
-	//}
-	
 	buffer.push('');
-	buffer.push("**Cadet Logger - UPDATED ON THE GO**");
+    	if (activities.length > 1) {
+		const lastActivity = activities.pop();
+		activitiesText += `${activities.join("\n")} \n${lastActivity}`;
+	} else {
+		activitiesText = activities;
+	}
+    	buffer.push("**Cadet Logger - Successful activities ticked off**");
+    	buffer.push(activitiesText);
+    	buffer.push('');
+    
+	let notes = document.getElementById('notes').value;
+	
+    	buffer.push("**Notes:**")
+   	buffer.push(notes)
 	
 	let curDarkmode = document.getElementById('darkmode').checked;
 	if (curDarkmode) {
@@ -108,84 +113,10 @@ function loadDarkmode() {
 let officers = null;
 let matched = [];
 
-const replaceNames = {
-	'Bucky Killbourne': 'Bucky Langston',
-	'Xander Langston': 'Xander Killbourne'
-};
 
-function loadOfficers() {
-	let cachedOfficers = localStorage.getItem("officers");
-	if (!officers) {
-		let xhr = new XMLHttpRequest();
-		try {
-			xhr.open("GET", "https://celestial.network/legacyrp/sasp", false);
-			xhr.send(null);
 
-			officers = JSON.parse(xhr.responseText).data;
-			officers = officers.map(officer => officer.callsign + ' ' +
-				(replaceNames[officer.full_name] ? replaceNames[officer.full_name] : officer.full_name));
-			localStorage.setItem('officers', xhr.responseText);
-		} catch (e) {
-			if (cachedOfficers) {
-				cachedOfficers = JSON.parse(cachedOfficers).data;
-				officers = cachedOfficers.map(officer => officer.callsign + ' ' + officer.full_name);
-				alert('Failed to load officers data from roster; using cached officers data...');
-			} else {
-				alert('Failed to load officers data from roster & no cache value stored!');
-			}
-		}
-	}
-}
 
-function searchOfficer(search) {
-	if (!search) {
-		document.getElementById('officerslist').innerHTML = '';
-		return;
-	}
-	search = search.toLowerCase();
 
-	if (!officers) loadOfficers();
-
-	let results = officers.filter(officer => officer.toLowerCase().includes(search));
-	let resultsCap = 5;
-	let count = 0;
-	let finalResults = [];
-	results.forEach(result => {
-		count++;
-		if (count > resultsCap) return;
-		result = result.trim();
-		finalResults.push("<button title='Add this officer to the list of officers involved' onClick='toggleOfficer(\"" + result + "\")'>" + result + "</button>");
-	});
-	document.getElementById('officerslist').innerHTML = finalResults.join("<br />");
-}
-
-function toggleOfficer(id) {
-	if (officersInvolved.has(id)) {
-		console.log("Removing " + id + "...");
-		officersInvolved.delete(id);
-	} else {
-		console.log("Adding " + id + "...");
-		officersInvolved.add(id);
-
-		document.getElementById('officersearch').value = "";
-	}
-	report();
-	updateOfficers();
-}
-
-function updateOfficers() {
-	let output = "";
-	for (let id of officersInvolved.values()) {
-		output += `<div class="chip">\n`;
-		output += `<img src="images/hat2.png" width="96" height="96">\n`;
-		output += `${id}\n`;
-		output += `<span class="closebtn" title="Remove this officer from the list of officers involved" style="cursor: default;" onclick='toggleOfficer(\"${id}\")'><i class="fa fa-times-circle-o" aria-hidden="true"></i>
-</span>\n`;
-		output += `</div>`
-	}
-
-	document.getElementById('officersAdded').innerHTML = "<br />" + output;
-}
 
 function showCopiedPopup() {
 	let popup = document.getElementById("myPopup");
