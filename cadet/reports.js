@@ -36,12 +36,13 @@ function report() {
 	if (document.getElementById('911').checked) activities.push("911 Call");
 	if (document.getElementById('code5').checked) activities.push("Code 5");
 	if (document.getElementById('arrest').checked) activities.push("Arrest");
-	if (activities.length > 1) {
-		const lastActivity = activities.pop();
-		activitiesText += `${activities.join(', ')} and ${lastActivity}`;
-	} else {
-		activitiesText = activities;
-	}
+	
+	//if (activities.length > 1) {
+	//	const lastActivity = activities.pop();
+	//	activitiesText += `${activities.join(', ')} and ${lastActivity}`;
+	//} else {
+	//	activitiesText = activities;
+	//}
 	
 	buffer.push('');
 	buffer.push("**Cadet Logger - UPDATED ON THE GO**");
