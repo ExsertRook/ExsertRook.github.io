@@ -108,7 +108,7 @@ input[type="number"] {
     top: 20px;
     right: 20px;
     white-space: pre-wrap;
-    width: calc(70% - 20px);
+    width: calc(60% - 20px);
     padding: 5px 10px;
 }
 
