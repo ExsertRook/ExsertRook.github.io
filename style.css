@@ -28,6 +28,17 @@
 	background-color: #94ecf2f1;
 	text-align: center;
 }
+.footer2 {
+	color: black;
+	position: absolute;
+	right: 1;
+	bottom: 0;
+	left: 10px;
+	padding: .3rem;
+	font-size: 15px;
+	background-color: #94ecf2f1;
+	text-align: right;
+}
 .keyword {
 	text-decoration: underline;
 	text-decoration-style: dashed;
