@@ -14,7 +14,7 @@
 	padding-left: 6px;
 	margin-top: 8px;
 	margin-bottom: 8px;
-	background: #94ecf2;
+	background: #94ecf2f1;
 	font-size: 18px;
 }
 .footer {
@@ -25,7 +25,7 @@
 	left: 0;
 	padding: .3rem;
 	font-size: 15px;
-	background-color: #94ecf2;
+	background-color: #94ecf2f1;
 	text-align: center;
 }
 .keyword {
