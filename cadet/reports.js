@@ -51,6 +51,9 @@ function report() {
 	
     	buffer.push("**Notes:**")
    	buffer.push(notes)
+	buffer.push('');
+
+	if (document.getElementById('checkedoff').checked) buffer.push("**Cadet Logger: Updated**");
 	
 	let curDarkmode = document.getElementById('darkmode').checked;
 	if (curDarkmode) {
