@@ -260,13 +260,18 @@ function report() {
 		}
 	};
 	let medical = medicalSelected.options[medicalSelected.selectedIndex].text;
-	buffer.push(`[MEDICAL ATTENTION | ${medicalInformation[medical].label}]:`);
-	buffer.push(medicalInformation[medical].text);
-	buffer.push('');
 
 	let processed = document.getElementById('processedat').value;
-	buffer.push('[PROCESSED]:');
-	buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
+	
+	let didchaseend = document.getElementById('cend').value;
+    	if (document.getElementById('cend').checked) {
+		buffer.push(`[MEDICAL ATTENTION | ${medicalInformation[medical].label}]:`);
+	    	buffer.push(medicalInformation[medical].text);
+	    	buffer.push('');
+
+        	buffer.push('[PROCESSED]:');
+	    	buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
+    	}
 	
 	let curDarkmode = document.getElementById('darkmode').checked;
 	if (curDarkmode) {
