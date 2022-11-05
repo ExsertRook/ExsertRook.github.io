@@ -27,6 +27,13 @@ function report() {
 	let parallel = document.getElementById('parallel').value;
 	let airunit = document.getElementById('airunit').value;
 	let bikeunit = document.getElementById('bikeunit').value;
+	
+	let primaryp = document.getElementById('primaryp').value;
+	let secondaryp = document.getElementById('secondaryp').value;
+	let tertiaryp = document.getElementById('tertiaryp').value;
+	let parallelp = document.getElementById('parallelp').value;
+	let airp = document.getElementById('airp').value;
+	
 	if (scenecommand || negotiator) buffer.push('');
 	
 	buffer.push(`[SCENE ASSIGNMENT]:`);
@@ -36,11 +43,11 @@ function report() {
 	
 	buffer.push('');
 	buffer.push(`[INVOLVED IN PURSUIT]:`);
-	if (primary) buffer.push(`Primary: ${primary}`);
-	if (secondary) buffer.push(`Secondary: ${secondary}`);
-	if (tertiary) buffer.push(`Tertiary: ${tertiary}`);
-	if (parallel) buffer.push(`Parallel: ${parallel}`);
-	if (airunit) buffer.push(`Air-1: ${airunit}`);
+	if (primary || primaryp) buffer.push(`Primary: ${primary} ${primaryp}`);
+	if (secondary || secondaryp) buffer.push(`Secondary: ${secondary} ${secondaryp}`);
+	if (tertiary || tertiaryp) buffer.push(`Tertiary: ${tertiary} ${tertiaryp}`);
+	if (parallel || parallelp) buffer.push(`Parallel: ${parallel} ${parallelp}`);
+	if (airunit || airp) buffer.push(`Air-1: ${airunit} ${airp}`);
 	if (bikeunit) buffer.push(`Bike-Unit: ${bikeunit}`);
 	buffer.push('');
 
