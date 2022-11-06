@@ -79,6 +79,13 @@ textarea {
     height: 100px;
 }
 
+.center {
+    margin-left: 110%;
+    margin-top: -80%;
+    padding-bottom: 0%;
+    margin-right: auto;
+}
+
 textarea, input[type="text"], input[type="number"] {
     border: 1px solid #a8a8a8;
     border-radius: 2px;
