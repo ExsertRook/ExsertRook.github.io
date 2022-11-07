@@ -40,7 +40,7 @@
 	text-align: right;
 }
 .keyword {
-	text-decoration: underline;
+	#text-decoration: underline;
 	text-decoration-style: dashed;
 }
 .score {
