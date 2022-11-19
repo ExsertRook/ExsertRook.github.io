@@ -7,7 +7,8 @@
 	<link rel="shortcut icon" href="impound.png" />
 	<link rel="stylesheet" href="index.css" />
 	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
-	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> </head>
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> 
+</head>
 
 <body onLoad="loadDarkmode()">
 	<div id="form">
@@ -16,15 +17,21 @@
     			body {
         		    font-family: 'Nunito';font-size: 16px;
     			}
-			table, th, td {
-                    		border:2px solid black;
-                    		border-collapse: collapse;
-                	}
-                	th {
-                    		height: 50px;
-                	}
-    			</style>
-			<span style="font-weight: bold;">Vehicle Hold Report Generator</span> | 
+                table, th, td {
+                    border:2px solid #000000;
+                    border-collapse: collapse;
+                }
+                th {
+                    height: 50px;
+					background-color: #a0a0a0;
+                }
+				th-2 {
+					background-color: aqua;
+				}
+
+    		</style>
+        
+			<span style="font-weight: bold; font-size: 18px;">Vehicle Hold Report Generator</span> | 
 			<input type="checkbox" id="darkmode" name="darkmode" value="darkmode" />
 			<label for="darkmode">Darkmode</label>
 			<br />
@@ -34,6 +41,7 @@
 				<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
 			</div>
 		</div>
+        
 		<div class="form-group">
 			<label>Incident Report Nr:</label>
 			<input type="text" id="incidentnr" name="incidentnr" placeholder="1234">
@@ -45,6 +53,27 @@
 				<option selected>B</option>
 				<option>C</option>
 				<option>D</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label>Hold Reason:</label>
+			<select id="holdreason">
+				<option>Involuntary Manslaughter</option>
+				<option>Voluntary Manslaughter</option>
+				<option>First Degree Murder</option>
+				<option>Second Degree Murder</option>
+				<option>Terrorism</option>
+				<option>Street Racing</option>
+				<option selected>Robbery of a Truck, Bank, J-Store</option>
+				<option>Kidnapping</option>
+				<option>Shooting</option>
+				<option>Weapons Trafficking</option>
+				<option>Felony Evading (Second Evasion - same vehicle)</option>
+				<option>Robbery of a Store</option>
+				<option>Armed Robbery of a Person</option>
+				<option>Drug Trafficking Class A/B</option>
+				<option>Driving Under the Influence</option>
+				<option>Misdemeanor Evading (Second Evasion - same vehicle)</option>
 			</select>
 		</div>
 		<div class="form-group">
@@ -68,64 +97,64 @@
 			<label>Vehicle Registered Owner:</label>
 			<input type="text" id="owner" name="owner" placeholder="Firstname Lastname">
 		</div>
-		<div class="form-group">
-			<label>Vehicle Description:</label>
+		<div>
+			<label>Vehicle Description:</label><br />
 			<input type="text" id="vehiclename" name="vehiclename" placeholder="Sultan">
 	</div>
-	<table class="center" style="width:120%" >
+    <table class="center" style="width:120%" >
         <thead>
-        	<tr>
-                	<th colspan="2">Class A Hold --- 12 Hours</th>
-            	</tr>
+            <tr>
+                <th colspan="2" style="font-size: 26px;">Class A Hold --- 12 Hours</th>
+            </tr>
         </thead>
         <tbody>
-        	<tr>
-                	<td>- Involuntary Manslaughter</td></tr>
-                	<td>- Voluntary Manslaughter</td></tr>
-                	<td>- First Degree Murder</td></tr>
-                	<td>- Second Degree Murder</td></tr>
-                	<td>- Terrorism</td></tr>
-            	</tr>
+            <tr>
+                <td>- Involuntary Manslaughter</td></tr>
+                <td>- Voluntary Manslaughter</td></tr>
+                <td>- First Degree Murder</td></tr>
+                <td>- Second Degree Murder</td></tr>
+                <td>- Terrorism</td></tr>
+            </tr>
         </tbody>
         <thead>
-            	<tr>
-                	<th colspan="2">Class B Hold --- 90 Minutes</th>
-            	</tr>
+            <tr>
+                <th colspan="2" style="font-size: 26px;">Class B Hold --- 90 Minutes</th>
+            </tr>
         </thead>
         <tbody>
-            	<tr>
-                	<td>- Evading, Excessive Speeding, or Reckless Driving while Street Racing</td></tr>
-                	<td>- Robbery of an Armored Truck, Bank, or Jewelry</td></tr>
-                	<td>- Kidnapping</td></tr>
-                	<td>- Shooting, or the commission of a crime associated with the use of a firearm</td></tr>
-                	<td>- Weapons Trafficking</td>
-            	</tr>
+            <tr>
+                <td>- Evading, Excessive Speeding, or Reckless Driving while Street Racing</td></tr>
+                <td>- Robbery of an Armored Truck, Bank, or Jewelry</td></tr>
+                <td>- Kidnapping</td></tr>
+                <td>- Shooting, or the commission of a crime associated with the use of a firearm</td></tr>
+                <td>- Weapons Trafficking</td>
+            </tr>
         </tbody>
         <thead>
-            	<tr>
-                	<th colspan="2">Class C Hold --- 60 Minutes</th>
-            	</tr>
+            <tr>
+                <th colspan="2" style="font-size: 26px;">Class C Hold --- 60 Minutes</th>
+            </tr>
         </thead>
         <tbody>
-            	<tr>
-                	<td>- Felony Evading (Second Evasion in the same vehicle)</td></tr>
-                	<td>- Robbery of a Store</td></tr>
-                	<td>- Armed Robbery of a Person</td></tr>
-                	<td>- Drug Trafficking Class A/B</td></tr>
-            	</tr>
+            <tr>
+                <td>- Felony Evading (Second Evasion in the same vehicle)</td></tr>
+                <td>- Robbery of a Store</td></tr>
+                <td>- Armed Robbery of a Person</td></tr>
+                <td>- Drug Trafficking Class A/B</td></tr>
+            </tr>
         </tbody>
         <thead>
-            	<tr>
-                	<th colspan="2">Class D Hold --- 30 Minutes</th>
-            	</tr>
+            <tr>
+                <th colspan="2" style="font-size: 26px;">Class D Hold --- 30 Minutes</th>
+            </tr>
         </thead>
         <tbody>
-            	<tr>
-                	<td>- Driving Under the Influence</td></tr>
-                	<td>- Misdemeanor Evading (Second Evasion in the same vehicle)</td></tr>
-            	</tr>
-    	</tbody>
-    	</table>
+            <tr>
+                <td>- Driving Under the Influence</td></tr>
+                <td>- Misdemeanor Evading (Second Evasion in the same vehicle)</td></tr>
+            </tr>
+        </tbody>
+    </table>
 	<textarea class="wide" id="reportBody">[report will automatically generate as you fill out the form to the left]&#10;&#10;(Note: the generated report will be editable, but once you edit it you can no longer update it based on the form)</textarea>
 	<!--<pre id="reportBody">[report will automatically generate as you fill out the form to the left]</pre> -->
 	
