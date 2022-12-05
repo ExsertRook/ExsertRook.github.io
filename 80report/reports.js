@@ -120,6 +120,9 @@ function report() {
 		},
 		'Evading a Parking Ticket': {
 			text: 'During regular patrol, we were dealing with a vehicle that was illegally parked. When talking to the drive of the vehicle and asking them to sign the parking citation, they decided to flee, initiating a 10-80A.',
+		},
+		'Warrant': {
+			text: 'During regular patrol, we had seen an individual who seemed to have an out standing warrant. Once we made sure of the individuals identity, the suspect had began evading from us, initiating a 10-80',
 		}
 	};
 	let pursuit = pursuitSelected.options[pursuitSelected.selectedIndex].text;
