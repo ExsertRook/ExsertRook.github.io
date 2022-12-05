@@ -50,76 +50,76 @@ function report() {
 	let pursuitSelected = document.getElementById('pursuittype');
 	let pursuitInformation = {
 		'Refusing to pull over': {
-			text: 'During regular patrol, we noticed that there was a vehicle breaking traffic laws. Upon attempting to pull them over, they did not even acknowledge it and refused to pull over their vehicle. With that they initiated a 10-80A with us pursuing the vehicle.',
+			text: 'During regular patrol, we noticed that there was a vehicle breaking traffic laws. Upon attempting to pull them over, they did not even acknowledge it and refused to pull over their vehicle. With that they initiated a 10-80 with us pursuing the vehicle.',
 		},
 		'Excessive Speeding': {
-			text: 'During regular patrol, we noticed that there was a vehicle who excessively sped past us. In an attempt to pull the vehicle over for a welfare check, they did not even pull over, initiating a 10-80A.',
+			text: 'During regular patrol, we noticed that there was a vehicle who excessively sped past us. In an attempt to pull the vehicle over for a welfare check, they did not even pull over, initiating a 10-80.',
 		},
 		'Drug-Sales': {
-			text: 'During regular patrol, we responded to some drug sale calls. Upon arrival, an individual that was in the area noticed the patrol vehicle and decided to get into their car and flee, initiating a 10-80A.',
+			text: 'During regular patrol, we responded to some drug sale calls. Upon arrival, an individual that was in the area noticed the patrol vehicle and decided to get into their car and flee, initiating a 10-80.',
 		},
 		'Drug-Sales (Confirmed Handoff)': {
-			text: 'During regular patrol, we responded to some drug sale calls. Upon arrival, we notice and confirm an individual doing a handoff to a pedestrian passing by. Once we made a move and go up to the suspect, they got into their vehicle and fled, initiating a 10-80A.',
+			text: 'During regular patrol, we responded to some drug sale calls. Upon arrival, we notice and confirm an individual doing a handoff to a pedestrian passing by. Once we made a move and go up to the suspect, they got into their vehicle and fled, initiating a 10-80.',
 		},
 		'10-11': {
-			text: 'During regular patrol, we pulled over a vehicle that had broken a traffic law. While questioning the suspect, they decided to turn their vehicle back on and evade from us, initiating a 10-80A.',
+			text: 'During regular patrol, we pulled over a vehicle that had broken a traffic law. While questioning the suspect, they decided to turn their vehicle back on and evade from us, initiating a 10-80.',
 		},
 		'10-11 (Code 5)': {
-			text: 'During regular patrol, we pulled over a vehicle. Later realizing that the vehicle had a BOLO (Be On the Look Out) on it, we performed a Code 5 felony stop on them. The moment the occupants in the vehicle noticed that weapons are being drawn at them by the police, they quickly switched the engine on and fled the scene, initiating a 10-80A.',
+			text: 'During regular patrol, we pulled over a vehicle. Later realizing that the vehicle had a BOLO (Be On the Look Out) on it, we performed a Code 5 felony stop on them. The moment the occupants in the vehicle noticed that weapons are being drawn at them by the police, they quickly switched the engine on and fled the scene, initiating a 10-80.',
 		},
 		'House Burglary': {
-			text: 'During regular patrol, we responded to 10-31 house burglary calls at the location mentioned earlier. Upon arrival, an individual ran from a house that was in the area into their vehicle and fled the scene, initiating a 10-80A.',
+			text: 'During regular patrol, we responded to 10-31 house burglary calls at the location mentioned earlier. Upon arrival, an individual ran from a house that was in the area into their vehicle and fled the scene, initiating a 10-80.',
 		},
 		'10-66': {
-			text: 'During regular patrol, we responded to some 10-66 calls. Once arriving there, we noticed an individual acting suspicious so we approached them for further investigation. Upon approaching them, they then decided to get into their vehicle and flee, initiating a 10-80A.',
+			text: 'During regular patrol, we responded to some 10-66 calls. Once arriving there, we noticed an individual acting suspicious so we approached them for further investigation. Upon approaching them, they then decided to get into their vehicle and flee, initiating a 10-80.',
 		},
 		'Stolen PD Car': {
-			text: 'During regular patrol, we noticed a PD vehicle roaming around with no tracker on. As we came closer to investigate, the person then decided to run, initiating a 10-80A.',
+			text: 'During regular patrol, we noticed a PD vehicle roaming around with no tracker on. As we came closer to investigate, the person then decided to run, initiating a 10-80.',
 		},
 		'10-71': {
-			text: 'During regular patrol, we responded to some 10-71 calls. Once arriving there, we noticed an individual that was fleeing the immediate area of the shots fired calls. We then chased after them, initiating a 10-80A.',
+			text: 'During regular patrol, we responded to some 10-71 calls. Once arriving there, we noticed an individual that was fleeing the immediate area of the shots fired calls. We then chased after them, initiating a 10-80.',
 		},
 		'BOLO Vehicle': {
-			text: 'During regular patrol, we had eyes on a vehicle that was marked down as a "BOLO Vehicle". Once we attempted to stop the vehicle, they had increased their speed and initiated a 10-80A.',
+			text: 'During regular patrol, we had eyes on a vehicle that was marked down as a "BOLO Vehicle". Once we attempted to stop the vehicle, they had increased their speed and initiated a 10-80.',
 		},
 		'Kidnapping': {
-			text: 'During regular patrol, we had a 10-72 situation occur at the location mentioned above. The hostage was placed into the vehicle and the drove off with the hostage, initiating a 10-80A.',
+			text: 'During regular patrol, we had a 10-72 situation occur at the location mentioned above. The hostage was placed into the vehicle and the drove off with the hostage, initiating a 10-80.',
 		},
 		'10-67': {
-			text: 'During regular patrol, we responded to a 10-67 (Grand Theft Auto) call of a car being stolen. Once we got on scene, and had eyes on the vehicle, the driver then decided to evade from us, initiating a 10-80A.',
+			text: 'During regular patrol, we responded to a 10-67 (Grand Theft Auto) call of a car being stolen. Once we got on scene, and had eyes on the vehicle, the driver then decided to evade from us, initiating a 10-80.',
 		},
 		'10-77 / 10-78 Call': {
-			text: 'During regular patrol, we responded to an officers request for additionals (10-77/78). Once we arrived on scene where backup was requested, there was an individual that started fleeing the scene, initiating a 10-80A.',
+			text: 'During regular patrol, we responded to an officers request for additionals (10-77/78). Once we arrived on scene where backup was requested, there was an individual that started fleeing the scene, initiating a 10-80.',
 		},
 		'Brandishing a weapon': {
-			text: 'During regular patrol, we had noticed an individual brandishing a weapon in a public area. Upon approaching the individual, they decided to get into a vehicle and evade from police, initiating a 10-80A.',
+			text: 'During regular patrol, we had noticed an individual brandishing a weapon in a public area. Upon approaching the individual, they decided to get into a vehicle and evade from police, initiating a 10-80.',
 		},
 		'2 Handed Weapon In Mount Zonah': {
-			text: 'During regular patrol, we had payed a visit to Mount Zonah. While we were there, we noticed an individual who had a two handed weapon on their back roaming around the hospital. In an attempt to detain the individual, they ran for their vehicle and initiated a 10-80A.',
+			text: 'During regular patrol, we had payed a visit to Mount Zonah. While we were there, we noticed an individual who had a two handed weapon on their back roaming around the hospital. In an attempt to detain the individual, they ran for their vehicle and initiated a 10-80.',
 		},
 		'911 Call': {
-			text: 'During regular patrol, we responded to a 911 text from an individual in need of assistance. When we got to the scene of the 911 call, the person that was in question of commiting a crime decided to evade from the police in their vehicle, initiating a 10-80A.',
+			text: 'During regular patrol, we responded to a 911 text from an individual in need of assistance. When we got to the scene of the 911 call, the person that was in question of commiting a crime decided to evade from the police in their vehicle, initiating a 10-80.',
 		},
 		'GTA (HoldUp)': {
-			text: 'During regular patrol, we noticed an individual holding up a driver of a vehicle for the keys. The suspect then grabbed the keys to the vehicle and initiated a 10-80A.',
+			text: 'During regular patrol, we noticed an individual holding up a driver of a vehicle for the keys. The suspect then grabbed the keys to the vehicle and initiated a 10-80.',
 		},
 		'Vandalism': {
-			text: 'During regular patrol, we had an individual walk up towards our police cruiser and hit it with an object, causing a dent within the vehicle. In an attempt to detain and arrest the individual, they made a run for their vehicle and initiated a 10-80A.',
+			text: 'During regular patrol, we had an individual walk up towards our police cruiser and hit it with an object, causing a dent within the vehicle. In an attempt to detain and arrest the individual, they made a run for their vehicle and initiated a 10-80.',
 		},
 		'10-99': {
-			text: 'During regular patrol we had an officer call out a 10-99 situation. After we arrived on scene of the 99 call, suspects fled immediately, initiating a 10-80A.',
+			text: 'During regular patrol we had an officer call out a 10-99 situation. After we arrived on scene of the 99 call, suspects fled immediately, initiating a 10-80.',
 		},
 		'Jaywalking': {
-			text: 'During regular patrol, we noticed an individual crossing a 4 lane road. We saw him doing it and deemed it as jaywalking. Once we approached the individual to detain and question them, they evaded and ran into a vehicle, taking off in it and initiating a 10-80A.',
+			text: 'During regular patrol, we noticed an individual crossing a 4 lane road. We saw him doing it and deemed it as jaywalking. Once we approached the individual to detain and question them, they evaded and ran into a vehicle, taking off in it and initiating a 10-80.',
 		},
 		'Stockade Robbery': {
-			text: 'During regular patrol, we had an alarm go off inside of an armored stockade bank truck near the location mentioned above. Once we arrived on scene, there was an individual inside of a vehicle, attempting to flee, they evaded and ran into a vehicle, taking off in it and initiating a 10-80A.',
+			text: 'During regular patrol, we had an alarm go off inside of an armored stockade bank truck near the location mentioned above. Once we arrived on scene, there was an individual inside of a vehicle, attempting to flee, they evaded and ran into a vehicle, taking off in it and initiating a 10-80.',
 		},
 		'EMS to PD Call': {
-			text: 'During regular patrol, we had EMS contact us through our radio requesting assistance at the location mentioned above. Once we arrived, the individual that matched the description EMS pointed out began fleeing, initiating a 10-80A.',
+			text: 'During regular patrol, we had EMS contact us through our radio requesting assistance at the location mentioned above. Once we arrived, the individual that matched the description EMS pointed out began fleeing, initiating a 10-80.',
 		},
 		'Evading a Parking Ticket': {
-			text: 'During regular patrol, we were dealing with a vehicle that was illegally parked. When talking to the drive of the vehicle and asking them to sign the parking citation, they decided to flee, initiating a 10-80A.',
+			text: 'During regular patrol, we were dealing with a vehicle that was illegally parked. When talking to the drive of the vehicle and asking them to sign the parking citation, they decided to flee, initiating a 10-80.',
 		},
 		'Warrant': {
 			text: 'During regular patrol, we had seen an individual who seemed to have an out standing warrant. Once we made sure of the individuals identity, the suspect had began evading from us, initiating a 10-80',
