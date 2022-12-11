@@ -23,7 +23,7 @@ function report() {
 	if (susname, susid, icudate) buffer.push(`**Arresting Officer:** ${callsign}`);
     if (incidentnr) buffer.push(`**Incident Report Nr:** ${incidentnr}`);
 	buffer.push('');
-	if (susname, susid, icudate, incidentnr) buffer.push('Charges they need to recieve:');
+	if (susname, susid, icudate, incidentnr) buffer.push('**Charges they need to recieve:**');
 	buffer.push('');
 	/// CHARGES
 	let c1 = document.getElementById('charge1').value;
