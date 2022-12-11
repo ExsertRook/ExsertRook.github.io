@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>ICU Arrest Information</title>
+	<link rel="shortcut icon" href="armedrobber.png" />
+	<link rel="stylesheet" href="index.css" />
+	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> </head>
+
+<body onLoad="loadDarkmode()">
+	<div id="form">
+		<div class="form-group">
+			<style>
+    			body {
+        		    font-family: 'Nunito';font-size: 16px;
+    			}
+    			</style>
+			<span style="font-weight: bold;">ICU Arrest Information</span> | 
+			<input type="checkbox" id="darkmode" name="darkmode" value="darkmode" />
+			<label for="darkmode">Darkmode</label>
+			<br />
+			<label class="inline" title="(You only have to do this once - it will cache)" style="border-bottom: 1px dotted #000; text-decoration: none;">Your callsign/name:</label>
+			<input type="text" id="yourself" name="yourself" placeholder="[SF-202] Thomas Sucher" /> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<div class="popup" id="copyReport">
+				<div class="btn" title="Copy the generated report to your clipboard">Copy The Information</div> <span class="popuptext" id="myPopup">Copied!</span>
+			</div>
+		</div>
+		<div class="form-group">
+            Suspect's Name:
+            <input type="text" id="suspectname" name="suspectname" placeholder="Jeff Bozo" />
+        </div>
+        <div class="form-group">
+            Suspect's CID:
+            <input type="text" id="suspectcid" name="suspectcid" placeholder="55613" />
+        </div>
+        <div class="form-group">
+            ICU Date:
+            <input type="checkbox" id="icudate" name="icudate" />
+        </div>
+        <div class="form-group">
+            Arresting Officer:
+            <input type="text" id="arrestingofficer" name="arrestingofficer" placeholder="[SF-202] Thomas Sucher" />
+        </div>
+        <div class="form-group">
+            Incident Report Nr:
+            <input type="text" id="incidentnr" name="incidentnr" placeholder="9228" />
+        </div>
+	</div>
+	<textarea class="wide" id="reportBody">[report will automatically generate as you fill out the form to the left]&#10;&#10;(Note: the generated report will be editable, but once you edit it you can no longer update it based on the form)</textarea>
+	<!--<pre id="reportBody">[report will automatically generate as you fill out the form to the left]</pre> -->
+	
+	<script src="reports.js"></script>
+</body>
+
+</html>
