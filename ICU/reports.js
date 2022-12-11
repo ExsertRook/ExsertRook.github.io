@@ -9,25 +9,42 @@ function report() {
 	if (!callsign) callsign = '[missing]';
 
 	buffer = [];
-    let susname = document.getElementById('suspectname').value;
+	/// Pull Info
+	let susname = document.getElementById('suspectname').value;
     let susid = document.getElementById('suspectcid').value;
-    let arrestofficer = document.getElementById('arrestingofficer').value;
     let incidentnr = document.getElementById('incidentnr').value;
-
+	let icudate = document.getElementById('icudate').value;
+	/// Push Info
     buffer.push(`**ICU**`);
     buffer.push('');
     if (susname) buffer.push(`**Name of Patient:** ${susname}`);
-    if (susid) buffer.push(`**Patient CID:** ${susid}`);
-
-    let icudate = document.getElementById('icudate').value;
-    if (document.getElementById('icudate').checked) {
-        buffer.push(new Date());
-    }
-
-	if (arrestofficer) buffer.push(`**Arresting Officer:** ${arrestofficer}`);
+    if (susid) buffer.push(`**Patient's CID:** ${susid}`);
+    if (icudate) buffer.push(`**ICU Date:** ${icudate}`);
+	if (susname, susid, icudate) buffer.push(`**Arresting Officer:** ${callsign}`);
     if (incidentnr) buffer.push(`**Incident Report Nr:** ${incidentnr}`);
+	buffer.push('');
+	if (susname, susid, icudate, incidentnr) buffer.push('Charges they need to recieve:');
+	buffer.push('');
+	/// CHARGES
+	let c1 = document.getElementById('charge1').value;
+	let c2 = document.getElementById('charge2').value;
+	let c3 = document.getElementById('charge3').value;
+	let c4 = document.getElementById('charge4').value;
+	let c5 = document.getElementById('charge5').value;
+	let c6 = document.getElementById('charge6').value;
 
-
+	if (c1) buffer.push(`- ${c1}`);		
+	if (c2) buffer.push(`- ${c2}`);	
+	if (c3) buffer.push(`- ${c3}`);	
+	if (c4) buffer.push(`- ${c4}`);	
+	if (c5) buffer.push(`- ${c5}`);	
+	if (c6) buffer.push(`- ${c6}`);
+	
+	buffer.push('');
+	///	Other Info
+	let other = document.getElementById('otherinfo').value;
+	if (other) buffer.push(`**Other Information:**`)
+	if (other) buffer.push(`${other}`);
     /////
 
 	let curDarkmode = document.getElementById('darkmode').checked;
@@ -40,10 +57,10 @@ function report() {
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }
 
-let inputs = document.querySelectorAll('input[type="text"], input[type="number"], textarea');
+let inputs = document.querySelectorAll('input[type="text"], input[type="text2"], input[type="text3"], input[type="text4"], input[type="number"], textarea');
 inputs.forEach(i => i.addEventListener('keyup', report, false));
 
-let checkboxes = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
+let checkboxes = document.querySelectorAll('input[type="checkbox"], input[type="radio"], input[type="date"]');
 checkboxes.forEach(i => i.addEventListener('click', report, false));
 
 let selectOptions = document.querySelectorAll('select');

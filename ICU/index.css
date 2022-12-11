@@ -79,7 +79,7 @@ textarea {
     height: 100px;
 }
 
-textarea, input[type="text"], input[type="number"] {
+textarea, input[type="text"], input[type="text2"], input[type="text3"], input[type="text4"], input[type="date"], input[type="number"] {
     border: 1px solid #a8a8a8;
     border-radius: 2px;
     font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Ubuntu Mono", "Roboto Mono", Menlo, Monaco, Consolas, monospace;
@@ -98,6 +98,22 @@ input[type="checkbox"] + label {
 
 input[type="text"] {
     width: 180px;
+    padding: 3px;
+}
+input[type="text2"] {
+    width: 350px;
+    padding: 3px;
+}
+input[type="text3"] {
+    width: 60px;
+    padding: 3px;
+}
+input[type="text4"] {
+    width: 30px;
+    padding: 3px;
+}
+input[type="date"] {
+    width: 110px;
     padding: 3px;
 }
 input[type="number"] {

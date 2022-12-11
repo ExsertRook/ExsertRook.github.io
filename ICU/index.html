@@ -33,22 +33,38 @@
         </div>
         <div class="form-group">
             Suspect's CID:
-            <input type="text" id="suspectcid" name="suspectcid" placeholder="55613" />
+            <input type="text3" id="suspectcid" name="suspectcid" placeholder="55613" />
         </div>
         <div class="form-group">
             ICU Date:
-            <input type="checkbox" id="icudate" name="icudate" />
-        </div>
-        <div class="form-group">
-            Arresting Officer:
-            <input type="text" id="arrestingofficer" name="arrestingofficer" placeholder="[SF-202] Thomas Sucher" />
+            <input type="date" id="icudate" name="icudate" placeholder="12/11/2022"/>
         </div>
         <div class="form-group">
             Incident Report Nr:
-            <input type="text" id="incidentnr" name="incidentnr" placeholder="9228" />
+            <input type="text3" id="incidentnr" name="incidentnr" placeholder="9228" />
         </div>
+		<div class="form-group">
+			Charges They Need To Recieve & How Many Counts:
+			<br />
+			<input type="text2" id="charge1" name="charge1" placeholder="P.C. 810 - Felony Evading a Peace Officer" />
+			<br />
+			<input type="text2" id="charge2" name="charge2" placeholder="P.C. 907 - Possession of Class 2 Weapon" />
+			<br />
+			<input type="text2" id="charge3" name="charge3" placeholder="P.C. 213 - Kidnapping" />
+			<br />
+			<input type="text2" id="charge4" name="charge4" placeholder="P.C. 308 - Armed Robbery of a Bank" />
+			<br />
+			<input type="text2" id="charge5" name="charge5" placeholder="P.C. 906 - Possession of Unregistered Firearm" />
+			<br />
+			<input type="text2" id="charge6" name="charge6" placeholder="P.C. 203 - Aggravated Assault and Battery" />
+		</div>
+		<div>
+			Other Information:
+			<br />
+			<textarea id="otherinfo" name="otherinfo" placeholder="Any other information to add to the ICU (Optional)"></textarea>
+		</div>
 	</div>
-	<textarea class="wide" id="reportBody">[report will automatically generate as you fill out the form to the left]&#10;&#10;(Note: the generated report will be editable, but once you edit it you can no longer update it based on the form)</textarea>
+	<textarea class="wide" id="reportBody">[report will automatically generate as you fill out the form to the left]&#10;&#10;</textarea>
 	<!--<pre id="reportBody">[report will automatically generate as you fill out the form to the left]</pre> -->
 	
 	<script src="reports.js"></script>
