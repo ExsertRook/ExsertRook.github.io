@@ -20,23 +20,23 @@ function report() {
 	let scenecommand = document.getElementById('scenecommand').value;
 	let negotiator = document.getElementById('negotiator').value;
 	let hostagestayer = document.getElementById('hostagestayer').value;
-	
+// Pull Drivers List
 	let primary = document.getElementById('primary').value;
 	let secondary = document.getElementById('secondary').value;
 	let tertiary = document.getElementById('tertiary').value;
 	let parallel = document.getElementById('parallel').value;
 	let airunit = document.getElementById('airunit').value;
 	let bikeunit = document.getElementById('bikeunit').value;
-	
+// Pull passengers List
 	let primaryp = document.getElementById('primaryp').value;
 	let secondaryp = document.getElementById('secondaryp').value;
 	let tertiaryp = document.getElementById('tertiaryp').value;
 	let parallelp = document.getElementById('parallelp').value;
 	let airp = document.getElementById('airp').value;
-	
+
 	if (scenecommand || negotiator) buffer.push('');
 	
-	buffer.push(`[SCENE ASSIGNMENT]:`);
+	if (scenecommand || negotiator || hostagestayer) buffer.push(`[SCENE ASSIGNMENT]:`);
 	if (scenecommand) buffer.push(`Scene Command: ${scenecommand}`);
 	if (negotiator) buffer.push(`Negotiator: ${negotiator}`);
 	if (hostagestayer) buffer.push(`Stayed Back For Hostage: ${hostagestayer}`);
@@ -59,7 +59,6 @@ function report() {
 		document.getElementById('whatFleeca').style.display = 'block';
 		let specific = document.getElementById('specificBank').value;
 		robberyString = `${robbery} at ${specific}`;
-		//document.getElementById('specificBank').disabled = false;
 		ROBBERY_STATE = 'FLEECA';
 	}
 	if (robbery.trim() === '24/7 Store') {
@@ -73,20 +72,8 @@ function report() {
 		document.getElementById('whatFleeca').style.display = 'none';
 		document.getElementById('whatStore').style.display = 'none';
 		robberyString = robbery;
-		// we are clearing this in case something else was selected previously
 		ROBBERY_STATE = 'JEWLERY';
 	}
-
-	/*
-	if (ROBBERY_STATE === 'FLEECA') {
-		let specific = document.getElementById('specificBank').value;
-		robbery = `${robbery} at ${specific}`;
-	}
-	if (ROBBERY_STATE === '24/7') {
-		let specific = document.getElementById('specificStore').value;
-		robbery = `${robbery} at ${specific}`;
-	}
-	*/
 
 	buffer.push(`[DETAILS | DEMANDS]:`);
 	buffer.push(`During normal patrol, we had received a report from dispatch of an alarm going off at the ${robberyString}. Once scene command was established, they assigned officer ${callsign} to create an incident report.`);
@@ -116,7 +103,6 @@ function report() {
 		demandsText = demands;
 	}
 
-	
 	let stayedBack = (hostagestayer ? hostagestayer.trim() : 'a unit');
 	buffer.push(`The ${robbersinside} unidentified suspect(s) demanded ${demandsText} for the safety of the ${hostages} hostage(s).` +
 		` Once they were ready on the inside, scene command prepared a lineup for the pursuit. Scene command assigned officer ${stayedBack} to stay back for the hostage and collect their contact information.`);
@@ -245,6 +231,9 @@ function report() {
 		},
 		'Secondary Vehicle Blocked Units | Escaped': {
 			text: 'The chase lasted for a bit of time until the pursuing units were blocked in a small alley by a secondary vehicle that got involved in the pursuit. After them successfully stopping the pursuing units, the original suspects managed to escape police and we declared the chase VCB.',
+		},
+		'Vehicle 10-50 | Suspects went down': {
+			text: 'The chase lasted for a bit of time until the evading vehicle had crashed and the occupants of the vehicle were incapacitated.',
 		}
 	};
 	let chase = chaseSelected.options[chaseSelected.selectedIndex].text;
@@ -271,15 +260,15 @@ function report() {
 	let processed = document.getElementById('processedat').value;
 	
 	let didchaseend = document.getElementById('cend').value;
-    	if (document.getElementById('cend').checked) {
-		buffer.push(`[MEDICAL ATTENTION | ${medicalInformation[medical].label}]:`);
-	    	buffer.push(medicalInformation[medical].text);
-	    	buffer.push('');
+	if (document.getElementById('cend').checked) {
+    	buffer.push(`[MEDICAL ATTENTION | ${medicalInformation[medical].label}]:`);
+		buffer.push(medicalInformation[medical].text);
+		buffer.push('');
 
-        	buffer.push('[PROCESSED]:');
-	    	buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
-    	}
-	
+    	buffer.push('[PROCESSED]:');
+		buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
+    }
+
 	let curDarkmode = document.getElementById('darkmode').checked;
 	if (curDarkmode) {
 		if (darkmodeState === 'false') updateDarkmode();
@@ -305,9 +294,7 @@ function loadName() {
 	document.getElementById('yourself').value = callsign;
 }
 
-// Listen for a click on the button
 function updateDarkmode() {
-	// Then toggle (add/remove) the .dark-theme class to the body
 	let darkmode = document.getElementById('darkmode').checked;
 	if (darkmode) {
 		localStorage.setItem("darkmode", true);
@@ -335,89 +322,6 @@ function loadDarkmode() {
 		document.getElementById('whatFleeca').style.display = 'none';
 		document.getElementById('whatStore').style.display = 'none';
 	}
-	//loadOfficers();
-}
-
-let officers = null;
-let matched = [];
-
-const replaceNames = {
-	'Bucky Killbourne': 'Bucky Langston',
-	'Xander Langston': 'Xander Killbourne'
-};
-
-function loadOfficers() {
-	let cachedOfficers = localStorage.getItem("officers");
-	if (!officers) {
-		let xhr = new XMLHttpRequest();
-		try {
-			xhr.open("GET", "https://celestial.network/legacyrp/sasp", false);
-			xhr.send(null);
-
-			officers = JSON.parse(xhr.responseText).data;
-			officers = officers.map(officer => officer.callsign + ' ' +
-				(replaceNames[officer.full_name] ? replaceNames[officer.full_name] : officer.full_name));
-			localStorage.setItem('officers', xhr.responseText);
-		} catch (e) {
-			if (cachedOfficers) {
-				cachedOfficers = JSON.parse(cachedOfficers).data;
-				officers = cachedOfficers.map(officer => officer.callsign + ' ' + officer.full_name);
-				alert('Failed to load officers data from roster; using cached officers data...');
-			} else {
-				alert('Failed to load officers data from roster & no cache value stored!');
-			}
-		}
-	}
-}
-
-function searchOfficer(search) {
-	if (!search) {
-		document.getElementById('officerslist').innerHTML = '';
-		return;
-	}
-	search = search.toLowerCase();
-
-	if (!officers) loadOfficers();
-
-	let results = officers.filter(officer => officer.toLowerCase().includes(search));
-	let resultsCap = 5;
-	let count = 0;
-	let finalResults = [];
-	results.forEach(result => {
-		count++;
-		if (count > resultsCap) return;
-		result = result.trim();
-		finalResults.push("<button title='Add this officer to the list of officers involved' onClick='toggleOfficer(\"" + result + "\")'>" + result + "</button>");
-	});
-	document.getElementById('officerslist').innerHTML = finalResults.join("<br />");
-}
-
-function toggleOfficer(id) {
-	if (officersInvolved.has(id)) {
-		console.log("Removing " + id + "...");
-		officersInvolved.delete(id);
-	} else {
-		console.log("Adding " + id + "...");
-		officersInvolved.add(id);
-
-		document.getElementById('officersearch').value = "";
-	}
-	report();
-	updateOfficers();
-}
-
-function updateOfficers() {
-	let output = "";
-	for (let id of officersInvolved.values()) {
-		output += `<div class="chip">\n`;
-		output += `<img src="images/hat2.png" width="96" height="96">\n`;
-		output += `${id}\n`;
-		output += `<span class="closebtn" title="Remove this officer from the list of officers involved" style="cursor: default;" onclick='toggleOfficer(\"${id}\")'><i class="fa fa-times-circle-o" aria-hidden="true"></i>
-</span>\n`;
-		output += `</div>`
-	}
-
-	document.getElementById('officersAdded').innerHTML = "<br />" + output;
 }
 
 function showCopiedPopup() {
