@@ -141,56 +141,116 @@ function report() {
 		'Units lost eyes | Escaped': {
 			text: 'The chase lasted for a bit of time until our pursuing units lost eyes on the suspects vehicle. After performing a search near the area where we lost eyes, we did not manage to find them.',
 		},
-		'Vehicle disabled | Ran on foot': {
-			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they got out of the disabled vehicle and ran on foot in hopes of getting away. The suspects were eventually apprehended and placed under police custody.',
-		},
-		'Vehicle disabled | Surrendered': {
-			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they were smart enough to surrender and not flee on foot. The suspects were eventually apprehended and placed under police custody.',
-		},
-		'Vehicle disabled | Vehicle swap': {
-			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they hopped out and got into a swap/transfer vehicle and the chase continued from there. Eventually after that pickup vehicle, the suspects were apprehended and placed under police custody.',
-		},
 		'Got out of vehicle | Ran on foot | Caught': {
 			text: 'The chase lasted for a bit of time until they had stopped their car and stepped out of it. The suspects initiated a 10-80B and attempted to evade on foot. Our pursuing units eventually managed to apprehend the suspects and place them under police custody.',
 		},
 		'Got out of vehicle | Ran on foot | Escaped': {
 			text: 'The chase lasted for a bit of time until they had stopped their car and stepped out of it. The suspects initiated a 10-80B and attempted to evade on foot.',
 		},
-		'Vehicle boxed in | Ran on foot': {
+		'Vehicle disabled | Ran on foot | Caught': {
+			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they got out of the disabled vehicle and ran on foot in hopes of getting away. The suspects were eventually apprehended and placed under police custody.',
+		},
+		'Vehicle disabled | Ran on foot | Escaped': {
+			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they got out of the disabled vehicle and ran on foot in hopes of getting away. The suspects then managed to out maneuver our ground units and eventually escape police custody.',
+		},
+		'Vehicle disabled | Vehicle swap | Caught': {
+			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they got out of the disabled vehicle and made a run for a vehicle that attempted to pick them up and assist them. Both the vehicle that attempted to pick them up and the original suspects were eventually apprehended and placed under police custody.',
+		},
+		'Vehicle disabled | Vehicle swap | Escaped': {
+			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they got out of the disabled vehicle and made a run for a vehicle that attempted to pick them up and assist them. After us losing eyes on them and performing a Code 6 of the general vicinity, both the vehicle that attempted to pick them up and the original suspects eventually escaped police custody.',
+		},
+		'Vehicle disabled | Surrendered': {
+			text: 'The chase lasted for a bit of time until their vehicle had disabled from crashing it too many times. From there they were smart enough to surrender and not flee on foot. The suspects were eventually apprehended and placed under police custody.',
+		},
+		'Vehicle boxed in | Ran on foot | Caught': {
 			text: 'The chase lasted for a bit of time until our pursuing ground units managed to pin the vehicle and box it in to where they could not move anymore. From there they got out of the boxed in vehicle and ran on foot in hopes of getting away. The suspects were eventually apprehended and placed under police custody.',
+		},
+		'Vehicle boxed in | Ran on foot | Escaped': {
+			text: 'The chase lasted for a bit of time until our pursuing ground units managed to pin the vehicle and box it in to where they could not move anymore. From there they got out of the boxed in vehicle and ran on foot in hopes of getting away. After us losing eyes on them and performing a Code 6 of the general vicinity, the suspects eventually escaped police custody.',
 		},
 		'Vehicle boxed in | Surrendered': {
 			text: 'The chase lasted for a bit of time until our pursuing ground units managed to pin the vehicle and box it in to where they could not move anymore. From there they were smart enough to surrender and not flee on foot. The suspects were eventually apprehended and placed under police custody.',
 		},
-		'Attempted Vehicle swap': {
+		'Attempted Vehicle swap | Caught': {
 			text: 'The chase lasted for a bit of time until they attempted to swap into a different vehicle but failed in the process. Shortly after the fleeing suspects had been apprehended and placed under police custody.',
 		},
-		'Vehicle swap x1': {
+		'Vehicle swap x1 | Caught': {
 			text: 'The chase lasted for a bit of time until they hopped out and got into a swap/transfer vehicle and the chase continued from there. Eventually after that pickup vehicle, the suspects were apprehended and placed under police custody.',
 		},
-		'Vehicle swap x2': {
+		'Vehicle swap x1 | Escaped': {
+			text: 'The chase lasted for a bit of time until they hopped out and got into a swap/transfer vehicle and the chase continued from there. Eventually after that pickup vehicle, the suspects were able to outdrive our pursuing units and making us lose eyes on the suspects. After an indepth search of the immediate area we did not find the suspects and called out VCB & UTL.',
+		},
+		'Vehicle swap x2 | Caught': {
 			text: 'The chase lasted for a bit of time until they hopped out and got into a swap/transfer vehicle and the chase continued from there. Eventually after that pickup vehicle, the suspects had another vehicle swap/transfer and the chase continued from there on. Eventually after that pickup vehicle, the suspects were apprehended and placed under police custody.',
 		},
-		'Bike swap': {
+		'Vehicle swap x2 | Escaped': {
+			text: 'The chase lasted for a bit of time until they hopped out and got into a swap/transfer vehicle and the chase continued from there. Eventually after that pickup vehicle, the suspects had another vehicle swap/transfer and the chase continued from there on. Eventually after the 2nd pickup vehicle, the suspects were able to outdrive our pursuing units and making us lose eyes on the suspects. After an indepth search of the immediate area we did not find the suspects and called out VCB & UTL.',
+		},
+		'Vehicle swap x3 | Caught': {
+			text: 'The chase lasted for a bit of time until they hopped out and got into a swap/transfer vehicle and the chase continued from there. Eventually after that pickup vehicle, the suspects had another vehicle swap/transfer and the chase continued from there on. Eventually after that pickup vehicle, they had another pickup and continued evading. Eventually the suspects were apprehended and placed under police custody.',
+		},
+		'Vehicle swap x3 | Escaped': {
+			text: 'The chase lasted for a bit of time until they hopped out and got into a swap/transfer vehicle and the chase continued from there. Eventually after that pickup vehicle, the suspects had another vehicle swap/transfer and the chase continued from there on. Eventually after that pickup vehicle, they had another pickup and continued evading. Eventually after the 3rd pickup vehicle, the suspects were able to outdrive our pursuing units and making us lose eyes on the suspects. After an indepth search of the immediate area we did not find the suspects and called out VCB & UTL.',
+		},
+		'Bike swap | Caught': {
 			text: 'The chase lasted for a bit of time until the hopped out of the car and got onto a bike that was set ready for them. The bike was then pursued and eventually the occupants fell off of the bike. The suspects were apprehended and placed under police custody.',
 		},
-		'Vehicle ran out of fuel': {
+		'Bike swap | Escaped': {
+			text: 'The chase lasted for a bit of time until the hopped out of the car and got onto a bike that was set ready for them. The bike was then pursued and eventually our ground units had lost eyes on them. After a Code 6 was performed, we did not manage to find the suspects and called the pursuit Code 4.',
+		},
+		'Vehicle ran out of fuel | Ran on foot | Transfer vehicle | Caught': {
+			text: 'The chase lasted for a bit of time until their vehicle had ran out of fuel and they got out on foot. Eventually the suspects got into a vehicle that had picked them up. From there another pursuit was initiated. Shortly after those suspects were apprehended and placed under police custody.',
+		},
+		'Vehicle ran out of fuel | Ran on foot | Transfer vehicle | Escaped': {
+			text: 'The chase lasted for a bit of time until their vehicle had ran out of fuel and they got out on foot. Eventually the suspects got into a vehicle that had picked them up. From there another pursuit was initiated. After some time had passed and us losing eyes on them, we performed a Code 6 of the general vicinity. Since we did not manage the find the suspects, we called the situation all clear.',
+		},
+		'Vehicle ran out of fuel | Ran on foot | Caught': {
 			text: 'The chase lasted for a bit of time until their vehicle had ran out of fuel and they got out on foot. Eventually the suspects were apprehended and placed under police custody.',
 		},
-		'Vehicle turtled | Ran on foot': {
-			text: 'The chase lasted for a bit of time until their car had flipped and landed on their roof from crashing it. From there they got out of the turtled vehicle and ran on foot in hopes of getting away. The suspects were eventually apprehended and placed under police custody.',
+		'Vehicle ran out of fuel | Ran on foot | Escaped': {
+			text: 'The chase lasted for a bit of time until their vehicle had ran out of fuel and they got out on foot. After us losing eyes on them and performing a Code 6 of the general vicinity, the suspects eventually escaped police custody.',
+		},
+		'Vehicle ran out of fuel | Surrendered': {
+			text: 'The chase lasted for a bit of time until their vehicle had ran out of fuel and they got out on foot. From there they were smart enough to surrender and not flee on foot. The suspects were eventually apprehended and placed under police custody.',
+		},
+		'Vehicle turtled | Ran on foot | Transfer vehicle | Caught': {
+			text: 'The chase lasted for a bit of time until they managed to drive so recklessly to the point that their car had ended up turtling. The suspects then climbed out of the vehicle and began fleeing on foot. Eventually the fleeing suspects then managed to get into a vehicle that was ready to pick them up. Our ground units eventually managed to apprehend the suspects and place them under police custody.',
+		},
+		'Vehicle turtled | Ran on foot | Transfer vehicle | Escaped': {
+			text: 'The chase lasted for a bit of time until they managed to drive so recklessly to the point that their car had ended up turtling. The suspects then climbed out of the vehicle and began fleeing on foot. Eventually the fleeing suspects then managed to get into a vehicle that was ready to pick them up. Our ground units eventually lost eyes on the pickup vehicle.',
+		},
+		'Vehicle turtled | Ran on foot | Caught': {
+			text: 'The chase lasted for a bit of time until they managed to drive so recklessly to the point that their car had ended up turtling. The suspects then climbed out of the vehicle and began fleeing on foot. Eventually our pursuing units managed to detain the running suspects and place them under police custody.',
+		},
+		'Vehicle turtled | Ran on foot | Escaped': {
+			text: 'The chase lasted for a bit of time until they managed to drive so recklessly to the point that their car had ended up turtling. The suspects then climbed out of the vehicle and began fleeing on foot. Eventually our pursuing units managed to lose eyes on the suspects and we called the chase VCB.',
 		},
 		'Vehicle turtled | Surrendered': {
-			text: 'The chase lasted for a bit of time until their car had flipped and landed on their roof from crashing it. From there they were smart enough to surrender and not flee on foot. The suspects were eventually apprehended and placed under police custody.',
+			text: 'The chase lasted for a bit of time until their vehicle had gotten stuck on the roof, turtling. The suspects then climbed out of the vehicle and were smart enough not to run but instead surrender. From there, the suspects were apprehended and placed under police custody.',
 		},
-		'Vehicle was sent into water': {
+		'Vehicle was sent into water | Caught': {
 			text: 'The chase lasted for a bit of time until they had drove their vehicle into the water. Eventually after pursuing the suspects in the water, they were all apprehended and placed under police custody.',
 		},
-		'Vehicle blew up': {
-			text: 'The chase lasted for a bit of time until they had drove so recklessly to the point where they had accidentally hit an explosive and blew up their vehicle. After recieving medical attention, the suspects were apprehended and placed under police custody.',
+		'Vehicle was sent into water | Escaped': {
+			text: 'The chase lasted for a bit of time until they had drove their vehicle into the water. Eventually after pursuing the suspects in the water, we lost eyes on all the fleeing suspects and they have escaped under police custody.',
 		},
-		'Shot at officers': {
-			text: 'The chase lasted for a bit of time until they had began opening fire on units pursuing them. A short exchange of gunfire had lasted and the suspects were incapacitated. After recieving medical attention, the suspects were placed under police custody.',
+		'Vehicle blew up': {
+			text: 'The chase lasted for a bit of time until they had drove so recklessly to the point where they had accidentally hit an explosive and blew up their vehicle. After receiving medical attention, the suspects were apprehended and placed under police custody.',
+		},
+		'Vehicle took a jump | Escaped': {
+			text: 'The chase lasted for a bit of time until we lost eyes on the suspects because they took a jump. Our pursuing vehicles failed to do the jump and we called the chase VCB.',
+		},
+		'Suspects opened fire from the vehicle | Caught': {
+			text: 'The chase lasted for a bit of time until the suspects decided to start opening fire on our pursuing officers. After a shortlasting exchange of gunfire, the officers managed to incapacitate the suspects and place them under police custody.',
+		},
+		'Suspects opened fire from the vehicle | Escaped': {
+			text: 'The chase lasted for a bit of time until the suspects decided to start opening fire on our pursuing officers. After a shortlasting exchange of gunfire, the officers did not manage to incapacitate the suspects and due to the suspects having an advantage, the officers took the chance and let the criminals flee in favour of saving our other officers lives. The suspects escaped and evaded police custody.',
+		},
+		'Secondary Vehicle Blocked Units | Escaped': {
+			text: 'The chase lasted for a bit of time until the pursuing units were blocked in a small alley by a secondary vehicle that got involved in the pursuit. After them successfully stopping the pursuing units, the original suspects managed to escape police and we declared the chase VCB.',
+		},
+		'Vehicle 10-50 | Suspects went down': {
+			text: 'The chase lasted for a bit of time until the evading vehicle had crashed and the occupants of the vehicle were incapacitated.',
 		}
 	};
 	let chase = chaseSelected.options[chaseSelected.selectedIndex].text;
@@ -251,169 +311,84 @@ function report() {
 	    	buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
     	}
 	
-	let curDarkmode = document.getElementById('darkmode').checked;
-	if (curDarkmode) {
-		if (darkmodeState === 'false') updateDarkmode();
-	} else if (!curDarkmode) {
-		if (darkmodeState === 'true') updateDarkmode();
+		let curDarkmode = document.getElementById('darkmode').checked;
+		if (curDarkmode) {
+			if (darkmodeState === 'false') updateDarkmode();
+		} else if (!curDarkmode) {
+			if (darkmodeState === 'true') updateDarkmode();
+		}
+	
+		return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 	}
-
-	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
-}
-
-let inputs = document.querySelectorAll('input[type="text"], input[type="number"], textarea');
-inputs.forEach(i => i.addEventListener('keyup', report, false));
-
-let checkboxes = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
-checkboxes.forEach(i => i.addEventListener('click', report, false));
-
-let selectOptions = document.querySelectorAll('select');
-selectOptions.forEach(i => i.addEventListener('click', report, false));
-
-function loadName() {
-	let callsign = '';
-	if (localStorage.getItem('callsign')) callsign = localStorage.getItem('callsign');
-	document.getElementById('yourself').value = callsign;
-}
-
-// Listen for a click on the button
-function updateDarkmode() {
-	// Then toggle (add/remove) the .dark-theme class to the body
-	let darkmode = document.getElementById('darkmode').checked;
-	if (darkmode) {
-		localStorage.setItem("darkmode", true);
-		darkmodeState = 'true';
-	} else if (!darkmode) {
-		localStorage.setItem("darkmode", false);
-		darkmodeState = 'false';
+	
+	let inputs = document.querySelectorAll('input[type="text"], input[type="number"], textarea');
+	inputs.forEach(i => i.addEventListener('keyup', report, false));
+	
+	let checkboxes = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
+	checkboxes.forEach(i => i.addEventListener('click', report, false));
+	
+	let selectOptions = document.querySelectorAll('select');
+	selectOptions.forEach(i => i.addEventListener('click', report, false));
+	
+	function loadName() {
+		let callsign = '';
+		if (localStorage.getItem('callsign')) callsign = localStorage.getItem('callsign');
+		document.getElementById('yourself').value = callsign;
 	}
-	document.body.classList.toggle('dark-theme');
-}
-
-function loadDarkmode() {
-	let darkmodeSetting = localStorage.getItem("darkmode");
-	if (!darkmodeSetting || darkmodeSetting === 'undefined' || darkmodeSetting === 'false') {
-		localStorage.setItem("darkmode", false);
-		darkmodeState = 'false';
-	}
-	if (darkmodeSetting == 'true') {
-		document.getElementById('darkmode').checked = true;
+	
+	function updateDarkmode() {
+		let darkmode = document.getElementById('darkmode').checked;
+		if (darkmode) {
+			localStorage.setItem("darkmode", true);
+			darkmodeState = 'true';
+		} else if (!darkmode) {
+			localStorage.setItem("darkmode", false);
+			darkmodeState = 'false';
+		}
 		document.body.classList.toggle('dark-theme');
-		darkmodeState = 'true';
 	}
-	loadName();
-	if (ROBBERY_STATE === 'JEWLERY') {
-		document.getElementById('whatFleeca').style.display = 'none';
-		document.getElementById('whatStore').style.display = 'none';
-	}
-	//loadOfficers();
-}
-
-let officers = null;
-let matched = [];
-
-const replaceNames = {
-	'Bucky Killbourne': 'Bucky Langston',
-	'Xander Langston': 'Xander Killbourne'
-};
-
-function loadOfficers() {
-	let cachedOfficers = localStorage.getItem("officers");
-	if (!officers) {
-		let xhr = new XMLHttpRequest();
-		try {
-			xhr.open("GET", "https://celestial.network/legacyrp/sasp", false);
-			xhr.send(null);
-
-			officers = JSON.parse(xhr.responseText).data;
-			officers = officers.map(officer => officer.callsign + ' ' +
-				(replaceNames[officer.full_name] ? replaceNames[officer.full_name] : officer.full_name));
-			localStorage.setItem('officers', xhr.responseText);
-		} catch (e) {
-			if (cachedOfficers) {
-				cachedOfficers = JSON.parse(cachedOfficers).data;
-				officers = cachedOfficers.map(officer => officer.callsign + ' ' + officer.full_name);
-				alert('Failed to load officers data from roster; using cached officers data...');
-			} else {
-				alert('Failed to load officers data from roster & no cache value stored!');
-			}
+	
+	function loadDarkmode() {
+		let darkmodeSetting = localStorage.getItem("darkmode");
+		if (!darkmodeSetting || darkmodeSetting === 'undefined' || darkmodeSetting === 'false') {
+			localStorage.setItem("darkmode", false);
+			darkmodeState = 'false';
+		}
+		if (darkmodeSetting == 'true') {
+			document.getElementById('darkmode').checked = true;
+			document.body.classList.toggle('dark-theme');
+			darkmodeState = 'true';
+		}
+		loadName();
+		if (ROBBERY_STATE === 'JEWLERY') {
+			document.getElementById('whatFleeca').style.display = 'none';
+			document.getElementById('whatStore').style.display = 'none';
 		}
 	}
-}
-
-function searchOfficer(search) {
-	if (!search) {
-		document.getElementById('officerslist').innerHTML = '';
-		return;
-	}
-	search = search.toLowerCase();
-
-	if (!officers) loadOfficers();
-
-	let results = officers.filter(officer => officer.toLowerCase().includes(search));
-	let resultsCap = 5;
-	let count = 0;
-	let finalResults = [];
-	results.forEach(result => {
-		count++;
-		if (count > resultsCap) return;
-		result = result.trim();
-		finalResults.push("<button title='Add this officer to the list of officers involved' onClick='toggleOfficer(\"" + result + "\")'>" + result + "</button>");
-	});
-	document.getElementById('officerslist').innerHTML = finalResults.join("<br />");
-}
-
-function toggleOfficer(id) {
-	if (officersInvolved.has(id)) {
-		console.log("Removing " + id + "...");
-		officersInvolved.delete(id);
-	} else {
-		console.log("Adding " + id + "...");
-		officersInvolved.add(id);
-
-		document.getElementById('officersearch').value = "";
-	}
-	report();
-	updateOfficers();
-}
-
-function updateOfficers() {
-	let output = "";
-	for (let id of officersInvolved.values()) {
-		output += `<div class="chip">\n`;
-		output += `<img src="images/hat2.png" width="96" height="96">\n`;
-		output += `${id}\n`;
-		output += `<span class="closebtn" title="Remove this officer from the list of officers involved" style="cursor: default;" onclick='toggleOfficer(\"${id}\")'><i class="fa fa-times-circle-o" aria-hidden="true"></i>
-</span>\n`;
-		output += `</div>`
-	}
-
-	document.getElementById('officersAdded').innerHTML = "<br />" + output;
-}
-
-function showCopiedPopup() {
-	let popup = document.getElementById("myPopup");
-	popup.classList.toggle("show");
-	setTimeout(function() {
+	
+	function showCopiedPopup() {
+		let popup = document.getElementById("myPopup");
 		popup.classList.toggle("show");
-	}, 3500);
-}
-
-document.getElementById('copyReport').addEventListener('click', copy, false);
-function clearSelection() {
-	if (window.getSelection) {
-		window.getSelection().removeAllRanges();
-	} else if (document.selection) {
-		document.selection.empty();
+		setTimeout(function() {
+			popup.classList.toggle("show");
+		}, 3500);
 	}
-}
-function copy() {
-	document.getElementById('reportBody').select();
-	try {
-		document.execCommand('copy');
-		showCopiedPopup();
-		clearSelection();
-	} catch(e) {
-		console.log("Copy error: " + e);
+	
+	document.getElementById('copyReport').addEventListener('click', copy, false);
+	function clearSelection() {
+		if (window.getSelection) {
+			window.getSelection().removeAllRanges();
+		} else if (document.selection) {
+			document.selection.empty();
+		}
 	}
-}
+	function copy() {
+		document.getElementById('reportBody').select();
+		try {
+			document.execCommand('copy');
+			showCopiedPopup();
+			clearSelection();
+		} catch(e) {
+			console.log("Copy error: " + e);
+		}
+	}
