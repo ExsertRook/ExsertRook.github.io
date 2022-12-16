@@ -50,6 +50,28 @@ function report() {
 	
 	if (colors) buffer.push(`At first glance, we noticed that the two gangs who were fighting eachother were wearing the following colors: ${colors}`);
 	buffer.push('');
+
+	let weaponname1 = document.getElementById('weaponname1').value;
+	let serial1 = document.getElementById('serial1').value;
+	let weaponname2 = document.getElementById('weaponname2').value;
+	let serial2 = document.getElementById('serial2').value;
+	let weaponname3 = document.getElementById('weaponname3').value;
+	let serial3 = document.getElementById('serial3').value;
+	let weaponname4 = document.getElementById('weaponname4').value;
+	let serial4 = document.getElementById('serial4').value;
+	let weaponname5 = document.getElementById('weaponname5').value;
+	let serial5 = document.getElementById('serial5').value;
+	let weaponname6 = document.getElementById('weaponname6').value;
+	let serial6 = document.getElementById('serial6').value;
+	
+	if (weaponname1 || serial1) buffer.push(`[WEAPON INFORMATION]:`);
+	if (weaponname1 || serial1) buffer.push(`Weapon: ${weaponname1} | Serial Number: ${serial1}`);
+	if (weaponname2 || serial2) buffer.push(`Weapon: ${weaponname2} | Serial Number: ${serial2}`);
+	if (weaponname3 || serial3) buffer.push(`Weapon: ${weaponname3} | Serial Number: ${serial3}`);
+	if (weaponname4 || serial4) buffer.push(`Weapon: ${weaponname4} | Serial Number: ${serial4}`);
+	if (weaponname5 || serial5) buffer.push(`Weapon: ${weaponname5} | Serial Number: ${serial5}`);
+	if (weaponname6 || serial6) buffer.push(`Weapon: ${weaponname6} | Serial Number: ${serial6}`);
+	buffer.push('');
 	
 	let medicalSelected = document.getElementById('medicalattention');
 	let medicalInformation = {
@@ -124,7 +146,6 @@ function loadName() {
 	document.getElementById('yourself').value = callsign;
 }
 
-// Listen for a click on the button
 function updateDarkmode() {
 	// Then toggle (add/remove) the .dark-theme class to the body
 	let darkmode = document.getElementById('darkmode').checked;
@@ -154,11 +175,8 @@ function loadDarkmode() {
 		document.getElementById('whatFleeca').style.display = 'none';
 		document.getElementById('whatStore').style.display = 'none';
 	}
-	//loadOfficers();
 }
 
-let officers = null;
-let matched = [];
 
 function showCopiedPopup() {
 	let popup = document.getElementById("myPopup");
