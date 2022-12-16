@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>PD Shootout Report Generator</title>
-	<link rel="shortcut icon" href="shoot.png" />
+	<link rel="shortcut icon" href="X.png" />
 	<link rel="stylesheet" href="index.css" />
 	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
 	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> </head>
@@ -21,7 +21,7 @@
 			<input type="checkbox" id="darkmode" name="darkmode" value="darkmode" />
 			<label for="darkmode">Darkmode</label>
 			<br />
-			<label class="inline" title="(You only have to do this once - it will cache)" style="border-bottom: 1px dotted #000; text-decoration: none;">Your callsign/name:</label>
+			<label class="inline" title="(You only have to do this once - it will cache)" style="border-bottom: 1px dotted #000; text-decoration: none;">Your callsign & name:</label>
 			<input type="text" id="yourself" name="yourself" placeholder="[SF-202] Thomas Sucher" /> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 			<div class="popup" id="copyReport">
 				<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
@@ -29,7 +29,7 @@
 		</div>
         <div class="form-group">
             <label>Details:</label>
-            What did the shootout stem from:
+            What did the shootout originate from:
             <select id="origin">
                 <option>10-90 (Bank)</option>
                 <option>10-90 (Jewelry)</option>
@@ -124,7 +124,7 @@
 			</select>
 		</div>
 	</div>
-	<textarea class="wide" id="reportBody">[report will automatically generate as you fill out the form to the left]&#10;&#10;(Note: the generated report will be editable, but once you edit it you can no longer update it based on the form)</textarea>
+	<textarea class="wide" id="reportBody">The Report will automatically generate as you fill out the form to the left.&#10;&#10;(Note: the generated report will be editable, but once you edit it, you can no longer update it based on the form)&#10;&#10;If you have any questions or concerns, feel free to fill the feedback form on the main website :)&#10;&#10;Also if you want to show love, make sure to thank Sucher :)</textarea>
 	<!--<pre id="reportBody">[report will automatically generate as you fill out the form to the left]</pre> -->
 	
 	<script src="reports.js"></script>
