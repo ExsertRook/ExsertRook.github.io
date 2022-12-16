@@ -97,7 +97,7 @@ input[type="text"] {
     padding: 3px;
 }
 input[type="number"] {
-    width: 70px;
+    width: 40px;
     padding: 0px;
     color: white;
 }
