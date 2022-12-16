@@ -48,29 +48,32 @@
 			Weapon #1: <input type="text" id="weaponname1" name="weaponname1" placeholder="e.g. Pistol .45">
 			Serial Number #1: <input type="text" id="serial1" name="serial1" placeholder="e.g. 12345678"><br />
 			Weapon #2: <input type="text" id="weaponname2" name="weaponname2" placeholder="e.g. Gardone Pistol">
-			Serial Number #2: <input type="text" id="serial2" name="serial2" placeholder="e.g. 12345678"> - (Optional)<br />
+			Serial Number #2: <input type="text" id="serial2" name="serial2" placeholder="e.g. 12345678"><br />
 			Weapon #3: <input type="text" id="weaponname3" name="weaponname3" placeholder="e.g. SIG Sauer P226">
-			Serial Number #3: <input type="text" id="serial3" name="serial3" placeholder="e.g. 12345678"> - (Optional)<br />
+			Serial Number #3: <input type="text" id="serial3" name="serial3" placeholder="e.g. 12345678"><br />
 			Weapon #4: <input type="text" id="weaponname4" name="weaponname4" placeholder="e.g. Pistol .50">
-			Serial Number #4: <input type="text" id="serial4" name="serial4" placeholder="e.g. 12345678"> - (Optional)<br />
+			Serial Number #4: <input type="text" id="serial4" name="serial4" placeholder="e.g. 12345678"><br />
 			Weapon #5: <input type="text" id="weaponname5" name="weaponname5" placeholder="e.g. Carbine Rifle">
-			Serial Number #5: <input type="text" id="serial5" name="serial5" placeholder="e.g. 12345678"> - (Optional)<br />
+			Serial Number #5: <input type="text" id="serial5" name="serial5" placeholder="e.g. 12345678"><br />
 			Weapon #6: <input type="text" id="weaponname6" name="weaponname6" placeholder="e.g. SMG">
-			Serial Number #6: <input type="text" id="serial6" name="serial6" placeholder="e.g. 12345678"> - (Optional)
+			Serial Number #6: <input type="text" id="serial6" name="serial6" placeholder="e.g. 12345678"><br />
+            		Weapon #7: <input type="text" id="weaponname7" name="weaponname7" placeholder="e.g. AP Pistol">
+			Serial Number #7: <input type="text" id="serial7" name="serial7" placeholder="e.g. 12345678"><br />
+            		Weapon #8: <input type="text" id="weaponname8" name="weaponname8" placeholder="e.g. Bullpup Rifle ">
+			Serial Number #8: <input type="text" id="serial8" name="serial8" placeholder="e.g. 12345678">
 		</div>
 		<div class="form-group">
 			<label>Charges:</label>
 			<select id="charge">
 				<option selected>P.C. 904 - Felony Weapons Discharge Violation</option>
 				<option>P.C. 903 - Weapons Discharge Violation</option>
-				<option>P.C. 904 - Felony Weapons Discharge Violation</option>
 				<option>P.C. 207 - Attempted Murder</option>
 				<option>P.C. 203 - Aggravated Assault and Battery</option>
 				<option>P.C. 203 - Aggravated Assault and Battery (PP)</option>
 			</select>
 		</div>
-		<div class="form-group">
-			<label>(Optional) 2nd Charge:</label>
+		<div>
+			<label>(Optional) 2nd Charge:</label><br />
 			<select id="2nd charge">
 				<option selected> </option>
 				<option>P.C. 903 - Weapons Discharge Violation</option>
@@ -79,7 +82,7 @@
 				<option>P.C. 203 - Aggravated Assault and Battery</option>	
 			</select>
 	</div>
-	<textarea class="wide" id="reportBody">[report will automatically generate as you fill out the form to the left]&#10;&#10;(Note: the generated report will be editable, but once you edit it you can no longer update it based on the form)</textarea>
+	<textarea class="wide" id="reportBody">The Report will automatically generate as you fill out the form to the left.&#10;&#10;(Note: the generated report will be editable, but once you edit it, you can no longer update it based on the form)&#10;&#10;If you have any questions or concerns, feel free to fill the feedback form on the main website :)&#10;&#10;Also if you want to show love, make sure to thank Sucher :)</textarea>
 	<!--<pre id="reportBody">[The report will automatically generate as you fill out the form to the left]</pre> -->
 	
 	<script src="reports.js"></script>
