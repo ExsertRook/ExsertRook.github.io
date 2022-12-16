@@ -38,14 +38,20 @@ function report() {
 	let serial5 = document.getElementById('serial5').value;
 	let weaponname6 = document.getElementById('weaponname6').value;
 	let serial6 = document.getElementById('serial6').value;
+    let weaponname7 = document.getElementById('weaponname7').value;
+	let serial7 = document.getElementById('serial7').value;
+    let weaponname8 = document.getElementById('weaponname8').value;
+	let serial8 = document.getElementById('serial8').value;
 	
-	buffer.push(`[WEAPON INFORMATION]:`);
+	if (weaponname1 || serial1) buffer.push(`[WEAPON INFORMATION]:`);
 	if (weaponname1 || serial1) buffer.push(`Weapon: ${weaponname1} | Serial Number: ${serial1}`);
 	if (weaponname2 || serial2) buffer.push(`Weapon: ${weaponname2} | Serial Number: ${serial2}`);
 	if (weaponname3 || serial3) buffer.push(`Weapon: ${weaponname3} | Serial Number: ${serial3}`);
 	if (weaponname4 || serial4) buffer.push(`Weapon: ${weaponname4} | Serial Number: ${serial4}`);
 	if (weaponname5 || serial5) buffer.push(`Weapon: ${weaponname5} | Serial Number: ${serial5}`);
 	if (weaponname6 || serial6) buffer.push(`Weapon: ${weaponname6} | Serial Number: ${serial6}`);
+    if (weaponname7 || serial7) buffer.push(`Weapon: ${weaponname7} | Serial Number: ${serial7}`);
+    if (weaponname8 || serial8) buffer.push(`Weapon: ${weaponname8} | Serial Number: ${serial8}`);
 	buffer.push('');
 	
 	let charge = document.getElementById('charge').value;
@@ -109,94 +115,10 @@ function loadDarkmode() {
 		darkmodeState = 'true';
 	}
 	loadName();
-	if (ROBBERY_STATE === 'JEWLERY') {
-		document.getElementById('whatFleeca').style.display = 'none';
-		document.getElementById('whatStore').style.display = 'none';
-	}
-	//loadOfficers();
 }
 
 let officers = null;
 let matched = [];
-
-const replaceNames = {
-	'Bucky Killbourne': 'Bucky Langston',
-	'Xander Langston': 'Xander Killbourne'
-};
-
-function loadOfficers() {
-	let cachedOfficers = localStorage.getItem("officers");
-	if (!officers) {
-		let xhr = new XMLHttpRequest();
-		try {
-			xhr.open("GET", "https://celestial.network/legacyrp/sasp", false);
-			xhr.send(null);
-
-			officers = JSON.parse(xhr.responseText).data;
-			officers = officers.map(officer => officer.callsign + ' ' +
-				(replaceNames[officer.full_name] ? replaceNames[officer.full_name] : officer.full_name));
-			localStorage.setItem('officers', xhr.responseText);
-		} catch (e) {
-			if (cachedOfficers) {
-				cachedOfficers = JSON.parse(cachedOfficers).data;
-				officers = cachedOfficers.map(officer => officer.callsign + ' ' + officer.full_name);
-				alert('Failed to load officers data from roster; using cached officers data...');
-			} else {
-				alert('Failed to load officers data from roster & no cache value stored!');
-			}
-		}
-	}
-}
-
-function searchOfficer(search) {
-	if (!search) {
-		document.getElementById('officerslist').innerHTML = '';
-		return;
-	}
-	search = search.toLowerCase();
-
-	if (!officers) loadOfficers();
-
-	let results = officers.filter(officer => officer.toLowerCase().includes(search));
-	let resultsCap = 5;
-	let count = 0;
-	let finalResults = [];
-	results.forEach(result => {
-		count++;
-		if (count > resultsCap) return;
-		result = result.trim();
-		finalResults.push("<button title='Add this officer to the list of officers involved' onClick='toggleOfficer(\"" + result + "\")'>" + result + "</button>");
-	});
-	document.getElementById('officerslist').innerHTML = finalResults.join("<br />");
-}
-
-function toggleOfficer(id) {
-	if (officersInvolved.has(id)) {
-		console.log("Removing " + id + "...");
-		officersInvolved.delete(id);
-	} else {
-		console.log("Adding " + id + "...");
-		officersInvolved.add(id);
-
-		document.getElementById('officersearch').value = "";
-	}
-	report();
-	updateOfficers();
-}
-
-function updateOfficers() {
-	let output = "";
-	for (let id of officersInvolved.values()) {
-		output += `<div class="chip">\n`;
-		output += `<img src="images/hat2.png" width="96" height="96">\n`;
-		output += `${id}\n`;
-		output += `<span class="closebtn" title="Remove this officer from the list of officers involved" style="cursor: default;" onclick='toggleOfficer(\"${id}\")'><i class="fa fa-times-circle-o" aria-hidden="true"></i>
-</span>\n`;
-		output += `</div>`
-	}
-
-	document.getElementById('officersAdded').innerHTML = "<br />" + output;
-}
 
 function showCopiedPopup() {
 	let popup = document.getElementById("myPopup");
