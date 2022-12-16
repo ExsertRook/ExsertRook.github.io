@@ -71,7 +71,6 @@ function loadName() {
 	document.getElementById('yourself').value = callsign;
 }
 
-
 function updateDarkmode() {
 	let darkmode = document.getElementById('darkmode').checked;
 	if (darkmode) {
