@@ -1,7 +1,6 @@
 'use strict';
 
 let buffer = [];
-let darkmodeState;
 
 function report() {
 	const ind = "        ";
@@ -34,9 +33,11 @@ function report() {
 
 	let finmin = (emeraldfinmin + sapphirefinmin + rubyfinmin + morganitefinmin);
 	let finmax = (emeraldfinmax + sapphirefinmax + rubyfinmax + morganitefinmax);
+	let finavg = ((finmin + finmax) / 2);
 
     if (finmin) buffer.push(`Minimum Price for all: $${finmin}`);
 	if (finmax) buffer.push(`Maximum Price for all: $${finmax}`);
+	if (finavg) buffer.push(`Average Price for all: $${finavg}`);
 
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }
@@ -49,12 +50,6 @@ checkboxes.forEach(i => i.addEventListener('click', report, false));
 
 let selectOptions = document.querySelectorAll('select');
 selectOptions.forEach(i => i.addEventListener('click', report, false));
-
-
-
-let officers = null;
-let matched = [];
-
 
 function showCopiedPopup() {
 	let popup = document.getElementById("myPopup");
