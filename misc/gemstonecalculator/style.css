@@ -103,7 +103,7 @@ input[type="number"] {
 }
 
 #reportBody {
-    height: 65px;
+    height: 85px;
     top: 140px;
     bottom: 140px;
     right: 10px;
@@ -254,7 +254,7 @@ button:hover {
 }
 
 body{
-  background-color: #2F3136;
+    background-color: #2F3136;
 }
 
 body.dark-theme {
