@@ -87,8 +87,8 @@ textarea {
 }
 
 textarea, input[type="text"], input[type="number"] {
-    border: 1px solid #a8a8a8;
-    border-radius: 2px;
+    border: 2px solid #e46e6e;
+    border-radius: 10px;
     font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Ubuntu Mono", "Roboto Mono", Menlo, Monaco, Consolas, monospace;
     font-size: 13px;
 }
@@ -99,7 +99,7 @@ input[type="checkbox"] + label {
 
 .form-group:not(.layer-2) {
     padding-bottom: 7px;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 2px solid #e46e6e;
     margin-bottom: 7px;
 }
 
@@ -280,10 +280,11 @@ body.dark-theme pre {
 body.dark-theme .btn {
 	background-color: #2F3136;
 	color: #f9f9f9;
+    border: 2px solid #e46e6e;
 }
 body.dark-theme .btn:hover{
-    background-color: #484848;
-    border-color: #adadad;
+    background-color: #e46e6e;
+    border-color: #8f4545;
 }
 body.dark-theme textarea, body.dark-theme input {
 	background-color: #2F3136;
@@ -298,4 +299,6 @@ body.dark-theme a {
 body.dark-theme select {
 	background-color: #2F3136;
 	color:#f9f9f9;
+    border: 2px solid #8f4545;
+    border-radius: 10px;
 }
