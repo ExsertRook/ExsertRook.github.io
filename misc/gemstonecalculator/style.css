@@ -79,7 +79,7 @@ textarea {
     height: 100px;
 }
 
-textarea, input[type="text"], input[type="number"] {
+textarea, input[type="text"], input[type="number"], input[type="emerald"] {
     border: 1px solid #000000;
     border-radius: 10px;
     font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Ubuntu Mono", "Roboto Mono", Menlo, Monaco, Consolas, monospace;
@@ -99,16 +99,21 @@ input[type="text"] {
 input[type="number"] {
     width: 40px;
     padding: 0px;
-    color: white;
+    color: rgb(247, 247, 247);
+}
+input[type="emerald"] {
+    width: 40px;
+    padding: 0px;
+    color: rgb(97, 204, 93);
 }
 
 #reportBody {
-    height: 85px;
+    height: 280px;
     top: 140px;
     bottom: 140px;
     right: 10px;
     white-space: pre-wrap;
-    width: 477px;
+    width: 510px;
     text-align: center;
 }
 
