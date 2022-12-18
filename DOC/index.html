@@ -22,13 +22,14 @@
 			<label for="darkmode">Darkmode</label>
 			<br />
 			<label class="inline" title="(You only have to do this once - it will cache)" style="border-bottom: 1px dotted #000; text-decoration: none;">Your callsign & name (Signature):</label>
-			<input type="text" id="yourself" name="yourself" placeholder="CC-502 M. Ricardo" /> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			<div class="popup" id="copyReport">
-				<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
-			</div>
+			<input type="text" id="yourself" name="yourself" placeholder="CC-502 M. Ricardo" />
+		</div>
+		<label>DOC Contraband Logger Report</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<div class="popup" id="copyReport">
+			<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
 		</div>
 		<div class="form-group">
-			<label>DOC Contraband Logger Report</label>
+			
 			<label>Information:</label>
 			Inmate Name: <input type="text" id="inmatename" name="inmatename" placeholder="Connor Jenkins"><br />
 			Contraband Found: <input type="text" id="contraband" name="contraband" placeholder="1x Radio, 1x Knife"><br />
@@ -39,7 +40,7 @@
 				<option>Returned</option>
 			</select><br /><br />
 			Picture of their Pockets: <input type="text" id="confiscatedpockets" name="confiscatedpockets" placeholder="Paste the link here">
-		</div><br /><br />
+		</div><br />
 
 		<label>DOC Visitations Logger Report</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<div class="popup" id="copyReport2">
@@ -67,10 +68,31 @@
 				<option>Returned</option>
 			</select><br />
 			Picture of their pockets - (Optional): <input type="text" id="pockets2" name="pockets2" placeholder="Paste the link here">
+		</div><br />
+		<label>DOC Prison Transport Logger Report</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<div class="popup" id="copyReport3">
+			<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
+		</div>
+		<div class="form-group">
+			Inmate Name(s):
+			1:&nbsp<input type="text" id="inmatename3" name="inmatename3" placeholder="Patrick White">
+			(If More Than 1 Inmate)
+			2:&nbsp<input type="text" id="inmatename32" name="inmatename32" placeholder="Cracker Jack">
+			3:&nbsp<input type="text" id="inmatename33" name="inmatename33" placeholder="Jack Stone"><br />
+			Number of Inmate(s):
+			<input type="number" min="0" id="numberofinmates" name="numberofinmates" placeholder="1"><br />
+			Sentence Length(s):
+			1:&nbsp<input type="number" min="0" id="sentencelength1" name="sentencelength1" placeholder="100">
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2:&nbsp<input type="number" min="0" id="sentencelength2" name="sentencelength2" placeholder="150">
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3:&nbsp<input type="number" min="0" id="sentencelength3" name="sentencelength3" placeholder="70"><br />
+			Correctional Officers Present: Add them (@) in discord so its easier
+			<br /><br /><br />
 		</div>
 	</div>
     <textarea class="wide" id="reportBody">The Report will automatically generate as you fill out the form to the left.&#10;&#10;(Note: the generated report will be editable, but once you edit it, you can no longer update it based on the form)&#10;&#10;If you have any questions or concerns, feel free to fill the feedback form on the main website :)&#10;&#10;Also if you want to show love, make sure to thank Sucher :)</textarea>
     <textarea class="wide" id="reportBody2">The Report will automatically generate as you fill out the form to the left.</textarea>
+	<textarea class="wide" id="reportBody3">The Report will automatically generate as you fill out the form to the left.</textarea>
 	
 	<script src="reports.js"></script>
 </body>
