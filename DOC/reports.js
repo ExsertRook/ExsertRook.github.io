@@ -64,6 +64,30 @@ function report2() {
 
 	return document.getElementById('reportBody2').innerHTML = buffer.join("\n");
 }
+function report3() {
+	let callsign = document.getElementById('yourself').value.trim();
+	if (callsign) localStorage.setItem('callsign', callsign);
+	if (!callsign) callsign = '[missing]';
+	const ind = "        ";
+	let date = new Date().toLocaleDateString('en-US');
+	buffer = [];
+
+	let InmateName3 = document.getElementById('inmatename3').value;
+	let InmateName32 = document.getElementById('inmatename32').value;
+	let InmateName33 = document.getElementById('inmatename33').value;
+	let NumberOfInmates = document.getElementById('numberofinmates').value;
+
+	let sentencelength1 = document.getElementById('sentencelength1').value;
+	let sentencelength2 = document.getElementById('sentencelength2').value;
+	let sentencelength3 = document.getElementById('sentencelength3').value;
+
+	if (InmateName3 || InmateName32 || InmateName33) buffer.push(`**Number of Inmate(s):** ${InmateName3} ${InmateName32} ${InmateName33}`);
+	if (NumberOfInmates) buffer.push(`**Number of Inmates:** ${NumberOfInmates}`);
+	if (sentencelength1 || sentencelength2 || sentencelength3) buffer.push(`**Sentence Length(s):** ${sentencelength1} months ${sentencelength2} ${sentencelength3}`);
+	buffer.push(`**COs Present:**`);
+	
+	return document.getElementById('reportBody3').innerHTML = buffer.join("\n");
+}
 
 /// Report 1
 let inputs = document.querySelectorAll('input[type="text"], input[type="number"], input[type="text2"], textarea');
@@ -79,6 +103,13 @@ let checkboxes2 = document.querySelectorAll('input[type="checkbox"], input[type=
 checkboxes2.forEach(i => i.addEventListener('click', report2, false));
 let selectOptions2 = document.querySelectorAll('select');
 selectOptions2.forEach(i => i.addEventListener('click', report2, false));
+/// Report 3
+let inputs3 = document.querySelectorAll('input[type="text"], input[type="number"], input[type="text2"], textarea');
+inputs3.forEach(i => i.addEventListener('keyup', report3, false));
+let checkboxes3 = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
+checkboxes3.forEach(i => i.addEventListener('click', report3, false));
+let selectOptions3 = document.querySelectorAll('select');
+selectOptions3.forEach(i => i.addEventListener('click', report3, false));
 
 function loadName() {
 	let callsign = '';
@@ -141,6 +172,14 @@ function clearSelection() {
 		document.selection.empty();
 	}
 }
+document.getElementById('copyReport3').addEventListener('click', copy3, false);
+function clearSelection() {
+	if (window.getSelection) {
+		window.getSelection().removeAllRanges();
+	} else if (document.selection) {
+		document.selection.empty();
+	}
+}
 function copy() {
 	document.getElementById('reportBody').select();
 	try {
@@ -153,6 +192,16 @@ function copy() {
 }
 function copy2() {
 	document.getElementById('reportBody2').select();
+	try {
+		document.execCommand('copy');
+		showCopiedPopup();
+		clearSelection();
+	} catch(e) {
+		console.log("Copy error: " + e);
+	}
+}
+function copy3() {
+	document.getElementById('reportBody3').select();
 	try {
 		document.execCommand('copy');
 		showCopiedPopup();
