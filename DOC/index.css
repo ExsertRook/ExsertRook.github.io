@@ -24,7 +24,7 @@ body {
     padding: 20px;
 }
 
-#form, #reportBody, #reportBody2 {
+#form, #reportBody, #reportBody2, #reportBody3 {
     width: 50%;
     display: block;
     margin: 0;
@@ -122,6 +122,15 @@ input[type="number"] {
     height: calc(25vh - 40px);
     position: fixed;
     top: 280px;
+    right: 20px;
+    white-space: pre-wrap;
+    width: calc(50% - 20px);
+    padding: 5px 10px;
+}
+#reportBody3 {
+    height: calc(25vh - 40px);
+    position: fixed;
+    top: 525px;
     right: 20px;
     white-space: pre-wrap;
     width: calc(50% - 20px);
