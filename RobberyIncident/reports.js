@@ -125,10 +125,10 @@ function report() {
 			text: 'The chase lasted for a bit of time until our pursuing units lost eyes on the suspects vehicle. After performing a search near the area where we lost eyes, we did not manage to find them.',
 		},
 		'Got out of vehicle | Ran on foot | Caught': {
-			text: 'The chase lasted for a bit of time until they had stopped their car and stepped out of it. The suspects initiated a 10-80B and attempted to evade on foot. Our pursuing units eventually managed to apprehend the suspects and place them under police custody.',
+			text: 'The chase lasted for a bit of time until they had stopped their car and stepped out of it. The suspects initiated a 10-81 and attempted to evade on foot. Our pursuing units eventually managed to apprehend the suspects and place them under police custody.',
 		},
 		'Got out of vehicle | Ran on foot | Escaped': {
-			text: 'The chase lasted for a bit of time until they had stopped their car and stepped out of it. The suspects initiated a 10-80B and attempted to evade on foot.',
+			text: 'The chase lasted for a bit of time until they had stopped their car and stepped out of it. The suspects initiated a 10-81 and attempted to evade on foot.',
 		},
 		'Vehicle disabled | Ran on foot | Caught': {
 			text: 'The chase lasted for a bit of time until their car had disabled from crashing it too many times. From there they got out of the disabled vehicle and ran on foot in hopes of getting away. The suspects were eventually apprehended and placed under police custody.',
