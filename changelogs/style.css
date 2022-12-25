@@ -102,3 +102,6 @@ ul {
   	text-align: right;
   	font-size: 30px;
 }
+body::-webkit-scrollbar{
+    display: none;
+}
