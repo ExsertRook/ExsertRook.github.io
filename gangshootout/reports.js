@@ -73,27 +73,23 @@ function report() {
 	if (weaponname6 || serial6) buffer.push(`Weapon: ${weaponname6} | Serial Number: ${serial6}`);
 	buffer.push('');
 	
-	let medicalSelected = document.getElementById('medicalattention');
-	let medicalInformation = {
-		'All recieved at Saint Fiacre': {
-			label: 'ALL SAINT FIACRE',
-			text: 'After we collected enough initial evidence, we collected the suspects and then transported all of them to Saint Fiacre where they got further medical attention.',
-		},
-		'All recieved at Mount Zonah': {
-			label: 'ALL MOUNT ZONAH',
-			text: 'After we collected enough initial evidence, we collected the suspects and then transported all of them to Saint Fiacre where they got further medical attention.',
-		},
-		'1 Gang at Saint Fiacre, other at Mount Zonah': {
-			label: 'SEPERATED',
-			text: 'After we collected enough initial evidence, we collected the suspects and then transported them to 2 different hospitals where they got further medical attention. One gang got transported to Saint Fiacre and the other gang was transported to Mount Zonah. We seperated them to avoid any potential conflict between the 2 gangs at the hospital.',
-		}
-	};
-	let medical = medicalSelected.options[medicalSelected.selectedIndex].text;
-	buffer.push(`[MEDICAL ATTENTION | ${medicalInformation[medical].label}]:`);
-	buffer.push(medicalInformation[medical].text);
-	buffer.push('');
-
+	
+	
+	let medneedsus = document.getElementById('medneedsus').value;
+	let medneedpd = document.getElementById('medneedpd').value;
+	let hospitalname = document.getElementById('hospitalname').value;
 	let processed = document.getElementById('processedat').value;
+
+	if (document.getElementById('medneed').checked) {
+		buffer.push(`[MEDICAL ATTENTION]:`);
+		buffer.push(`After we apprehended the suspects, they were in need of medical attention. We brought the injured people (Suspects Total: ${medneedsus} | PD Total: ${medneedpd}) to ${hospitalname}.`);
+		buffer.push(`Once everyone got medical treatment, we started heading back towards the PD.`)
+	} else {
+		buffer.push(`[MEDICAL ATTENTION]:`);
+		buffer.push(`Due to no suspects or officers having any major injuries, everyone waved their rights to medical attention.`);
+	}
+
+	buffer.push('');
 	buffer.push('[PROCESSED]:');
 	buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
 	

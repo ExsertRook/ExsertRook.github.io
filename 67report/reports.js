@@ -33,8 +33,20 @@ function report() {
 	buffer.push(`The vehicle in question was a${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}.`);
 	buffer.push('');
 	
-
+	let medneedsus = document.getElementById('medneedsus').value;
+	let medneedpd = document.getElementById('medneedpd').value;
+	let hospitalname = document.getElementById('hospitalname').value;
 	let processed = document.getElementById('processedat').value;
+
+	if (document.getElementById('medneed').checked) {
+		buffer.push(`[MEDICAL ATTENTION]:`);
+		buffer.push(`After we apprehended the suspects, they were in need of medical attention. We brought the injured people (Suspects Total: ${medneedsus} | PD Total: ${medneedpd}) to ${hospitalname}.`);
+		buffer.push(`Once everyone got medical treatment, we started heading back towards the PD.`)
+	} else {
+		buffer.push(`[MEDICAL ATTENTION]:`);
+		buffer.push(`Due to no suspects or officers having any major injuries, everyone waved their rights to medical attention.`);
+	}
+	buffer.push('');
 	buffer.push('[PROCESSED]:');
 	buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
 	
