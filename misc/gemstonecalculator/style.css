@@ -264,7 +264,7 @@ button:hover {
 }
 
 body{
-    background-color: #2F3136;
+    background-color: rgb(54, 54, 54);
 }
 
 body.dark-theme {
