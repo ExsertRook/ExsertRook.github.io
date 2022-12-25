@@ -92,3 +92,6 @@ ul {
   	text-align: right;
   	font-size: 30px;
 }
+*::-webkit-scrollbar{
+    display: none;
+}
