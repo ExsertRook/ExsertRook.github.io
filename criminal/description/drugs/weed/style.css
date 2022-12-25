@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Nunito';
+    color: white;
+    background-color: rgb(54, 54, 54);
 }
 
 *::-webkit-scrollbar{
@@ -26,16 +28,11 @@
     font-size: 20px;
     font-weight: normal;
 }
+
 .container .imageDescription h4 {
     padding-left: 20px;
     padding-right: 20px;
     font-size: 20px;
-    font-weight: normal;
-}
-.container .imageDescription h5, li {
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 18px;
     font-weight: normal;
 }
 
@@ -50,12 +47,6 @@
     padding: auto;
 }
 
-.homebutton {
-    padding-left: 10px;
-    padding-top: 10px;
-    font-size: 20px;
-}
-
 .image {
     padding-left: 20px;
     padding-right: 20px;
@@ -64,17 +55,18 @@
 
 .homebutton{
     padding-left: 20px;
-    padding-top: 20px ;
+    padding-top: 20px;
     font-weight: 600;
+    font-size: 20px;
 }
 
 a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 10px;
     text-decoration: none;
-    color: initial;
+    color: white;
     padding: 6px 20px;
 }
