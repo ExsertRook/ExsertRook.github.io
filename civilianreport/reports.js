@@ -23,10 +23,12 @@ function report() {
 	let reporttype = document.getElementById('reporttype').value;
 	let reportdetails = document.getElementById('reportdetails').value;
 
+	if (civname) buffer.push(`During normal patrol routine, we had an individual come to MRPD to make a complaint they had.w`)
 	if (civname) buffer.push(`Reporting Civilian's Name: ${civname}`);
 	if (civnumber) buffer.push(`Reporting Civilian's Number: ${civnumber}`);
 	buffer.push('');
 	if (reporttype) buffer.push(`Type of report: ${reporttype}`);
+	if (reportdetails) buffer.push(`Report in detail: ${reportdetails}`);
 
 
 	let curDarkmode = document.getElementById('darkmode').checked;
