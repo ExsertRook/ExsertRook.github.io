@@ -34,6 +34,11 @@ body {
 input[type="text"] {
     background-color: rgb(54, 54, 54);
     color: rgb(226, 226, 226);
+    font-weight: 500;
+}
+input[type="text"]::placeholder {
+    color:rgb(226, 226, 226);
+    font-weight: 500;
 }
 
 .container form {
