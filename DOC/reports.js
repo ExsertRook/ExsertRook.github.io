@@ -81,7 +81,7 @@ function report3() {
 	let sentencelength2 = document.getElementById('sentencelength2').value;
 	let sentencelength3 = document.getElementById('sentencelength3').value;
 
-	if (InmateName3 || InmateName32 || InmateName33) buffer.push(`**Number of Inmate(s):** ${InmateName3} ${InmateName32} ${InmateName33}`);
+	if (InmateName3 || InmateName32 || InmateName33) buffer.push(`**Names of Inmate(s):** ${InmateName3} ${InmateName32} ${InmateName33}`);
 	if (NumberOfInmates) buffer.push(`**Number of Inmates:** ${NumberOfInmates}`);
 	if (sentencelength1 || sentencelength2 || sentencelength3) buffer.push(`**Sentence Length(s):** ${sentencelength1} months ${sentencelength2} ${sentencelength3}`);
 	buffer.push(`**COs Present:**`);
