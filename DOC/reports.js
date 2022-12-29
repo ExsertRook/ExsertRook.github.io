@@ -54,6 +54,7 @@ function report2() {
 	let visitor3cash = document.getElementById('visitor3cash').value;
 	let contraband2 = document.getElementById('contraband2').value;
 	let status2 = document.getElementById('status2').value;
+	let pockets2 = document.getElementById('pockets2').value;
 
 	buffer.push(`**Name & Callsign:** ${callsign}`);
 	if (InmateName2) buffer.push(`**Inmate Name:** ${InmateName2}`);
@@ -61,6 +62,7 @@ function report2() {
 	buffer.push(`**Any contraband found?:** ${contraband2}`);
 	if (visitor1cash || visitor2cash || visitor3cash) buffer.push(`**Money count of each individual:** ${visitor1cash} ${visitor2cash} ${visitor3cash}`);
 	if (status2) buffer.push(`**Status:** ${status2}`);
+	if (pockets2) buffer.push(`${pockets2}`);
 
 	return document.getElementById('reportBody2').innerHTML = buffer.join("\n");
 }
