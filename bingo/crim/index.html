@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<script type="text/javascript">
+	window.onbeforeunload = function(){
+  		return 'Are you sure you want to leave?';
+	}
+</script>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <title>Criminal Bingo</title>
-</head>
-<body>
-    
+	<meta charset="UTF-8">
+	<title>LegacyRP Crim Bingo</title>
+	<link rel="stylesheet" href="style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> </head>
+
+<body onLoad="loadPage()">
+	<div id="form">
+			<h1 style="font-size: 50px;">Criminal Bingo</h1><br />
+		<div class="buttonsgroup">
+			<button class="btn" onClick="reloadPage()"><i class="fa fa-refresh" aria-hidden="true"></i> New Board</button> &nbsp&nbsp;
+			<input type="checkbox" id="darkmode" name="darkmode" value="darkmode" />
+			<label for="darkmode">Button that does nothing!</label>
+			<br />
+		</div>
+		<div class="form-group" id="bingo_table">
+			<!-- to be auto-generated on page load -->
+		</div>
+	</div>
+	<script src="bingo.js"></script>
 </body>
 </html>
