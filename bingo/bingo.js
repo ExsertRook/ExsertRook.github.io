@@ -85,6 +85,7 @@ const cells = [
 	"Drunk person driving",
 	"Hand out a Jaywalking ticket",
 	"Chase goes through a Construction Site",
+	"Get Dono-walled",
 ];
 	
 function shuffle(array) {
