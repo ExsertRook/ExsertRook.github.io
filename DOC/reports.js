@@ -58,9 +58,21 @@ function report2() {
 
 	buffer.push(`**Name & Callsign:** ${callsign}`);
 	if (InmateName2) buffer.push(`**Inmate Name:** ${InmateName2}`);
-	if (visitor1 || visitor2 || visitor3) buffer.push(`**Name(s) of Individuals visiting:** ${visitor1} ${visitor2} ${visitor3}`);
+
+	let visitorfinal = ''
+	if (visitor1 || !visitor2 || !visitor3) visitorfinal = (`${visitor1}`);
+	if (visitor2) visitorfinal = (`${visitor1} | ${visitor2}`);
+	if (visitor3) visitorfinal = (`${visitor1} | ${visitor2} | ${visitor3}`);
+	if (visitorfinal) buffer.push(`**Name(s) of Individuals visiting:** ${visitorfinal}`)
+
 	buffer.push(`**Any contraband found?:** ${contraband2}`);
-	if (visitor1cash || visitor2cash || visitor3cash) buffer.push(`**Money count of each individual:** ${visitor1cash} ${visitor2cash} ${visitor3cash}`);
+
+	let visitorcashfinal = ''
+	if (visitor1cash || !visitor2cash || !visitor3cash) visitorcashfinal = (`$${visitor1cash}`);
+	if (visitor2cash) visitorcashfinal = (`$${visitor1cash} | $${visitor2cash}`);
+	if (visitor3cash) visitorcashfinal = (`$${visitor1cash} | $${visitor2cash} | $${visitor3cash}`);
+	if (visitorcashfinal) buffer.push(`**Money count of each individual:** ${visitorcashfinal}`)
+
 	if (status2) buffer.push(`**Status:** ${status2}`);
 	if (pockets2) buffer.push(`${pockets2}`);
 
@@ -83,9 +95,20 @@ function report3() {
 	let sentencelength2 = document.getElementById('sentencelength2').value;
 	let sentencelength3 = document.getElementById('sentencelength3').value;
 
-	if (InmateName3 || InmateName32 || InmateName33) buffer.push(`**Names of Inmate(s):** ${InmateName3} ${InmateName32} ${InmateName33}`);
+	let inmatenamesfinal = ''
+	if (InmateName3 || !InmateName32 || !InmateName33) inmatenamesfinal = (`${InmateName3}`);
+	if (InmateName32) inmatenamesfinal = (`${InmateName3} | ${InmateName32}`);
+	if (InmateName33) inmatenamesfinal = (`${InmateName3} | ${InmateName32} | ${InmateName33}`);
+	if (inmatenamesfinal) buffer.push(`**Names of Inmate(s):** ${inmatenamesfinal}`);
+
 	if (NumberOfInmates) buffer.push(`**Number of Inmates:** ${NumberOfInmates}`);
-	if (sentencelength1 || sentencelength2 || sentencelength3) buffer.push(`**Sentence Length(s):** ${sentencelength1} months ${sentencelength2} ${sentencelength3}`);
+
+	let sentencelengthfinal = ''
+	if (sentencelength1 || !sentencelength2 || !sentencelength3) sentencelengthfinal = (`${sentencelength1} months`);
+	if (sentencelength2) sentencelengthfinal = (`${sentencelength1} months | ${sentencelength2} months`);
+	if (sentencelength3) sentencelengthfinal = (`${sentencelength1} months | ${sentencelength2} months | ${sentencelength3} months`);
+	if (sentencelengthfinal || inmatenamesfinal) buffer.push(`**Sentence Length(s):** ${sentencelengthfinal}`);
+
 	buffer.push(`**COs Present:**`);
 	
 	return document.getElementById('reportBody3').innerHTML = buffer.join("\n");
