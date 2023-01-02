@@ -70,6 +70,18 @@ function report() {
 		'House Burglary': {
 			text: 'During regular patrol, we responded to 10-31 house burglary calls at the location mentioned earlier. Upon arrival, an individual ran from a house that was in the area into their vehicle and fled the scene, initiating a 10-80.',
 		},
+		'Assault and Battery': {
+			text: 'During regular patrol, we had noticed an individual assaulting another individual without a weapon. When we went to confront them, they decided to hop in a vehicle and flee, initiating a 10-80.',
+		},
+		'Assault and Battery (PP)': {
+			text: 'During regular patrol, we had noticed an individual assaulting an EMS/PD worker without a weapon. When we went to confront them, they decided to hop in a vehicle and flee, initiating a 10-80.',
+		},
+		'Aggravated Assault and Battery': {
+			text: 'During regular patrol, we had noticed an individual assaulting another individual with a weapon. When we went to confront them, they decided to hop in a vehicle and flee, initiating a 10-80.',
+		},
+		'Aggravated Assault and Battery (PP)': {
+			text: 'During regular patrol, we had noticed an individual assaulting an EMS/PD worker with a weapon. When we went to confront them, they decided to hop in a vehicle and flee, initiating a 10-80.',
+		},
 		'10-66': {
 			text: 'During regular patrol, we responded to some 10-66 calls. Once arriving there, we noticed an individual acting suspicious so we approached them for further investigation. Upon approaching them, they then decided to get into their vehicle and flee, initiating a 10-80.',
 		},
