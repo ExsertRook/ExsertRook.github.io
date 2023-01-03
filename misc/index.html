@@ -1,60 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/suchercircle.png" />
     <title>My Miscellaneous Creations Hub</title>
-    <link rel="shortcut icon" href="suchercircle.png" />
-    <link rel="stylesheet" href="style/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="rps.js"></script>
-</head>
-<body>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
-    <style>
-    body {
-        font-family: 'Nunito';font-size: 24px;
-	    background: url("pcwq.png") no-repeat 
-    	  center center fixed; 
-    -webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
-    
-    }
+</head>
 
-    a:link {
-        text-decoration: none;
-    }
-
-    a:visited {
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    a:active {
-        text-decoration: underline;
-    }
-
-    </style>
-    <h1 align="center">Miscellaneous Creations</h1>
-    
-    <div class="textbody">
-	<br />
-        <h2 align="center">Have a look!</h2><br />
-        <ul>
-            <p align="center"><a href="https://exsertrook.github.io/misc/paycheck-calculator" target="_blank">SASP Paycheck Calculator</a></p>
-	    <p align="center"><a href="https://exsertrook.github.io/misc/gemstonecalculator" target="_blank">Gemstone Price Calculator</a></p>
-	    <br />
-	<p align="center"><a href="https://forms.gle/fjhy2yVvuu9Gxm3g7" target="_blank">Feedback Form</a></p>
-        </ul>
-	    
+<body>
+    <div class="webtitle">
+        <label>My Miscellaneous Creations</label>
     </div>
-    <div class="footer"><i class="fa fa-copyright" aria-hidden="true"></i> Thomas Sucher 2022</div>
-    <div class="footer2"><i class="fa fa-copyright" aria-hidden="true"></i><a href="https://exsertrook.github.io/" target="_blank">Incident Report Generator HUB</a></div>
     
-</body>        
+    <section class="container">
+        <form>
+            <i class="fas fa-search"></i>
+            <input type="text" name="search" id="search" placeholder="Search Here..." 
+            onkeyup="search()">
+        </form>
+    
+
+        <div class="cardList" id="cardList">
+            
+            <div class="card">
+                <img src="images/cash.png" alt="">
+                <div class="cardDetails">
+                    <h2>SASP Paycheck Calculator</h2>
+                    <h3>Find out how much money you made being on duty!</h3>
+                    <h3><a href="https://exsertrook.github.io/misc/paycheck-calculator/" target="_blank">Click Here!</a></h3>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/diamond.png" alt="">
+                <div class="cardDetails">
+                    <h2>Gemstone Price Calculator</h2>
+                    <h3>Find out how roughly your hard work payed off</h3>
+                    <h3><a href="https://exsertrook.github.io/misc/gemstonecalculator/" target="_blank">Click Here!</a></h3>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/bingo.png" alt="">
+                <div class="cardDetails">
+                    <h2>SASP Bingo</h2>
+                    <h3>Play this if you are bored while on duty. Kind of like tiny tasks :)</h3>
+                    <h3><a href="https://exsertrook.github.io/bingo/" target="_blank">Click Here!</a></h3>
+                </div>
+            </div>
+        </div>   
+    </section>
+    <div class="bottombuttons">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfactDdUV3CSPzpgETro5rtRNhDSrg7a8Zvl3kjZHzlkZsr6g/viewform" class="button" target="_blank" style="color: black; font-size: 16px;">Feedback Form</a>      
+        <a href="https://exsertrook.github.io/changelogs/" class="button" target="_blank" style="color: black; font-size: 16px;">Changelogs</a><br />
+        <a href="https://exsertrook.github.io/" class="bigbutton" target="_blank" style="color: black; font-size: 18px;">Incident Report Generators</a>
+    </div> 
+    <script src="script.js"></script> 
+
+    <!--
+    <div class="card">
+        <img src="images/" alt="">
+        <div class="cardDetails">
+            <h2></h2>
+            <h3></h3>
+            <h3><a href="description/">Location / More Details</a></h3>
+        </div>
+    </div>
+    -->
+</body>
 </html>
