@@ -123,18 +123,7 @@ function reloadPage() {
 
 function loadPage() {
 	table = header;
-	if (!pageReloaded) {
-		let darkmodeSetting = localStorage.getItem("darkmode");
-		if (!darkmodeSetting || darkmodeSetting === 'undefined' || darkmodeSetting === 'false') {
-			localStorage.setItem("darkmode", false);
-			darkmodeState = 'false';
-		}
-		if (darkmodeSetting == 'true') {
-			document.getElementById('darkmode').checked = true;
-			document.body.classList.toggle('dark-theme');
-			darkmodeState = 'true';
-		}
-	}
+
 	let randCells = shuffle(cells);
 	
 	let totalCount = 0;

@@ -120,23 +120,23 @@ button {
     transition: 250ms;
 }
 
-body.dark-theme {
+body {
 	color: #eee;
 	background: #3c3d3d;
 }
-body.dark-theme .selected-bingo {
+.selected-bingo {
 	background-color: #29b340;
     color: black;
 }
-body.dark-theme .btn {
+.btn {
 	background-color: #2F3136;
 	color: #f9f9f9;
 }
-body.dark-theme .btn:hover{
+.btn:hover{
     background-color: #444444;
     border-color: #29b340;
 }
 
-body.dark-theme td {
+td {
   border: 3px solid white;
 }
