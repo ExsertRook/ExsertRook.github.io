@@ -144,7 +144,7 @@ function report() {
         buffer.push('');
         buffer.push(`Steel: ${pistolmag_steel}`);
         buffer.push(`Aluminum: ${pistolmag_aluminum}`);
-        buffer.push(`Rubbwer: ${pistolmag_rubber}`);
+        buffer.push(`Rubber: ${pistolmag_rubber}`);
     }
     if (document.getElementById('smgmag').checked) {
         buffer.push(`Attachment Selected: SMG Magazine`);
@@ -188,7 +188,7 @@ function report() {
         buffer.push(`Screws: ${supressor_screws}x`);
         buffer.push(`Resin: ${supressor_resin}x`);
         buffer.push('');
-        buffer.push(`Screws: ${supressor_steel}x`);
+        buffer.push(`Steel: ${supressor_steel}x`);
         buffer.push(`Aluminum: ${supressor_aluminum}x`);
         buffer.push(`Rubber: ${supressor_rubber}x`);
     }
