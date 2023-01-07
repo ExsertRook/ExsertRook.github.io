@@ -269,6 +269,7 @@ function report() {
 	let medneedsus = document.getElementById('medneedsus').value;
 	let medneedpd = document.getElementById('medneedpd').value;
 	let hospitalname = document.getElementById('hospitalname').value;
+	let nocontest = document.getElementById('nocontest').value;
 	
 	if (document.getElementById('cend').checked) {
 		if (document.getElementById('medneed').checked) {
@@ -284,7 +285,9 @@ function report() {
     	buffer.push('[PROCESSED]:');
 		buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
 
-		
+		if (document.getElementById('nocontest').checked) {
+			buffer.push(`The suspect plead no contest.`);
+		}
     }
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }
