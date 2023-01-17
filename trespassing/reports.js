@@ -2,7 +2,6 @@
 
 let buffer = [];
 let officersInvolved = new Set();
-let darkmodeState;
 let alreadySpecifiedRobbery = false;
 let ROBBERY_STATE = 'JEWLERY';
 
@@ -83,13 +82,6 @@ function report() {
 		buffer.push(`[MEDICAL ATTENTION]:`);
 		buffer.push(`Due to no suspects or officers having any major injuries, everyone waved their rights to medical attention.`);
 	}
-	
-	let curDarkmode = document.getElementById('darkmode').checked;
-	if (curDarkmode) {
-		if (darkmodeState === 'false') updateDarkmode();
-	} else if (!curDarkmode) {
-		if (darkmodeState === 'true') updateDarkmode();
-	}
 
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }
@@ -107,39 +99,6 @@ function loadName() {
 	let callsign = '';
 	if (localStorage.getItem('callsign')) callsign = localStorage.getItem('callsign');
 	document.getElementById('yourself').value = callsign;
-}
-
-// Listen for a click on the button
-function updateDarkmode() {
-	// Then toggle (add/remove) the .dark-theme class to the body
-	let darkmode = document.getElementById('darkmode').checked;
-	if (darkmode) {
-		localStorage.setItem("darkmode", true);
-		darkmodeState = 'true';
-	} else if (!darkmode) {
-		localStorage.setItem("darkmode", false);
-		darkmodeState = 'false';
-	}
-	document.body.classList.toggle('dark-theme');
-}
-
-function loadDarkmode() {
-	let darkmodeSetting = localStorage.getItem("darkmode");
-	if (!darkmodeSetting || darkmodeSetting === 'undefined' || darkmodeSetting === 'false') {
-		localStorage.setItem("darkmode", false);
-		darkmodeState = 'false';
-	}
-	if (darkmodeSetting == 'true') {
-		document.getElementById('darkmode').checked = true;
-		document.body.classList.toggle('dark-theme');
-		darkmodeState = 'true';
-	}
-	loadName();
-	if (ROBBERY_STATE === 'JEWLERY') {
-		document.getElementById('whatFleeca').style.display = 'none';
-		document.getElementById('whatStore').style.display = 'none';
-	}
-	//loadOfficers();
 }
 
 let officers = null;

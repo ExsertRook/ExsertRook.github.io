@@ -26,15 +26,37 @@ function report() {
 	let parallel = document.getElementById('parallel').value;
 	let parallelp = document.getElementById('parallelp').value;
 	let airunit = document.getElementById('airunit').value;
+	let airp = document.getElementById('airp').value;
 	let bikeunit = document.getElementById('bikeunit').value;
 	buffer.push('');
 	
 	buffer.push(`[INVOLVED IN PURSUIT]:`);
-	if (primary || primaryp) buffer.push(`Primary: ${primary} ${primaryp}`);
-	if (secondary || secondaryp) buffer.push(`Secondary: ${secondary} ${secondaryp}`);
-	if (tertiary || tertiaryp) buffer.push(`Tertiary: ${tertiary} ${tertiaryp}`);
-	if (parallel || parallelp) buffer.push(`Parallel: ${parallel} ${parallelp}`);
-	if (airunit) buffer.push(`Air-1: ${airunit}`);
+
+	let primaryfinal = ''
+	if (primary || !primaryp) primaryfinal = (`${primary}`);
+	if (primaryp) primaryfinal = (`${primary} & ${primaryp}`);
+	if (primaryfinal) buffer.push(`Primary: ${primaryfinal}`);
+	
+	let secondaryfinal = ''
+	if (secondary || !secondaryp) secondaryfinal = (`${secondary}`);
+	if (secondaryp) secondaryfinal = (`${secondary} & ${secondaryp}`);
+	if (secondaryfinal) buffer.push(`Secondary: ${secondaryfinal}`);
+
+	let tertiaryfinal = ''
+	if (tertiary || !tertiaryp) tertiaryfinal = (`${tertiary}`);
+	if (tertiaryp) tertiaryfinal = (`${tertiary} & ${tertiaryp}`);
+	if (tertiaryfinal) buffer.push(`Tertiary: ${tertiaryfinal}`);
+
+	let parallelfinal = ''
+	if (parallel || !parallelp) parallelfinal = (`${parallel}`);
+	if (parallelp) parallelfinal = (`${parallel} & ${parallelp}`);
+	if (parallelfinal) buffer.push(`Parallel: ${parallelfinal}`);
+
+	let airfinal = ''
+	if (airunit || !airp) airfinal = (`${airunit}`);
+	if (airp) airfinal = (`${airunit} & ${airp}`);
+	if (airfinal) buffer.push(`Air-1: ${airfinal}`);
+
 	if (bikeunit) buffer.push(`Bike-Unit: ${bikeunit}`);
 	buffer.push('');
 	
@@ -258,6 +280,12 @@ function report() {
 		'Suspects opened fire from the vehicle | Escaped': {
 			text: 'The chase lasted for a bit of time until the suspects decided to start opening fire on our pursuing officers. After a shortlasting exchange of gunfire, the officers did not manage to incapacitate the suspects and due to the suspects having an advantage, the officers took the chance and let the criminals flee in favour of saving our other officers lives. The suspects escaped and evaded police custody.',
 		},
+		'Turned into a shootout | All Caught': {
+			text: 'The chase lasted for a bit of time until the robbers had initiated a shootout. Eventually after all the suspects were incapacitated, we secured them and held a perimeter on scene.',
+		},
+		'Turned into a shootout | All Escaped': {
+			text: 'The chase lasted for a bit of time until the robbers had initiated a shootout. Unfortunately, since they managed to incapacitate more officers than we managed to incapacitate them, we had no choice but to let them flee the area to secure our downed officers safety.',
+		},
 		'Secondary Vehicle Blocked Units | Escaped': {
 			text: 'The chase lasted for a bit of time until the pursuing units were blocked in a small alley by a secondary vehicle that got involved in the pursuit. After them successfully stopping the pursuing units, the original suspects managed to escape police and we declared the chase VCB.',
 		},
@@ -278,7 +306,8 @@ function report() {
 	let vehicledesc = document.getElementById('vehicledesc').value;
 	let vehiclereg = document.getElementById('vehiclereg').value;
 	let occupants = document.getElementById('occupants').value;
-	if (vehicledesc) vehicledesc = ` was a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
+	let carcolor = document.getElementById('carcolor').value;
+	if (vehicledesc || carcolor) vehicledesc = ` was a ${carcolor} in colored ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
 	buffer.push(`The vehicle we were pursuing${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}. There were a total of ${occupants} occupants inside of the vehicle.`);
 	
 	let flaggedSelected = document.getElementById('flaggedquestion');
@@ -315,13 +344,6 @@ function report() {
 	    	buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
     	}
 	
-		let curDarkmode = document.getElementById('darkmode').checked;
-		if (curDarkmode) {
-			if (darkmodeState === 'false') updateDarkmode();
-		} else if (!curDarkmode) {
-			if (darkmodeState === 'true') updateDarkmode();
-		}
-	
 		return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 	}
 	
@@ -338,36 +360,6 @@ function report() {
 		let callsign = '';
 		if (localStorage.getItem('callsign')) callsign = localStorage.getItem('callsign');
 		document.getElementById('yourself').value = callsign;
-	}
-	
-	function updateDarkmode() {
-		let darkmode = document.getElementById('darkmode').checked;
-		if (darkmode) {
-			localStorage.setItem("darkmode", true);
-			darkmodeState = 'true';
-		} else if (!darkmode) {
-			localStorage.setItem("darkmode", false);
-			darkmodeState = 'false';
-		}
-		document.body.classList.toggle('dark-theme');
-	}
-	
-	function loadDarkmode() {
-		let darkmodeSetting = localStorage.getItem("darkmode");
-		if (!darkmodeSetting || darkmodeSetting === 'undefined' || darkmodeSetting === 'false') {
-			localStorage.setItem("darkmode", false);
-			darkmodeState = 'false';
-		}
-		if (darkmodeSetting == 'true') {
-			document.getElementById('darkmode').checked = true;
-			document.body.classList.toggle('dark-theme');
-			darkmodeState = 'true';
-		}
-		loadName();
-		if (ROBBERY_STATE === 'JEWLERY') {
-			document.getElementById('whatFleeca').style.display = 'none';
-			document.getElementById('whatStore').style.display = 'none';
-		}
 	}
 	
 	function showCopiedPopup() {

@@ -7,26 +7,24 @@
 	<link rel="shortcut icon" href="stop.png" />
 	<link rel="stylesheet" href="index.css" />
 	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
-	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> </head>
-
-<body onLoad="loadDarkmode()">
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<header>
+	<br />
+    <div class="headerbuttons"><a href="https://exsertrook.github.io/vehicleholdreport/" target="_blank" class="button">PD Impound Generator</a> &nbsp <a href="https://exsertrook.github.io/" class="button">Back to HUB</a>
+	</div>
+	<br />
+	10-11 > Arrest Incident Report Generator<br />
+	<!--<buttonsasp onclick="saspchange()">SASP</buttonsasp> &nbsp&nbsp&nbsp <buttonbcso onclick="bcsochange()">BCSO</buttonbcso> &nbsp&nbsp&nbsp <buttonsahp onclick="sahpchange()">SAHP</buttonsahp>-->
+	<br />
+	<label class="inline" style="font-size: 14px;">Your Callsign & Name:</label><br />
+    <input type="text" id="yourself" name="yourself" placeholder="[SF-202] Thomas Sucher"/><br />
+	<div class="popup" id="copyReport">
+		<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
+	</div>
+</header>
+<body>
 	<div id="form">
-		<div class="form-group">
-			<style>
-    			body {
-        		    font-family: 'Nunito';font-size: 16px;
-    			}
-    			</style>
-			<span style="font-weight: bold;">10-11 > Arrest Incident Report Generator</span> | 
-			<input type="checkbox" id="darkmode" name="darkmode" value="darkmode" />
-			<label for="darkmode">Darkmode</label>
-			<br />
-			<label class="inline" title="(You only have to do this once - it will cache)" style="border-bottom: 1px dotted #000; text-decoration: none;">Your callsign & name:</label>
-			<input type="text" id="yourself" name="yourself" placeholder="[SF-202] Thomas Sucher" /> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			<div class="popup" id="copyReport">
-				<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
-			</div>
-		</div>
 		<div class="form-group">
 			<label>Location:</label>
 			10-11 / Code 5 Location: <input type="text" id="location" name="location" placeholder="e.g. Hawick Ave">

@@ -1,34 +1,68 @@
 * {
     box-sizing: border-box;
     outline: none !important;
+    background-color: rgb(24, 24, 24);
+    color: white;
 }
 
 html, body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Ubuntu", "Roboto", "Noto Sans", "Droid Sans", sans-serif;
     font-size: 15px;
-    color: #242729;
+    color: #292a2b;
     margin: 0;
     line-height: 22.5px;
+}
+
+header {
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    font-size: 24px;
+    width: 100%;
+    height: 200px;
+    top: 0;
+    position: fixed;
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgb(146, 245, 223);
+    color: white;
+    background-image: url(sasp.png);
+    background-repeat: no-repeat;
+    background-size: 200px;
 }
 
 pre, code {
     font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Ubuntu Mono", "Roboto Mono", Menlo, Monaco, Consolas, monospace;
     font-size: 13px;
     line-height: 17px;
-    background: rgb(246, 246, 246);
 }
 
 body {
     display: flex;
     margin: 0;
     padding: 20px;
+    font-family: 'Nunito';font-size: 16px;
 }
 
 #form, #reportBody {
-    width: 50%;
+    width: 100%;
     display: block;
     margin: 0;
-    padding: 5px;
+    padding: 5px; 
+}
+
+#form{
+    margin-top: 180px;
+}
+
+#reportBody {
+    height: 78%;
+    position: fixed;
+    top: 198px;
+    right: 20px;
+    bottom: 110px;
+    white-space: pre-wrap;
+    width: calc(50% - 20px);
+    padding: 5px 10px;
 }
 
 .form-group:not(.layer-2) > label {
@@ -40,6 +74,10 @@ body {
     margin-bottom: 3px;
 }
 
+.form-group {
+    margin-bottom: 10px;
+}
+
 label {
     font-weight: 600;
 }
@@ -47,14 +85,10 @@ label.inline {
     display: inline-block !important;
 }
 
-.form-group {
-    margin-bottom: 10px;
-}
-
 textarea {
     padding: 3px;
     resize: none;
-    width: 300px;
+    width: 450px;
     height: 50px;
 }
 
@@ -79,11 +113,18 @@ textarea {
     height: 100px;
 }
 /*Textbox border*/
-textarea, input[type="text"], input[type="number"] {
-    border: 2px solid #e46e6e;
+textarea, input[type="text"], input[type="text2"], input[type="number"] {
+    border: 2px solid rgb(146, 245, 223);
     border-radius: 10px;
-    font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Ubuntu Mono", "Roboto Mono", Menlo, Monaco, Consolas, monospace;
+    font-family: 'Nunito';
     font-size: 13px;
+    background-color: #242424;
+}
+
+input[type="text"], input[type="text2"], input[type="number"]::placeholder {
+    color: white;
+    text-align: center;
+    font-family: 'Nunito';
 }
 
 input[type="checkbox"] + label {
@@ -92,28 +133,24 @@ input[type="checkbox"] + label {
 /*Inbetween lines*/
 .form-group:not(.layer-2) {
     padding-bottom: 7px;
-    border-bottom: 2px solid #e46e6e;
+    border-bottom: 2px solid rgb(146, 245, 223);
     margin-bottom: 7px;
+    width: 50%;
 }
 
 input[type="text"] {
     width: 180px;
     padding: 3px;
 }
+input[type="text2"] {
+    padding: 3px;
+    width: 90px;
+}
 input[type="number"] {
     width: 60px;
     padding: 3px;
 }
 
-#reportBody {
-    height: calc(100vh - 40px);
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    white-space: pre-wrap;
-    width: calc(50% - 20px);
-    padding: 5px 10px;
-}
 
 label + .form-group.layer-2 {
     margin-top: 10px;
@@ -122,6 +159,7 @@ label + .form-group.layer-2 {
 input[type="checkbox"] {
     position: relative;
     top: 1px;
+    accent-color: rgb(146, 245, 223);
 }
 
 input.invisible {
@@ -133,20 +171,98 @@ input.invisible {
 }
 
 button {
-    border: 1px solid #c1c1c1;
-    background: #ececec;
+    border: 1px solid transparent;
+    color: #333;
+    background-color: rgb(146, 245, 223);
+    border-color: rgb(54, 94, 85);
+    border-radius: 4px;
     padding: 5px 15px;
     cursor: pointer;
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 5px;
     transition: 250ms;
+    
+}
+buttonsasp {
+    border: 1px solid transparent;
+    color: #333;
+    background-color: rgb(86, 183, 240);
+    border-color: rgb(39, 84, 110);
+    border-radius: 4px;
+    padding: 5px 15px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 5px;
+    transition: 250ms;
+    font-size: 14px;
+    font-weight: bold;
+}
+buttonbcso {
+    border: 1px solid transparent;
+    color: #333;
+    background-color: rgb(245, 210, 146);
+    border-color: rgb(114, 98, 69);
+    border-radius: 4px;
+    padding: 5px 15px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 5px;
+    transition: 250ms;
+    font-size: 14px;
+    font-weight: bold;
+}
+buttonsahp {
+    border: 1px solid transparent;
+    color: #333;
+    background-color: rgb(56, 44, 221);
+    border-color: rgb(19, 16, 73);
+    border-radius: 4px;
+    padding: 5px 15px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 5px;
+    transition: 250ms;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-button:hover {
-    background: #c1c1c1;
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-decoration: none;
+
+    color: #333;
+    background-color: rgb(146, 245, 223);
+    border-color: rgb(54, 94, 85);
 }
 
-.dark-theme.chip, .chip {
+a.button:hover {
+    color: white;
+    background-color: rgb(54, 94, 85);
+    border-color: rgb(21, 36, 32);
+}
+
+.chip {
     display: inline-block;
     padding: 0 25px;
     height: 45px;
@@ -167,6 +283,15 @@ button:hover {
     border-radius: 50%;
 }
 
+select {
+	background-color: #242424;
+	color:#f9f9f9;
+    border: 2px solid rgb(146, 245, 223);
+    border-radius: 10px;
+    font-family: 'Nunito';
+    text-align: center;
+}
+
 .popup {
   position: relative;
   display: inline-block;
@@ -175,7 +300,19 @@ button:hover {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  margin-left: 45%;
 }
+
+.headerbuttons {
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-left: 80%;
+    top: 0;
+  }
 
 /* The actual popup (appears on top) */
 .popup .popuptext {
@@ -246,54 +383,42 @@ button:hover {
     border-radius: 4px;
 
     color: #333;
-    background-color: #fff;
-    border-color: #ccc;
+    background-color: rgb(146, 245, 223);
+    border-color: rgb(54, 94, 85);
 }
 
 .btn:hover{
-    color: #333;
-    background-color: #e6e6e6;
-    border-color: #adadad;
+    color: white;
+    background-color: rgb(54, 94, 85);
+    border-color: rgb(21, 36, 32);
 }
 
-body{
-  background-color: white;
+.lineup:not(.layer-2) > label {
+    display: block;
+    margin-right: 10px;
 }
-/*HTML body color*/
-body.dark-theme {
-	color: #ffffff;
-	background: #303338;
+.lineup.layer-2 {
+    margin-bottom: 3px;
 }
-body.dark-theme .chip {
-	color: black;
-}
-body.dark-theme pre {
-	background-color: #2F3136;
-}
-body.dark-theme .btn {
-	background-color: #2b2d31;
-	color: white;
-    border: 2px solid #e46e6e;
-}
-/*Textbox color*/
-body.dark-theme .btn:hover{
-    background-color: #e46e6e;
-    border-color: #8f4545;
-}
-body.dark-theme textarea, body.dark-theme input {
-	background-color: #2b2d31;
-	color:#f9f9f9;
-}
-body.dark-theme textarea::placeholder, body.dark-theme input::placeholder {
-	color: #C1C1C1;  
-}
-body.dark-theme a {
-    color: #48e;
-}
-body.dark-theme select {
+.lineup {
+    margin-bottom: 10px;
 
-	background-color: #2F3136;
-	color:#f9f9f9;
-    border: 2px solid #8f4545;
-    border-radius: 10px;
+}
+.lineup:not(.layer-2) {
+    padding-bottom: 7px;
+    border-bottom: 2px solid rgb(146, 245, 223);
+    margin-bottom: 7px;
+    width: 50%;
+}
+label + .lineup.layer-2 {
+    margin-top: 10px;
+}
+
+h1, h2 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }

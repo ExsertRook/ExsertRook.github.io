@@ -2,7 +2,6 @@
 
 let buffer = [];
 let officersInvolved = new Set();
-let darkmodeState;
 
 function report() {
 	let callsign = document.getElementById('yourself').value.trim();
@@ -47,13 +46,6 @@ function report() {
 	if (other) buffer.push(`${other}`);
     /////
 
-	let curDarkmode = document.getElementById('darkmode').checked;
-	if (curDarkmode) {
-		if (darkmodeState === 'false') updateDarkmode();
-	} else if (!curDarkmode) {
-		if (darkmodeState === 'true') updateDarkmode();
-	}
-
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }
 
@@ -70,36 +62,6 @@ function loadName() {
 	let callsign = '';
 	if (localStorage.getItem('callsign')) callsign = localStorage.getItem('callsign');
 	document.getElementById('yourself').value = callsign;
-}
-
-function updateDarkmode() {
-	let darkmode = document.getElementById('darkmode').checked;
-	if (darkmode) {
-		localStorage.setItem("darkmode", true);
-		darkmodeState = 'true';
-	} else if (!darkmode) {
-		localStorage.setItem("darkmode", false);
-		darkmodeState = 'false';
-	}
-	document.body.classList.toggle('dark-theme');
-}
-
-function loadDarkmode() {
-	let darkmodeSetting = localStorage.getItem("darkmode");
-	if (!darkmodeSetting || darkmodeSetting === 'undefined' || darkmodeSetting === 'false') {
-		localStorage.setItem("darkmode", false);
-		darkmodeState = 'false';
-	}
-	if (darkmodeSetting == 'true') {
-		document.getElementById('darkmode').checked = true;
-		document.body.classList.toggle('dark-theme');
-		darkmodeState = 'true';
-	}
-	loadName();
-	if (ROBBERY_STATE === 'JEWLERY') {
-		document.getElementById('whatFleeca').style.display = 'none';
-		document.getElementById('whatStore').style.display = 'none';
-	}
 }
 
 function showCopiedPopup() {

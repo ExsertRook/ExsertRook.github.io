@@ -1,12 +1,14 @@
 * {
     box-sizing: border-box;
     outline: none !important;
+    background-color: rgb(24, 24, 24);
+    font-family: 'Nunito';
 }
 
 html, body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Ubuntu", "Roboto", "Noto Sans", "Droid Sans", sans-serif;
+    font-family: 'Nunito';
     font-size: 15px;
-    color: #242729;
+    color: rgb(24, 24, 24);
     margin: 0;
     line-height: 22.5px;
 }
@@ -87,19 +89,24 @@ textarea {
 }
 
 textarea, input[type="text"], input[type="number"] {
-    border: 2px solid #e46e6e;
+    border: 2px solid rgb(146, 245, 223);
     border-radius: 10px;
-    font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Ubuntu Mono", "Roboto Mono", Menlo, Monaco, Consolas, monospace;
     font-size: 13px;
+    background-color: #242424;
+    color: white
 }
-
+input[type="text"], input[type="text2"], input[type="number"]::placeholder {
+    color: white;
+    text-align: center;
+    font-family: 'Nunito';
+}
 input[type="checkbox"] + label {
     display: inline-block !important;
 }
 
 .form-group:not(.layer-2) {
     padding-bottom: 7px;
-    border-bottom: 2px solid #e46e6e;
+    border-bottom: 2px solid rgb(146, 245, 223);    
     margin-bottom: 7px;
 }
 
@@ -120,6 +127,7 @@ input[type="number"] {
     white-space: pre-wrap;
     width: calc(30% - 40px);
     padding: 5px 10px;
+    color: white;
 }
 
 label + .form-group.layer-2 {
@@ -184,6 +192,15 @@ button:hover {
   user-select: none;
 }
 
+select {
+	background-color: #242424;
+	color:#f9f9f9;
+    border: 2px solid rgb(146, 245, 223);
+    border-radius: 10px;
+    font-family: 'Nunito';
+    text-align: center;
+}
+
 /* The actual popup (appears on top) */
 .popup .popuptext {
   visibility: hidden;
@@ -231,6 +248,10 @@ button:hover {
   to {opacity:1 ;}
 }
 
+td {
+    text-align: center;
+}
+
 .btn {
     display: inline-block;
     padding: 6px 12px;
@@ -253,52 +274,18 @@ button:hover {
     border-radius: 4px;
 
     color: #333;
-    background-color: #fff;
-    border-color: #ccc;
+    background-color: rgb(146, 245, 223);
+    border-color: rgb(54, 94, 85);
 }
 
 .btn:hover{
-    color: #333;
-    background-color: #e6e6e6;
-    border-color: #adadad;
+    color: white;
+    background-color: rgb(54, 94, 85);
+    border-color: rgb(21, 36, 32);
 }
 
 body{
-  background-color: white;
+  background-color: rgb(24, 24, 24);
+  color: white
 }
 
-body.dark-theme {
-	color: #eee;
-	background: #36393F;
-}
-body.dark-theme .chip {
-	color: black;
-}
-body.dark-theme pre {
-	background-color: #2F3136;
-}
-body.dark-theme .btn {
-	background-color: #2F3136;
-	color: #f9f9f9;
-    border: 2px solid #e46e6e;
-}
-body.dark-theme .btn:hover{
-    background-color: #e46e6e;
-    border-color: #8f4545;
-}
-body.dark-theme textarea, body.dark-theme input {
-	background-color: #2F3136;
-	color:#f9f9f9;
-}
-body.dark-theme textarea::placeholder, body.dark-theme input::placeholder {
-	color: #C1C1C1;  
-}
-body.dark-theme a {
-    color: #48e;
-}
-body.dark-theme select {
-	background-color: #2F3136;
-	color:#f9f9f9;
-    border: 2px solid #8f4545;
-    border-radius: 10px;
-}

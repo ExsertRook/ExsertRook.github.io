@@ -7,26 +7,24 @@
 	<link rel="shortcut icon" href="shoot.png" />
 	<link rel="stylesheet" href="index.css" />
 	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
-	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> </head>
-
-<body onLoad="loadDarkmode()">
-	<div id="form">
-		<div class="form-group">
-			<style>
-    			body {
-        		    font-family: 'Nunito';font-size: 16px;
-    			}
-    			</style>
-			<span style="font-weight: bold;">PD Shootout Report Generator</span> | 
-			<input type="checkbox" id="darkmode" name="darkmode" value="darkmode" />
-			<label for="darkmode">Darkmode</label>
-			<br />
-			<label class="inline" title="(You only have to do this once - it will cache)" style="border-bottom: 1px dotted #000; text-decoration: none;">Your callsign & name:</label>
-			<input type="text" id="yourself" name="yourself" placeholder="[SF-202] Thomas Sucher" /> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			<div class="popup" id="copyReport">
-				<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
-			</div>
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+	<header>
+		<br />
+		<div class="headerbuttons"><a href="https://exsertrook.github.io/vehicleholdreport/" target="_blank" class="button">PD Impound Generator</a> &nbsp <a href="https://exsertrook.github.io/" class="button">Back to HUB</a>
 		</div>
+		<br />
+		PD Shootout Report Generator<br />
+		<!--<buttonsasp onclick="saspchange()">SASP</buttonsasp> &nbsp&nbsp&nbsp <buttonbcso onclick="bcsochange()">BCSO</buttonbcso> &nbsp&nbsp&nbsp <buttonsahp onclick="sahpchange()">SAHP</buttonsahp>-->
+		<br />
+		<label class="inline" style="font-size: 14px;">Your Callsign & Name:</label><br />
+		<input type="text" id="yourself" name="yourself" placeholder="[SF-202] Thomas Sucher"/><br />
+		<div class="popup" id="copyReport">
+			<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
+		</div>
+	</header>
+<body>
+	<div id="form">
         <div class="form-group">
             <label>Details:</label>
             What did the shootout originate from:
@@ -83,15 +81,15 @@
 			Weapon #1: <input type="text" id="weaponname1" name="weaponname1" placeholder="e.g. Pistol .45">
 			Serial Number #1: <input type="text" id="serial1" name="serial1" placeholder="e.g. 12345678"><br />
 			Weapon #2: <input type="text" id="weaponname2" name="weaponname2" placeholder="e.g. Gardone Pistol">
-			Serial Number #2: <input type="text" id="serial2" name="serial2" placeholder="e.g. 12345678"> - (Optional) <br />
+			Serial Number #2: <input type="text" id="serial2" name="serial2" placeholder="e.g. 12345678"><br />
 			Weapon #3: <input type="text" id="weaponname3" name="weaponname3" placeholder="e.g. SIG Sauer P226">
-			Serial Number #3: <input type="text" id="serial3" name="serial3" placeholder="e.g. 12345678"> - (Optional) <br />
+			Serial Number #3: <input type="text" id="serial3" name="serial3" placeholder="e.g. 12345678"><br />
 			Weapon #4: <input type="text" id="weaponname4" name="weaponname4" placeholder="e.g. Pistol .50">
-			Serial Number #4: <input type="text" id="serial4" name="serial4" placeholder="e.g. 12345678"> - (Optional)<br />
+			Serial Number #4: <input type="text" id="serial4" name="serial4" placeholder="e.g. 12345678"><br />
 			Weapon #5: <input type="text" id="weaponname5" name="weaponname5" placeholder="e.g. Carbine Rifle">
-			Serial Number #5: <input type="text" id="serial5" name="serial5" placeholder="e.g. 12345678"> - (Optional)<br />
+			Serial Number #5: <input type="text" id="serial5" name="serial5" placeholder="e.g. 12345678"><br />
 			Weapon #6: <input type="text" id="weaponname6" name="weaponname6" placeholder="e.g. SMG">
-			Serial Number #6: <input type="text" id="serial6" name="serial6" placeholder="e.g. 12345678"> - (Optional)
+			Serial Number #6: <input type="text" id="serial6" name="serial6" placeholder="e.g. 12345678">
 		</div>
 		<div class="form-group">
 			<label>Blanket Charges:</label>
@@ -139,7 +137,7 @@
 				<option>Cayo Perico</option>
 			</select>
 		</div>
-		<div clas="form-group">
+		<div>
 			<label>Processed at...</label><br />
 			<select id="processedat">
 				<option selected>MRPD</option>

@@ -7,33 +7,31 @@
 	<link rel="shortcut icon" href="ems.png" />
 	<link rel="stylesheet" href="index.css" />
 	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
-	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> </head>
-
-<body onLoad="loadDarkmode()">
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<header>
+	<br />
+    <div class="headerbuttons"><a href="https://exsertrook.github.io/" class="button">Back to HUB</a>
+	</div>
+	<br />
+	Suspect ICU Report Template<br />
+	<!--<buttonsasp onclick="saspchange()">SASP</buttonsasp> &nbsp&nbsp&nbsp <buttonbcso onclick="bcsochange()">BCSO</buttonbcso> &nbsp&nbsp&nbsp <buttonsahp onclick="sahpchange()">SAHP</buttonsahp>-->
+	<br />
+	<label class="inline" style="font-size: 14px;">Your Callsign & Name:</label><br />
+    <input type="text" id="yourself" name="yourself" placeholder="[SF-202] Thomas Sucher"/><br />
+	<div class="popup" id="copyReport">
+		<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
+	</div>
+</header>
+<body>
 	<div id="form">
-		<div class="form-group">
-			<style>
-    			body {
-        		    font-family: 'Nunito';font-size: 16px;
-    			}
-    			</style>
-			<span style="font-weight: bold;">ICU Arrest Information</span> | 
-			<input type="checkbox" id="darkmode" name="darkmode" value="darkmode" />
-			<label for="darkmode">Darkmode</label>
-			<br />
-			<label class="inline" title="(You only have to do this once - it will cache)" style="border-bottom: 1px dotted #000; text-decoration: none;">Your callsign/name:</label>
-			<input type="text" id="yourself" name="yourself" placeholder="[SF-202] Thomas Sucher" /> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			<div class="popup" id="copyReport">
-				<div class="btn" title="Copy the generated report to your clipboard">Copy The Information</div> <span class="popuptext" id="myPopup">Copied!</span>
-			</div>
-		</div>
 		<div class="form-group">
             Suspect's Name:
             <input type="text" id="suspectname" name="suspectname" placeholder="Jeff Bozo" />
         </div>
         <div class="form-group">
             Suspect's CID:
-            <input type="text3" id="suspectcid" name="suspectcid" placeholder="55613" />
+            <input type="text2" id="suspectcid" name="suspectcid" placeholder="55613" />
         </div>
         <div class="form-group">
             ICU Date:
@@ -41,22 +39,22 @@
         </div>
         <div class="form-group">
             Incident Report Nr:
-            <input type="text3" id="incidentnr" name="incidentnr" placeholder="9228" />
+            <input type="text2" id="incidentnr" name="incidentnr" placeholder="9228" />
         </div>
 		<div class="form-group">
 			Charges They Need To Recieve & How Many Counts:
 			<br />
-			<input type="text2" id="charge1" name="charge1" placeholder="P.C. 810 - Felony Evading a Peace Officer" />
+			<input type="text3" id="charge1" name="charge1" placeholder="P.C. 810 - Felony Evading a Peace Officer" />
 			<br />
-			<input type="text2" id="charge2" name="charge2" placeholder="P.C. 907 - Possession of Class 2 Weapon" />
+			<input type="text3" id="charge2" name="charge2" placeholder="P.C. 907 - Possession of Class 2 Weapon" />
 			<br />
-			<input type="text2" id="charge3" name="charge3" placeholder="P.C. 213 - Kidnapping" />
+			<input type="text3" id="charge3" name="charge3" placeholder="P.C. 213 - Kidnapping" />
 			<br />
-			<input type="text2" id="charge4" name="charge4" placeholder="P.C. 308 - Armed Robbery of a Bank" />
+			<input type="text3" id="charge4" name="charge4" placeholder="P.C. 308 - Armed Robbery of a Bank" />
 			<br />
-			<input type="text2" id="charge5" name="charge5" placeholder="P.C. 906 - Possession of Unregistered Firearm" />
+			<input type="text3" id="charge5" name="charge5" placeholder="P.C. 906 - Possession of Unregistered Firearm" />
 			<br />
-			<input type="text2" id="charge6" name="charge6" placeholder="P.C. 203 - Aggravated Assault and Battery" />
+			<input type="text3" id="charge6" name="charge6" placeholder="P.C. 203 - Aggravated Assault and Battery" />
 		</div>
 		<div>
 			Other Information:

@@ -77,7 +77,7 @@ function report() {
             text: 'After the officers on scene noticed that the individuals robbing the place did not have a hostage, we made the move and convinced them to surrender.',
         },
         'Had a Hostage': {
-            text: 'After the officers on scene noticed that the individuals robbing the place did not have , we made the move and convinced them to surrender.',
+            text: 'After the officers on scene noticed that the individuals robbing the place did have a hostage, we convinced them during negotiations to surrender.',
         },
         'Breached | Peaceful': {
             text: 'After attempting to convince the robbers, the suspects refused to surrender peacefully. Since we did not get anywhere with the negotiations, we went ahead and breached. The suspects did end up putting up a bit of resistance but all of them were apprehended.',
@@ -108,13 +108,6 @@ function report() {
 	buffer.push('[PROCESSED]:');
 	buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
 
-	let curDarkmode = document.getElementById('darkmode').checked;
-	if (curDarkmode) {
-		if (darkmodeState === 'false') updateDarkmode();
-	} else if (!curDarkmode) {
-		if (darkmodeState === 'true') updateDarkmode();
-	}
-
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }
 
@@ -131,36 +124,6 @@ function loadName() {
 	let callsign = '';
 	if (localStorage.getItem('callsign')) callsign = localStorage.getItem('callsign');
 	document.getElementById('yourself').value = callsign;
-}
-
-function updateDarkmode() {
-	let darkmode = document.getElementById('darkmode').checked;
-	if (darkmode) {
-		localStorage.setItem("darkmode", true);
-		darkmodeState = 'true';
-	} else if (!darkmode) {
-		localStorage.setItem("darkmode", false);
-		darkmodeState = 'false';
-	}
-	document.body.classList.toggle('dark-theme');
-}
-
-function loadDarkmode() {
-	let darkmodeSetting = localStorage.getItem("darkmode");
-	if (!darkmodeSetting || darkmodeSetting === 'undefined' || darkmodeSetting === 'false') {
-		localStorage.setItem("darkmode", false);
-		darkmodeState = 'false';
-	}
-	if (darkmodeSetting == 'true') {
-		document.getElementById('darkmode').checked = true;
-		document.body.classList.toggle('dark-theme');
-		darkmodeState = 'true';
-	}
-	loadName();
-	if (ROBBERY_STATE === 'JEWLERY') {
-		document.getElementById('whatFleeca').style.display = 'none';
-		document.getElementById('whatStore').style.display = 'none';
-	}
 }
 
 function showCopiedPopup() {

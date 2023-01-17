@@ -3,50 +3,48 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>10-90 Incident Report Generator</title>
+	<title>10-90 Report Generator V2</title>
 	<link rel="shortcut icon" href="armedrobber.png" />
 	<link rel="stylesheet" href="index.css" />
 	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
-	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> </head>
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<header>
+	<br />
+    <div class="headerbuttons"><a href="https://exsertrook.github.io/vehicleholdreport/" target="_blank" class="button">PD Impound Generator</a> &nbsp <a href="https://exsertrook.github.io/" class="button">Back to HUB</a>
+	</div>
+	<br />
+	10-90 Robbery Incident Report Generator V2<br />
+	<!--<buttonsasp onclick="saspchange()">SASP</buttonsasp> &nbsp&nbsp&nbsp <buttonbcso onclick="bcsochange()">BCSO</buttonbcso> &nbsp&nbsp&nbsp <buttonsahp onclick="sahpchange()">SAHP</buttonsahp>-->
+	<br />
+	<label class="inline" style="font-size: 14px;">Your Callsign & Name:</label><br />
+    <input type="text" id="yourself" name="yourself" placeholder="[SF-202] Thomas Sucher"/><br />
+	<div class="popup" id="copyReport">
+		<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
+	</div>
+</header>
 
-<body onLoad="loadDarkmode()">
-	<div id="form">
-		<div class="form-group">
-			<style>
-    			body {
-        		    font-family: 'Nunito';font-size: 16px;
-    			}
-    			</style>
-			<span style="font-weight: bold;">10-90 Robbery Incident Report Generator</span><br />
-			<span style="font-weight: bold;">Useful Links: <a href="https://exsertrook.github.io/vehicleholdreport/" target="_blank"><b>PD Impound Template</b></a> | <a href="https://exsertrook.github.io/"><b>Back to Hub</b></a> | </span>
-			<input type="checkbox" id="darkmode" name="darkmode" value="darkmode" />
-			<label for="darkmode">Darkmode</label>
-			<br />
-			<label class="inline" title="(You only have to do this once - it will cache)" style="border-bottom: 1px dotted #000; text-decoration: none;">Your callsign & name:</label>
-			<input type="text" id="yourself" name="yourself" placeholder="[SF-202] Thomas Sucher" /> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			<div class="popup" id="copyReport">
-				<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
-			</div>
-		</div>
+<body>
+    
+    <div id="form">
+        
 		<div class="form-group">
 			<label>Assignment:</label>
 			Scene command: <input type="text" id="scenecommand" name="scenecommand" placeholder="[XX-XXX] Name"><br />
 			Negotiator: <input type="text" id="negotiator" name="negotiator" placeholder="[XX-XXX] Name"><br />
 			Who stayed back for hostage: <input type="text" id="hostagestayer" name="hostagestayer" placeholder="[XX-XXX] Name">
 		</div>
-		<div class="form-group">
-			<label>Pursuit Order:</label>
+		<div class="lineup">
+			<label style="text-align: left;">Pursuit Order:</label>
 			Primary: <input type="text" id="primary" name="primary" placeholder="[XX-XXX] Name">
-			Passenger (Optional): <input type="text" id="primaryp" name="primaryp" placeholder="[XX-XXX] Name"><br />
+			Passenger: <input type="text" id="primaryp" name="primaryp" placeholder="[XX-XXX] Name"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Bike-Unit (Optional): <input type="text" id="bikeunit" name="bikeunit" placeholder="[XX-XXX] Name"><br />
 			Secondary: <input type="text" id="secondary" name="secondary" placeholder="[XX-XXX] Name">
-			Passenger (Optional): <input type="text" id="secondaryp" name="secondaryp" placeholder="[XX-XXX] Name"><br />
-			Tertiary: <input type="text" id="tertiary" name="tertiary" placeholder="[XX-XXX] Name">
-			Passenger (Optional): <input type="text" id="tertiaryp" name="tertiaryp" placeholder="[XX-XXX] Name"><br />
-			Parallel: <input type="text" id="parallel" name="parallel" placeholder="[XX-XXX] Name">
-			Passenger (Optional): <input type="text" id="parallelp" name="parallelp" placeholder="[XX-XXX] Name"><br />
-			Air-1 (Optional): <input type="text" id="airunit" name="airunit" placeholder="Probably Johnson">
-			Passenger (Optional): <input type="text" id="airp" name="airp" placeholder="[XX-XXX] Name"><br />
-			Bike-Unit (Optional): <input type="text" id="bikeunit" name="bikeunit" placeholder="[XX-XXX] Name">
+			Passenger: <input type="text" id="secondaryp" name="secondaryp" placeholder="[XX-XXX] Name"><br />
+			Tertiary: <input type="text" id="tertiary" name="tertiary" placeholder="[XX-XXX] Name"> 
+			Passenger: <input type="text" id="tertiaryp" name="tertiaryp" placeholder="[XX-XXX] Name">  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Air-1 (Optional): <input type="text" id="airunit" name="airunit" placeholder="Probably Johnson"><br />
+			Parallel: <input type="text" id="parallel" name="parallel" placeholder="[XX-XXX] Name"> 
+			Passenger: <input type="text" id="parallelp" name="parallelp" placeholder="[XX-XXX] Name"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Co-Pilot (Optional): <input type="text" id="airp" name="airp" placeholder="[XX-XXX] Name"><br />
+			
 		</div>
 		<div class="form-group">
 			<label>Robbery Type:</label>
@@ -143,8 +141,9 @@
 		</div>
 		<div class="form-group">
 			<label>Vehicle Information:</label>
-			Description: <input type="text" id="vehicledesc" name="vehicledesc" placeholder="Blue Sultan"><br />
-			Plate: <input type="text" id="vehicleplate" name="vehicleplate" placeholder="12ABC345"><br />
+			Description: <input type="text" id="vehicledesc" name="vehicledesc" placeholder="Sultan Classic"><br />
+			Color: <input type="text2" id="carcolor" name="carcolor" placeholder="Blue"><br />
+			Plate: <input type="text2" id="vehicleplate" name="vehicleplate" placeholder="12ABC345"><br />
 			Registered To: <input type="text" id="vehiclereg" name="vehiclereg" placeholder="FirstName LastName">
 		</div>
 		<div class="form-group">
@@ -231,8 +230,8 @@
 				<option>Cayo Perico</option>
 			</select>
 		</div>
-		<div clsas="form-group">
-			<label>Processed at...</label><br />
+		<div class="form-group">
+			<label>Processed at...</label>
 			<select id="processedat">
 				<option selected>MRPD</option>
 				<option>Sandy Shores Sheriff's Office</option>
@@ -241,12 +240,15 @@
 				<option>Highway PD</option>
 				<option>Del Perro Pier PD</option>
 				<option>Rockford PD</option>
+				<option>Ranger Station</option>
 			</select>
+		</div>
+		<div>
+			<label>Optional:</label>
+			Plead no contest<input type="checkbox" id="nocontest" name="nocontest" value="nocontest">
 		</div>
 	</div>
 	<textarea class="wide" id="reportBody">The Report will automatically generate as you fill out the form to the left.&#10;&#10;(Note: the generated report will be editable, but once you edit it, you can no longer update it based on the form)&#10;&#10;If you have any questions or concerns, feel free to fill the feedback form on the main website :)&#10;&#10;Also if you want to show love, make sure to thank Sucher :)</textarea>
-	<!--<pre id="reportBody">[report will automatically generate as you fill out the form to the left]</pre> -->
-	
 	<script src="reports.js"></script>
 </body>
 </html>

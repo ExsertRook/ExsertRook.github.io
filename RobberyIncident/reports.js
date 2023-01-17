@@ -2,14 +2,15 @@
 
 let buffer = [];
 let officersInvolved = new Set();
-let darkmodeState;
 let alreadySpecifiedRobbery = false;
 let ROBBERY_STATE = 'JEWLERY';
 
 function report() {
 	let callsign = document.getElementById('yourself').value.trim();
-	if (callsign) localStorage.setItem('callsign', callsign);
-	if (!callsign) callsign = '[missing]';
+	if (callsign) {
+		localStorage.setItem('callsign', callsign);
+	}
+	if (!callsign) callsign = '[Insert Callsign]';
 	const ind = "        ";
 	let date = new Date().toLocaleDateString('en-US');
 
@@ -43,11 +44,32 @@ function report() {
 	
 	buffer.push('');
 	buffer.push(`[INVOLVED IN PURSUIT]:`);
-	if (primary || primaryp) buffer.push(`Primary: ${primary} ${primaryp}`);
-	if (secondary || secondaryp) buffer.push(`Secondary: ${secondary} ${secondaryp}`);
-	if (tertiary || tertiaryp) buffer.push(`Tertiary: ${tertiary} ${tertiaryp}`);
-	if (parallel || parallelp) buffer.push(`Parallel: ${parallel} ${parallelp}`);
-	if (airunit || airp) buffer.push(`Air-1: ${airunit} ${airp}`);
+
+	let primaryfinal = ''
+	if (primary || !primaryp) primaryfinal = (`${primary}`);
+	if (primaryp) primaryfinal = (`${primary} & ${primaryp}`);
+	if (primaryfinal) buffer.push(`Primary: ${primaryfinal}`);
+	
+	let secondaryfinal = ''
+	if (secondary || !secondaryp) secondaryfinal = (`${secondary}`);
+	if (secondaryp) secondaryfinal = (`${secondary} & ${secondaryp}`);
+	if (secondaryfinal) buffer.push(`Secondary: ${secondaryfinal}`);
+
+	let tertiaryfinal = ''
+	if (tertiary || !tertiaryp) tertiaryfinal = (`${tertiary}`);
+	if (tertiaryp) tertiaryfinal = (`${tertiary} & ${tertiaryp}`);
+	if (tertiaryfinal) buffer.push(`Tertiary: ${tertiaryfinal}`);
+
+	let parallelfinal = ''
+	if (parallel || !parallelp) parallelfinal = (`${parallel}`);
+	if (parallelp) parallelfinal = (`${parallel} & ${parallelp}`);
+	if (parallelfinal) buffer.push(`Parallel: ${parallelfinal}`);
+
+	let airfinal = ''
+	if (airunit || !airp) airfinal = (`${airunit}`);
+	if (airp) airfinal = (`${airunit} & ${airp}`);
+	if (airfinal) buffer.push(`Air-1: ${airfinal}`);
+
 	if (bikeunit) buffer.push(`Bike-Unit: ${bikeunit}`);
 	buffer.push('');
 
@@ -112,8 +134,11 @@ function report() {
 	let plate = document.getElementById('vehicleplate').value;
 	let vehicledesc = document.getElementById('vehicledesc').value;
 	let vehiclereg = document.getElementById('vehiclereg').value
-	if (vehicledesc) vehicledesc = ` which was a ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
-	buffer.push(`We then let them get into their vehicle${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}. Once everyone was ready, the chase started and they attempted to evade from police recklessly.`);
+	let vehiclecolor = document.getElementById('carcolor').value;
+	if (vehicledesc || vehiclecolor) vehicledesc = ` which was a ${vehiclecolor} in colored ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
+	if (vehiclereg) vehiclereg = `The vehicle was registered to an individual named ${vehiclereg}. `;
+	if (!vehiclereg) vehiclereg = '';
+	buffer.push(`We then let them get into their vehicle${vehicledesc}. ${vehiclereg}Once everyone was ready, the chase started and they attempted to evade from police recklessly.`);
 	buffer.push('');
 
 	let chaseSelected = document.getElementById('chaseend');
@@ -244,6 +269,7 @@ function report() {
 	let medneedsus = document.getElementById('medneedsus').value;
 	let medneedpd = document.getElementById('medneedpd').value;
 	let hospitalname = document.getElementById('hospitalname').value;
+	let nocontest = document.getElementById('nocontest').value;
 	
 	if (document.getElementById('cend').checked) {
 		if (document.getElementById('medneed').checked) {
@@ -258,19 +284,15 @@ function report() {
 		buffer.push('');
     	buffer.push('[PROCESSED]:');
 		buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
+
+		if (document.getElementById('nocontest').checked) {
+			buffer.push(`The suspect plead no contest.`);
+		}
     }
-
-	let curDarkmode = document.getElementById('darkmode').checked;
-	if (curDarkmode) {
-		if (darkmodeState === 'false') updateDarkmode();
-	} else if (!curDarkmode) {
-		if (darkmodeState === 'true') updateDarkmode();
-	}
-
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }
 
-let inputs = document.querySelectorAll('input[type="text"], input[type="number"], textarea');
+let inputs = document.querySelectorAll('input[type="text"], input[type="text2"], input[type="number"], textarea');
 inputs.forEach(i => i.addEventListener('keyup', report, false));
 
 let checkboxes = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
@@ -283,36 +305,6 @@ function loadName() {
 	let callsign = '';
 	if (localStorage.getItem('callsign')) callsign = localStorage.getItem('callsign');
 	document.getElementById('yourself').value = callsign;
-}
-
-function updateDarkmode() {
-	let darkmode = document.getElementById('darkmode').checked;
-	if (darkmode) {
-		localStorage.setItem("darkmode", true);
-		darkmodeState = 'true';
-	} else if (!darkmode) {
-		localStorage.setItem("darkmode", false);
-		darkmodeState = 'false';
-	}
-	document.body.classList.toggle('dark-theme');
-}
-
-function loadDarkmode() {
-	let darkmodeSetting = localStorage.getItem("darkmode");
-	if (!darkmodeSetting || darkmodeSetting === 'undefined' || darkmodeSetting === 'false') {
-		localStorage.setItem("darkmode", false);
-		darkmodeState = 'false';
-	}
-	if (darkmodeSetting == 'true') {
-		document.getElementById('darkmode').checked = true;
-		document.body.classList.toggle('dark-theme');
-		darkmodeState = 'true';
-	}
-	loadName();
-	if (ROBBERY_STATE === 'JEWLERY') {
-		document.getElementById('whatFleeca').style.display = 'none';
-		document.getElementById('whatStore').style.display = 'none';
-	}
 }
 
 function showCopiedPopup() {
