@@ -122,7 +122,7 @@ button {
 
 body {
 	color: #eee;
-	background: #3c3d3d;
+	background: #242424;
 }
 .selected-bingo {
 	background-color: #29b340;
@@ -133,10 +133,21 @@ body {
 	color: #f9f9f9;
 }
 .btn:hover{
-    background-color: #444444;
+    background-color: #315e39;
     border-color: #29b340;
+    border-radius: 20px;
 }
 
 td {
   border: 3px solid white;
+}
+
+footer {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: .3rem;
+	font-size: 15px;
+	text-align: center;
 }
