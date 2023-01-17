@@ -106,6 +106,7 @@ const cells = [
 	"See Hunter on duty",
 	"Get told to BACK OFF!",
 	"Shoot down an illegally flying helicopter",
+	"See a chief on duty",
 ];
 	
 function shuffle(array) {
