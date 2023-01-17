@@ -49,6 +49,7 @@ const cells = [
 	"Hostage needs food",
 	"12+ Officers on duty",
 	"Shootout Occurs",
+	"Shootout in tunnels",
 	"Cadet Primary",
 	"10-66 on Vinewood",
 	"Radio gets out of hand",
@@ -58,7 +59,8 @@ const cells = [
 	"Streetrace",
 	"Negotiate for the hostage and let them leave",
 	"VCB in less than 1 minute",
-	"Have already done 10 hours this week",
+	"Have already done 10+ hours this week",
+	"Have already done 20+ hours this week",
 	"Only one on duty",
 	"More EMS on duty than PD",
 	"Officer Kidnapped",
@@ -74,7 +76,7 @@ const cells = [
 	"Starving mid-chase",
 	"Get called to the IA building",
 	"Process a suspect in Paleto PD",
-	"Bike transfer",
+	"Bike transfer / swap",
 	"Sent it into the water",
 	"Suspects turtle",
 	"Write an incident report",
@@ -91,6 +93,19 @@ const cells = [
 	"Hand out a Jaywalking ticket",
 	"Chase goes through a Construction Site",
 	"Get Dono-walled",
+	"No Ammo",
+	"Ran out of ammo mid shootout",
+	"Starving mid-shootout",
+	"No FTOs respond on radio",
+	"Breach a robbery",
+	"Witness a house burglary",
+	"Take part in Bike Patrol",
+	"Drive a speedunit",
+	"Trespassing at MRPD",
+	"Tell Sucher the word BINGO while on duty",
+	"See Hunter on duty",
+	"Get told to BACK OFF!",
+	"Shoot down an illegally flying helicopter",
 ];
 	
 function shuffle(array) {
@@ -131,7 +146,7 @@ function loadPage() {
 		let selected = randCells[totalCount];
 		totalCount++;
 		if (totalCount == 13) {
-			selected = "Freebie";
+			selected = "Free Square";
 			table += "<td id=\"cell-" + selected + "\" style='" + tdInlineStyle + "' onClick='toggle(\"" + selected + "\")'>"
 			table += `${selected}`;
 			table += `</td>`;
@@ -146,5 +161,5 @@ function loadPage() {
 	table += '</table>';
 
 	document.getElementById('bingo_table').innerHTML = table;
-	toggle("Freebie");
+	toggle("Free Square");
 }
