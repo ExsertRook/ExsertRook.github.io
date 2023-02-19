@@ -74,6 +74,9 @@ function report() {
 		'Weed': {
 			text: 'The drug specifically in question was weed.',
 		},
+		'Shrooms': {
+			text: 'The drug specifically in question was shrooms.',
+		},
 		'Cocaine': {
 			text: 'The drug specifically in question was cocaine.',
 		},
