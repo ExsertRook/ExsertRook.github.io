@@ -6,6 +6,7 @@ const tdInlineStyle = `user-select: none; cursor: pointer;`;
 
 const cells = [
 	"10-99",
+	"10-67",
 	"10-66 Calls",
 	"10-78s - no location",
 	"Whole PD for this?",
@@ -116,6 +117,10 @@ const cells = [
 	"Get told to BACK OFF!",
 	"Shoot down an illegally flying helicopter",
 	"See a chief on duty",
+	"Criminal tweets about his getaway",
+	"Twitter beef",
+	"Respond to a vehicle tampering",
+	"Whole lineup consists of the same department",
 ];
 	
 function shuffle(array) {
