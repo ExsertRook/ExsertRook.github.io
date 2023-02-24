@@ -281,10 +281,10 @@ function report() {
 			text: 'The chase lasted for a bit of time until the suspects decided to start opening fire on our pursuing officers. After a shortlasting exchange of gunfire, the officers did not manage to incapacitate the suspects and due to the suspects having an advantage, the officers took the chance and let the criminals flee in favour of saving our other officers lives. The suspects escaped and evaded police custody.',
 		},
 		'Turned into a shootout | All Caught': {
-			text: 'The chase lasted for a bit of time until the robbers had initiated a shootout. Eventually after all the suspects were incapacitated, we secured them and held a perimeter on scene.',
+			text: 'The chase lasted for a bit of time until the suspects had initiated a shootout. Eventually after all the suspects were incapacitated, we secured them and held a perimeter on scene.',
 		},
 		'Turned into a shootout | All Escaped': {
-			text: 'The chase lasted for a bit of time until the robbers had initiated a shootout. Unfortunately, since they managed to incapacitate more officers than we managed to incapacitate them, we had no choice but to let them flee the area to secure our downed officers safety.',
+			text: 'The chase lasted for a bit of time until the suspects had initiated a shootout. Unfortunately, since they managed to incapacitate more officers than we managed to incapacitate them, we had no choice but to let them flee the area to secure our downed officers safety.',
 		},
 		'Secondary Vehicle Blocked Units | Escaped': {
 			text: 'The chase lasted for a bit of time until the pursuing units were blocked in a small alley by a secondary vehicle that got involved in the pursuit. After them successfully stopping the pursuing units, the original suspects managed to escape police and we declared the chase VCB.',

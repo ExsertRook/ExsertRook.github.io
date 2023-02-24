@@ -31,6 +31,9 @@ function report() {
 		'10-90 (Store)': {
 			text: 'The whole shootout that has occured, originated from a 10-90 (Grocery Store) robbery.',
 		},
+		'10-78 (Stockade)': {
+			text: 'The whole shootout that has occured, originated from 10-78 calls (Stockade) robbery.',
+		},
 		'10-11': {
 			text: 'The whole shootout that has occured, originated from a 10-11 (Traffic Stop).',
 		},
