@@ -103,12 +103,14 @@ function report() {
 	if (document.getElementById('medneed').checked) {
 		buffer.push(`[MEDICAL ATTENTION]:`);
 		buffer.push(`After we apprehended the suspects, they were in need of medical attention. We brought the injured people (Suspects Total: ${medneedsus} | PD Total: ${medneedpd}) to ${hospitalname}.`);
-		buffer.push(`Once everyone got medical treatment, we started heading back towards the PD.`)
+		buffer.push(`Once everyone got medical treatment, we started heading back towards the PD.`);
 	} else {
 		buffer.push(`[MEDICAL ATTENTION]:`);
 		buffer.push(`Due to no suspects or officers having any major injuries, everyone waved their rights to medical attention.`);
 	}
-
+	if (document.getElementById('runhospital').checked) {
+		buffer.push(`The suspect attempted to flee at the hospital but was apprehended.`);
+	}
 	buffer.push('');
 	buffer.push('[PROCESSED]:');
 	buffer.push(`All of the apprehended suspects were processed at ${processed}.`);

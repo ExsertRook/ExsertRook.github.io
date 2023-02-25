@@ -89,7 +89,9 @@ function report() {
 		buffer.push(`[MEDICAL ATTENTION]:`);
 		buffer.push(`Due to no suspects or officers having any major injuries, everyone waved their rights to medical attention.`);
 	}
-
+	if (document.getElementById('runhospital').checked) {
+		buffer.push(`The suspect attempted to flee at the hospital but was apprehended.`);
+	}
 	buffer.push('');
 	buffer.push('[PROCESSED]:');
 	buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
