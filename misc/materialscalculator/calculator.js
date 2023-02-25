@@ -38,6 +38,9 @@ function report() {
 	let glassMechanicFinal = (glassMechanicValue * glass);
 	/// Calculate weight in lbs
 	let weight = ((aluminum * 5) + (steel * 5) + (scrap * 5) + (rubber * 5) + (glass * 5));
+	/// Calculate Total
+	let WarehouseValuetotal = (aluminumWarehouseFinal + steelWarehouseFinal + scrapWarehouseFinal + rubberWarehouseFinal + glassWarehouseFinal);
+	let MechanicValuetotal = (aluminumMechanicFinal + steelMechanicFinal + scrapMechanicFinal + rubberMechanicFinal + glassMechanicFinal);
 	/// Print out text
 	buffer.push('Money you would make from selling:');
 	buffer.push('');
@@ -57,6 +60,7 @@ function report() {
 	buffer.push(`Warehouse: $${glassWarehouseFinal} | Mechanic: $${glassMechanicFinal}`);
 	buffer.push('');
 	buffer.push(`Total weight of materials: ${weight}lbs`);
+	buffer.push(`Total Warehouse Value: $${WarehouseValuetotal} | Mechanic: $${MechanicValuetotal}`);
 	/// Return it to HTML page
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }
