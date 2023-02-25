@@ -19,11 +19,11 @@ function report() {
 	let rubberWarehouseValue = 8
 	let glassWarehouseValue = 20
 	/// Mechanic Average Price values
-	let aluminumMechanicValue = 0
-	let steelMechanicValue = 0
-	let scrapMechanicValue = 0
-	let rubberMechanicValue = 0
-	let glassMechanicValue = 0
+	let aluminumMechanicValue = 70
+	let steelMechanicValue = 90
+	let scrapMechanicValue = 50
+	let rubberMechanicValue = 12
+	let glassMechanicValue = 30
 	/// Calculations warehouse
 	let aluminumWarehouseFinal = (aluminumWarehouseValue * aluminum);
 	let steelWarehouseFinal = (steelWarehouseValue * steel);
