@@ -7,11 +7,21 @@ const tdInlineStyle = `user-select: none; cursor: pointer;`;
 const cells = [
 	"Danny Asks Coke Plane",
 	"Speed Unit",
-	"Solo",
+	"Run Solo",
+	"Run a Duo",
+	"Run a Trio",
 	"Hit a Fleeca Bank",
 	"Hit a J-Store",
 	"Hit a 24/7",
 	"Hit a Stockade",
+	"Arrested - Stole a Vehicle",
+	"Arrested - Robbed a bank/J-Store/Store",
+	"Chop 2 cars",
+	"Kidnap a danny",
+	"Kidnap a garbageman",
+	"Visit the hospital",
+	"Retrieve your confiscated items from PD",
+	"Spin the Casino Wheel",
 ];
 	
 function shuffle(array) {
