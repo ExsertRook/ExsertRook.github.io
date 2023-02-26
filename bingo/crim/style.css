@@ -120,23 +120,34 @@ button {
     transition: 250ms;
 }
 
-body.dark-theme {
+body {
 	color: #eee;
-	background: #3c3d3d;
+	background: #242424;
 }
-body.dark-theme .selected-bingo {
-	background-color: #29b340;
+.selected-bingo {
+	background-color: #b32929;
     color: black;
 }
-body.dark-theme .btn {
+.btn {
 	background-color: #2F3136;
 	color: #f9f9f9;
 }
-body.dark-theme .btn:hover{
-    background-color: #444444;
-    border-color: #29b340;
+.btn:hover{
+    background-color: #5e3131;
+    border-color: #b32929;
+    border-radius: 20px;
 }
 
-body.dark-theme td {
+td {
   border: 3px solid white;
+}
+
+footer {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: .3rem;
+	font-size: 15px;
+	text-align: center;
 }
