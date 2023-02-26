@@ -75,6 +75,7 @@ const cells = [
 	"MDT down",
 	"Class 3 in a hospital",
 	"10-32 at Casino",
+	"Spin the Casino Wheel",
 	"Criminal Threats",
 	"Hand out a speeding ticket",
 	"Hand out a Driving without a license ticket",
