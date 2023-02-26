@@ -8,8 +8,8 @@ function report() {
     buffer = []
 	/// Pull from HTML
     let emerald = document.getElementById('emerald').value;
-	let sapphire = document.getElementById('ruby').value;
-	let ruby = document.getElementById('sapphire').value;
+	let sapphire = document.getElementById('sapphire').value;
+	let ruby = document.getElementById('ruby').value;
 	let morganite = document.getElementById('morganite').value;
 	let drills = document.getElementById('drill').value;
 	/// Values Minimum
