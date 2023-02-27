@@ -41,6 +41,8 @@ function report() {
 	/// Calculate Total
 	let WarehouseValuetotal = (aluminumWarehouseFinal + steelWarehouseFinal + scrapWarehouseFinal + rubberWarehouseFinal + glassWarehouseFinal);
 	let MechanicValuetotal = (aluminumMechanicFinal + steelMechanicFinal + scrapMechanicFinal + rubberMechanicFinal + glassMechanicFinal);
+	/// Calculate Percentage Increase
+	let percentageincrease = (Math.round((MechanicValuetotal / WarehouseValuetotal) * 100));
 	/// Print out text
 	buffer.push('Money you would make from selling:');
 	buffer.push('');
@@ -61,6 +63,7 @@ function report() {
 	buffer.push('');
 	buffer.push(`Total weight of materials: ${weight}lbs`);
 	buffer.push(`Total Warehouse Value: $${WarehouseValuetotal} | Mechanic: $${MechanicValuetotal}`);
+	buffer.push(`Percentage Increase: ${percentageincrease}% more money!`);
 	/// Return it to HTML page
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }
