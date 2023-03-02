@@ -138,7 +138,7 @@ function report() {
 	if (vehicledesc || vehiclecolor) vehicledesc = ` which was a ${vehiclecolor} in colored ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
 	if (vehiclereg) vehiclereg = `The vehicle was registered to an individual named ${vehiclereg}. `;
 	if (!vehiclereg) vehiclereg = '';
-	buffer.push(`We then let them get into their vehicle${vehicledesc}. ${vehiclereg}Once everyone was ready, the chase started and they attempted to evade from police recklessly.`);
+	buffer.push(`We then let them get into their vehicle${vehicledesc}. ${vehiclereg}Once everyone was ready, the chase started and they attempted to evade police recklessly.`);
 	buffer.push('');
 
 	let chaseSelected = document.getElementById('chaseend');
