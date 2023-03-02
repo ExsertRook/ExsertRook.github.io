@@ -16,7 +16,7 @@ function report() {
 	let emeraldmin = (120);
 	let sapphiremin = (399);
 	let rubymin = (830);
-	let morganitemin = (4600);
+	let morganitemin = (2600);
 	/// Values Max
 	let emeraldmax = (229);
 	let sapphiremax = (520);
