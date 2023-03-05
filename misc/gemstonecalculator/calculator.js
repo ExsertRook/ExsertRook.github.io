@@ -14,8 +14,8 @@ function report() {
 	let drills = document.getElementById('drill').value;
 	/// Values Minimum
 	let emeraldmin = (120);
-	let sapphiremin = (399);
-	let rubymin = (830);
+	let sapphiremin = (241);
+	let rubymin = (585);
 	let morganitemin = (2600);
 	/// Values Max
 	let emeraldmax = (229);
