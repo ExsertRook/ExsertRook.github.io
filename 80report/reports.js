@@ -84,16 +84,16 @@ function report() {
 			text: 'During regular patrol, we responded to some drug sale calls. Upon arrival, we notice and confirm an individual doing a handoff to a pedestrian passing by. Once we made a move and go up to the suspect, they got into their vehicle and fled, initiating a 10-80.',
 		},
 		'Vehicle Tampering Call (Class A)': {
-			text: 'During regular patrol, we responded to a Vehile Tampering Dispatch call (Class A). Upon we arrived and the suspect had noticed us, they suspect decided to flee, initiating a 10-80.',
+			text: 'During regular patrol, we responded to a Vehicle Tampering Dispatch call (Class A). Upon we arrived and the suspect had noticed us, they suspect decided to flee, initiating a 10-80.',
 		},
 		'Vehicle Tampering Call (Class B)': {
-			text: 'During regular patrol, we responded to a Vehile Tampering Dispatch call (Class B). Upon we arrived and the suspect had noticed us, they suspect decided to flee, initiating a 10-80.',
+			text: 'During regular patrol, we responded to a Vehicle Tampering Dispatch call (Class B). Upon we arrived and the suspect had noticed us, they suspect decided to flee, initiating a 10-80.',
 		},
 		'Vehicle Tampering Call (Class C)': {
-			text: 'During regular patrol, we responded to a Vehile Tampering Dispatch call (Class C). Upon we arrived and the suspect had noticed us, they suspect decided to flee, initiating a 10-80.',
+			text: 'During regular patrol, we responded to a Vehicle Tampering Dispatch call (Class C). Upon we arrived and the suspect had noticed us, they suspect decided to flee, initiating a 10-80.',
 		},
 		'Vehicle Tampering Call (Class D)': {
-			text: 'During regular patrol, we responded to a Vehile Tampering Dispatch call (Class D). Upon we arrived and the suspect had noticed us, they suspect decided to flee, initiating a 10-80.',
+			text: 'During regular patrol, we responded to a Vehicle Tampering Dispatch call (Class D). Upon we arrived and the suspect had noticed us, they suspect decided to flee, initiating a 10-80.',
 		},
 		'10-11': {
 			text: 'During regular patrol, we pulled over a vehicle that had broken a traffic law. While questioning the suspect, they decided to turn their vehicle back on and evade from us, initiating a 10-80.',
