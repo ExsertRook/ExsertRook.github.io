@@ -134,7 +134,8 @@ const cells = [
 	"BCSO on duty",
 	"SAHP on duty",
 	"Chase a Red colored car",
-	"Carter Winston on a 10-11 or speedtrap"
+	"Carter Winston on a 10-11 or speedtrap",
+	"Basic Bitch Package",
 ];
 	
 function shuffle(array) {
