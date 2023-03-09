@@ -115,6 +115,7 @@ const cells = [
 	"Oscar Deacon on duty",
 	"Trespassing at MRPD",
 	"Tell Sucher the word BINGO while on duty",
+	"Sucher on duty",
 	"See Hunter on duty",
 	"Alone on duty",
 	"Get told to BACK OFF!",
@@ -124,6 +125,9 @@ const cells = [
 	"Twitter beef",
 	"Respond to a vehicle tampering",
 	"Whole lineup consists of the same department",
+	"Someone didnt hold their radio down long enough",
+	"Adam Ahmed passenger princess",
+	"Sucher cuts off mid sentence",
 ];
 	
 function shuffle(array) {
