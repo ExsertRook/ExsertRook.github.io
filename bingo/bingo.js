@@ -34,7 +34,6 @@ const cells = [
 	"Shooting outside MRPD",
 	"VCB while Air-1 Refuels",
 	"Cop taken Hostage",
-	"Mack Hunter goes to a 10-66 call",
 	"I want a supervisor",
 	"Grill Bomb",
 	"Be Primary on a chase",
