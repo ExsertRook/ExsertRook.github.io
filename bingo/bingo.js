@@ -130,7 +130,12 @@ const cells = [
 	"Sucher cuts off mid sentence",
 	"FIB on duty",
 	"IA on duty",
+	"Management on duty",
 	"SWAT on duty",
+	"BCSO on duty",
+	"SAHP on duty",
+	"Chase a Red colored car",
+	"Carter Winston on a 10-11 or speedtrap"
 ];
 	
 function shuffle(array) {
