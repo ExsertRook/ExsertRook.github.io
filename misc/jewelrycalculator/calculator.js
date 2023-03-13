@@ -25,7 +25,7 @@ function report() {
 	let gw5 = (0);
 	/// Necklaces Average Values
 	let ns1 = (537);
-	let ns2 = (0);
+	let ns2 = (598);
 	let ns3 = (0);
 	let ns4 = (0);
 	let ns5 = (0);
