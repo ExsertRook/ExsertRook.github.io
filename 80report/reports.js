@@ -125,11 +125,17 @@ function report() {
 		'10-71': {
 			text: 'During regular patrol, we responded to some 10-71 calls. Once arriving there, we noticed an individual that was fleeing the immediate area of the shots fired calls. We then chased after them, initiating a 10-80.',
 		},
+		'Kidnapping': {
+			text: 'During regular patrol, we had a 10-72 situation occur at the location mentioned above. The hostage was placed into the vehicle and the drove off with the hostage, initiating a 10-80.',
+		},
 		'BOLO Vehicle': {
 			text: 'During regular patrol, we had eyes on a vehicle that was marked down as a "BOLO Vehicle". Once we attempted to stop the vehicle, they had increased their speed and initiated a 10-80.',
 		},
-		'Kidnapping': {
-			text: 'During regular patrol, we had a 10-72 situation occur at the location mentioned above. The hostage was placed into the vehicle and the drove off with the hostage, initiating a 10-80.',
+		'Stolen PD Helicopter': {
+			text: 'During regular patrol, there was someone who had stolen a Police Helicopter. Once we had eyes on the helicopter, we began pursuing it.',
+		},
+		'Stolen PD Helicopter': {
+			text: 'During regular patrol, we noticed a rogue helicopter flying recklessly. Once we had closer eyes on the helicopter, we began pursuing it.',
 		},
 		'10-67': {
 			text: 'During regular patrol, we responded to a 10-67 (Grand Theft Auto) call of a car being stolen. Once we got on scene, and had eyes on the vehicle, the driver then decided to evade from us, initiating a 10-80.',
