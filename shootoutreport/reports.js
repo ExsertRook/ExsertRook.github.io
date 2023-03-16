@@ -22,6 +22,9 @@ function report() {
 
 	let originS = document.getElementById('origin');
 	let originInfo = {
+		'Custom...': {
+			text: 'The whole shootout that has occured, originated from...',
+		},
 		'10-90 (Bank)': {
 			text: 'The whole shootout that has occured, originated from a 10-90 (Fleeca Bank) robbery.',
 		},
