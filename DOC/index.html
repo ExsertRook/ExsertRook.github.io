@@ -7,9 +7,23 @@
 	<link rel="shortcut icon" href="doc.png" />
 	<link rel="stylesheet" href="index.css" />
 	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
-	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> </head>
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
 
 <body onLoad="loadDarkmode()">
+	<datalist id="roster">
+		<option value="[W-100] Ian Johnson">Warden</option>
+		<option value="[W-102] Brick Laser">Deputy Warden</option>
+		<option value="[C-110] Sam Bellamy">Captain</option>
+		<option value="[C-111] Marcus Odin">Captain</option>
+		<option value="[S-201] Eddie Newton">Sergeant</option>
+		<option value="[CO-401] Charlene Monroe">Corrections Officer</option>
+		<option value="[CO-402] Kore Beannut">Corrections Officer</option>
+		<option value="[CO-404] Leo Jarvis">Corrections Officer</option>
+		<option value="[CO-410] Mollie Ricardo">Corrections Officer</option>
+		<option value="[CO-411] Christopher Ricardo">Corrections Officer</option>
+		<option value="[CO-412] Lola Moon">Corrections Officer</option>
+	</datalist>
 	<div id="form">
 		<div class="form-group">
 			<style>
@@ -22,7 +36,7 @@
 			<label for="darkmode">Darkmode</label>
 			<br />
 			<label class="inline" title="(You only have to do this once - it will cache)" style="border-bottom: 1px dotted #000; text-decoration: none;">Your callsign & name (Signature):</label>
-			<input type="text" id="yourself" name="yourself" placeholder="CC-502 M. Ricardo" />
+			<input type="text" autocomplete="on" list="roster" id="yourself" name="yourself" placeholder="CC-502 M. Ricardo" />
 		</div>
 		<label>DOC Contraband Logger Report</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<div class="popup" id="copyReport">
