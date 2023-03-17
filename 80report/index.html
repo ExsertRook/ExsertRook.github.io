@@ -19,7 +19,7 @@
 	<!--<buttonsasp onclick="saspchange()">SASP</buttonsasp> &nbsp&nbsp&nbsp <buttonbcso onclick="bcsochange()">BCSO</buttonbcso> &nbsp&nbsp&nbsp <buttonsahp onclick="sahpchange()">SAHP</buttonsahp>-->
 	<br />
 	<label class="inline" style="font-size: 14px;">Your Callsign & Name:</label><br />
-    <input type="text" id="yourself" name="yourself" placeholder="[SF-202] Thomas Sucher"/><br />
+    <input type="text" autocomplete="on" list="roster" id="yourself" name="yourself" placeholder="[SF-202] Thomas Sucher"/><br />
 	<div class="popup" id="copyReport">
 		<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
 	</div>
@@ -27,16 +27,122 @@
 
 <body>
 	<div id="form">
+		<datalist id="roster">
+			<option value="[X-100] Holden Steele">Chief</option>
+			<option value="[X-101] Aniyah Diem">Assistant Chief</option>
+			<option value="[X-102] Curtis Roscoe">Chief</option>
+			<option value="[A-110] Johnson Wrangler">Captain</option>
+			<option value="[A-111] Max Callahan-Knightly">Captain</option>
+			<option value="[A-112] Nathan Spencer">Captain</option>
+			<option value="[A-113] Riley Steele">Captain</option>
+			<option value="[LT-122] Pepper Belle">Lieutenant</option>
+			<option value="[LT-126] Jeffrie Gogginschmiel">Lieutenant</option>
+			<option value="[LT-129] Quintin Johnson">Lieutenant</option>
+			<option value="[LT-167] Ronny Roman">Lieutenant</option>
+			<option value="[SF-202] Alexander Murphy">Sergeant First Class</option>
+			<option value="[SF-203] Maya Serrano">Sergeant First Class</option>
+			<option value="[SF-204] Natasha Strawberry">Sergeant First Class</option>
+			<option value="[SF-205] Jack Lawns">Sergeant First Class</option>
+			<option value="[SF-206] Zia Novak">Sergeant First Class</option>
+			<option value="[SF-207] Dale Otis">Sergeant First Class</option>
+			<option value="[SF-210] Joe Dirte">Sergeant First Class</option>
+			<option value="[SF-212] Sam Escobar">Sergeant First Class</option>
+			<option value="[SF-213] James Slick">Sergeant First Class</option>
+			<option value="[SF-214] Roger Fitzgerald">Sergeant First Class</option>
+			<option value="[SF-215] Faye Howell">Sergeant First Class</option>
+			<option value="[SF-218] Ben Asher">Sergeant First Class</option>
+			<option value="[SF-219] Maverick Black">Sergeant First Class</option>
+			<option value="[S-220] Apple Jack">Sergeant</option>
+			<option value="[S-221] Justin Cobb">Sergeant</option>
+			<option value="[S-222] Charlie Ives">Sergeant</option>
+			<option value="[S-223] Adam Ahmed">Sergeant</option>
+			<option value="[S-224] Johnny Stevenson">Sergeant</option>
+			<option value="[S-225] Austin Fury">Sergeant</option>
+			<option value="[S-227] Jason Brennon">Sergeant</option>
+			<option value="[S-230] Ryan Walker">Sergeant</option>
+			<option value="[S-235] John Price">Sergeant</option>
+			<option value="[S-255] Thomas Sucher">Sergeant</option>
+			<option value="[S-293] Kitanya Neaze">Sergeant</option>
+			<option value="[CO-303] Randle Caster">Corporal</option>
+			<option value="[CO-306] Kira Cheez">Corporal</option>
+			<option value="[CO-307] Brynn Rose">Corporal</option>
+			<option value="[CO-308] Terry Briggs">Corporal</option>
+			<option value="[CO-309] Dawid Odison">Corporal</option>
+			<option value="[CO-310] Skylar Blake">Corporal</option>
+			<option value="[CO-311] Anya Petroski">Corporal</option>
+			<option value="[CO-312] Rhys Miller">Corporal</option>
+			<option value="[CO-313] James Jr Jackson">Corporal</option>
+			<option value="[CO-316] Henry Hoover">Corporal</option>
+			<option value="[CO-318] Rory Graves">Corporal</option>
+			<option value="[CO-320] Mia Jimenez">Corporal</option>
+			<option value="[CO-321] Chase Sandwich">Corporal</option>
+			<option value="[CO-324] Mack Hunter">Corporal</option>
+			<option value="[CO-325] Richard Paul">Corporal</option>
+			<option value="[CO-333] Juggington Sausage">Corporal</option>
+			<option value="[CO-340] Peter Wrangler">Corporal</option>
+			<option value="[CO-345] Jessup Lee">Corporal</option>
+			<option value="[CO-360] Albus Davies">Corporal</option>
+			<option value="[ST-401] Oscar Deacon">Senior Trooper</option>
+			<option value="[ST-402] Han Kuffman">Senior Trooper</option>
+			<option value="[ST-403] Jake Hall">Senior Trooper</option>
+			<option value="[ST-404] Sebastian Collinsworth">Senior Trooper</option>
+			<option value="[ST-405] Hermoine Focker">Senior Trooper</option>
+			<option value="[ST-406] Herman Nader">Senior Trooper</option>
+			<option value="[ST-408] Mafuyu Asou">Senior Trooper</option>
+			<option value="[ST-409] Carter Winston">Senior Trooper</option>
+			<option value="[ST-411] Marcus Burns">Senior Trooper</option>
+			<option value="[ST-420] Augustus Gloop">Senior Trooper</option>
+			<option value="[ST-469] Eddie Irwin">Senior Trooper</option>
+			<option value="[ST-489] William Randal">Senior Trooper</option>
+			<option value="[ST-490] Daniel Kruger">Senior Trooper</option>
+			<option value="[ST-496] Frank S. Long">Senior Trooper</option>
+			<option value="[ST-498] Ray Chasington">Senior Trooper</option>
+			<option value="[TF-502] Michigan Silver">Trooper First Class</option>
+			<option value="[TF-503] Lela Law">Trooper First Class</option>
+			<option value="[TF-504] Steven Senegal">Trooper First Class</option>
+			<option value="[TF-506] Brad Hancock">Trooper First Class</option>
+			<option value="[TF-507] Daniel Shelby">Trooper First Class</option>
+			<option value="[TF-508] Peter Dinklage">Trooper First Class</option>
+			<option value="[TF-509 Dominic Banks]">Trooper First Class</option>
+			<option value="[TF-510] Liam Logie">Trooper First Class</option>
+			<option value="[TF-511] Brick Stone">Trooper First Class</option>
+			<option value="[TF-519] Joseph Dredd">Trooper First Class</option>
+			<option value="[TF-555] Billie Santana">Trooper First Class</option>
+			<option value="[TF-597] Sweetie Belle">Trooper First Class</option>
+			<option value="[T-601] Jason Waltson">Trooper</option>
+			<option value="[T-602] Damien King">Trooper</option>
+			<option value="[T-603] Ismael Mencho De La Hoya">Trooper</option>
+			<option value="[T-604] Karissa Rayy">Trooper</option>
+			<option value="[T-605] Attacus Atlas">Trooper</option>
+			<option value="[T-606] Kyle Brooks">Trooper</option>
+			<option value="[T-610] Bucky Langston">Trooper</option>
+			<option value="[T-611] Alexandr Nolan">Trooper</option>
+			<option value="[T-666] Tanner Mockingbird">Trooper</option>
+			<option value="[T-667] Kevin Blart">Trooper</option>
+			<option value="[T-677] LeDarius Savage">Trooper</option>
+			<option value="[T-690] Araya Kais">Trooper</option>
+			<option value="[TA-701] Louie Herrett">Cadet | SASP</option>
+			<option value="[TA-702] Sam Winger">Cadet | SASP</option>
+			<option value="[TA-703] Dempsey Watson">Cadet | SASP</option>
+			<option value="[TA-704] Elijah Moonscar">Cadet | SASP</option>
+			<option value="[TA-705] Edwin Johnson">Cadet | SASP</option>
+			<option value="[TA-706] Arthur Hunt">Cadet | SASP</option>
+			<option value="[TA-707] Mya-Louise Taylor">Cadet | SASP</option>
+			<option value="[TA-708] Bopper Copper">Cadet | SASP</option>
+			<option value="[TA-709] Julio Joness">Cadet | SASP</option>
+			<option value="[TA-711] Teddy Bagster">Cadet | SASP</option>
+			<option value="[TA-714] Felix Snow">Cadet | SASP</option>
+		</datalist>
 		<div class="lineup">
 			<label style="text-align: left;">Pursuit Order:</label>
-			Primary: <input type="text" id="primary" name="primary" placeholder="[XX-XXX] Name">
-			Passenger: <input type="text" id="primaryp" name="primaryp" placeholder="[XX-XXX] Name"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Bike-Unit (Optional): <input type="text" id="bikeunit" name="bikeunit" placeholder="[XX-XXX] Name"><br />
-			Secondary: <input type="text" id="secondary" name="secondary" placeholder="[XX-XXX] Name">
-			Passenger: <input type="text" id="secondaryp" name="secondaryp" placeholder="[XX-XXX] Name"><br />
-			Tertiary: <input type="text" id="tertiary" name="tertiary" placeholder="[XX-XXX] Name"> 
-			Passenger: <input type="text" id="tertiaryp" name="tertiaryp" placeholder="[XX-XXX] Name">  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Air-1 (Optional): <input type="text" id="airunit" name="airunit" placeholder="Probably Johnson"><br />
-			Parallel: <input type="text" id="parallel" name="parallel" placeholder="[XX-XXX] Name"> 
-			Passenger: <input type="text" id="parallelp" name="parallelp" placeholder="[XX-XXX] Name"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Co-Pilot (Optional): <input type="text" id="airp" name="airp" placeholder="[XX-XXX] Name"><br />
+			Primary: <input type="text" autocomplete="on" list="roster" id="primary" name="primary" placeholder="[XX-XXX] Name">
+			Passenger: <input type="text" autocomplete="on" list="roster" id="primaryp" name="primaryp" placeholder="[XX-XXX] Name"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Bike-Unit (Optional): <input type="text" autocomplete="on" list="roster" id="bikeunit" name="bikeunit" placeholder="[XX-XXX] Name"><br />
+			Secondary: <input type="text" autocomplete="on" list="roster" id="secondary" name="secondary" placeholder="[XX-XXX] Name">
+			Passenger: <input type="text" autocomplete="on" list="roster" id="secondaryp" name="secondaryp" placeholder="[XX-XXX] Name"><br />
+			Tertiary: <input type="text" autocomplete="on" list="roster" id="tertiary" name="tertiary" placeholder="[XX-XXX] Name"> 
+			Passenger: <input type="text" autocomplete="on" list="roster" id="tertiaryp" name="tertiaryp" placeholder="[XX-XXX] Name">  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Air-1 (Optional): <input type="text" autocomplete="on" list="roster" id="airunit" name="airunit" placeholder="Probably Johnson"><br />
+			Parallel: <input type="text" autocomplete="on" list="roster" id="parallel" name="parallel" placeholder="[XX-XXX] Name"> 
+			Passenger: <input type="text" autocomplete="on" list="roster" id="parallelp" name="parallelp" placeholder="[XX-XXX] Name"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Co-Pilot (Optional): <input type="text" autocomplete="on" list="roster" id="airp" name="airp" placeholder="[XX-XXX] Name"><br />
 		</div>
 		<div class="form-group">
 			<label>Location:</label>
@@ -221,17 +327,15 @@
 			<br />
 			<input type="checkbox" id="runhospital" name="runhospital" value="runhospital"> - Check if Attempted to flee at hospital
 		</div>
-		<div clsas="form-group">
-			<label>Processed at...</label><br />
+		<div class="form-group">
+			<label>Processed at...</label>
 			<select id="processedat">
 				<option selected>MRPD</option>
 				<option>Sandy Shores Sheriff's Office</option>
 				<option>Davis PD</option>
-				<option>Paleto PD</option>
-				<option>Highway PD</option>
-				<option>Del Perro Pier PD</option>
+				<option>Paleto Police Department</option>
+				<option>Highway Police Department</option>
 				<option>Ranger Station</option>
-				<option>Rockford PD</option>
 			</select>
 		</div>
 	</div>
