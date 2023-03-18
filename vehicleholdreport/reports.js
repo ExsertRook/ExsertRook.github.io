@@ -44,6 +44,10 @@ function report() {
 
 	let vehicle = document.getElementById('vehiclename').value;
 	if (vehicle) buffer.push(`Vehicle Model/Name: ${vehicle}`);
+	if (owner) buffer.push('');
+
+	let color = document.getElementById('vehiclecolor').value;
+	if (color) buffer.push(`Vehicle Color: ${color}`);
 //////////////////////////////////////////////////////////////////
 
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
