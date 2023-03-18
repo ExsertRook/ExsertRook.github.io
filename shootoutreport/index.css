@@ -25,9 +25,9 @@ header {
     margin-bottom: 10px;
     border-bottom: 2px solid rgb(146, 245, 223);
     color: white;
-    background-image: url(sasp.png);
+    background-image: url(3departments.png);
     background-repeat: no-repeat;
-    background-size: 200px;
+    background-size: 600px;
 }
 
 pre, code {

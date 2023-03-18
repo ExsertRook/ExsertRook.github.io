@@ -19,14 +19,14 @@ function report() {
 	let sw5 = (0);
 	/// Goldwatches Average Values
 	let gw1 = (1469);
-	let gw2 = (0);
+	let gw2 = (1399);
 	let gw3 = (0);
 	let gw4 = (0);
 	let gw5 = (0);
 	/// Necklaces Average Values
 	let ns1 = (537);
 	let ns2 = (598);
-	let ns3 = (0);
+	let ns3 = (501);
 	let ns4 = (0);
 	let ns5 = (0);
 	/// Diamonds Average Values
