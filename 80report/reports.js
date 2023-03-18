@@ -196,6 +196,9 @@ function report() {
 		'Units lost eyes | Escaped': {
 			text: 'The chase lasted for a bit of time until our pursuing units lost eyes on the suspects vehicle. After performing a search near the area where we lost eyes, we did not manage to find them.',
 		},
+		'Suspects caught | General Ending': {
+			text: 'The chase lasted for a bit of time until our pursuing units managed to apprehend the suspects.',
+		},
 		'Got out of vehicle | Ran on foot | Caught': {
 			text: 'The chase lasted for a bit of time until they had stopped their car and stepped out of it. The suspects initiated a 10-81 and attempted to evade on foot. Our pursuing units eventually managed to apprehend the suspects and place them under police custody.',
 		},

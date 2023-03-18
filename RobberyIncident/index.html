@@ -133,6 +133,32 @@
 			<option value="[TA-711] Teddy Bagster">Cadet | SASP</option>
 			<option value="[TA-714] Felix Snow">Cadet | SASP</option>
 		</datalist>
+		<datalist id="emsroster">
+			<option value="[100] Kiwi Campbell">Director</option>
+			<option value="[102] Tymo Dandelion">Deputy Director</option>
+			<option value="[113] Lia Park">Assistant Director</option>
+			<option value="[121] Alex Wiśniewski">Captain</option>
+			<option value="[122] David Schmid">Captain</option>
+			<option value="[123] Justin Higgins-Gill">Captain</option>
+			<option value="[302] Jerrie Hielmark">Sergeant</option>
+			<option value="[303] Amadej Zuse-Hemmingway">Sergeant</option>
+			<option value="[306] John Little">Sergeant</option>
+			<option value="[401] Eevie Addams">Specialist</option>
+			<option value="[403] Avery Brown">Specialist</option>
+			<option value="[404] Elijah Morgan">Specialist</option>
+			<option value="[405] Chad Schutty">Specialist</option>
+			<option value="[408] Mr. Pasha">Specialist</option>
+			<option value="[501] Alex Stevenson">Paramedic</option>
+			<option value="[503] Luke Millers">Paramedic</option>
+			<option value="[506] Jacob Neil">Paramedic</option>
+			<option value="[507] Jace McKenna">Paramedic</option>
+			<option value="[601] Sonni Williams">Student Paramedic</option>
+			<option value="[602] Nathaniel Bartholemuel">Student Paramedic</option>
+			<option value="[701] Marko Lee">EMT</option>
+			<option value="[702] Anna Shim">EMT</option>
+			<option value="[704] Narek Devyn">EMT</option>
+			<option value="[705] Rey Lawson">EMT</option>
+		</datalist>
 		<div class="form-group">
 			<label>Assignment:</label>
 			Scene command: <input type="text" autocomplete="on" list="roster" id="scenecommand" name="scenecommand" placeholder="[XX-XXX] Name"><br />
@@ -255,6 +281,7 @@
 			<select id="chaseend">
 				<option selected>Write Custom Ending</option>
 				<option>Units lost eyes | Escaped</option>
+				<option>Suspects caught | General Ending</option>
 				<option></option>
 				<option>Got out of vehicle | Ran on foot | Caught</option>
 				<option>Got out of vehicle | Ran on foot | Escaped</option>
@@ -316,8 +343,19 @@
 		</div>	
 		<div class="form-group">
 			<label>Medical Attention...</label>
-			Was it needed? <input type="checkbox" id="medneed" name="medneed" value="medneed"><br />
-			If needed, how many? &nbsp Suspects: 
+			- Was it needed? <input type="checkbox" id="medneed" name="medneed" value="medneed"><br />
+			<!-- - Were EMS present?
+			<select id="emspresent">
+				<option selected>?</option>
+				<option>Yes</option>
+				<option>No</option>
+			</select><br />
+			<div id="emsnames">
+				&nbsp&nbsp&nbsp - (Optional) Names of EMS on scene:
+				<input type="text" placeholder="[XXX] Name" autocomplete="on" list="emsroster" id="emsonscene" name="emsonscene">&nbsp
+				<input type="text" placeholder="[XXX] Name" autocomplete="on" list="emsroster" id="emsonscene2" name="emsonscene2">
+			</div> --> 
+			- If needed, how many? &nbsp Suspects: 
 			<select id="medneedsus">
 				<option>1</option>
 				<option>2</option>
