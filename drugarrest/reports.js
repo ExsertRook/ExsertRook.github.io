@@ -72,22 +72,22 @@ function report() {
 	let drugSelected = document.getElementById('drugtype');
 	let drugInformation = {
 		'Weed (Class B)': {
-			text: 'The drug specifically in question was weed.',
+			text: 'The drug specifically in question was weed (Class B).',
 		},
 		'Shrooms (Class A)': {
-			text: 'The drug specifically in question was shrooms.',
+			text: 'The drug specifically in question was shrooms (Class A).',
 		},
 		'Cocaine (Class A)': {
-			text: 'The drug specifically in question was cocaine.',
+			text: 'The drug specifically in question was cocaine (Class A).',
 		},
 		'Oxy (Class A)': {
-			text: 'The drug specifically in question was oxy.',
+			text: 'The drug specifically in question was oxy (Class A).',
 		},
 		'Acid (Class B)': {
-			text: 'The drug specifically in question was acid.',
+			text: 'The drug specifically in question was acid (Class B).',
 		},
 		'Meth (Class A)': {
-			text: 'The drug specifically in question was meth.',
+			text: 'The drug specifically in question was meth (Class A).',
 		}
 	};
 	
