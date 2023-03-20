@@ -20,7 +20,7 @@ function report() {
 	/// Goldwatches Average Values
 	let gw1 = (1469);
 	let gw2 = (1399);
-	let gw3 = (0);
+	let gw3 = (1470);
 	let gw4 = (0);
 	let gw5 = (0);
 	/// Necklaces Average Values
