@@ -102,6 +102,7 @@ const cells = [
 	"Chase goes through a Construction Site",
 	"Get Dono-walled",
 	"No Ammo",
+	"Officer Ryan Walker says PUMPKIN",
 	"Johnson is eating",
 	"Johnson clears throat",
 	"Shots fired at Green Wonderland",
