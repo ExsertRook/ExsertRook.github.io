@@ -12,7 +12,7 @@ function report() {
 	let necklaces = document.getElementById('necklaces').value;
 	let diamonds = document.getElementById('diamonds').value;
 	/// Silverwatches Average Values
-	let sw1 = (0);
+	let sw1 = (308);
 	let sw2 = (0);
 	let sw3 = (0);
 	let sw4 = (0);
@@ -27,8 +27,9 @@ function report() {
 	let ns1 = (537);
 	let ns2 = (598);
 	let ns3 = (501);
-	let ns4 = (0);
-	let ns5 = (0);
+	let ns4 = (503);
+	let ns5 = (600);
+	let ns6 = (529);
 	/// Diamonds Average Values
 	let dm1 = (0);
 	let dm2 = (0);
@@ -38,7 +39,7 @@ function report() {
 	/// Calculations
 	let silverwatchaverage = ((sw1 + sw2 + sw3 + sw4 + sw5) / 5);
 	let goldwatchaverage = ((gw1 + gw2 + gw3 + gw4 + gw5) / 5);
-	let necklacesaverage = ((ns1 + ns2 + ns3 + ns4 + ns5) / 5);
+	let necklacesaverage = ((ns1 + ns2 + ns3 + ns4 + ns5 + ns6) / 6);
 	let diamondsaverage = ((dm1 + dm2 + dm3 + dm4 + dm5) / 5);
 	/// ReportBody Information Text
 	buffer.push(`Rough Prices for your Jewelry:`);
