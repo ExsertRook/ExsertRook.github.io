@@ -152,6 +152,9 @@ function report() {
 		'Suspects caught | General Ending': {
 			text: 'The chase lasted for a bit of time until our pursuing units managed to apprehend the suspects.',
 		},
+		'Surrendered | General Ending': {
+			text: 'The chase lasted for a bit of time until the suspects fleeing decided to surrender.',
+		},
 		'Got out of vehicle | Ran on foot | Caught': {
 			text: 'The chase lasted for a bit of time until they had stopped their car and stepped out of it. The suspects initiated a 10-81 and attempted to evade on foot. Our pursuing units eventually managed to apprehend the suspects and place them under police custody.',
 		},
