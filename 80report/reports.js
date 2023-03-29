@@ -65,7 +65,7 @@ function report() {
 	
 	buffer.push(`[LOCATION]:`);
 	if (locationstart) buffer.push(`Pursuit Began / Initial Location: ${locationstart}`);
-	if (locationend) buffer.push(`Pursuit Ended: ${locationend}`);
+	if (locationend) buffer.push(`Pursuit Ended / Final Location: ${locationend}`);
 	buffer.push('');
 
 	
