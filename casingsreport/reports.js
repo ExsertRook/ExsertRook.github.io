@@ -20,8 +20,20 @@ function report() {
 	buffer.push('');
 	
 	buffer.push(`[DETAILS OF THE INCIDENT]:`);
-	if (location) buffer.push(`While being out on regular patrol, we responded to shots fired dispatch calls near ${location}. `);
-	if (processedat) buffer.push(`Once we arrived on scene we started to look for casings in the general area. Upon successfully finding casings on the ground, we collected them in evidence bags and took them to ${processedat} and processed them for further information.`);
+
+	let shotsSelected = document.getElementById('typeofcall');
+	let shotsInformation = {
+		'10-71 Calls': {
+			text: 'While being out on regular patrol, we responded to shots fired dispatch calls. Once we arrived on scene we started to look for casings in the general area. Upon successfully finding casings on the ground, we collected them in evidence bags.',
+		},
+		'Officers Shot at': {
+			text: 'While being out on regular patrol, we had criminals open fire on officers. Eventually the suspects managed to flee the area and we secured a perimeter. We then started to look for casings in the general area. Upon successfully finding casings on the ground, we collected them in evidence bags.',
+		}
+	};
+	let shotstype = shotsSelected.options[shotsSelected.selectedIndex].text;
+	if (shotsSelected) buffer.push(shotsInformation[shotstype].text);
+	if (location) buffer.push(`The scene of the casings was located at ${location}. `);
+	if (processedat) buffer.push(`Once we collected the evidence, we took them to ${processedat} and processed them for further information.`);
 	buffer.push('');
 	
 	let weaponname1 = document.getElementById('weaponname1').value;
