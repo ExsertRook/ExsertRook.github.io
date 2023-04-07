@@ -71,6 +71,9 @@ function report() {
 	
 	let pursuitSelected = document.getElementById('pursuittype');
 	let pursuitInformation = {
+		'Custom...': {
+			text: 'During regular patrol, ...',
+		},
 		'Refusing to pull over': {
 			text: 'During regular patrol, we noticed that there was a vehicle breaking traffic laws. Upon attempting to pull them over, they did not even acknowledge it and refused to pull over their vehicle. With that they initiated a 10-80 with us pursuing the vehicle.',
 		},
