@@ -18,7 +18,11 @@ function report() {
 	let location = document.getElementById('location').value;
 	let processedat = document.getElementById('processedat').value;
 	buffer.push('');
-	
+	if (location) {
+		buffer.push(`[LOCATION]:`)
+		buffer.push(`The scene of the casings was located at ${location}.`);
+		buffer.push('');
+	}
 	buffer.push(`[DETAILS OF THE INCIDENT]:`);
 
 	let shotsSelected = document.getElementById('typeofcall');
@@ -32,7 +36,6 @@ function report() {
 	};
 	let shotstype = shotsSelected.options[shotsSelected.selectedIndex].text;
 	if (shotsSelected) buffer.push(shotsInformation[shotstype].text);
-	if (location) buffer.push(`The scene of the casings was located at ${location}. `);
 	if (processedat) buffer.push(`Once we collected the evidence, we took them to ${processedat} and processed them for further information.`);
 	buffer.push('');
 	
@@ -64,16 +67,38 @@ function report() {
     if (weaponname8 || serial8) buffer.push(`Weapon: ${weaponname8} | Serial Number: ${serial8}`);
 	buffer.push('');
 	
-	let charge = document.getElementById('charge').value;
-	let charge2 = document.getElementById('2nd charge').value;
-	
-	buffer.push(`[CHARGES]:`);
-	if (charge) buffer.push(`Once a suspect is apprehended and they are in possessions of those weapons with the same serial numbers, they are to be brought to the interrogation room and questioned about the situation.`);
-	if (charge) buffer.push(`If the interrogation verdict allows to, the suspect is to be charged with (alongside the obvious possession charge):`);
-	buffer.push('');
-	if (charge) buffer.push(`${charge}`);
-	if (charge2) buffer.push(`${charge2}`); 
+	let charge1 = document.getElementById('charge1').value;
+	let enhancement1 = document.getElementById('enhancement1').value;
+	let charge2 = document.getElementById('charge2').value;
+	let enhancement2 = document.getElementById('enhancement2').value;
+	let charge3 = document.getElementById('charge3').value;
+	let enhancement3 = document.getElementById('enhancement3').value;
+	let chargewhole1 = '';
+	let chargewhole2 = '';
+	let chargewhole3 = '';
+	let chargecount1 = document.getElementById('chargecount1').value;
+	let chargecount2 = document.getElementById('chargecount2').value;
+	let chargecount3 = document.getElementById('chargecount3').value;
 
+	buffer.push(`[CHARGES]:`);
+	if (charge1) buffer.push(`Once a suspect is apprehended and they are in possessions of those weapons with the same serial numbers, they are to be brought to the interrogation room and questioned about the situation.`);
+	if (charge1) buffer.push(`If the interrogation verdict allows to, the suspect is to be charged with (alongside the obvious possession charge):`);
+	buffer.push('');
+	if (charge1) chargewhole1 = (`${charge1} ${chargecount1}`);
+	if (charge1 || enhancement1) chargewhole1 = (`${charge1} with the ${enhancement1} enhancement ${chargecount1}`);
+	if (!enhancement1) chargewhole1 = (`${charge1} ${chargecount1}`);
+	if (chargewhole1) buffer.push(`${chargewhole1}`);
+
+	if (charge2) chargewhole2 = (`${charge2} ${chargecount2}`);
+	if (charge2 || enhancement2) chargewhole2 = (`${charge2} with the ${enhancement2} enhancement ${chargecount2}`);
+	if (!enhancement2) chargewhole2 = (`${charge2} ${chargecount2}`);
+	if (chargewhole2) buffer.push(`${chargewhole2}`);
+
+	if (charge3) chargewhole3 = (`${charge3} ${chargecount3}`);
+	if (charge3 || enhancement3) chargewhole3 = (`${charge3} with the ${enhancement3} enhancement ${chargecount3}`);
+	if (!enhancement3) chargewhole3 = (`${charge3} ${chargecount3}`);
+	if (chargewhole3) buffer.push(`${chargewhole3}`);
+	
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }
 
