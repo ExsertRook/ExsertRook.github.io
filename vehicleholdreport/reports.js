@@ -2,6 +2,17 @@
 
 let buffer = [];
 
+function reportTitle () {
+	const ind = "        ";
+	buffer = [];
+
+	let plate = document.getElementById('plate').value;
+	let vehicle = document.getElementById('vehiclename').value;
+	buffer.push(`Vehicle Hold: ${vehicle} | ${plate}`);
+
+	return document.getElementById('reportBody2').innerHTML = buffer.join("\n");
+}
+
 function report() {
 	let callsign = document.getElementById('yourself').value.trim();
 	if (callsign) localStorage.setItem('callsign', callsign);
@@ -53,7 +64,7 @@ function report() {
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }
 
-let inputs = document.querySelectorAll('input[type="text"], input[type="number"], textarea');
+let inputs = document.querySelectorAll('input[type="text"], input[type="text2"], input[type="number"], textarea');
 inputs.forEach(i => i.addEventListener('keyup', report, false));
 
 let checkboxes = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
@@ -61,6 +72,15 @@ checkboxes.forEach(i => i.addEventListener('click', report, false));
 
 let selectOptions = document.querySelectorAll('select');
 selectOptions.forEach(i => i.addEventListener('click', report, false));
+
+let inputs2 = document.querySelectorAll('input[type="text"], input[type="text2"], input[type="number"], textarea');
+inputs.forEach(i => i.addEventListener('keyup', reportTitle, false));
+
+let checkboxes2 = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
+checkboxes.forEach(i => i.addEventListener('click', reportTitle, false));
+
+let selectOptions2 = document.querySelectorAll('select');
+selectOptions.forEach(i => i.addEventListener('click', reportTitle, false));
 
 function loadName() {
 	let callsign = '';
@@ -82,6 +102,24 @@ function clearSelection() {
 		window.getSelection().removeAllRanges();
 	} else if (document.selection) {
 		document.selection.empty();
+	}
+}
+document.getElementById('copyTitle').addEventListener('click', copy2, false);
+function clearSelection() {
+	if (window.getSelection) {
+		window.getSelection().removeAllRanges();
+	} else if (document.selection) {
+		document.selection.empty();
+	}
+}
+function copy2() {
+	document.getElementById('reportBody2').select();
+	try {
+		document.execCommand('copy');
+		showCopiedPopup();
+		clearSelection();
+	} catch(e) {
+		console.log("Copy error: " + e);
 	}
 }
 function copy() {

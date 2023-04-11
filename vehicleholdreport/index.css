@@ -83,12 +83,12 @@ textarea {
 
 .center {
     margin-left: 110%;
-    margin-top: -80%;
-    padding-bottom: 0%;
+    margin-top: -100%;
+    padding-bottom: 10%;
     margin-right: auto;
 }
 
-textarea, input[type="text"], input[type="number"] {
+textarea, input[type="text"], input[type="text2"], input[type="number"] {
     border: 2px solid rgb(146, 245, 223);
     border-radius: 10px;
     font-size: 13px;
@@ -111,7 +111,11 @@ input[type="checkbox"] + label {
 }
 
 input[type="text"] {
-    width: 180px;
+    width: 170px;
+    padding: 3px;
+}
+input[type="text2"] {
+    width: 90px;
     padding: 3px;
 }
 input[type="number"] {
@@ -122,14 +126,25 @@ input[type="number"] {
 #reportBody {
     height: calc(100vh - 40px);
     position: fixed;
+    top: 100px;
+    right: 20px;
+    white-space: pre-wrap;
+    width: calc(30% - 40px);
+    padding: 5px 10px;
+    color: white;
+    font-size: 100%;
+}
+#reportBody2 {
+    height: calc(10vh - 40px);
+    position: fixed;
     top: 20px;
     right: 20px;
     white-space: pre-wrap;
     width: calc(30% - 40px);
     padding: 5px 10px;
     color: white;
+    font-size: 130%;
 }
-
 label + .form-group.layer-2 {
     margin-top: 10px;
 }
