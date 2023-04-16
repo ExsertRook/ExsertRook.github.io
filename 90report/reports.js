@@ -5,6 +5,40 @@ let officersInvolved = new Set();
 let alreadySpecifiedRobbery = false;
 let ROBBERY_STATE = 'JEWLERY';
 
+function reportTitle() {
+	buffer = [];
+	const ind = "        ";
+
+	let robbery = document.getElementById('robberytype').value;
+	let robberyString = '';
+
+	if (robbery.trim() === 'Fleeca Bank') {
+		document.getElementById('whatStore').style.display = 'none';
+		document.getElementById('whatFleeca').style.display = 'block';
+		let specific = document.getElementById('specificBank').value;
+		robberyString = `${robbery} at ${specific}`;
+		ROBBERY_STATE = 'FLEECA';
+	}
+	if (robbery.trim() === '24/7 Store') {
+		document.getElementById('whatFleeca').style.display = 'none';
+		document.getElementById('whatStore').style.display = 'block';
+		let specific = document.getElementById('specificStore').value;
+		robberyString = `${robbery} at ${specific}`;
+		ROBBERY_STATE = '24/7';
+	} 
+	if (robbery.trim() === 'Jewelry Store') {
+		document.getElementById('whatFleeca').style.display = 'none';
+		document.getElementById('whatStore').style.display = 'none';
+		robberyString = robbery;
+		ROBBERY_STATE = 'JEWLERY';
+	}
+	let vehicledesc = document.getElementById('vehicledesc').value;
+
+	buffer.push(`10-90 | ${robberyString} | ${vehicledesc}`);
+
+	return document.getElementById('reportBody2').innerHTML = buffer.join("\n");
+}
+
 function report() {
 	let callsign = document.getElementById('yourself').value.trim();
 	if (callsign) {
@@ -293,15 +327,20 @@ function report() {
     }
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }
-
+/// ReportBody
 let inputs = document.querySelectorAll('input[type="text"], input[type="text2"], input[type="number"], textarea');
 inputs.forEach(i => i.addEventListener('keyup', report, false));
-
 let checkboxes = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
 checkboxes.forEach(i => i.addEventListener('click', report, false));
-
 let selectOptions = document.querySelectorAll('select');
 selectOptions.forEach(i => i.addEventListener('click', report, false));
+/// Title Generator
+let inputs2 = document.querySelectorAll('input[type="text"], input[type="text2"], input[type="number"], textarea');
+inputs.forEach(i => i.addEventListener('keyup', reportTitle, false));
+let checkboxes2 = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
+checkboxes.forEach(i => i.addEventListener('click', reportTitle, false));
+let selectOptions2 = document.querySelectorAll('select');
+selectOptions.forEach(i => i.addEventListener('click', reportTitle, false));
 
 function loadName() {
 	let callsign = '';
@@ -323,6 +362,24 @@ function clearSelection() {
 		window.getSelection().removeAllRanges();
 	} else if (document.selection) {
 		document.selection.empty();
+	}
+}
+document.getElementById('copyTitle').addEventListener('click', copy2, false);
+function clearSelection() {
+	if (window.getSelection) {
+		window.getSelection().removeAllRanges();
+	} else if (document.selection) {
+		document.selection.empty();
+	}
+}
+function copy2() {
+	document.getElementById('reportBody2').select();
+	try {
+		document.execCommand('copy');
+		showCopiedPopup();
+		clearSelection();
+	} catch(e) {
+		console.log("Copy error: " + e);
 	}
 }
 function copy() {
