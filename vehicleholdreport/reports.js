@@ -21,6 +21,59 @@ function report() {
 	let date = new Date().toLocaleDateString('en-US');
 
 	buffer = [];
+
+	let holdreason = document.getElementById('holdreason').value;
+	let holdtype = "";
+	
+	if (holdreason === "Involuntary Manslaughter") {
+		holdtype = "A"
+	}
+	if (holdreason === "Voluntary Manslaughter") {
+		holdtype = "A"
+	}
+	if (holdreason === "First Degree Murder") {
+		holdtype = "A"
+	}
+	if (holdreason === "Second Degree Murder") {
+		holdtype = "A"
+	}
+	if (holdreason === "Terrorism") {
+		holdtype = "A"
+	}
+	if (holdreason === "Felony Evading (Second time being charged for the day)") {
+		holdtype = "B"
+	}
+	if (holdreason === "Robbery of a Stockade, Bank, J-Store") {
+		holdtype = "B"
+	}
+	if (holdreason === "Kidnapping") {
+		holdtype = "B"
+	}
+	if (holdreason === "Shooting, or commission of a crime associated") {
+		holdtype = "B"
+	}
+	if (holdreason === "Weapons Trafficking") {
+		holdtype = "B"
+	}
+	if (holdreason === "Reckless Driving while Street Racing") {
+		holdtype = "C"
+	}
+	if (holdreason === "Robbery of a Store") {
+		holdtype = "C"
+	}
+	if (holdreason === "Armed Robbery of a Person") {
+		holdtype = "C"
+	}
+	if (holdreason === "Drug Trafficking Class A/B") {
+		holdtype = "C"
+	}
+	if (holdreason === "Driving Under the Influence") {
+		holdtype = "D"
+	}
+	if (holdreason === "Felony Evading (First time being charged for the day)") {
+		holdtype = "D"
+	}
+
 	buffer.push("[REPORTING OFFICER]:");
 	buffer.push(callsign);
 	buffer.push('');
@@ -29,13 +82,11 @@ function report() {
 	if (incident) buffer.push(`Incident Report Nr: ${incident}`);
 	if (incident) buffer.push('');
 	
-	let holdtype = document.getElementById('holdtype').value;
 	if (holdtype) buffer.push(`Hold Class Type: ${holdtype}`);
 	if (holdtype) buffer.push('');
 
-	let holdreason = document.getElementById('holdreason').value;
-	buffer.push(`Hold Reason: ${holdreason}`);
-	buffer.push('');
+	if (holdreason) buffer.push(`Hold Reason: ${holdreason}`);
+	if (holdreason) buffer.push('');
 
 	let holdtime = document.getElementById('holdtime').value;
 	if (holdtime) buffer.push(`Hold Time: ${holdtime}`);
