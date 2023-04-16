@@ -24,54 +24,71 @@ function report() {
 
 	let holdreason = document.getElementById('holdreason').value;
 	let holdtype = "";
+	let holdtime = "";
 	
 	if (holdreason === "Involuntary Manslaughter") {
 		holdtype = "A"
+		holdtime = "12 Hours"
 	}
 	if (holdreason === "Voluntary Manslaughter") {
 		holdtype = "A"
+		holdtime = "12 Hours"
 	}
 	if (holdreason === "First Degree Murder") {
 		holdtype = "A"
+		holdtime = "12 Hours"
 	}
 	if (holdreason === "Second Degree Murder") {
 		holdtype = "A"
+		holdtime = "12 Hours"
 	}
 	if (holdreason === "Terrorism") {
 		holdtype = "A"
+		holdtime = "12 Hours"
 	}
 	if (holdreason === "Felony Evading (Second time being charged for the day)") {
 		holdtype = "B"
+		holdtime = "360 Minutes"
 	}
 	if (holdreason === "Robbery of a Stockade, Bank, J-Store") {
 		holdtype = "B"
+		holdtime = "360 Minutes"
 	}
 	if (holdreason === "Kidnapping") {
 		holdtype = "B"
+		holdtime = "360 Minutes"
 	}
 	if (holdreason === "Shooting, or commission of a crime associated") {
 		holdtype = "B"
+		holdtime = "360 Minutes"
 	}
 	if (holdreason === "Weapons Trafficking") {
 		holdtype = "B"
+		holdtime = "360 Minutes"
 	}
 	if (holdreason === "Reckless Driving while Street Racing") {
 		holdtype = "C"
+		holdtime = "240 Minutes"
 	}
 	if (holdreason === "Robbery of a Store") {
 		holdtype = "C"
+		holdtime = "240 Minutes"
 	}
 	if (holdreason === "Armed Robbery of a Person") {
 		holdtype = "C"
+		holdtime = "240 Minutes"
 	}
 	if (holdreason === "Drug Trafficking Class A/B") {
 		holdtype = "C"
+		holdtime = "240 Minutes"
 	}
 	if (holdreason === "Driving Under the Influence") {
 		holdtype = "D"
+		holdtime = "180 Minutes"
 	}
 	if (holdreason === "Felony Evading (First time being charged for the day)") {
 		holdtype = "D"
+		holdtime = "180 Minutes"
 	}
 
 	buffer.push("[REPORTING OFFICER]:");
@@ -88,7 +105,6 @@ function report() {
 	if (holdreason) buffer.push(`Hold Reason: ${holdreason}`);
 	if (holdreason) buffer.push('');
 
-	let holdtime = document.getElementById('holdtime').value;
 	if (holdtime) buffer.push(`Hold Time: ${holdtime}`);
 	if (holdtime) buffer.push('');
 
