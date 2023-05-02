@@ -19,7 +19,9 @@ function report() {
 		buffer.push(`**${title}**`);
 		buffer.push(``);
 	};
-	
+	let titleother = document.getElementById('titleother').value;
+	if (titleother) buffer.push(`**${titleother}**`);
+
 	let patientname = document.getElementById('patientname').value;
 	let patientbirth = document.getElementById('patientbirth').value;
 	let patientnumber = document.getElementById('patientnumber').value;
@@ -60,7 +62,7 @@ function report() {
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }
 
-let inputs = document.querySelectorAll('input[type="text"], input[type="number"], textarea');
+let inputs = document.querySelectorAll('input[type="text"], input[type="text2"], input[type="number"], textarea');
 inputs.forEach(i => i.addEventListener('keyup', report, false));
 
 let checkboxes = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
