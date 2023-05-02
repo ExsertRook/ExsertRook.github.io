@@ -46,11 +46,13 @@ function report() {
 
 	let summary = document.getElementById('summary').value;
 	if (summary) {
+		buffer.push(``);
 		buffer.push(`**Summary:**`);
 		buffer.push(`${summary}`);
 	}
 
 	if (callsign) {
+		buffer.push(``);
 		buffer.push(`**Signed,**`);
 		buffer.push(`${callsign}`);
 	}
