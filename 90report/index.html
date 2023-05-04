@@ -9,6 +9,28 @@
 	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
 	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
+
+<script>
+	fetch ("https://www.legacymdtserver.com/roster")
+    .then(response => response.json)
+    .then(data =>{
+        // item.callsign & item.name
+        const callsignsandnames = data.map(item => '${item.callsign} ${item.name}');
+
+        // render this shit as options in a datalist
+        const datalist = document.createElement('datalist');
+        callsignsandnames.forEach(item => {
+            const option = document.createElement('datalist');
+            option.value = item;
+            datalist.appendChild(option);
+        });
+        document.getElementById('rosterlist').appendChild(datalist);
+    })
+    .catch(error =>{
+        console.error('Could not fetch data')
+    })
+</script>
+
 <header>
 	<br />
     <div class="headerbuttons"><a href="https://exsertrook.github.io/vehicleholdreport/" target="_blank" class="button">PD Impound Generator</a> &nbsp <a href="https://exsertrook.github.io/" class="button">Back to HUB</a>
