@@ -242,6 +242,15 @@ function report() {
 		'Vehicle turtled | Surrendered': {
 			text: 'The chase lasted for a bit of time until their vehicle had gotten stuck on the roof, turtling. The suspects then climbed out of the vehicle and were smart enough not to run but instead surrender. From there, the suspects were apprehended and placed under police custody.',
 		},
+		'Vehicle Stuck | Ran on foot | Caught': {
+			text: 'The chase lasted for a bit of time until their vehicle had gotten stuck in a confined space and were physically unable to drive out of there. The suspects then got out of the vehicle and ran on foot in hopes of getting away. The suspects were eventually apprehended and placed under police custody.',
+		},
+		'Vehicle Stuck | Ran on foot | Escaped': {
+			text: 'The chase lasted for a bit of time until their vehicle had gotten stuck in a confined space and were physically unable to drive out of there. The suspects then got out of their vehicle and ran on foot in hopes of getting away. After us losing eyes on them and performing a Code 6 of the general vicinity, the suspects eventually escaped police custody.',
+		},
+		'Vehicle Stuck | Surrendered': {
+			text: 'The chase lasted for a bit of time until their vehicle had gotten stuck in a confined space and were physically unable to drive out of there. The suspects then got out of their vehicle and decided to surrender and they were placed under police custody.',
+		},
 		'Vehicle was sent into water | Caught': {
 			text: 'The chase lasted for a bit of time until they had drove their vehicle into the water. Eventually after pursuing the suspects in the water, they were all apprehended and placed under police custody.',
 		},
@@ -280,6 +289,15 @@ function report() {
 		},
 		'Bike disabled | Surrendered': {
 			text: 'The chase lasted for a bit of time until the suspect(s) bike had disabled. The suspects then got off of their bike and decided to surrender and they were placed under police custody.',
+		},
+		'Vehicle Tires Popped | Ran on foot | Caught': {
+			text: 'The chase lasted for a bit of time until their car tires had popped from crashing. From there they got out of the vehicle and ran on foot in hopes of getting away. The suspects were eventually apprehended and placed under police custody.',
+		},
+		'Vehicle Tires Popped | Ran on foot | Escaped': {
+			text: 'The chase lasted for a bit of time until their car tires had popped from crashing. From there they got out of the vehicle and ran on foot in hopes of getting away. The suspects then managed to out maneuver our ground units and eventually escape police custody.',
+		},
+		'Vehicle Tires Popped | Surrendered': {
+			text: 'The chase lasted for a bit of time until their vehicle tires had popped from crashing. From there they were smart enough to surrender and not flee on foot. The suspects were eventually apprehended and placed under police custody.',
 		},
 		'Fell off bike | Ran on foot | Caught': {
 			text: 'The chase lasted for a bit of time until the suspect(s) had fallen off of their bike. The suspects then got off of the bike and ran on foot in hopes of getting away. The suspects were eventually apprehended and placed under police custody.',

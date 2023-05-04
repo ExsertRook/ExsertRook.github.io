@@ -229,6 +229,15 @@ function report() {
 		'Vehicle disabled | Surrendered': {
 			text: 'The chase lasted for a bit of time until their vehicle had disabled from crashing it too many times. From there they were smart enough to surrender and not flee on foot. The suspects were eventually apprehended and placed under police custody.',
 		},
+		'Vehicle Tires Popped | Ran on foot | Caught': {
+			text: 'The chase lasted for a bit of time until their car tires had popped from crashing. From there they got out of the vehicle and ran on foot in hopes of getting away. The suspects were eventually apprehended and placed under police custody.',
+		},
+		'Vehicle Tires Popped | Ran on foot | Escaped': {
+			text: 'The chase lasted for a bit of time until their car tires had popped from crashing. From there they got out of the vehicle and ran on foot in hopes of getting away. The suspects then managed to out maneuver our ground units and eventually escape police custody.',
+		},
+		'Vehicle Tires Popped | Surrendered': {
+			text: 'The chase lasted for a bit of time until their vehicle tires had popped from crashing. From there they were smart enough to surrender and not flee on foot. The suspects were eventually apprehended and placed under police custody.',
+		},
 		'Vehicle boxed in | Ran on foot | Caught': {
 			text: 'The chase lasted for a bit of time until our pursuing ground units managed to pin the vehicle and box it in to where they could not move anymore. From there they got out of the boxed in vehicle and ran on foot in hopes of getting away. The suspects were eventually apprehended and placed under police custody.',
 		},
