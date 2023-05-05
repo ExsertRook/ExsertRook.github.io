@@ -84,7 +84,7 @@ textarea, input[type="text"], input[type="number"], input[type="emerald"] {
     border: 1px solid #000000;
     border-radius: 10px;
     font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Ubuntu Mono", "Roboto Mono", Menlo, Monaco, Consolas, monospace;
-    font-size: 18px;
+    font-size: 16px;
     background-color: #292a2c;
     color: #f3ecec;
 }
@@ -298,4 +298,12 @@ body.dark-theme a {
 body.dark-theme select {
 	background-color: #2F3136;
 	color:#f9f9f9;
+}
+select, input[type="number"] {
+	background-color: #242424;
+	color:#f9f9f9;
+    border: 2px solid rgb(93, 255, 107);
+    border-radius: 10px;
+    font-family: 'Nunito';
+    text-align: center;
 }
