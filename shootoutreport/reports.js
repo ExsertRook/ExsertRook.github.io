@@ -18,7 +18,7 @@ function report() {
     buffer.push('');
     
 	buffer.push('[INCIDENT DETAILS]:');
-	buffer.push('During normal patrol, we had a shootout happen between PD and another group.');
+	buffer.push('During normal patrol, we had a shootout happen between police officers and a group of people.');
 
 	let originS = document.getElementById('origin');
 	let originInfo = {
@@ -45,6 +45,9 @@ function report() {
 		},
 		'On-going shootout': {
 			text: 'The whole shootout that has occured, originated from an on-going shootout.',
+		},
+		'Felony Evading': {
+			text: 'The whole shootout that has occured, originated from an on-going shootout',
 		}
 	}
 	let origin = originS.options[originS.selectedIndex].text;
