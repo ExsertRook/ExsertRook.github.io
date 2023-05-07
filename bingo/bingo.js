@@ -140,9 +140,9 @@ const cells = [
 	"Chase a Purple colored car",
 	"Chase a Green colored car",
 	"Chase a Yellow colored car",
-	"Carter Winston on a 10-11 or speedtrap",
 	"Basic Bitch Package",
 	"Billie and Sucher riding together",
+	"Use Drive-Mode for a chase",
 ];
 	
 function shuffle(array) {
