@@ -17,11 +17,11 @@ function report() {
 		'Trooper': {
 			ranktitle: 'Current rank: Trooper',
 		},
-		'Trooper First': {
+		'Trooper First Class': {
 			ranktitle: 'Current rank: Trooper First Class',
 		},
 		'Senior Trooper': {
-			ranktitle: 'Current rank: Senior Trainer',
+			ranktitle: 'Current rank: Senior Trooper',
 		},
 		'Corporal': {
 			ranktitle: 'Current rank: Corporal',
@@ -29,7 +29,7 @@ function report() {
 		'Sergeant': {
 			ranktitle: 'Current rank: Sergeant',
 		},
-        'Sergeant First': {
+        'Sergeant First Class': {
             ranktitle: 'Current rank: Sergeant First Class',
         },
         'Lieutenant': {
