@@ -18,13 +18,129 @@
 	<!--<buttonsasp onclick="saspchange()">SASP</buttonsasp> &nbsp&nbsp&nbsp <buttonbcso onclick="bcsochange()">BCSO</buttonbcso> &nbsp&nbsp&nbsp <buttonsahp onclick="sahpchange()">SAHP</buttonsahp>-->
 	<br />
 	<label class="inline" style="font-size: 14px;">Your Callsign & Name:</label><br />
-    <input type="text" id="yourself" name="yourself" placeholder="[SF-202] Thomas Sucher"/><br />
+    <input type="text" autocomplete="on" list="roster" id="yourself" name="yourself" placeholder="[SF-202] Thomas Sucher"/><br />
 	<div class="popup" id="copyReport">
 		<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
 	</div>
 </header>
 <body>
 	<div id="form">
+		<datalist id="roster">
+			<option value="[X-100] Holden Steele">Chief</option>
+			<option value="[X-101] Aniyah Diem">Assistant Chief</option>
+			<option value="[X-102] Curtis Roscoe">Deputy Chief</option>
+			<option value="[A-110] Johnson Wrangler">Captain</option>
+			<option value="[A-111] Max Callahan-Knightly">Captain</option>
+			<option value="[A-112] Nathan Spencer">Captain</option>
+			<option value="[A-113] Riley Steele">Captain</option>
+			<option value="[LT-122] Pepper Belle">Lieutenant</option>
+			<option value="[LT-125] Maya Serrano">Lieutenant</option>
+			<option value="[LT-126] Jeffrie Gogginschmiel">Lieutenant</option>
+			<option value="[LT-128] Alexander Murphy">Lieutenant</option>
+			<option value="[LT-129] Quintin Johnson">Lieutenant</option>
+			<option value="[LT-130] Joe Dirte">Lieutenant</option>
+			<option value="[LT-131] Maverick Black">Lieutenant</option>
+			<option value="[LT-132] Sam Escobar">Lieutenant</option>
+			<option value="[SF-203] Adam Ahmed">Sergeant First Class</option>
+			<option value="[SF-205] Jack Lawns">Sergeant First Class</option>
+			<option value="[SF-207] Dale Otis">Sergeant First Class</option>
+			<option value="[SF-208] Johnny Stevenson">Sergeant First Class</option>
+			<option value="[SF-211] Jason Brennon">Sergeant First Class</option>
+			<option value="[SF-213] James Slick">Sergeant First Class</option>
+			<option value="[SF-214] Roger Fitzgerald">Sergeant First Class</option>
+			<option value="[SF-215] Faye Howell">Sergeant First Class</option>
+			<option value="[SF-217] Kitanya Neaze">Sergeant First Class</option>
+			<option value="[SF-218] Ben Asher">Sergeant First Class</option>
+			<option value="[SF-219] Ronny Roman">Sergeant First Class</option>
+			<option value="[S-220] Apple Jack">Sergeant</option>
+			<option value="[S-224] Rhys Miller">Sergeant</option>
+			<option value="[S-230] Ryan Walker">Sergeant</option>
+			<option value="[S-235] John Price">Sergeant</option>
+			<option value="[S-240] Natasha Strawberry">Sergeant</option>
+			<option value="[S-255] Thomas Sucher">Sergeant</option>
+			<option value="[S-298] Danny Supreme">Sergeant</option>
+			<option value="[CO-301] Oscar Deacon">Corporal</option>
+			<option value="[CO-303] Randle Caster">Corporal</option>
+			<option value="[CO-304] Sebastian Collinsworth">Corporal</option>
+			<option value="[CO-305] Tooru Novak">Corporal</option>
+			<option value="[CO-306] Kira Cheez">Corporal</option>
+			<option value="[CO-307] Brynn Rose">Corporal</option>
+			<option value="[CO-308] Terry Briggs">Corporal</option>
+			<option value="[CO-309] Dawid Odison">Corporal</option>
+			<option value="[CO-310] Skylar Blake">Corporal</option>
+			<option value="[CO-311] Anya Petroski">Corporal</option>
+			<option value="[CO-312] Juggington Sausage">Corporal</option>
+			<option value="[CO-313] James Jr Jackson">Corporal</option>
+			<option value="[CO-314] Liam Hayward">Corporal</option>
+			<option value="[CO-315] Aileen Callahan-Knightly">Corporal</option>
+			<option value="[CO-316] Henry Hoover">Corporal</option>
+			<option value="[CO-318] Rory Graves">Corporal</option>
+			<option value="[CO-319] Marcus Burns">Corporal</option>
+			<option value="[CO-320] Mia Jimenez">Corporal</option>
+			<option value="[CO-321] Chase Sandwich">Corporal</option>
+			<option value="[CO-324] Mack Hunter">Corporal</option>
+			<option value="[CO-333] Han Kuffman">Corporal</option>
+			<option value="[CO-345] Jessup Lee">Corporal</option>
+			<option value="[CO-346] Austin Fury">Corporal</option>
+			<option value="[CO-355] Billie Santana">Corporal</option>
+			<option value="[CO-360] Albus Davies">Corporal</option>
+			<option value="[CO-398] Ray Chasington">Corporal</option>
+			<option value="[ST-401] Trey Lawns">Senior Trooper</option>
+			<option value="[ST-403] Jake Hall">Senior Trooper</option>
+			<option value="[ST-405] Hermoine Focker">Senior Trooper</option>
+			<option value="[ST-406] Herman Nader">Senior Trooper</option>
+			<option value="[ST-408] Mafuyu Asou">Senior Trooper</option>
+			<option value="[ST-410] Jason Waltson">Senior Trooper</option>
+			<option value="[ST-411] Lela Law">Senior Trooper</option>
+			<option value="[ST-414] Patrick O'Neill">Senior Trooper</option>
+			<option value="[ST-419] Joseph Dredd">Senior Trooper</option>
+			<option value="[ST-420] Augustus Gloop">Senior Trooper</option>
+			<option value="[ST-444] Apple Bloom">Senior Trooper</option>
+			<option value="[ST-456] Brick Stone">Senior Trooper</option>
+			<option value="[ST-469] Eddie Irwin">Senior Trooper</option>
+			<option value="[ST-489] William Randal">Senior Trooper</option>
+			<option value="[ST-497] Sweetie Belle">Senior Trooper</option>
+			<option value="[TF-501] Louie Herrett">Trooper First Class</option>
+			<option value="[TF-502] Michigan Silver">Trooper First Class</option>
+			<option value="[TF-503] Sam Winger">Trooper First Class</option>
+			<option value="[TF-504] Steven Senegal">Trooper First Class</option>
+			<option value="[TF-505] Xander Killbourne">Trooper First Class</option>
+			<option value="[TF-507] Maxmilian Speig">Trooper First Class</option>
+			<option value="[TF-510] Johnson Edwin">Trooper First Class</option>
+			<option value="[TF-511] Alexandr Nolan">Trooper First Class</option>
+			<option value="[TF-515] Kyle Brooks">Trooper First Class</option>
+			<option value="[TF-522] Jay Jay Jackson">Trooper First Class</option>
+			<option value="[TF-525] Bucky Langston">Trooper First Class</option>
+			<option value="[TF-598] Tanner Mockingbird">Trooper First Class</option>
+			<option value="[T-601] Noah Jamerson">Trooper</option>
+			<option value="[T-602] Kyle Ross">Trooper</option>
+			<option value="[T-603] Mira Lee">Trooper</option>
+			<option value="[T-604] James Goff Jr.">Trooper</option>
+			<option value="[T-605] Mya-Louise Taylor">Trooper</option>
+			<option value="[T-607] Dominic Banks">Trooper</option>
+			<option value="[T-608] Tim Kermit">Trooper</option>
+			<option value="[TA-701] Matt Frost">Cadet | SASP</option>
+			<option value="[TA-702] Helena Brigham">Cadet | SASP</option>
+			<option value="[TA-703] Dempsey Watson">Cadet | SASP</option>
+			<option value="[TA-704] Frederick Dortmund">Cadet | SASP</option>
+			<option value="[TA-705] Boris Ketwig">Cadet | SASP</option>
+			<option value="[TA-706] Ryan Goode">Cadet | SASP</option>
+			<option value="[TA-707] Edoardo Dante Torres">Cadet | SASP</option>
+			<option value="[TA-708] Lingling Chen">Cadet | SASP</option>
+			<option value="[TA-709] Alex Bradford">Cadet | SASP</option>
+			<option value="[TA-710] James Roberts">Cadet | SASP</option>
+			<option value="[TA-711] Haylay Cassidy">Cadet | SASP</option>
+			<option value="[TA-712] Scarlex Doe">Cadet | SASP</option>
+			<option value="[TA-713] Pho King">Cadet | SASP</option>
+			<option value="[TA-714] Milo Serrano">Cadet | SASP</option>
+			<option value="[TA-715] Tommy Phoenix">Cadet | SASP</option>
+			<option value="[TA-716] Timothy Moore">Cadet | SASP</option>
+			<option value="[TA-717] Zephyr Wolfe">Cadet | SASP</option>
+			<option value="[TA-718] Rico Dredd">Cadet | SASP</option>
+			<option value="[TA-719] Joaquín Rodríguez">Cadet | SASP</option>
+			<option value="[TA-720] Arthur Hunt">Cadet | SASP</option>
+			<option value="[TA-721] Erika Lavelle">Cadet | SASP</option>
+		</datalist>
 		<div class="form-group">
 			<label>Location:</label>
 			10-67 Call Location: <input type="text" id="location" name="location" placeholder="Hawick Ave">
