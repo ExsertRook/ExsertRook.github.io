@@ -86,6 +86,9 @@ function report() {
 		'Drug-Sales (Confirmed Handoff)': {
 			text: 'During regular patrol, we responded to some drug sale calls. Upon arrival, we notice and confirm an individual doing a handoff to a pedestrian passing by. Once we made a move and go up to the suspect, they got into their vehicle and fled, initiating a 10-80.',
 		},
+		'Hit and Run': {
+			text: 'During regular patrol, we were driving around and then all of a sudden, an individual had crashed into the side of our patrol cruiser. When we went to pull them over, they kept fleeing, initiating a 10-80.',
+		},
 		'Vehicle Tampering Call (Class M)': {
 			text: 'During regular patrol, we responded to a Vehicle Tampering Dispatch call (Class M). Upon we arrived and the suspect had noticed us, they suspect decided to flee, initiating a 10-80.',
 		},
