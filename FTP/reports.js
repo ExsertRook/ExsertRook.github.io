@@ -47,25 +47,25 @@ function report() {
 	}
 	if (activities) {
 		buffer.push(`**Activities Completed Successfully:**`);
-		buffer.push(`${activities}`);
+		buffer.push(`*${activities}*`);
 	}
 	if (activities2) {
-		buffer.push(`${activities2}`);
+		buffer.push(`*${activities2}*`);
 	}
 	if (activities3) {
-		buffer.push(`${activities3}`);
+		buffer.push(`*${activities3}*`);
 	}
 	if (activities4) {
-		buffer.push(`${activities4}`);
+		buffer.push(`*${activities4}*`);
 	}
 	if (activities5) {
-		buffer.push(`${activities5}`);
+		buffer.push(`*${activities5}*`);
 	}
 	if (activities6) {
-		buffer.push(`${activities6}`);
+		buffer.push(`*${activities6}*`);
 	}
 	if (activities7) {
-		buffer.push(`${activities7}`);
+		buffer.push(`*${activities7}*`);
 	}
 	
 	buffer.push(``);
