@@ -110,6 +110,9 @@ function report() {
 		'10-11': {
 			text: 'During regular patrol, we pulled over a vehicle that had broken a traffic law. While questioning the suspect, they decided to turn their vehicle back on and evade from us, initiating a 10-80.',
 		},
+		'10-11 (Stolen Vehicle)': {
+			text: 'During regular patrol, we pulled over a vehicle and conducted a traffic stop on it. While questioning the driver, we realised that the vehicle was stolen. After we asked them to step out of their vehicle, they decided to turn their vehicle back on and evade from us, initiating a 10-80.',
+		},
 		'10-11 (Code 5)': {
 			text: 'During regular patrol, we pulled over a vehicle. Later realizing that the vehicle had a BOLO (Be On the Look Out) on it, we performed a Code 5 felony stop on them. The moment the occupants in the vehicle noticed that weapons are being drawn at them by the police, they quickly switched the engine on and fled the scene, initiating a 10-80.',
 		},
