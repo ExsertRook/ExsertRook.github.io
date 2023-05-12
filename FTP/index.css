@@ -120,6 +120,13 @@ textarea, input[type="text"], input[type="text2"], input[type="number"] {
     font-size: 13px;
     background-color: #242424;
 }
+input[type="time"] { 
+    border: 2px solid rgb(146, 245, 223);
+    border-radius: 8px;
+    font-family: 'Nunito';
+    font-size: 13px;
+    background-color: #242424;
+} 
 
 input[type="text"], input[type="text2"], input[type="number"]::placeholder {
     color: white;

@@ -21,7 +21,9 @@ function report() {
 	/// INFO
 	let cadetname = document.getElementById('cadet').value;
 	let phase = document.getElementById('phase').value;
-	let hourscounted = document.getElementById('hourscounted').value;
+	let timestart = document.getElementById('timestart').value;
+	let timeend = document.getElementById('timeend').value;
+	let timezone = document.getElementById('timezone').value;
 
 	let activities = document.getElementById('activitiescompleted').value;
 	let activities2 = document.getElementById('activitiescompleted2').value;
@@ -40,9 +42,11 @@ function report() {
 	}
 	if (phase) { 
 		buffer.push(`**Phase:** ${phase}`);
+		buffer.push(``);
 	}
-	if (hourscounted) {
-		buffer.push(`**Hours Counted:** ${hourscounted}`);
+	if (timestart) {
+		buffer.push(`**Patrol Started:** ${timestart} ${timezone}`);
+		buffer.push(`**Patrol Ended:** ${timeend} ${timezone}`)
 		buffer.push(``);
 	}
 	if (activities) {
