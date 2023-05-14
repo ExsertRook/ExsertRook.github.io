@@ -143,6 +143,7 @@ const cells = [
 	"Basic Bitch Package",
 	"Billie and Sucher riding together",
 	"Use Drive-Mode for a chase",
+	"Johnson Silent Fart",
 ];
 	
 function shuffle(array) {
