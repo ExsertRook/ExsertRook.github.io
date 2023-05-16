@@ -64,6 +64,12 @@ function report() {
 		},
 		'Joyriding': {
 			text: 'After analyzing the whole situation, we came to a realization that after running the plate of the vehicle, the name of the owner of the vehicle did not match the name on the driving license we were provided. We asked the driver to step out of the vehicle and from there the driver was placed in handcuffs and under police custody for joyriding.',
+		},
+		'Brandishing a Class 2': {
+			text: 'After pulling the person over, we had conducted a Code 5 due to the fact that the individual was brandishing a Class 2 weapon. From there we escalated the situation and asked the vehicle occupants to step out one at a time. From there the driver was placed in handcuffs and under police custody.',
+		},
+		'Brandishing a Class 3': {
+			text: 'After pulling the person over, we had conducted a Code 5 due to the fact that the individual was brandishing a Class 3 weapon. From there we escalated the situation and asked the vehicle occupants to step out one at a time. From there the driver was placed in handcuffs and under police custody.',
 		}
 	};
 	let arrestreason = arrestreasonSelected.options[arrestreasonSelected.selectedIndex].text;
