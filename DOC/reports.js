@@ -12,7 +12,6 @@ function report() {
 	if (!callsign) callsign = '[missing]';
 	const ind = "        ";
 	let date = new Date().toLocaleDateString('en-US');
-
 	buffer = [];
 
 	let InmateName = document.getElementById('inmatename').value;
@@ -27,13 +26,6 @@ function report() {
 	if (callsign) buffer.push(`**Signed**`);
 	if (callsign) buffer.push(`*${callsign}*`);
 	if (ConfiscatedPockets) buffer.push(`${ConfiscatedPockets}`);
-	
-	let curDarkmode = document.getElementById('darkmode').checked;
-	if (curDarkmode) {
-		if (darkmodeState === 'false') updateDarkmode();
-	} else if (!curDarkmode) {
-		if (darkmodeState === 'true') updateDarkmode();
-	}
 
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }

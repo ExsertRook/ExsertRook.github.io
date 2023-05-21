@@ -10,41 +10,47 @@
 	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
-<body onLoad="loadDarkmode()">
+<header>
+	<br />
+	</div>
+	<br />
+	DOC Report Loggers<br />
+	<br />
+	<label class="inline" style="font-size: 14px;">Your Callsign & Name:</label><br />
+    <input type="text" autocomplete="on" list="roster" id="yourself" name="yourself" placeholder="[S-202] Christopher Ricardo"/><br />
+</header>
+
+<body>
 	<datalist id="roster">
 		<option value="[W-100] Ian Johnson">Warden</option>
-		<option value="[W-102] Brick Laser">Deputy Warden</option>
+		<option value="[W-101] Brick Laser">Deputy Warden</option>
 		<option value="[C-110] Sam Bellamy">Captain</option>
 		<option value="[C-111] Marcus Odin">Captain</option>
-		<option value="[S-201] Eddie Newton">Sergeant</option>
-		<option value="[SR-301] Charlene Monroe">Senior Corrections Officer</option>
-		<option value="[SR-302] Christopher Ricardo">Senior Corrections Officer</option>
+		<option value="[LT-120] Eddie Newton">Lieutenant</option>
+		<option value="[S-201] Charlene Monroe">Sergeant</option>
+		<option value="[S-202] Christopher Ricardo">Sergeant</option>
+		<option value="[SO-301] Damian King">Senior Corrections Officer</option>
 		<option value="[CO-401] John Hater">Corrections Officer</option>
+		<option value="[CO-402] Artur Fear">Corrections Officer</option>
+		<option value="[CO-403] Cameron Collinsworth">Corrections Officer</option>
+		<option value="[CO-404] Solomon Gray">Corrections Officer</option>
 		<option value="[CO-412] Lola Moon">Corrections Officer</option>
-		<option value="[CC-502] Arthur Fear">Corrections Cadet</option>
-		<option value="[CC-503] Mikhail Smirnoff">Corrections Cadet</option>
-
+		<option value="[CO-420] Elleb Ozo">Corrections Officer</option>
+		<option value="[CC-503] Jose Blazer">Corrections Cadet</option>
 	</datalist>
 	<div id="form">
-		<div class="form-group">
+		<div>
 			<style>
     			body {
         		    font-family: 'Nunito';font-size: 16px;
     			}
-    			</style>
-			<span style="font-weight: bold;">DOC Logger Templates</span> | 
-			<input type="checkbox" id="darkmode" name="darkmode" value="darkmode" />
-			<label for="darkmode">Darkmode</label>
-			<br />
-			<label class="inline" title="(You only have to do this once - it will cache)" style="border-bottom: 1px dotted #000; text-decoration: none;">Your callsign & name (Signature):</label>
-			<input type="text" autocomplete="on" list="roster" id="yourself" name="yourself" placeholder="CC-502 M. Ricardo" />
+    		</style>
 		</div>
 		<label>DOC Contraband Logger Report</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<div class="popup" id="copyReport">
 			<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
 		</div>
 		<div class="form-group">
-			
 			<label>Information:</label>
 			Inmate Name: <input type="text" id="inmatename" name="inmatename" placeholder="Connor Jenkins"><br />
 			Contraband Found: <input type="text" id="contraband" name="contraband" placeholder="1x Radio, 1x Knife"><br />
@@ -53,15 +59,15 @@
 				<option>Ongoing</option>
 				<option>Removed</option>
 				<option>Returned</option>
-			</select><br /><br />
+			</select><br />
 			Picture of their Pockets: <input type="text" id="confiscatedpockets" name="confiscatedpockets" placeholder="Paste the link here">
-		</div><br />
+		</div><br /><br />
 
 		<label>DOC Visitations Logger Report</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<div class="popup" id="copyReport2">
 			<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
 		</div>
-		<div class="form-group">
+		<div class="form-group"><br />
 			Inmate Name: <input type="text" id="inmatename2" name="inmatename2" placeholder="Chris Brown" /><br />
 			Names of Individual(s) Visiting:
 			1:&nbsp<input type="text" id="visitor1" name="visitor1" placeholder="John Smith">
@@ -88,7 +94,7 @@
 		<div class="popup" id="copyReport3">
 			<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
 		</div>
-		<div class="form-group">
+		<div class="form-group"><br />
 			Inmate Name(s):
 			1:&nbsp<input type="text" id="inmatename3" name="inmatename3" placeholder="Patrick White">
 			(If More Than 1 Inmate)
@@ -102,7 +108,7 @@
 			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2:&nbsp<input type="number" min="0" id="sentencelength2" name="sentencelength2" placeholder="150">
 			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3:&nbsp<input type="number" min="0" id="sentencelength3" name="sentencelength3" placeholder="70"><br />
 			Correctional Officers Present: Add them (@) in discord so its easier
-			<br /><br /><br />
+			<br /><br />
 		</div>
 	</div>
     <textarea class="wide" id="reportBody">The Report will automatically generate as you fill out the form to the left.&#10;&#10;(Note: the generated report will be editable, but once you edit it, you can no longer update it based on the form)&#10;&#10;If you have any questions or concerns, feel free to fill the feedback form on the main website :)&#10;&#10;Also if you want to show love, make sure to thank Sucher :)</textarea>
