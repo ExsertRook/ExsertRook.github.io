@@ -313,6 +313,9 @@ function report() {
 		},
 		'Fell off bike | Surrendered': {
 			text: 'The chase lasted for a bit of time until the suspect(s) had fallen off of their bike. The suspects then got off of their bike and decided to surrender and they were placed under police custody.',
+		},
+		'Suspects declared Code Red': {
+			text: 'The chase lasted for a bit of time until the suspect(s) had done something that made us declared them code red. Eventually the suspect(s) within the vehicle were incapacitated and stopped. We then cleared the scene and secured the suspects to place them under police custody.',
 		}
 	};
 	let chase = chaseSelected.options[chaseSelected.selectedIndex].text;
