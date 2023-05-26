@@ -141,7 +141,6 @@ const cells = [
 	"Chase a Green colored car",
 	"Chase a Yellow colored car",
 	"Basic Bitch Package",
-	"Billie and Sucher riding together",
 	"Use Drive-Mode for a chase",
 	"Johnson Silent Fart",
 ];
