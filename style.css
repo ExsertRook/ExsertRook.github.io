@@ -14,7 +14,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url('vacation.png') no-repeat
+    background: url('siteclosed.jpg') no-repeat
         center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
