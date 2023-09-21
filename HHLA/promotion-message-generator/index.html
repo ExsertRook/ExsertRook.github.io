@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Promotion Message Generator</title>
+	<link rel="shortcut icon" href="cash.png" />
+	<link rel="stylesheet" href="style.css" />
+	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> </head>
+
+<body onLoad="loadDarkmode()">
+	<div id="form">
+		<div class="form-group">
+			<style>
+    			body {
+        		    font-family: 'Nunito';font-size: 18px;
+    			}
+    			</style>
+			<h1><span style="font-weight: bold; font-size: 40px; text-align: center;">Promotion & More Message Generator</span></h1>
+			<input type="checkbox" id="darkmode" name="darkmode" value="darkmode" />
+			<label for="darkmode">Darker mode</label>
+			<br />
+		</div>
+		<div class="form-group">
+            <label style="font-size: 22px;">Details:</label>
+            Select Message Type:
+            <select id="pdrank">
+                <option>Promotion</option>
+				<option>Demotion</option>
+                <option>HEAT - Accepted</option>
+                <option>HEAT - On Hold</option>
+                <option>HEAT - Declined</option>
+                <option>SASP Application - Accepted</option>
+                <option>SASP Application - Declined</option>
+            </select>
+        <div class="form-group">
+            Hours in Realtime (~1h in game = 5min Realtime):
+            <input type="number" min="0" id="hoursread" name="hoursread" placeholder="16">
+        </div>
+	</div>
+	
+    <textarea class="wide" id="reportBody">Please Choose your rank within the SASP!</textarea>
+	<!--<pre id="reportBody"></pre> -->
+
+	<script src="calculator.js"></script>
+</body>
+
+</html>
