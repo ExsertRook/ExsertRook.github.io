@@ -391,8 +391,10 @@ function report() {
 	let vehiclereg = document.getElementById('vehiclereg').value;
 	let occupants = document.getElementById('occupants').value;
 	let carcolor = document.getElementById('carcolor').value;
-	if (vehicledesc || carcolor) vehicledesc = ` was a ${carcolor} in colored ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
-	buffer.push(`The vehicle we were pursuing${vehicledesc}. The vehicle was registered to an individual named ${vehiclereg}. There were a total of ${occupants} occupants inside of the vehicle.`);
+	if (vehiclereg) vehiclereg = `The vehicle was registered to an individual named ${vehiclereg}. `;
+	if (vehicledesc || carcolor || plate) vehicledesc = `was a ${carcolor} in colored ${vehicledesc}${(plate ? ' (PLATE: ' + plate + ')' : '')}`;
+	if (!vehiclereg) vehiclereg = ``;
+	buffer.push(`The vehicle we were pursuing ${vehicledesc}. ${vehiclereg} There were a total of ${occupants} occupants inside of the vehicle.`);
 	
 	let flaggedSelected = document.getElementById('flaggedquestion');
 	let flaggedInformation = {
