@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    outline: none !important;
+    font-family: 'Nunito';
+}
+
+html, body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Ubuntu", "Roboto", "Noto Sans", "Droid Sans", sans-serif;
+    font-size: 15px;
+    color: #242729;
+    margin: 0;
+    line-height: 22.5px;
+}
+
+pre, code {
+    font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Ubuntu Mono", "Roboto Mono", Menlo, Monaco, Consolas, monospace;
+    font-size: 13px;
+    line-height: 17px;
+	background-color: #FFF3F2;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 20px;
+}
+
+#form, #reportBody {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 5px;
+}
+
+h1 {
+    align-self: center;
+    text-align: center;
+
+}
+
+td {
+	border: 1px solid black;
+	padding-top: 0px;
+	padding-bottom: 0px;
+    width: 100px;
+    height: 100px;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  width: 500px;
+  margin-top: 25px;
+}
+
+.form-group.layer-2 {
+    margin-bottom: 3px;
+}
+
+label.inline {
+    display: inline-block !important;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonsgroup {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+}
+
+textarea {
+    padding: 3px;
+    resize: none;
+    width: 300px;
+    height: 100px;
+}
+
+.narrow {
+    padding: 3px;
+    resize: none;
+    width: 400px;
+	height: 25px;
+}
+
+.long {
+    padding: 3px;
+    resize: none;
+    width: 400px;
+    height: 200px;
+}
+
+.wide {
+    padding: 3px;
+    resize: none;
+    width: 400px;
+    height: 100px;
+}
+
+.form-group:not(.layer-2) {
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+}
+
+button {
+    border: 1px solid #c1c1c1;
+    background: #ececec;
+    padding: 5px 15px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    transition: 250ms;
+}
+
+body {
+	color: #eee;
+	background: #242424;
+}
+.selected-bingo {
+	background-color: #b32929;
+    color: black;
+}
+.btn {
+	background-color: #2F3136;
+	color: #f9f9f9;
+}
+.btn:hover{
+    background-color: #5e3131;
+    border-color: #b32929;
+    border-radius: 20px;
+}
+
+td {
+  border: 3px solid white;
+}
+
+footer {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: .3rem;
+	font-size: 15px;
+	text-align: center;
+}

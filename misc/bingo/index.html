@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script type="text/javascript">
+	window.onbeforeunload = function(){
+  		return 'Are you sure you want to leave?';
+	}
+</script>
+
+<head>
+	<meta charset="UTF-8">
+	<title>SASP Bingo</title>
+	<link rel="shortcut icon" href="bingo.png" />
+	<link rel="stylesheet" href="style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> </head>
+
+<body onLoad="loadPage()">
+	<div id="form">
+			<h1 style="font-size: 50px;">SASP Bingo</h1><br />
+		<div class="buttonsgroup">
+			<button class="btn" onClick="reloadPage()"><i class="fa fa-refresh" aria-hidden="true"></i> New Board</button> &nbsp&nbsp;
+			<br />
+		</div>
+		<div class="form-group" id="bingo_table">
+			<!-- to be auto-generated on page load -->
+		</div>
+	</div>
+	<footer>
+		Once you have a BINGO, make sure to tell Sucher and he will give you a hug!
+	</footer>
+	<script src="bingo.js"></script>
+</body>
+</html>
