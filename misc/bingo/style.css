@@ -113,11 +113,13 @@ textarea {
 button {
     border: 1px solid #c1c1c1;
     background: #ececec;
-    padding: 5px 15px;
+    padding: 5px 130px;
     cursor: pointer;
     display: inline-block;
     margin-top: 10px;
     transition: 250ms;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 body {
@@ -125,17 +127,19 @@ body {
 	background: #242424;
 }
 .selected-bingo {
-	background-color: #29b340;
-    color: black;
+	background-color: #09c6ff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
 }
 .btn {
-	background-color: #2F3136;
+	background-color: rgb(65, 65, 65);
 	color: #f9f9f9;
 }
 .btn:hover{
     background-color: #315e39;
     border-color: #29b340;
     border-radius: 20px;
+    padding: 5px 180px;
 }
 
 td {

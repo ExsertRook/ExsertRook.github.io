@@ -10,7 +10,6 @@ const cells = [
 	"10-66 Calls",
 	"10-78s - no location",
 	"Whole PD for this?",
-	"Use Tazer instead of a Pistol",
 	"Flees from Traffic Stop",
 	"Flees from Felony stop",
 	"STOP RAMMING US!",
