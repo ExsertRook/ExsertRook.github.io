@@ -70,7 +70,6 @@ const cells = [
 	"Tow truck shows up",
 	"200 month sentence",
 	"Hostage at hospital",
-	"MDT down",
 	"Class 3 in a hospital",
 	"10-32 at Casino",
 	"Spin the Casino Wheel",
