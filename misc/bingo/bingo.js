@@ -1,6 +1,6 @@
 let darkmodeState;
 
-const header = `<table><tr style="font-weight: bold; background-color: gray; font-size: 30px"><td><h1>B</h1></td><td><h1>I</h1></td><td><h1>N</h1></td><td><h1>G</h1></td><td><h1>O</h1></td></tr>`;
+const header = `<table><tr style="font-weight: bold; background-color: rgb(55, 17, 226); font-size: 30px"><td><h1>B</h1></td><td><h1>I</h1></td><td><h1>N</h1></td><td><h1>G</h1></td><td><h1>O</h1></td></tr>`;
 
 const tdInlineStyle = `user-select: none; cursor: pointer;`;
 
@@ -17,7 +17,6 @@ const cells = [
 	"You cant do that!!! - Criminal",
 	"PD 10-14",
 	"EMS 10-14",
-	"DOC 10-14",
 	"Deal with a Danny",
 	"911 - Someone needs food at the prison",
 	"Prison Riot",
