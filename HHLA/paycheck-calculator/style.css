@@ -82,9 +82,9 @@ textarea {
 
 textarea, input[type="text"], input[type="number"], input[type="emerald"] {
     border: 1px solid #000000;
-    border-radius: 10px;
+    border-radius: 50px;
     font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Ubuntu Mono", "Roboto Mono", Menlo, Monaco, Consolas, monospace;
-    font-size: 16px;
+    font-size: 18px;
     background-color: #292a2c;
     color: #f3ecec;
 }
@@ -106,14 +106,9 @@ input[type="number"] {
     padding: 0px;
     color: rgb(247, 247, 247);
 }
-input[type="emerald"] {
-    width: 40px;
-    padding: 0px;
-    color: rgb(97, 204, 93);
-}
 
 #reportBody {
-    height: 60px;
+    height: 80px;
     top: 140px;
     bottom: 140px;
     right: 10px;
@@ -302,7 +297,7 @@ body.dark-theme select {
 select, input[type="number"] {
 	background-color: #242424;
 	color:#f9f9f9;
-    border: 2px solid rgb(93, 255, 107);
+    border: 2px solid rgb(58, 61, 255);
     border-radius: 10px;
     font-family: 'Nunito';
     text-align: center;
