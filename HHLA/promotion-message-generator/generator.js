@@ -9,47 +9,95 @@ function report() {
 	let date = new Date().toLocaleDateString('en-US');
     buffer = []
 
-    let ranks = document.getElementById('pdrank');
-	let rankInfo = {
-		'Cadet': {
-            ranktitle: 'Current rank: Cadet',
+    let messages = document.getElementById('messageType');
+	let callsign = document.getElementById('callsign');
+	let msgInfo = {
+		'Promotion': {
+            row1: '**PROMOTED**',
+			row2: '',
+			row3: '@',
+			row4: '',
+			row5: '',
 		},
-		'Trooper': {
-			ranktitle: 'Current rank: Trooper',
+		'Cadet Promotion': {
+            row1: '**PROMOTED**',
+			row2: '',
+			row3: '@',
+			row4: '',
+			row5: '**Congratulations!** On behalf of command, you have passed your cadet phase and have been promoted to a **Probationary Trooper!**',
+			row6: '',
 		},
-		'Trooper First Class': {
-			ranktitle: 'Current rank: Trooper First Class',
+		'Demotion': {
+			row1: '**DEMOTED**',
+			row2: '',
+			row3: '@',
+			row4: '',
+			row5: '',
 		},
-		'Senior Trooper': {
-			ranktitle: 'Current rank: Senior Trooper',
+		'FTP - Accepted': {
+			row1: '**FTP - ACCEPTED**',
+			row2: '',
+			row3: '@',
+			row4: '',
+			row5: '',
 		},
-		'Corporal': {
-			ranktitle: 'Current rank: Corporal',
+		'FTP - On Hold': {
+			row1: '**FTP - ON HOLD**',
+			row2: '',
+			row3: '@',
+			row4: '',
+			row5: '',
 		},
-		'Sergeant': {
-			ranktitle: 'Current rank: Sergeant',
+		'FTP - Declined': {
+			row1: '**FTP - DECLINED**',
+			row2: '',
+			row3: '@',
+			row4: '',
+			row5: '',
 		},
-        'Sergeant First Class': {
-            ranktitle: 'Current rank: Sergeant First Class',
-        },
-        'Lieutenant': {
-            ranktitle: 'Current rank: Lieutenant',
-        },
-        'Captain': {
-            ranktitle: 'Current rank: Captain',
-        },
-        'Chief': {
-            ranktitle: 'Current rank: Chief',
-        }
+		'SWAT - Accepted': {
+			row1: '**SWAT - ACCEPTED**',
+			row2: '',
+			row3: '@',
+			row4: '',
+			row5: '',
+		},
+		'SWAT - On Hold': {
+			row1: '**SWAT - ON HOLD**',
+			row2: '',
+			row3: '@',
+			row4: '',
+			row5: '',
+		},
+		'SWAT - Declined': {
+			row1: '**SWAT - DECLINED**',
+			row2: '',
+			row3: '@',
+			row4: '',
+			row5: '',
+		},
+		'SASP Application - Accepted': {
+			row1: '**ACCEPTED**',
+			row2: '',
+			row3: '',
+			row4: '',
+			row5: '',
+		},
+		'SASP Application - Declined': {
+			row1: '**DECLINED**',
+			row2: '',
+			row3: '',
+			row4: '',
+			row5: '',
+		}
 	}
-	let currentrank = ranks.options[ranks.selectedIndex].text;
-	buffer.push(rankInfo[currentrank].ranktitle);
-
-    let hours = document.getElementById('hoursread').value;
-	let rankmoney = document.getElementById('pdrank').value;
-    let moneymade = (12 * hours * rankmoney);
-
-    buffer.push(`Money made: $${moneymade}`);
+	let currentmsg = messages.options[messages.selectedIndex].text;
+	buffer.push(msgInfo[currentmsg].row1);
+	buffer.push(msgInfo[currentmsg].row2);
+	buffer.push(msgInfo[currentmsg].row3);
+	buffer.push(msgInfo[currentmsg].row4);
+	buffer.push(msgInfo[currentmsg].row5);
+	buffer.push(msgInfo[currentmsg].row6);
 
 	let curDarkmode = document.getElementById('darkmode').checked;
 	if (curDarkmode) {
