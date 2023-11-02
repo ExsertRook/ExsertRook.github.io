@@ -25,25 +25,36 @@
 		<div class="form-group">
             <label style="font-size: 22px;">Details:</label>
             Select Message Type:
-            <select id="pdrank">
+            <select id="messageType">
                 <option>Promotion</option>
+				<option>Cadet Promotion</option>
 				<option>Demotion</option>
-                <option>HEAT - Accepted</option>
-                <option>HEAT - On Hold</option>
-                <option>HEAT - Declined</option>
+				<option></option>
+                <option>FTP - Accepted</option>
+                <option>FTP - On Hold</option>
+                <option>FTP - Declined</option>
+				<option></option>
+				<option>SWAT - Accepted</option>
+                <option>SWAT - On Hold</option>
+                <option>SWAT - Declined</option>
+				<option></option>
                 <option>SASP Application - Accepted</option>
                 <option>SASP Application - Declined</option>
             </select>
         <div class="form-group">
-            Hours in Realtime (~1h in game = 5min Realtime):
-            <input type="number" min="0" id="hoursread" name="hoursread" placeholder="16">
+            <br />
+			New Rank (If Applicable):
+            <input type="text2" min="0" id="rank" placeholder="Senior Trooper">
+			<br />
+            New Callsign (If Applicable):
+            <input type="text" min="0" id="callsign" placeholder="ST-420">
         </div>
 	</div>
 	
-    <textarea class="wide" id="reportBody">Please Choose your rank within the SASP!</textarea>
+    <textarea class="wide" id="reportBody">Fill out the above!</textarea>
 	<!--<pre id="reportBody"></pre> -->
 
-	<script src="calculator.js"></script>
+	<script src="generator.js"></script>
 </body>
 
 </html>
