@@ -151,6 +151,17 @@ input[type="number"] {
     padding: 3px;
 }
 
+#reportBody2 {
+    height: calc(10vh - 55px);
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    white-space: pre-wrap;
+    width: calc(30%);
+    padding: 5px 10px;
+    color: white;
+    font-size: 110%;
+}
 
 label + .form-group.layer-2 {
     margin-top: 10px;

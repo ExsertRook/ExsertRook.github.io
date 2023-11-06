@@ -5,6 +5,39 @@ let officersInvolved = new Set();
 let alreadySpecifiedRobbery = false;
 let ROBBERY_STATE = 'JEWLERY';
 
+function reportTitle () {
+	const ind = "        ";
+	buffer = [];
+
+	let robbery = document.getElementById('robberytype').value;
+	let robberyString = '';
+	if (robbery.trim() === 'Fleeca Bank') {
+		document.getElementById('whatStore').style.display = 'none';
+		document.getElementById('whatFleeca').style.display = 'block';
+		let specific = document.getElementById('specificBank').value;
+		robberyString = `${specific} ${robbery}`;
+		ROBBERY_STATE = 'FLEECA';
+	}
+	if (robbery.trim() === '24/7 Store') {
+		document.getElementById('whatFleeca').style.display = 'none';
+		document.getElementById('whatStore').style.display = 'block';
+		let specific = document.getElementById('specificStore').value;
+		robberyString = `${specific} ${robbery}`;
+		ROBBERY_STATE = '24/7';
+	} 
+	if (robbery.trim() === 'Jewelry Store') {
+		document.getElementById('whatFleeca').style.display = 'none';
+		document.getElementById('whatStore').style.display = 'none';
+		robberyString = robbery;
+		ROBBERY_STATE = 'JEWLERY';
+	}
+
+	let vehicle = document.getElementById('vehicledesc').value;
+	buffer.push(`10-90 | ${robberyString} | ${vehicle} `);
+
+	return document.getElementById('reportBody2').innerHTML = buffer.join("\n");
+}
+
 function report() {
 	let callsign = document.getElementById('yourself').value.trim();
 	if (callsign) {
@@ -357,6 +390,15 @@ checkboxes.forEach(i => i.addEventListener('click', report, false));
 
 let selectOptions = document.querySelectorAll('select');
 selectOptions.forEach(i => i.addEventListener('click', report, false));
+
+let inputs2 = document.querySelectorAll('input[type="text"], input[type="text2"], input[type="number"], textarea');
+inputs.forEach(i => i.addEventListener('keyup', reportTitle, false));
+
+let checkboxes2 = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
+checkboxes.forEach(i => i.addEventListener('click', reportTitle, false));
+
+let selectOptions2 = document.querySelectorAll('select');
+selectOptions.forEach(i => i.addEventListener('click', reportTitle, false));
 
 function loadName() {
 	let callsign = '';
