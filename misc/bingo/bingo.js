@@ -123,6 +123,7 @@ const cells = [
 	"FIB on duty",
 	"SWAT on duty",
 	"BCSO on duty",
+	"Parking Enforcement on duty",
 	"More BCSO on duty than SASP",
 	"Chase a Red colored car",
 	"Chase a Blue colored car",
