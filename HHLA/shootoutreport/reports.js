@@ -40,6 +40,9 @@ function report() {
 		'10-11': {
 			text: 'The whole shootout that has occured, originated from a 10-11 (Traffic Stop).',
 		},
+		'10-32 Calls': {
+			text: 'The whole shootout that has occured, originated from a 10-32 call.',
+		},
 		'Shots Fired Calls': {
 			text: 'The whole shootout that has occured, originated from 10-71s (Shots Fired Calls).',
 		},
