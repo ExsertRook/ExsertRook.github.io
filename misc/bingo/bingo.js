@@ -121,6 +121,7 @@ const cells = [
 	"Someone didnt hold their radio down long enough",
 	"Sucher cuts off mid sentence",
 	"FIB on duty",
+	"Detectives on duty",
 	"SWAT on duty",
 	"BCSO on duty",
 	"Parking Enforcement on duty",
