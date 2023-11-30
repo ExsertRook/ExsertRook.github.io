@@ -349,11 +349,13 @@ function report() {
 		},
 		'Suspects declared Code Red': {
 			text: 'The chase lasted for a bit of time until the suspect(s) had done something that made us declared them code red. Eventually the suspect(s) within the vehicle were incapacitated and stopped. We then cleared the scene and secured the suspects to place them under police custody.',
+		},
+		'Suspects Initiated a Shootout': {
+			text: 'The chase lasted for some time until the suspect(s) initiated a shootout. Eventually they were slammed and placed into police custody.'
 		}
 	};
 	let chase = chaseSelected.options[chaseSelected.selectedIndex].text;
 	buffer.push(chaseInformation[chase].text);
-	buffer.push('');
 
 	let processed = document.getElementById('processedat').value;
 	let medneedsus = document.getElementById('medneedsus').value;
