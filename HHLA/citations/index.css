@@ -80,6 +80,7 @@ body {
 
 label {
     font-weight: 600;
+    font-size: 20px;
 }
 label.inline {
     display: inline-block !important;
