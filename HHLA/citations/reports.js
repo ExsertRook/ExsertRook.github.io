@@ -25,7 +25,7 @@ function report() {
 	buffer.push(`Location: ${location}`);
 	buffer.push(`Reason: ${reason}`);
 	buffer.push('');
-	buffer.push(`Fine Amount: $${fineAmount}`);
+	buffer.push(`Fine Amount: ${fineAmount}`);
 	buffer.push(`Fine Status: ${fineStatus}`);
 	buffer.push(``);
 	buffer.push(`Recipient: ${recipient}`);
