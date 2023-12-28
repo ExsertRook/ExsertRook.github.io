@@ -2,7 +2,7 @@
 
 let buffer = [];
 
-function reportTitle () {
+function price () {
 	const ind = "        ";
 	buffer = [];
 
@@ -94,38 +94,7 @@ function report() {
 	buffer.push("[REPORTING OFFICER]:");
 	buffer.push(callsign);
 	buffer.push('');
-	
-	let incident = document.getElementById('incidentnr').value;
-	if (incident) buffer.push(`Incident Report Nr: ${incident}`);
-	if (incident) buffer.push('');
-	
-	if (holdtype) buffer.push(`Hold Class Type: ${holdtype}`);
-	if (holdtype) buffer.push('');
 
-	if (holdreason) buffer.push(`Hold Reason: ${holdreason}`);
-	if (holdreason) buffer.push('');
-
-	if (holdtime) buffer.push(`Hold Time: ${holdtime}`);
-	if (holdtime) buffer.push('');
-
-	let vin = document.getElementById('vin').value;
-	if (vin) buffer.push(`Vehicle VIN Nr: ${vin}`);
-	if (vin) buffer.push('');
-	
-	let plate = document.getElementById('plate').value;
-	if (plate) buffer.push(`Vehicle Plate Nr: ${plate}`);
-	if (plate) buffer.push('');
-	
-	let owner = document.getElementById('owner').value;
-	if (owner) buffer.push(`Vehicle Owner: ${owner}`);
-	if (owner) buffer.push('');
-
-	let vehicle = document.getElementById('vehiclename').value;
-	if (vehicle) buffer.push(`Vehicle Model/Name: ${vehicle}`);
-	if (owner) buffer.push('');
-
-	let color = document.getElementById('vehiclecolor').value;
-	if (color) buffer.push(`Vehicle Color: ${color}`);
 //////////////////////////////////////////////////////////////////
 
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");

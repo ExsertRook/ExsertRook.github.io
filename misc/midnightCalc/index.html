@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Vehicle Hold Report Generator</title>
+	<title>Midnight Tunershop Calculator</title>
 	<link rel="shortcut icon" href="impound.png" />
 	<link rel="stylesheet" href="index.css" />
 	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
@@ -12,73 +12,6 @@
 
 <body>
 	<div id="form">
-		<datalist id="roster">
-			<option value="[X-100] Thomas Sucher">Chief of Police</option>
-			<option value="[X-101] Ivy Snow">Assistant Chief</option>
-			<option value="[X-102] Jiggle Billy">Deputy Chief</option>
-			<option value="[M-104] Johnny Houseman">Major</option>
-			<option value="[A-106] Richeard Paul">Captain</option>
-			<option value="[A-107] Kendal HickleBottom">Captain</option>
-			<option value="[LT-109] Luka Tim">Lieutenant</option>
-			<option value="[LT-110] Nate Flake">Lieutenant</option>
-			<option value="[LT-112] Tanner Pierson">Lieutenant</option>
-			<option value="[LT-113] Annabelle Taylor">Lieutenant</option>
-			<option value="[SF-201] Karl Bum">Sergeant First Class</option>
-			<option value="[SF-202] Kristy Summerfield">Sergeant First Class</option>
-			<option value="[S-206] Jaiden Houseman">Sergeant</option>
-			<option value="[S-207] Stan Cooper">Sergeant</option>
-			<option value="[S-208] Nigel Andrews">Sergeant</option>
-			<option value="[S-209] Johnny Walker">Sergeant</option>
-			<option value="[SC-301] Hugo Armando">Senior Corporal</option>
-			<option value="[SC-305] Chester Hamcheck">Senior Corporal</option>
-			<option value="[CO-309] Dante Pinder">Corporal</option>
-			<option value="[CO-310] Timothy Cagle">Corporal</option>
-			<option value="[CO-311] Jimi Hendrix">Corporal</option>
-			<option value="[CO-313] Emily Ubermacht">Corporal</option>
-			<option value="[ST-401] Jason Teapot">Senior Trooper</option>
-			<option value="[ST-403] Sal Deans">Senior Trooper</option>
-			<option value="[ST-404] Tate Degirth">Senior Trooper</option>
-			<option value="[ST-405] Tommy Phoenix">Senior Trooper</option>
-			<option value="[ST-408] Mack Hunter">Senior Trooper</option>
-			<option value="[ST-412] Bryn Rose">Senior Trooper</option>
-			<option value="[T-501] Jim Bop">Trooper</option>
-			<option value="[T-502] Pablo Ching">Trooper</option>
-			<option value="[T-503] Ernesto Cashman">Trooper</option>
-			<option value="[T-504] John Tea">Trooper</option>
-			<option value="[T-505] Michael Clarkson">Trooper</option>
-			<option value="[T-506] Sam Pierson">Trooper</option>
-			<option value="[T-507] Jake Pierson">Trooper</option>
-			<option value="[T-508] Cayden Pierson">Trooper</option>
-			<option value="[T-510] Jessyca Cortez">Trooper</option>
-			<option value="[T-511] Robbie Smith">Trooper</option>
-			<option value="[T-512] Jim Dweller">Trooper</option>
-			<option value="[T-513] Harry Knicklebottom">Trooper</option>
-			<option value="[T-514] Jake Hall">Trooper</option>
-			<option value="[T-518] Blake Wazowsky">Trooper</option>
-			<option value="[PT-601] Angel Torres">Probationary Trooper</option>
-			<option value="[PT-602] Miklo Santana">Probationary Trooper</option>
-			<option value="[PT-603] Tyler Young">Probationary Trooper</option>
-			<option value="[PT-604] Dan Mercer">Probationary Trooper</option>
-			<option value="[PT-607] Carl Smither">Probationary Trooper</option>
-			<option value="[PT-610] Ben Jackson">Probationary Trooper</option>
-			<option value="[TA-701] Christian Duvall">Cadet</option>
-			<option value="[TA-703] Jack Cain">Cadet</option>
-			<option value="[TA-704] Billy Baker">Cadet</option>
-			<option value="[TA-712] Alex Ishikawa">Cadet</option>
-			<option value="[200] Kevin Johnson">BCSO</option>
-			<option value="[209] Hank Voight">BCSO</option>
-			<option value="[210] Jager Houseman">BCSO</option>
-			<option value="[220] Jose Klop">BCSO</option>
-			<option value="[302] Ryland Goude">BCSO</option>
-			<option value="[401] Jesse Earp">BCSO</option>
-			<option value="[506] Stormii Edwards">BCSO</option>
-			<option value="[513] Dale Gribblee">BCSO</option>
-			<option value="[516] Jameson Johnson">BCSO</option>
-			<option value="[601] Jon Sins">BCSO</option>
-			<option value="[602] Jamal William">BCSO</option>
-			<option value="[606] John McAdams">BCSO</option>
-			<option value="[FIB] Johnny Walker">FIB</option>
-		</datalist>
 		<div class="form-group">
 			<style>
     			body {
@@ -99,115 +32,21 @@
 
     		</style>
         
-			<span style="font-weight: bold; font-size: 24px; text-align: center;">Vehicle Hold Report Generator</span>
+			<span style="font-weight: bold; font-size: 24px; text-align: center;">Midnight Tunershop Calculator</span>
 			<br />
-			<label class="inline" title="(You only have to do this once - it will cache)" style="text-decoration: none;">Your callsign & name:</label>
-			<input type="text" autocomplete="on" list="roster" id="yourself" name="yourself" placeholder="[X-100] Thomas Sucher" /><br />
-			<div class="popup" id="copyTitle">
-				<div class="btn" title="Copy the generated title to your clipboard">Copy The Title</div> <span class="popuptext" id="myPopup">Title copied!</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			</div>
+			<label class="inline" title="(You only have to do this once - it will cache)" style="text-decoration: none;">Your name:</label>
+			<input type="text" autocomplete="on" list="roster" id="yourself" name="yourself" placeholder="Connor Jenkins" /><br />
 			<div class="popup" id="copyReport">
-				<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
+				<div class="btn" title="Copy the generated report to your clipboard">Copy The Reciept</div> <span class="popuptext" id="myPopup">Report copied!</span>
 			</div>
-			
-		</div>
-        
+		
 		<div class="form-group">
-			<label>Incident Report Nr:</label>
-			<input type="text2" id="incidentnr" name="incidentnr" placeholder="12345">
 		</div>
 		<div class="form-group">
-			<label>Hold Reason:</label>
-			<select id="holdreason">
-				<option>Involuntary / Voluntary Manslaughter</option>
-				<option>First / Second Degree Murder</option>
-				<option>Terrorism</option>
-				<option></option>
-				<option>2nd Felony Evasion of the day</option>
-				<option selected>Robbery of a Stockade, Bank, J-Store</option>
-				<option>Kidnapping</option>
-				<option>Shooting, or commission of a crime associated</option>
-				<option>Trafficking of Class 2/3 Weapons</option>
-				<option></option>
-				<option>Reckless Driving while Street Racing</option>
-				<option>Robbery of a Store</option>
-				<option>Armed Robbery of a Person</option>
-				<option>Drug Trafficking Class A/B</option>
-				<option></option>
-				<option>Driving Under the Influence</option>
-				<option>1st Felony Evasion of the day</option>
-			</select>
+			<label></label>
 		</div>
-		<div>
-			<label>Vehicle Information:</label><br />
-			VIN Number:<br />
-			<input type="text" id="vin" name="vin" placeholder="12AB34CDE567890"><br />
-			Plate Number:<br />
-			<input type="text" id="plate" name="plate" placeholder="12ABC345"><br />
-			Registered Owner:<br />
-			<input type="text" id="owner" name="owner" placeholder="Firstname Lastname"><br />
-			Model / Name:<br />
-			<input type="text" id="vehiclename" name="vehiclename" placeholder="Mustang"><br />
-			Color:<br />
-			<input type="text" id="vehiclecolor" name="vehiclecolor" placeholder="Black"><br />
-	</div>
-    <table class="center" style="width:120%" >
-        <thead>
-            <tr>
-                <th colspan="2" style="font-size: 26px;">Class A Hold &nbsp - &nbsp 9 Hours (540 Minutes)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Involuntary / Voluntary Manslaughter</td></tr>
-                <td>First / Second Degree Murder</td></tr>
-                <td>Terrorism</td></tr>
-				<td>&nbsp;</td>
-            </tr>
-        </tbody>
-        <thead>
-            <tr>
-                <th colspan="2" style="font-size: 26px;">Class B Hold &nbsp - &nbsp 6 Hours (360 Minutes)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>2nd Felony Evasion of the day</td></tr>
-                <td>Robbery of an Armored Truck, Bank, or Jewelry</td></tr>
-                <td>Kidnapping</td></tr>
-                <td>Shooting, or the commission of a crime associated with the use of a firearm</td></tr>
-                <td>Trafficking of Class 2/3 weapons</td></tr>
-				<td>&nbsp;</td>
-            </tr>
-        </tbody>
-        <thead>
-            <tr>
-                <th colspan="2" style="font-size: 26px;">Class C Hold &nbsp - &nbsp 4 Hours (240 Minutes)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Reckless Driving whilst Street Racing</td></tr>
-                <td>Robbery of a Store</td></tr>
-                <td>Armed Robbery of a Person</td></tr>
-                <td>Drug Trafficking Class A/B</td></tr>
-				<td>&nbsp;</td>
-            </tr>
-        </tbody>
-        <thead>
-            <tr>
-                <th colspan="2" style="font-size: 26px;">Class D Hold &nbsp - &nbsp 2 Hours (120 Minutes)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Driving Under the Influence</td></tr>
-                <td>1st Felony Evasion of the day</td></tr>
-            </tr>
-        </tbody>
-    </table>
-	<textarea class="wide" id="reportBody2">The Title of the MDT Report will generate here</textarea>
-	<textarea class="wide" id="reportBody">The Report will automatically generate as you fill out the form to the left.&#10;&#10;(Note: the generated report will be editable, but once you edit it, you can no longer update it based on the form)&#10;&#10;If you have any questions or concerns, feel free to fill the feedback form on the main website :)&#10;&#10;Also if you want to show love, make sure to thank Sucher :)</textarea>
+	<textarea class="wide" id="reportBody2">The Price will appear here</textarea>
+	<textarea class="wide" id="reportBody">The Reciept will generate here</textarea>
 	<!--<pre id="reportBody">[report will automatically generate as you fill out the form to the left]</pre> -->
 	
 	<script src="reports.js"></script>
