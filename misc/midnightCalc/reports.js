@@ -91,10 +91,6 @@ function report() {
 		holdtime = "180 Minutes"
 	}
 
-	buffer.push("[REPORTING OFFICER]:");
-	buffer.push(callsign);
-	buffer.push('');
-
 //////////////////////////////////////////////////////////////////
 
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
