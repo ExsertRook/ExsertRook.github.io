@@ -12,7 +12,7 @@ html, body {
     margin: auto;
     line-height: 22.5px;
     margin-top: 140px;
-    background: url('underwater.png') no-repeat
+    background: url('razer.png') no-repeat
         center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -93,6 +93,15 @@ textarea, input[type="text"], input[type="number"], input[type="emerald"] {
     font-size: 18px;
     background-color: #292a2c;
     color: #f3ecec;
+}
+
+select {
+	background-color: #242424;
+	color:#f9f9f9;
+    border: 2px solid rgb(80, 80, 80);
+    border-radius: 10px;
+    font-family: 'Nunito';
+    text-align: center;
 }
 
 .input[type="number"]::-webkit-scrollbar{
