@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Mechanic Price Calculator</title>
+	<link rel="shortcut icon" href="hammer.png" />
+	<link rel="stylesheet" href="style.css" />
+	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> </head>
+
+<body>
+	<div id="form">
+		<div class="form-group">
+			<style>
+    			body {
+        		    font-family: 'Nunito';font-size: 18px;
+    			}
+    			</style>
+			<h1><span style="font-weight: bold; font-size: 40px; text-align: center; color: rgb(255, 255, 255)">Materials Price Calculator</span></h1>
+			<br />
+		</div>
+		<div class="container">
+			<label>How Much Profit?</label><br />
+			<select id="percentage">
+				<option value="0.05">5%</option>
+				<option value="0.1">10%</option>
+				<option value="0.15">15%</option>
+				<option value="0.2">20%</option>
+				<option value="0.25">25%</option>
+				<option value="0.3">30%</option>
+			</select><br /><br />
+			<label style="font-size: 22px;">Details (How Many?):</label><br />
+            Aluminum:
+            <input type="number" min="0" id="aluminum" name="aluminum" placeholder="6"><br />
+			Glass:
+            <input type="number" min="0" id="glass" name="glass" placeholder="3"><br />
+			Rubber:
+            <input type="number" min="0" id="rubber" name="rubber" placeholder="7"><br />
+			Scrap Metal:
+            <input type="number" min="0" id="scrap" name="scrap" placeholder="9"><br />
+			Steel:
+            <input type="number" min="0" id="steel" name="steel" placeholder="4"><br />
+			Motor Oil:
+            <input type="number" min="0" id="oil" name="oil" placeholder="1"><br /><br />
+	</div>
+	
+    <textarea class="wide" id="reportBody">Please Choose the amount of materials that you have!</textarea>
+
+	<script src="calculator.js"></script>
+</body>
+
+</html>
