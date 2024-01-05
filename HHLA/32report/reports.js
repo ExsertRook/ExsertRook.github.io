@@ -26,14 +26,26 @@ function report() {
 	let fleeattemptSelected = document.getElementById('fleeattempt');
 	let fleeattemptInformation = {
 		'Yes': {
-			text: 'After we made contact with the individual, they attempted to flee. Eventually the suspect was apprehended and placed under police custody.',
+			text: 'After we made contact with the individual, they attempted to flee.',
 		},
 		'No': {
-			text: 'After we made contact with the individual, they did not attempt to flee. The suspect was apprehended and placed under police custody.',
+			text: 'After we made contact with the individual, they did not attempt to flee.',
 		}
 	};
 	let fleeattempt = fleeattemptSelected.options[fleeattemptSelected.selectedIndex].text;
 	buffer.push(fleeattemptInformation[fleeattempt].text);
+
+	let didTheyShootSelected = document.getElementById('didtheyshoot');
+	let didTheyShootInfo = {
+		'Yes': {
+			text: 'After a bit of time the suspect(s) decided to open fire on officers. Eventually all suspects were apprehended.',
+		},
+		'No': {
+			text: 'After a bit of time, all the suspect(s) were eventually apprehended.',
+		}
+	};
+	let didtheyshoot = didTheyShootSelected.options[didTheyShootSelected.selectedIndex].text;
+	buffer.push(didTheyShootInfo[didtheyshoot].text);
 	buffer.push('');
 
 	buffer.push(`[VEHICLE INFORMATION]:`);

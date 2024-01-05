@@ -116,6 +116,7 @@ const cells = [
 	"Complete 1 daily task",
 	"They take a massive jump",
 	"10-32 / 10-66 Calls at Cayo Perico",
+	"Suspect flies mid arrest",
 ];
 	
 function shuffle(array) {
