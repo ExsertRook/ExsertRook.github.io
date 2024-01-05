@@ -53,6 +53,7 @@ function report() {
 
 	let scenecommand = document.getElementById('scenecommand').value;
 	let negotiator = document.getElementById('negotiator').value;
+	let pictures = document.getElementById('pictures').value;
 	let hostagestayer = document.getElementById('hostagestayer').value;
 // Pull Drivers List
 	let primary = document.getElementById('primary').value;
@@ -73,6 +74,7 @@ function report() {
 	if (scenecommand || negotiator || hostagestayer) buffer.push(`[SCENE ASSIGNMENT]:`);
 	if (scenecommand) buffer.push(`Scene Command: ${scenecommand}`);
 	if (negotiator) buffer.push(`Negotiator: ${negotiator}`);
+	if (pictures) buffer.push(`Pictures: ${pictures}`);
 	if (hostagestayer) buffer.push(`Stayed Back For Hostage: ${hostagestayer}`);
 	
 	buffer.push('');
