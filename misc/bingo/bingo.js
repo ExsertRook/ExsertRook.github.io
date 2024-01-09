@@ -89,7 +89,7 @@ const cells = [
 	"Take part in Bike Patrol",
 	"Visit Burgershot (Burgershit)",
 	"Trespassing at MRPD",
-	"Tell Sucher the word Lasagne while on duty",
+	"Tell Sucher the word Hippopotamus while on duty",
 	"Sucher on duty",
 	"Houseman on duty",
 	"Get told to BACK OFF!",
@@ -118,6 +118,7 @@ const cells = [
 	"10-32 / 10-66 Calls at Cayo Perico",
 	"Suspect flies mid arrest",
 	"Gang war",
+	"Kendal flying Air-1",
 ];
 	
 function shuffle(array) {
