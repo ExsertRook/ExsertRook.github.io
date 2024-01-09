@@ -19,11 +19,13 @@ function report() {
 
 	let scenecommand = document.getElementById('scenecommand').value;
 	let negotiator = document.getElementById('negotiator').value;
+	let pictures = document.getElementById('pictures').value;
     buffer.push('');
 	
 	if (scenecommand || negotiator) buffer.push(`[SCENE ASSIGNMENT]:`);
 	if (scenecommand) buffer.push(`Scene Command: ${scenecommand}`);
 	if (negotiator) buffer.push(`Negotiator: ${negotiator}`);
+	if (pictures) buffer.push(`Took Pictures: ${pictures}`);
     if (scenecommand || negotiator) buffer.push('');
 
 	let robbery = document.getElementById('robberytype').value;
