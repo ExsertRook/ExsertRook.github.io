@@ -365,10 +365,12 @@ function report() {
 	let hospitalname = document.getElementById('hospitalname').value;
 	if (document.getElementById('cend').checked) {
 		if (document.getElementById('medneed').checked) {
+			buffer.push('');
 			buffer.push(`[MEDICAL ATTENTION]:`);
 			buffer.push(`After we apprehended the suspects, they were in need of medical attention. We brought the injured people (Suspects Total: ${medneedsus} | PD Total: ${medneedpd}) to ${hospitalname}.`);
 			buffer.push(`Once everyone got medical treatment, we started heading back towards the PD.`)
 		} else {
+			buffer.push('');
 			buffer.push(`[MEDICAL ATTENTION]:`);
 			buffer.push(`Due to no suspects or officers having any major injuries, everyone waved their rights to medical attention.`);
 		}
