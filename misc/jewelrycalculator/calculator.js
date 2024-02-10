@@ -13,16 +13,16 @@ function report() {
 	let diamonds = document.getElementById('diamonds').value;
 	/// Silverwatches Average Values
 	let sw1 = (308);
-	let sw2 = (0);
-	let sw3 = (0);
-	let sw4 = (0);
-	let sw5 = (0);
+	let sw2 = (328);
+	let sw3 = (318);
+	let sw4 = (308);
+	let sw5 = (308);
 	/// Goldwatches Average Values
 	let gw1 = (1469);
 	let gw2 = (1399);
 	let gw3 = (1470);
-	let gw4 = (0);
-	let gw5 = (0);
+	let gw4 = (1399);
+	let gw5 = (1399);
 	/// Necklaces Average Values
 	let ns1 = (537);
 	let ns2 = (598);
@@ -31,11 +31,11 @@ function report() {
 	let ns5 = (600);
 	let ns6 = (529);
 	/// Diamonds Average Values
-	let dm1 = (0);
-	let dm2 = (0);
-	let dm3 = (0);
-	let dm4 = (0);
-	let dm5 = (0);
+	let dm1 = (4500);
+	let dm2 = (5050);
+	let dm3 = (4700);
+	let dm4 = (4690);
+	let dm5 = (4800);
 	/// Calculations
 	let silverwatchaverage = ((sw1 + sw2 + sw3 + sw4 + sw5) / 5);
 	let goldwatchaverage = ((gw1 + gw2 + gw3 + gw4 + gw5) / 5);
