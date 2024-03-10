@@ -11,7 +11,7 @@ function rep(elem, quantity) {
 }
 
 const Menu = {
-	"Main Charges:": {
+	"Assault:": {
 		header: true,
 	},
 	"Aggravated Assault and Battery": {
@@ -42,16 +42,33 @@ const Menu = {
 			...rep("Steel", 48),
 		],
 	},
-	"Evading a Police Officer": {
+    "Evading/Resisting:": {
+		header: true,
+	},
+	"Evading a Peace Officer": {
 		noIcon: true,
 		price: 350,
 		items: [
 			...rep("Steel", 15),
 		],
 	},
-	"Felony Evading a Police Officer": {
+	"Felony Evading a Peace Officer": {
 		noIcon: true,
 		price: 700,
+		items: [
+			...rep("Steel", 30),
+		],
+	},
+    "Resisting a Peace Officer": {
+		noIcon: true,
+		price: 600,
+		items: [
+			...rep("Steel", 20),
+		],
+	},
+	"Felony Resisting a Peace Officer": {
+		noIcon: true,
+		price: 1000,
 		items: [
 			...rep("Steel", 30),
 		],
@@ -75,102 +92,106 @@ const Menu = {
 	},
     "Armed Robbery of a Jewelry Store": {
 		noIcon: true,
-		price: 1500,
+		price: 5000,
 		items: [
-			...rep("Aluminium", 10),
-			...rep("Plastic", 10),
-			...rep("Rubber", 10),
+			...rep("Steel", 150),
 		],
 	},
-    "Armed Robbery of a Store": {
+    "Armed Robbery of a Stockade": {
 		noIcon: true,
-		price: 1500,
+		price: 4100,
 		items: [
-			...rep("Aluminium", 10),
-			...rep("Plastic", 10),
-			...rep("Rubber", 10),
+			...rep("Steel", 120),
 		],
 	},
-	"Lockpicks:": {
+	"Possessions:": {
 		header: true,
 	},
-	"Adv Lock Pick": {
+	"Possession of Unregistered Firearm": {
 		noIcon: true,
-		price: 3000,
+		price: 500,
 		items: [
-			...rep("Aluminium", 50),
-			...rep("Plastic", 50),
-			...rep("Rubber", 50),
+			...rep("Steel", 10),
 		],
 	},
-	"Lockpick Set": {
+	"Possession of Class 2 Weapon": {
 		noIcon: true,
-		price: 300,
+		price: 600,
 		items: [
-			...rep("Aluminium", 5),
-			...rep("Plastic", 3),
-			...rep("Rubber", 3),
+			...rep("Steel", 30),
 		],
 	},
-	"Misc:": {
+    "Possession of Class 3 Weapon": {
+		noIcon: true,
+		price: 1000,
+		items: [
+			...rep("Steel", 50),
+		],
+	},
+    "Possession of Contraband": {
+		noIcon: true,
+		price: 150,
+		items: [
+			...rep("Steel", 10),
+		],
+	},
+    "Possession of Contraband in Crime": {
+		noIcon: true,
+		price: 150,
+		items: [
+			...rep("Steel", 10),
+		],
+	},
+	"Drug Charges:": {
 		header: true,
 	},
-	"Thermite Charge": {
+	"Possession of a Class B Substance": {
 		noIcon: true,
-		price: 8000,
+		price: 200,
 		items: [
-			...rep("Aluminium", 75),
-			...rep("Copper", 75),
-			...rep("Rubber", 50),
-			...rep("Plastic", 75),
-			...rep("Electronics", 100),
+			...rep("Steel", 5),
 		],
 	},
-	"Molly": {
+	"Intention to Sell a Class B Substance": {
 		noIcon: true,
-		price: 3000,
+		price: 1400,
 		items: [
-			...rep("Aluminium", 75),
-			...rep("Whiskey", 3),
+			...rep("Steel", 30),
 		],
 	},
-	"Sledge Hammer": {
-		noIcon: true,
-		price: 4000,
-		items: [
-			...rep("Steel", 75),
-			...rep("Scrap Metal", 75),
-		],
-	},
-	"Knuckle": {
-		noIcon: true,
-		price: 4000,
-		items: [
-			...rep("Aluminium", 125),
-			...rep("Scrap Metal", 10),
-		],
-	},
-	"Dagger": {
-		noIcon: true,
-		price: 4000,
-		items: [
-			...rep("Aluminium", 125),
-			...rep("Scrap Metal", 10),
-		],
-	},
-	"Standard Radio": {
+    "Drug Trafficking of a Class B Substance": {
 		noIcon: true,
 		price: 2000,
 		items: [
-			...rep("Electronics", 50),
+			...rep("Steel", 50),
 		],
 	},
-	"Hand Cuffs": {
+    "Possession of a Class A Substance": {
 		noIcon: true,
-		price: 10000,
-		lastItem: true,
+		price: 150,
 		items: [
-			...rep("Scrap Metal", 500),
+			...rep("Steel", 10),
+		],
+	},
+	"Intention to Sell a Class A Substance": {
+		noIcon: true,
+		price: 150,
+		items: [
+			...rep("Steel", 10),
+		],
+	},
+    "Drug Trafficking of a Class A Substance": {
+		noIcon: true,
+		price: 150,
+		items: [
+			...rep("Steel", 10),
+		],
+	},
+    "Sale of a Controlled Substance": {
+		noIcon: true,
+		price: 150,
+		items: [
+			...rep("Steel", 10),
 		],
 	},
 };
