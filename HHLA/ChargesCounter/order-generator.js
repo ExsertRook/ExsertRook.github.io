@@ -42,6 +42,51 @@ const Menu = {
 			...rep("Steel", 48),
 		],
 	},
+    "Attempted Murder": {
+		noIcon: true,
+		price: 2500,
+		items: [
+			...rep("Steel", 120),
+		],
+	},
+    "Attempted Murder (PP)": {
+		noIcon: true,
+		price: 3000,
+		items: [
+			...rep("Steel", 144),
+		],
+	},
+    "Robberies:": {
+		header: true,
+	},
+	"Armed Robbery of a Shop": {
+		noIcon: true,
+		price: 1500,
+		items: [
+			...rep("Steel", 40),
+		],
+	},
+	"Armed Robbery of a Bank": {
+		noIcon: true,
+		price: 3200,
+		items: [
+			...rep("Steel", 90),
+		],
+	},
+    "Armed Robbery of a Jewelry Store": {
+		noIcon: true,
+		price: 5000,
+		items: [
+			...rep("Steel", 150),
+		],
+	},
+    "Armed Robbery of a Stockade": {
+		noIcon: true,
+		price: 4100,
+		items: [
+			...rep("Steel", 120),
+		],
+	},
     "Evading/Resisting:": {
 		header: true,
 	},
@@ -73,38 +118,7 @@ const Menu = {
 			...rep("Steel", 30),
 		],
 	},
-	"Robberies:": {
-		header: true,
-	},
-	"Armed Robbery of a Shop": {
-		noIcon: true,
-		price: 1500,
-		items: [
-			...rep("Steel", 40),
-		],
-	},
-	"Armed Robbery of a Bank": {
-		noIcon: true,
-		price: 3200,
-		items: [
-			...rep("Steel", 90),
-		],
-	},
-    "Armed Robbery of a Jewelry Store": {
-		noIcon: true,
-		price: 5000,
-		items: [
-			...rep("Steel", 150),
-		],
-	},
-    "Armed Robbery of a Stockade": {
-		noIcon: true,
-		price: 4100,
-		items: [
-			...rep("Steel", 120),
-		],
-	},
-	"Possessions:": {
+    "Weapons:": {
 		header: true,
 	},
 	"Possession of Unregistered Firearm": {
@@ -127,6 +141,134 @@ const Menu = {
 		items: [
 			...rep("Steel", 50),
 		],
+	},
+    "Trafficking of Class 1 Weapon": {
+		noIcon: true,
+		price: 5000,
+		items: [
+			...rep("Steel", 100),
+		],
+	},
+    "Trafficking of Class 2 Weapon": {
+		noIcon: true,
+		price: 7000,
+		items: [
+			...rep("Steel", 150),
+		],
+	},
+    "Trafficking of Class 3 Weapon": {
+		noIcon: true,
+		price: 10000,
+		items: [
+			...rep("Steel", 200),
+		],
+	},
+    "Carrying a Firearm Without a License": {
+		noIcon: true,
+		price: 400,
+		items: [
+			...rep("Steel", 25),
+		],
+	},
+    "Brandishing a Weapon": {
+		noIcon: true,
+		price: 350,
+		items: [
+			...rep("Steel", 20),
+		],
+	},
+    "Weapons Discharge Violation": {
+		noIcon: true,
+		price: 200,
+		items: [
+			...rep("Steel", 10),
+		],
+	},
+    "Felony Weapons Discharge Violation": {
+		noIcon: true,
+		price: 400,
+		items: [
+			...rep("Steel", 20),
+		],
+	},
+    "Crimes against person:": {
+		header: true,
+	},
+    "Criminal Threat": {
+		noIcon: true,
+		price: 500,
+		items: [
+			...rep("Steel", 15),
+		],
+	},
+    "Criminal Threat (PP)": {
+		noIcon: true,
+		price: 600,
+		items: [
+			...rep("Steel", 18),
+		],
+	},
+    "Torture": {
+		noIcon: true,
+		price: 2000,
+		items: [
+			...rep("Steel", 100),
+		],
+	},
+    "Kidnapping": {
+		noIcon: true,
+		price: 1200,
+		items: [
+			...rep("Steel", 70),
+		],
+	},
+    "Kidnapping (PP)": {
+		noIcon: true,
+		price: 1440,
+		items: [
+			...rep("Steel", 84),
+		],
+	},
+    "Crimes against Property:": {
+		header: true,
+	},
+    "Grand Theft Auto": {
+		noIcon: true,
+		price: 1000,
+		items: [
+			...rep("Steel", 30),
+		],
+	},
+    "Theft": {
+		noIcon: true,
+		price: 200,
+		items: [
+			...rep("Steel", 10),
+		],
+	},
+    "Grand Theft": {
+		noIcon: true,
+		price: 1000,
+		items: [
+			...rep("Steel", 15),
+		],
+	},
+    "Kidnapping": {
+		noIcon: true,
+		price: 1200,
+		items: [
+			...rep("Steel", 70),
+		],
+	},
+    "Kidnapping (PP)": {
+		noIcon: true,
+		price: 1440,
+		items: [
+			...rep("Steel", 84),
+		],
+	},
+    "Possessions:": {
+		header: true,
 	},
     "Possession of Contraband": {
 		noIcon: true,
@@ -168,30 +310,30 @@ const Menu = {
 	},
     "Possession of a Class A Substance": {
 		noIcon: true,
-		price: 150,
+		price: 500,
 		items: [
 			...rep("Steel", 10),
 		],
 	},
 	"Intention to Sell a Class A Substance": {
 		noIcon: true,
-		price: 150,
+		price: 2200,
 		items: [
-			...rep("Steel", 10),
+			...rep("Steel", 50),
 		],
 	},
     "Drug Trafficking of a Class A Substance": {
 		noIcon: true,
-		price: 150,
+		price: 4000,
 		items: [
-			...rep("Steel", 10),
+			...rep("Steel", 70),
 		],
 	},
     "Sale of a Controlled Substance": {
 		noIcon: true,
-		price: 150,
+		price: 400,
 		items: [
-			...rep("Steel", 10),
+			...rep("Steel", 20),
 		],
 	},
 };
