@@ -495,7 +495,6 @@ function report() {
 	buffer.push("");
 	buffer.push(`<strong>TOTAL MONEY:</strong> <span class="green">$${total}</span>`);
     buffer.push("");
-	buffer.push("");
 	buffer.push(`<strong>TOTAL TIME:</strong> <span class="blue">${totalItems} months</span>`);
 
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
