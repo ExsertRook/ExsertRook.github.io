@@ -87,6 +87,13 @@ const Menu = {
 			...rep("Steel", 120),
 		],
 	},
+    "Armed Robbery": {
+		noIcon: true,
+		price: 1500,
+		items: [
+			...rep("Steel", 70),
+		],
+	},
     "Evading/Resisting:": {
 		header: true,
 	},
@@ -253,18 +260,11 @@ const Menu = {
 			...rep("Steel", 15),
 		],
 	},
-    "Kidnapping": {
+    "Burglary": {
 		noIcon: true,
-		price: 1200,
+		price: 800,
 		items: [
-			...rep("Steel", 70),
-		],
-	},
-    "Kidnapping (PP)": {
-		noIcon: true,
-		price: 1440,
-		items: [
-			...rep("Steel", 84),
+			...rep("Steel", 30),
 		],
 	},
     "Possessions:": {
@@ -448,7 +448,7 @@ function getEmptyOrder() {
 	buffer.push("<strong>CHARGES:</strong>");
 	buffer.push("");
 	buffer.push("");
-	buffer.push(`<strong>TOTAL MONEY:</strong> <span class="green">$0</span>`);
+	buffer.push(`<strong>TOTAL FINE:</strong> <span class="green">$0</span>`);
 	document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }
 
@@ -493,7 +493,7 @@ function report() {
 	if (allItemsOrdered.length) buffer.push(allItemsOrdered.join("\n"));
 	buffer.push("");
 	buffer.push("");
-	buffer.push(`<strong>TOTAL MONEY:</strong> <span class="green">$${total}</span>`);
+	buffer.push(`<strong>TOTAL FINE:</strong> <span class="green">$${total}</span>`);
     buffer.push("");
 	buffer.push(`<strong>TOTAL TIME:</strong> <span class="blue">${totalItems} months</span>`);
 
