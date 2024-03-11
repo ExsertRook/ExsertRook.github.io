@@ -336,6 +336,58 @@ const Menu = {
 			...rep("Steel", 20),
 		],
 	},
+    "Vehicular Offenses:": {
+		header: true,
+	},
+    "Driving Without License": {
+		noIcon: true,
+		price: 300,
+		items: [
+			...rep("Steel", 0),
+		],
+	},
+    "Hit and Run": {
+		noIcon: true,
+		price: 750,
+		items: [
+			...rep("Steel", 25),
+		],
+	},
+    "Speeding": {
+		noIcon: true,
+		price: 300,
+		items: [
+			...rep("Steel", 0),
+		],
+	},
+    "Excessive Speeding": {
+		noIcon: true,
+		price: 600,
+		items: [
+			...rep("Steel", 30),
+		],
+	},
+    "Reckless Driving": {
+		noIcon: true,
+		price: 600,
+		items: [
+			...rep("Steel", 20),
+		],
+	},
+    "Driving Under the Influence": {
+		noIcon: true,
+		price: 400,
+		items: [
+			...rep("Steel", 10),
+		],
+	},
+    "Joyriding": {
+		noIcon: true,
+		price: 350,
+		items: [
+			...rep("Steel", 10),
+		],
+	},
 };
 
 const INDIVIDUAL_ITEMS = [
