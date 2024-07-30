@@ -72,13 +72,13 @@ function report() {
 	if (scenecommand || negotiator) buffer.push('');
 	
 	if (scenecommand || negotiator || hostagestayer) buffer.push(`[SCENE ASSIGNMENT]:`);
-	if (scenecommand) buffer.push(`Scene Command: ${scenecommand}`);
+	if (scenecommand) buffer.push(`Scene Commander: ${scenecommand}`);
 	if (negotiator) buffer.push(`Negotiator: ${negotiator}`);
 	if (pictures) buffer.push(`Pictures: ${pictures}`);
-	if (hostagestayer) buffer.push(`Stayed Back For Hostage: ${hostagestayer}`);
+	if (hostagestayer) buffer.push(`Hostage Taker: ${hostagestayer}`);
 	
 	buffer.push('');
-	buffer.push(`[INVOLVED IN PURSUIT]:`);
+	buffer.push(`[PURSUIT ORDER]:`);
 
 	let primaryfinal = ''
 	if (primary || !primaryp) primaryfinal = (`${primary}`);
@@ -132,13 +132,13 @@ function report() {
 		ROBBERY_STATE = 'JEWLERY';
 	}
 
-	buffer.push(`[DETAILS | DEMANDS]:`);
-	buffer.push(`During normal patrol, we had received a report from dispatch of an alarm going off at the ${robberyString}. Once scene command was established, they assigned officer ${callsign} to create an incident report.`);
+	buffer.push(`[SCENE DETAILS]:`);
+	buffer.push(`Whilst on duty, we received a dispatch call regarding an alarm going off at the ${robberyString}. Once a scene commander was established, they assigned officer ${callsign} to create and write the incident report.`);
 	buffer.push('');
 	let hostages = document.getElementById('hostages').value;
 	let robbersinside = document.getElementById('robbersinside').value;
 	let robbersoutside = document.getElementById('robbersoutside').value;
-	buffer.push(`After setting up the perimeter around the area, we began negotiations. During the negotiations, we learned that there were a total of:`);
+	buffer.push(`After securing a perimeter, we began negotiations. During negotiations, we learned that there were a total of:`);
 	buffer.push(`Robbers Inside: ${robbersinside}`);
 	buffer.push(`Robbers Outside: ${robbersoutside}`);
 	buffer.push(`Hostages: ${hostages}`);
@@ -161,8 +161,8 @@ function report() {
 	}
 
 	let stayedBack = (hostagestayer ? hostagestayer.trim() : 'a unit');
-	buffer.push(`The ${robbersinside} unidentified suspect(s) demanded ${demandsText} for the safety of the ${hostages} hostage(s).` +
-		` Once they were ready on the inside, scene command prepared a lineup for the pursuit. Scene command assigned officer ${stayedBack} to stay back for the hostage and collect their contact information.`);
+	buffer.push(`The ${robbersinside} suspect(s) demanded ${demandsText} for the safety of the ${hostages} hostage(s).` +
+		` Once the suspect(s) confirmed that they were ready on the inside, scene commander prepared a pursuit lineup. Scene commander assigned officer ${stayedBack} to collect the hostage and their contact information.`);
 	buffer.push('');
 
 	buffer.push(`[VEHICLE | CHASE]:`);
@@ -367,8 +367,8 @@ function report() {
 		if (document.getElementById('medneed').checked) {
 			buffer.push('');
 			buffer.push(`[MEDICAL ATTENTION]:`);
-			buffer.push(`After we apprehended the suspects, they were in need of medical attention. We brought the injured people (Suspects Total: ${medneedsus} | PD Total: ${medneedpd}) to ${hospitalname}.`);
-			buffer.push(`Once everyone got medical treatment, we started heading back towards the PD.`)
+			buffer.push(`After we apprehended the suspects, they were in need of medical attention. We brought the injured people (Suspects Total: ${medneedsus} | Officers Total: ${medneedpd}) to ${hospitalname}.`);
+			buffer.push(`Once everyone received medical attention, officers started returning to PD.`)
 		} else {
 			buffer.push('');
 			buffer.push(`[MEDICAL ATTENTION]:`);
