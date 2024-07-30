@@ -279,35 +279,6 @@ body{
     background-color: rgb(54, 54, 54);
 }
 
-body.dark-theme {
-	color: #eee;
-	background: #191a1d;
-}
-body.dark-theme .chip {
-	color: black;
-}
-body.dark-theme pre {
-	background-color: #2F3136;
-}
-body.dark-theme .btn {
-	background-color: #2F3136;
-	color: #f9f9f9;
-}
-body.dark-theme .btn:hover{
-    background-color: #484848;
-    border-color: #adadad;
-}
-body.dark-theme textarea, body.dark-theme input {
-	background-color: #2F3136;
-	color:#f9f9f9;
-}
-body textarea::placeholder, body input::placeholder {
-	color: #757474;  
-}
-body.dark-theme a {
-    color: #48e;
-}
-body.dark-theme select {
-	background-color: #2F3136;
-	color:#f9f9f9;
+.centered{
+    text-align: center;
 }
