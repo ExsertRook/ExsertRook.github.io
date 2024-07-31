@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Materials Price Calculator</title>
+	<link rel="shortcut icon" href="hammer.png" />
+	<link rel="stylesheet" href="style.css" />
+	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> </head>
+
+<body>
+	<div id="form">
+		<div class="form-group">
+			<style>
+    			body {
+        		    font-family: 'Nunito';font-size: 18px;
+    			}
+    			</style>
+			<h1><span style="font-weight: bold; font-size: 40px; text-align: center; color: rgb(255, 255, 255)">Materials Price Calculator</span></h1>
+			<br />
+		</div>
+		<div class="container">
+            <label style="font-size: 22px; align-items: center;">Enter Amount:</label><br /><br />
+            
+            <input type="number" class="centered" min="0" id="aluminum" name="aluminum" placeholder="6">
+			- Crude Aluminum<br />
+            <input type="number" class="centered" min="0" id="steel" name="steel" placeholder="4">
+			- Raw Steel<br />
+            <input type="number" class="centered" min="0" id="scrap" name="scrap" placeholder="9">
+			- Scrap Metal<br />
+            <input type="number" class="centered" min="0" id="glass" name="glass" placeholder="3">
+			- Glass<br />
+            <input type="number" class="centered" min="0" id="rubber" name="rubber" placeholder="7">
+			- Uncured Rubber<br /><br />
+	</div>
+	
+    <textarea class="wide" id="reportBody">Please Enter the amount of materials that you have!</textarea>
+
+	<script src="calculator.js"></script>
+</body>
+
+</html>
