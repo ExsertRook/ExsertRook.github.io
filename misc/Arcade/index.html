@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Materials Price Calculator</title>
+	<title>Arcade Bartender Calculator</title>
 	<link rel="shortcut icon" href="hammer.png" />
 	<link rel="stylesheet" href="style.css" />
 	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
@@ -17,25 +17,94 @@
         		    font-family: 'Nunito';font-size: 18px;
     			}
     			</style>
-			<h1><span style="font-weight: bold; font-size: 40px; text-align: center; color: rgb(255, 255, 255)">Materials Price Calculator</span></h1>
+			<h1><span style="font-weight: bold; font-size: 40px; text-align: center; color: rgb(255, 255, 255)">Arcade Bartender Calculator</span></h1>
 			<br />
 		</div>
 		<div class="container">
-            <label style="font-size: 22px; align-items: center;">Enter Amount:</label><br /><br />
-            
-            <input type="number" class="centered" min="0" id="aluminum" name="aluminum" placeholder="6">
-			- Crude Aluminum<br />
-            <input type="number" class="centered" min="0" id="steel" name="steel" placeholder="4">
-			- Raw Steel<br />
-            <input type="number" class="centered" min="0" id="scrap" name="scrap" placeholder="9">
-			- Scrap Metal<br />
-            <input type="number" class="centered" min="0" id="glass" name="glass" placeholder="3">
-			- Glass<br />
-            <input type="number" class="centered" min="0" id="rubber" name="rubber" placeholder="7">
-			- Uncured Rubber<br /><br />
-	</div>
+
+            <div class="firsthalf">
+				VR<br />
+				<input type="number" class="centered" min="0" id="zpill" placeholder="X">
+				- Zombie VR<br />
+				<input type="number" class="centered" min="0" id="arenapill" placeholder="X">
+				- Arena VR<br />
+				<input type="number" class="centered" min="0" id="arenasmall" placeholder="1">
+				- Arena VR Small Pack (5+)<br />
+				<input type="number" class="centered" min="0" id="arenaparty" placeholder="1">
+				- Arena VR Party Pack (10+)<br /><br />
+
+				A La Carte<br />
+				<input type="number" class="centered" min="0" id="hotdog" placeholder="X">
+				- Hot Dog<br />
+				<input type="number" class="centered" min="0" id="nachos" placeholder="X">
+				- Nachos<br />
+				<input type="number" class="centered" min="0" id="wonderwaffle" placeholder="X">
+				- Wonder Waffle<br />
+				<input type="number" class="centered" min="0" id="water" placeholder="X">
+				- Water<br />
+				<input type="number" class="centered" min="0" id="soda" placeholder="X">
+				- Coke / Pepsi<br />
+				<input type="number" class="centered" min="0" id="milk" placeholder="X">
+				- Pigeon Milk<br /><br />
+				
+				Smoothies<br />
+				<input type="number" class="centered" min="0" id="pacman" placeholder="X">
+				- Pac Man<br />
+				<input type="number" class="centered" min="0" id="monkeyparadise" placeholder="X">
+				- Monkey's Paradise<br />
+				<input type="number" class="centered" min="0" id="princesspeach" placeholder="X">
+				- Princess Peach<br />
+				<input type="number" class="centered" min="0" id="hardapplecider" placeholder="X">
+				- Ty's Hard Apple Cider<br />
+				<input type="number" class="centered" min="0" id="reddead" placeholder="X">
+				- Red Dead<br />
+				<input type="number" class="centered" min="0" id="guantlet" placeholder="X">
+				- Guantlet
+			
+			</div>
+			<div class="secondhalf">	
+
+				Shakes<br />
+				<input type="number" class="centered" min="0" id="strawberry" placeholder="X">
+				- Strawberry<br />
+				<input type="number" class="centered" min="0" id="chocolate" placeholder="X">
+				- Chocolate<br />
+				<input type="number" class="centered" min="0" id="cherrybeer" placeholder="X">
+				- Cherry Beer<br />
+				<input type="number" class="centered" min="0" id="cokefloat" placeholder="X">
+				- Coke Float<br /><br />
+
+			
+		
+				Combos<br />
+				<input type="number" class="centered" min="0" id="sampler" placeholder="X">
+				- Sampler<br />
+				<input type="number" class="centered" min="0" id="moomunch" placeholder="X">
+				- Moo Munch Combo<br />
+				<input type="number" class="centered" min="0" id="nachodeluxe" placeholder="X">
+				- Nacho Deluxe Meal<br />
+				<input type="number" class="centered" min="0" id="bonanza" placeholder="X">
+				- Crunch 'n Quench Bonanza<br /><br />
+
+				Secret Menu<br />
+				<input type="number" class="centered" min="0" id="applepie" placeholder="X">
+				- Apple Pie<br />
+				<input type="number" class="centered" min="0" id="thevirgin" placeholder="X">
+				- The Virgin<br />
+				<input type="number" class="centered" min="0" id="thecartel" placeholder="X">
+				- The Cartel<br />
+				<input type="number" class="centered" min="0" id="annoyingorange" placeholder="X">
+				- Annoying Orange<br />
+				<input type="number" class="centered" min="0" id="antiems" placeholder="X">
+				- Anti-EMS Smoothie<br />
+				<input type="number" class="centered" min="0" id="newzealand" placeholder="X">
+				- New Zealand Special<br />
+				<input type="number" class="centered" min="0" id="glizzywater" placeholder="X">
+				- Glizzy Water Special<br />
+			</div>
+		</div>
 	
-    <textarea class="wide" id="reportBody">Please Enter the amount of materials that you have!</textarea>
+    <textarea class="wide" id="reportBody">Please Enter the products!</textarea>
 
 	<script src="calculator.js"></script>
 </body>
