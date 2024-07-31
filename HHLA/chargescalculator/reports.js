@@ -5,67 +5,10 @@ let officersInvolved = new Set();
 let alreadySpecifiedRobbery = false;
 
 function report() {
-	let callsign = document.getElementById('yourself').value.trim();
-	if (callsign) localStorage.setItem('callsign', callsign);
-	if (!callsign) callsign = '[missing]';
 	const ind = "        ";
 	let date = new Date().toLocaleDateString('en-US');
 
 	buffer = [];
-	buffer.push("[REPORTING OFFICER]:");
-	buffer.push(callsign);	
-
-	let location = document.getElementById('location').value;
-	let processedat = document.getElementById('processedat').value;
-	buffer.push('');
-	if (location) {
-		buffer.push(`[LOCATION]:`)
-		buffer.push(`The scene of the casings was located at ${location}.`);
-		buffer.push('');
-	}
-	buffer.push(`[DETAILS OF THE INCIDENT]:`);
-
-	let shotsSelected = document.getElementById('typeofcall');
-	let shotsInformation = {
-		'10-71 Calls': {
-			text: 'While being out on regular patrol, we responded to shots fired dispatch calls. Once we arrived on scene we started to look for casings in the general area. Upon successfully finding casings on the ground, we collected them in evidence bags.',
-		},
-		'Officers Shot at': {
-			text: 'While being out on regular patrol, we had criminals open fire on officers. Eventually the suspects managed to flee the area and we secured a perimeter. We then started to look for casings in the general area. Upon successfully finding casings on the ground, we collected them in evidence bags.',
-		}
-	};
-	let shotstype = shotsSelected.options[shotsSelected.selectedIndex].text;
-	if (shotsSelected) buffer.push(shotsInformation[shotstype].text);
-	if (processedat) buffer.push(`Once we collected the evidence, we took them to ${processedat} and processed them for further information.`);
-	buffer.push('');
-	
-	let weaponname1 = document.getElementById('weaponname1').value;
-	let serial1 = document.getElementById('serial1').value;
-	let weaponname2 = document.getElementById('weaponname2').value;
-	let serial2 = document.getElementById('serial2').value;
-	let weaponname3 = document.getElementById('weaponname3').value;
-	let serial3 = document.getElementById('serial3').value;
-	let weaponname4 = document.getElementById('weaponname4').value;
-	let serial4 = document.getElementById('serial4').value;
-	let weaponname5 = document.getElementById('weaponname5').value;
-	let serial5 = document.getElementById('serial5').value;
-	let weaponname6 = document.getElementById('weaponname6').value;
-	let serial6 = document.getElementById('serial6').value;
-    let weaponname7 = document.getElementById('weaponname7').value;
-	let serial7 = document.getElementById('serial7').value;
-    let weaponname8 = document.getElementById('weaponname8').value;
-	let serial8 = document.getElementById('serial8').value;
-	
-	if (weaponname1 || serial1) buffer.push(`[WEAPON INFORMATION]:`);
-	if (weaponname1 || serial1) buffer.push(`Weapon: ${weaponname1} | Serial Number: ${serial1}`);
-	if (weaponname2 || serial2) buffer.push(`Weapon: ${weaponname2} | Serial Number: ${serial2}`);
-	if (weaponname3 || serial3) buffer.push(`Weapon: ${weaponname3} | Serial Number: ${serial3}`);
-	if (weaponname4 || serial4) buffer.push(`Weapon: ${weaponname4} | Serial Number: ${serial4}`);
-	if (weaponname5 || serial5) buffer.push(`Weapon: ${weaponname5} | Serial Number: ${serial5}`);
-	if (weaponname6 || serial6) buffer.push(`Weapon: ${weaponname6} | Serial Number: ${serial6}`);
-    if (weaponname7 || serial7) buffer.push(`Weapon: ${weaponname7} | Serial Number: ${serial7}`);
-    if (weaponname8 || serial8) buffer.push(`Weapon: ${weaponname8} | Serial Number: ${serial8}`);
-	buffer.push('');
 	
 	let charge1 = document.getElementById('charge1').value;
 	let enhancement1 = document.getElementById('enhancement1').value;
@@ -73,17 +16,33 @@ function report() {
 	let enhancement2 = document.getElementById('enhancement2').value;
 	let charge3 = document.getElementById('charge3').value;
 	let enhancement3 = document.getElementById('enhancement3').value;
+	let charge4 = document.getElementById('charge4').value;
+	let enhancement4 = document.getElementById('enhancement4').value;
+	let charge5 = document.getElementById('charge5').value;
+	let enhancement5 = document.getElementById('enhancement5').value;
+	let charge6 = document.getElementById('charge6').value;
+	let enhancement6 = document.getElementById('enhancement6').value;
+	let charge7 = document.getElementById('charge7').value;
+	let enhancement7 = document.getElementById('enhancement7').value;
+	let charge8 = document.getElementById('charge8').value;
+	let enhancement8 = document.getElementById('enhancement8').value;
 	let chargewhole1 = '';
 	let chargewhole2 = '';
 	let chargewhole3 = '';
+	let chargewhole4 = '';
+	let chargewhole5 = '';
+	let chargewhole6 = '';
+	let chargewhole7 = '';
+	let chargewhole8 = '';
 	let chargecount1 = document.getElementById('chargecount1').value;
 	let chargecount2 = document.getElementById('chargecount2').value;
 	let chargecount3 = document.getElementById('chargecount3').value;
+	let chargecount4 = document.getElementById('chargecount4').value;
+	let chargecount5 = document.getElementById('chargecount5').value;
+	let chargecount6 = document.getElementById('chargecount6').value;
+	let chargecount7 = document.getElementById('chargecount7').value;
+	let chargecount8 = document.getElementById('chargecount8').value;
 
-	buffer.push(`[CHARGES]:`);
-	if (charge1) buffer.push(`Once a suspect is apprehended and they are in possessions of those weapons with the same serial numbers, they are to be brought to the interrogation room and questioned about the situation.`);
-	if (charge1) buffer.push(`If the interrogation verdict allows to, the suspect is to be charged with (alongside the obvious possession charge):`);
-	buffer.push('');
 	if (charge1) chargewhole1 = (`${charge1} ${chargecount1}`);
 	if (charge1 || enhancement1) chargewhole1 = (`${charge1} with the ${enhancement1} enhancement ${chargecount1}`);
 	if (!enhancement1) chargewhole1 = (`${charge1} ${chargecount1}`);
@@ -99,6 +58,31 @@ function report() {
 	if (!enhancement3) chargewhole3 = (`${charge3} ${chargecount3}`);
 	if (chargewhole3) buffer.push(`${chargewhole3}`);
 	
+	if (charge4) chargewhole4 = (`${charge4} ${chargecount4}`);
+	if (charge4 || enhancement4) chargewhole4 = (`${charge4} with the ${enhancement4} enhancement ${chargecount4}`);
+	if (!enhancement4) chargewhole4 = (`${charge4} ${chargecount4}`);
+	if (chargewhole4) buffer.push(`${chargewhole4}`);
+
+	if (charge5) chargewhole5 = (`${charge5} ${chargecount5}`);
+	if (charge5 || enhancement5) chargewhole5 = (`${charge5} with the ${enhancement5} enhancement ${chargecount5}`);
+	if (!enhancement5) chargewhole5 = (`${charge5} ${chargecount5}`);
+	if (chargewhole5) buffer.push(`${chargewhole5}`);
+
+	if (charge6) chargewhole6 = (`${charge6} ${chargecount6}`);
+	if (charge6 || enhancement6) chargewhole6 = (`${charge6} with the ${enhancement6} enhancement ${chargecount6}`);
+	if (!enhancement6) chargewhole6 = (`${charge6} ${chargecount6}`);
+	if (chargewhole6) buffer.push(`${chargewhole6}`);
+
+	if (charge7) chargewhole7 = (`${charge7} ${chargecount7}`);
+	if (charge7 || enhancement7) chargewhole7 = (`${charge7} with the ${enhancement7} enhancement ${chargecount7}`);
+	if (!enhancement7) chargewhole7 = (`${charge7} ${chargecount7}`);
+	if (chargewhole7) buffer.push(`${chargewhole7}`);
+
+	if (charge8) chargewhole8 = (`${charge8} ${chargecount8}`);
+	if (charge8 || enhancement8) chargewhole8 = (`${charge8} with the ${enhancement8} enhancement ${chargecount8}`);
+	if (!enhancement8) chargewhole8 = (`${charge8} ${chargecount8}`);
+	if (chargewhole8) buffer.push(`${chargewhole8}`);
+
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }
 
