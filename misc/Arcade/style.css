@@ -141,6 +141,14 @@ input[type="emerald"] {
     position: fixed;
 }
 
+#reportBody2 {
+    height: 100px;
+    width: 600px;
+    text-align: center;
+    position: fixed;
+    margin-top: 50px;
+}
+
 label + .form-group.layer-2 {
     margin-top: 10px;
 }

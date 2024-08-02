@@ -194,52 +194,146 @@ function report() {
 		cokefloatFinal + samplerFinal + moomunchFinal + nachodeluxeFinal + bonanzaFinal + applepieFinal + thevirginFinal +
 		thecartelFinal + annoyingorangeFinal + antiemsFinal + newzealandFinal + glizzywaterFinal);
 
+	/// Calculate Profit
+	let totalProfit = (zpillProfit + arenapillProfit + arenasmallProfit + arenapartyProfit + hotdogProfit + nachosProfit + 
+		wonderwaffleProfit + waterProfit + sodaProfit + milkProfit + pacmanProfit + monkeyparadiseProfit + princesspeachProfit +
+		hardappleciderProfit + reddeadProfit + guantletProfit + strawberryProfit + chocolateProfit + cherrybeerProfit + 
+		cokefloatProfit + samplerProfit + moomunchProfit + nachodeluxeProfit + bonanzaProfit + applepieProfit + thevirginProfit +
+		thecartelProfit + annoyingorangeProfit + antiemsProfit + newzealandProfit + glizzywaterProfit);
+
+
 	/// Print out text
 	buffer.push('Sale Prices:');
 	buffer.push('');
-	if (zpill) buffer.push(`Zombie VR: $${zpillFinal}`);
-	if (arenapill) buffer.push(`Arena VR: $${arenapillFinal}`);
-	if (arenasmall) buffer.push(`Arena VR Small: $${arenasmallFinal}`);
-	if (arenaparty) buffer.push(`Arena VR Party: $${arenapartyFinal}`);
-	if (hotdog) buffer.push(`Hotdogs: $${hotdogFinal}`);
-	if (nachos) buffer.push(`Nachos: $${nachosFinal}`);
-	if (wonderwaffle) buffer.push(`Wonder Waffles: $${wonderwaffleFinal}`);
-	if (water) buffer.push(`Water: $${waterFinal}`);
-	if (soda) buffer.push(`Coke / Pepsi: $${sodaFinal}`);
-	if (milk) buffer.push(`Pigeon Milk: $${milkFinal}`);
-	if (pacman) buffer.push(`Pac Man: $${pacmanFinal}`);
-	if (monkeyparadise) buffer.push(`Monkey's Paradise: $${monkeyparadiseFinal}`);
-	if (princesspeach) buffer.push(`Princess Peach: $${princesspeachFinal}`);
-	if (hardapplecider) buffer.push(`Ty's Hard Apple Cider: $${hardappleciderFinal}`);
-	if (reddead) buffer.push(`Red Dead: $${reddeadFinal}`);
-	if (guantlet) buffer.push(`Guantlet: $${guantletFinal}`);
-	if (strawberry) buffer.push(`Strawberry Smoothie: $${strawberryFinal}`);
-	if (chocolate) buffer.push(`Chocolate Smoothie: $${chocolateFinal}`);
-	if (cherrybeer) buffer.push(`Cherry Beer: $${cherrybeerFinal}`);
-	if (cokefloat) buffer.push(`Coke Float: $${cokefloatFinal}`);
-	if (sampler) buffer.push(`Sampler: $${samplerFinal}`);
-	if (moomunch) buffer.push(`Moo Munch Combo: $${moomunchFinal}`);
-	if (nachodeluxe) buffer.push(`Nacho Deluxe Meal: $${nachodeluxeFinal}`);
-	if (bonanza) buffer.push(`Crunch 'n Quench Bonanza: $${bonanzaFinal}`);
-	if (applepie) buffer.push(`Apple Pie: $${applepieFinal}`);
-	if (thevirgin) buffer.push(`The Virgin: $${thevirginFinal}`);
-	if (thecartel) buffer.push(`The Cartel: $${thecartelFinal}`);
-	if (annoyingorange) buffer.push(`Annoying Orange: $${annoyingorangeFinal}`);
-	if (antiems) buffer.push(`Anti-EMS Smoothie: $${antiemsFinal}`);
-	if (newzealand) buffer.push(`New Zealand Special: $${newzealandFinal}`);
-	if (glizzywater) buffer.push(`Glizzy Water Special: $${glizzywaterFinal}`);
+	if (zpill) buffer.push(`Zombie VR: $${zpillFinal} - ${zpill}`);
+	if (arenapill) buffer.push(`Arena VR: $${arenapillFinal} - ${arenapill}`);
+	if (arenasmall) buffer.push(`Arena VR Small: $${arenasmallFinal} - ${arenasmall}`);
+	if (arenaparty) buffer.push(`Arena VR Party: $${arenapartyFinal} - ${arenaparty}`);
+	if (hotdog) buffer.push(`Hotdogs: $${hotdogFinal} - ${hotdog}`);
+	if (nachos) buffer.push(`Nachos: $${nachosFinal} - ${nachos}`);
+	if (wonderwaffle) buffer.push(`Wonder Waffles: $${wonderwaffleFinal} - ${wonderwaffle}`);
+	if (water) buffer.push(`Water: $${waterFinal} - ${water}`);
+	if (soda) buffer.push(`Coke / Pepsi: $${sodaFinal} - ${soda}`);
+	if (milk) buffer.push(`Pigeon Milk: $${milkFinal} - ${milk}`);
+	if (pacman) buffer.push(`Pac Man: $${pacmanFinal} - ${pacman}`);
+	if (monkeyparadise) buffer.push(`Monkey's Paradise: $${monkeyparadiseFinal} - ${monkeyparadise}`);
+	if (princesspeach) buffer.push(`Princess Peach: $${princesspeachFinal} - ${princesspeach}`);
+	if (hardapplecider) buffer.push(`Ty's Hard Apple Cider: $${hardappleciderFinal} - ${hardapplecider}`);
+	if (reddead) buffer.push(`Red Dead: $${reddeadFinal} - ${reddead}`);
+	if (guantlet) buffer.push(`Guantlet: $${guantletFinal} - ${guantlet}`);
+	if (strawberry) buffer.push(`Strawberry Smoothie: $${strawberryFinal} - ${strawberry}`);
+	if (chocolate) buffer.push(`Chocolate Smoothie: $${chocolateFinal} - ${chocolate}`);
+	if (cherrybeer) buffer.push(`Cherry Beer: $${cherrybeerFinal} - ${cherrybeer}`);
+	if (cokefloat) buffer.push(`Coke Float: $${cokefloatFinal} - ${cokefloat}`);
+	if (sampler) buffer.push(`Sampler: $${samplerFinal} - ${sampler}`);
+	if (moomunch) buffer.push(`Moo Munch Combo: $${moomunchFinal} - ${moomunch}`);
+	if (nachodeluxe) buffer.push(`Nacho Deluxe Meal: $${nachodeluxeFinal} - ${nachodeluxe}`);
+	if (bonanza) buffer.push(`Crunch 'n Quench Bonanza: $${bonanzaFinal} - ${bonanza}`);
+	if (applepie) buffer.push(`Apple Pie: $${applepieFinal} - ${applepie}`);
+	if (thevirgin) buffer.push(`The Virgin: $${thevirginFinal} - ${thevirgin}`);
+	if (thecartel) buffer.push(`The Cartel: $${thecartelFinal} - ${thecartel}`);
+	if (annoyingorange) buffer.push(`Annoying Orange: $${annoyingorangeFinal} - ${annoyingorange}`);
+	if (antiems) buffer.push(`Anti-EMS Smoothie: $${antiemsFinal} - ${antiems}`);
+	if (newzealand) buffer.push(`New Zealand Special: $${newzealandFinal} - ${newzealand}`);
+	if (glizzywater) buffer.push(`Glizzy Water Special: $${glizzywaterFinal} - ${glizzywater}`);
 	
 	buffer.push('');
 	buffer.push(`Total Price: $${totalprice}`);
+	buffer.push('');
+	buffer.push(`Total Profit Made: $${totalProfit}`);
+
 	/// Return it to HTML page
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
+}
+
+function Ingredients() {
+	const ind = "        ";
+	buffer = [];
+
+	/// Recipes
+	let pacmanRecipe = ("2x Cherry, 1x Strawberry, 1x Peach, 1x Apple");
+	let monkeyparadiseRecipe = ("3x Banana, 1x Watermelon, 1x Strawberry");
+	let princesspeachRecipe = ("3x Peach, 1x Mango, x1 Orange");
+	let hardappleciderRecipe = ("4x Apple, 1x Cider");
+	let reddeadRecipe = ("1x Apple, 1x Cherry, 1x Strawberry, 1x Pomegranate, 1x Beer");
+	let guantletRecipe = ("4x random assortment, 1x Cider");
+	let strawberryRecipe = ("4x Strawberry, 1x Pigeon Milk");
+	let chocolateRecipe = ("4x Cocoa Powder, 1x Pigeon Milk");
+	let cherrybeerRecipe = ("3x Cherry, 1x Pigeon Milk, 1x Beer");
+	let cokefloatRecipe = ("4x Coke, 1x Pigeon Milk");
+	let samplerRecipe = ("1x Hotdog, 1x Nacho, 1x Wonder Waffle & 2x Water OR 2x Soft Drink");
+	let moomunchRecipe = ("1x Pigeon Milk, 1x Wonder Waffle, 1x Nachos, 1x Hot Dog");
+	let nachodeluxeRecipe = ("4x Nachos & 4x Soft Drink");
+	let bonanzaRecipe = ("2x Nachos, 2x Hot Dogs, 2x Wonder Waffles & 2x Soft Drink");
+	let applepieRecipe = ("3x Apple, 2x Waffle");
+	let thevirginRecipe = ("5x Cherry");
+	let thecartelRecipe = ("5x Nacho");
+	let annoyingorangeRecipe = ("3x Orange, 2x Apple");
+	let antiemsRecipe = ("5x Apple");
+	let newzealandRecipe = ("5x Kiwi");
+	let glizzywaterRecipe = ("3x Hotdog, 2x Water");
+
+	let pacman = document.getElementById('pacman').value;
+	let monkeyparadise = document.getElementById('monkeyparadise').value;
+	let princesspeach = document.getElementById('princesspeach').value;
+	let hardapplecider = document.getElementById('hardapplecider').value;
+	let reddead = document.getElementById('reddead').value;
+	let guantlet = document.getElementById('guantlet').value;
+
+	let strawberry = document.getElementById('strawberry').value;
+	let chocolate = document.getElementById('chocolate').value;
+	let cherrybeer = document.getElementById('cherrybeer').value;
+	let cokefloat = document.getElementById('cokefloat').value;
+
+	let sampler = document.getElementById('sampler').value;
+	let moomunch = document.getElementById('moomunch').value;
+	let nachodeluxe = document.getElementById('nachodeluxe').value;
+	let bonanza = document.getElementById('bonanza').value;
+
+	let applepie = document.getElementById('applepie').value;
+	let thevirgin = document.getElementById('thevirgin').value;
+	let thecartel = document.getElementById('thecartel').value;
+	let annoyingorange = document.getElementById('annoyingorange').value;
+	let antiems = document.getElementById('antiems').value;
+	let newzealand = document.getElementById('newzealand').value;
+	let glizzywater = document.getElementById('glizzywater').value;
+
+	if (pacman) buffer.push(`Pac Man: ${pacmanRecipe}`);
+	if (monkeyparadise) buffer.push(`Monkey's Paradise: ${monkeyparadiseRecipe}`);
+	if (princesspeach) buffer.push(`Princess Peach: ${princesspeachRecipe}`);
+	if (hardapplecider) buffer.push(`Ty's Hard Apple Cider: ${hardappleciderRecipe}`);
+	if (reddead) buffer.push(`Red Dead: ${reddeadRecipe}`);
+	if (guantlet) buffer.push(`Guantlet: ${guantletRecipe}`);
+	if (strawberry) buffer.push(`Strawberry: ${strawberryRecipe}`);
+	if (chocolate) buffer.push(`Chocolate: ${chocolateRecipe}`);
+	if (cherrybeer) buffer.push(`Cherry Beer: ${cherrybeerRecipe}`);
+	if (cokefloat) buffer.push(`Coke Float: ${cokefloatRecipe}`);
+	if (sampler) buffer.push(`Sampler: ${samplerRecipe}`);
+	if (moomunch) buffer.push(`Moo Munch Combo: ${moomunchRecipe}`);
+	if (nachodeluxe) buffer.push(`Nacho Deluxe Meal: ${nachodeluxeRecipe}`);
+	if (bonanza) buffer.push(`Crunch 'n Quench Bonanza: ${bonanzaRecipe}`);
+	if (applepie) buffer.push(`Apple Pie: ${applepieRecipe}`);
+	if (thevirgin) buffer.push(`The Virgin: ${thevirginRecipe}`);
+	if (thecartel) buffer.push(`The Cartel: ${thecartelRecipe}`);
+	if (annoyingorange) buffer.push(`Annoying Orange: ${annoyingorangeRecipe}`);
+	if (antiems) buffer.push(`Anti-EMS Smoothie: ${antiemsRecipe}`);
+	if (newzealand) buffer.push(`New Zealand Special: ${newzealandRecipe}`);
+	if (glizzywater) buffer.push(`Glizzy Water Special: ${glizzywaterRecipe}`);
+
+	return document.getElementById('reportBody2').innerHTML = buffer.join("\n");
 }
 /// Allow inputs from webpage
 let inputs = document.querySelectorAll('input[type="text"], input[type="number"], input[type="emerald"] textarea');
 inputs.forEach(i => i.addEventListener('keyup', report, false));
+let inputs2 = document.querySelectorAll('input[type="text"], input[type="number"], input[type="emerald"] textarea');
+inputs.forEach(i => i.addEventListener('keyup', Ingredients, false));
 /// Allow checkboxes from webpage
 let checkboxes = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
 checkboxes.forEach(i => i.addEventListener('click', report, false));
+let checkboxes2 = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
+checkboxes.forEach(i => i.addEventListener('click', Ingredients, false));
 /// Allow select options
 let selectOptions = document.querySelectorAll('select');
 selectOptions.forEach(i => i.addEventListener('click', report, false));
+let selectOptions2 = document.querySelectorAll('select');
+selectOptions.forEach(i => i.addEventListener('click', Ingredients, false));
