@@ -9,6 +9,8 @@ function report() {
 
 	/// Pull from HTML
 	let zpill = document.getElementById('zpill').value;
+	let zpillsmall = document.getElementById('zpillsmall').value;
+	let zpillparty = document.getElementById('zpillparty').value;
 	let arenapill = document.getElementById('arenapill').value;
 	let arenasmall = document.getElementById('arenasmall').value;
 	let arenaparty = document.getElementById('arenaparty').value;
@@ -47,6 +49,8 @@ function report() {
 
 	/// Item Costs
 	let zpillCost = 1070
+	let zpillsmallCost = 10700
+	let zpillpartyCost = 26750
 	let arenapillCost = 54
 	let arenasmallCost = 270
 	let arenapartyCost = 540
@@ -84,10 +88,12 @@ function report() {
 	let glizzywaterCost = 45
 
 	/// Item sell price
-	let zpillSell = 1200
-	let arenapillSell = 350
-	let arenasmallSell = 1600
-	let arenapartySell = 3000
+	let zpillSell = 1500
+	let zpillsmallSell = 14500
+	let zpillpartySell = 37000
+	let arenapillSell = 450
+	let arenasmallSell = 2000
+	let arenapartySell = 4250
 
 	let hotdogSell = 30
 	let nachosSell = 30
@@ -123,6 +129,8 @@ function report() {
 
 	/// Final calculator price
 	let zpillFinal = (zpillSell * zpill);
+	let zpillsmallFinal = (zpillsmallSell * zpillsmall);
+	let zpillpartyFinal = (zpillpartySell * zpillparty);
 	let arenapillFinal = (arenapillSell * arenapill);
 	let arenasmallFinal = (arenasmallSell * arenasmall);
 	let arenapartyFinal = (arenapartySell * arenaparty);
@@ -156,6 +164,8 @@ function report() {
 
 	/// Profit calculations
 	let zpillProfit = (zpillSell - zpillCost) * zpill;
+	let zpillsmallProfit = (zpillsmallSell - zpillsmallCost) * zpillsmall;
+	let zpillpartyProfit = (zpillpartySell - zpillpartyCost) * zpillparty;
 	let arenapillProfit = (arenapillSell - arenapillCost) * arenapill;
 	let arenasmallProfit = (arenasmallSell - arenasmallCost) * arenasmall;
 	let arenapartyProfit = (arenapartySell - arenapartyCost) * arenaparty;
@@ -188,14 +198,14 @@ function report() {
 	let glizzywaterProfit = (glizzywaterSell - glizzywaterCost) * glizzywater;
 
 	/// Calculate total price
-	let totalprice = (zpillFinal + arenapillFinal + arenasmallFinal + arenapartyFinal + hotdogFinal + nachosFinal + 
+	let totalprice = (zpillFinal + zpillsmallFinal + zpillpartyFinal + arenapillFinal + arenasmallFinal + arenapartyFinal + hotdogFinal + nachosFinal + 
 		wonderwaffleFinal + waterFinal + sodaFinal + milkFinal + pacmanFinal + monkeyparadiseFinal + princesspeachFinal +
 		hardappleciderFinal + reddeadFinal + guantletFinal + strawberryFinal + chocolateFinal + cherrybeerFinal + 
 		cokefloatFinal + samplerFinal + moomunchFinal + nachodeluxeFinal + bonanzaFinal + applepieFinal + thevirginFinal +
 		thecartelFinal + annoyingorangeFinal + antiemsFinal + newzealandFinal + glizzywaterFinal);
 
 	/// Calculate Profit
-	let totalProfit = (zpillProfit + arenapillProfit + arenasmallProfit + arenapartyProfit + hotdogProfit + nachosProfit + 
+	let totalProfit = (zpillProfit + zpillsmallProfit + zpillpartyProfit + arenapillProfit + arenasmallProfit + arenapartyProfit + hotdogProfit + nachosProfit + 
 		wonderwaffleProfit + waterProfit + sodaProfit + milkProfit + pacmanProfit + monkeyparadiseProfit + princesspeachProfit +
 		hardappleciderProfit + reddeadProfit + guantletProfit + strawberryProfit + chocolateProfit + cherrybeerProfit + 
 		cokefloatProfit + samplerProfit + moomunchProfit + nachodeluxeProfit + bonanzaProfit + applepieProfit + thevirginProfit +
@@ -206,6 +216,8 @@ function report() {
 	buffer.push('Sale Prices:');
 	buffer.push('');
 	if (zpill) buffer.push(`Zombie VR: $${zpillFinal} - ${zpill}`);
+	if (zpillsmall) buffer.push(`Zombie VR Small: $${zpillsmallFinal} - ${zpillsmall}`);
+	if (zpillparty) buffer.push(`Zombie VR Party: $${zpillpartyFinal} - ${zpillsmall}`);
 	if (arenapill) buffer.push(`Arena VR: $${arenapillFinal} - ${arenapill}`);
 	if (arenasmall) buffer.push(`Arena VR Small: $${arenasmallFinal} - ${arenasmall}`);
 	if (arenaparty) buffer.push(`Arena VR Party: $${arenapartyFinal} - ${arenaparty}`);
