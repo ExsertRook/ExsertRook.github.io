@@ -79,54 +79,6 @@ const Menu = {
 	},
 
 
-    "Assault Charges:": {
-		header: true,
-	},
-	"Aggravated Assault and Battery": {
-		noIcon: true,
-		price: (1200),
-		items: [
-			...rep("Steel", 60),
-		],
-	},
-    "Aggravated Assault and Battery (PP)": {
-		noIcon: true,
-		price: (1440),
-		items: [
-			...rep("Steel", 72),
-		],
-	},
-	"Assault and Battery": {
-		noIcon: true,
-		price: 1000,
-		items: [
-			...rep("Steel", 40),
-		],
-	},
-    "Assault and Battery (PP)": {
-		noIcon: true,
-		price: 1200,
-		items: [
-			...rep("Steel", 48),
-		],
-	},
-    "Evading:": {
-		header: true,
-	},
-	"Evading a Police Officer": {
-		noIcon: true,
-		price: 350,
-		items: [
-			...rep("Steel", 15),
-		],
-	},
-	"Felony Evading a Police Officer": {
-		noIcon: true,
-		price: 700,
-		items: [
-			...rep("Steel", 30),
-		],
-	},
 	"Robberies:": {
 		header: true,
 	},
@@ -172,35 +124,22 @@ const Menu = {
 			...rep("Aluminium", 120),
 		],
 	},
-	"Lockpicks:": {
-		header: true,
-	},
-	"Kidnapping": {
-		noIcon: true,
-		price: 1200,
-		items: [
-			...rep("Aluminium", 70),
-		],
-	},
-	"Possession of Class 2 Weapon": {
-		noIcon: true,
-		price: 600,
-		items: [
-			...rep("Aluminium", 30),
-		],
-	},
+
 	"Misc:": {
 		header: true,
 	},
-	"Thermite Charge": {
+	"Criminal Threats": {
 		noIcon: true,
-		price: 8000,
+		price: 500,
 		items: [
-			...rep("Aluminium", 75),
-			...rep("Copper", 75),
-			...rep("Rubber", 50),
-			...rep("Plastic", 75),
-			...rep("Electronics", 100),
+			...rep("Aluminium", 15),
+		],
+	},
+    "Criminal Threats (PP)": {
+		noIcon: true,
+		price: 600,
+		items: [
+			...rep("Aluminium", 18),
 		],
 	},
 	"Molly": {
@@ -208,48 +147,9 @@ const Menu = {
 		price: 3000,
 		items: [
 			...rep("Aluminium", 75),
-			...rep("Whiskey", 3),
 		],
 	},
-	"Sledge Hammer": {
-		noIcon: true,
-		price: 4000,
-		items: [
-			...rep("Steel", 75),
-			...rep("Scrap Metal", 75),
-		],
-	},
-	"Knuckle": {
-		noIcon: true,
-		price: 4000,
-		items: [
-			...rep("Aluminium", 125),
-			...rep("Scrap Metal", 10),
-		],
-	},
-	"Dagger": {
-		noIcon: true,
-		price: 4000,
-		items: [
-			...rep("Aluminium", 125),
-			...rep("Scrap Metal", 10),
-		],
-	},
-	"Standard Radio": {
-		noIcon: true,
-		price: 2000,
-		items: [
-			...rep("Electronics", 50),
-		],
-	},
-	"Hand Cuffs": {
-		noIcon: true,
-		price: 10000,
-		lastItem: true,
-		items: [
-			...rep("Scrap Metal", 500),
-		],
-	},
+	
 };
 
 const INDIVIDUAL_ITEMS = [
