@@ -142,14 +142,143 @@ const Menu = {
 			...rep("Aluminium", 18),
 		],
 	},
-	"Molly": {
+    "Felony Weapons Discharge": {
 		noIcon: true,
-		price: 3000,
+		price: 400,
 		items: [
-			...rep("Aluminium", 75),
+			...rep("Aluminium", 20),
 		],
 	},
-	
+    "Verbal Harassment": {
+		noIcon: true,
+		price: 300,
+		items: [
+			...rep("Aluminium", 10),
+		],
+	},
+    "Bribery": {
+		noIcon: true,
+		price: 500,
+		items: [
+			...rep("Aluminium", 25),
+		],
+	},
+    "Disregarding a Lawful Command": {
+		noIcon: true,
+		price: 300,
+		items: [
+			...rep("Aluminium", 10),
+		],
+	},
+    "Obstruction of Justice": {
+		noIcon: true,
+		price: 200,
+		items: [
+			...rep("Aluminium", 0),
+		],
+	},
+
+
+    "Drugs:": {
+		header: true,
+	},
+    "Possession of a Class A Substance": {
+		noIcon: true,
+		price: 500,
+		items: [
+			...rep("Aluminium", 10),
+		],
+	},
+    "Intention to Sell a Class A Substance": {
+		noIcon: true,
+		price: 2200,
+		items: [
+			...rep("Aluminium", 50),
+		],
+	},
+    "Drug Trafficking a Class A Substance": {
+		noIcon: true,
+		price: 4000,
+		items: [
+			...rep("Aluminium", 70),
+		],
+	},
+    "Possession of a Class B Substance": {
+		noIcon: true,
+		price: 200,
+		items: [
+			...rep("Aluminium", 5),
+		],
+	},
+	"Intention to Sell a Class B Substance": {
+		noIcon: true,
+		price: 1400,
+		items: [
+			...rep("Aluminium", 30),
+		],
+	},
+    "Drug Trafficking a Class B Substance": {
+		noIcon: true,
+		price: 2000,
+		items: [
+			...rep("Aluminium", 50),
+		],
+	},
+    "Maintaining a Place for Distribution": {
+		noIcon: true,
+		price: 1200,
+		items: [
+			...rep("Aluminium", 45),
+		],
+	},
+    "Sale of a Controlled Substance": {
+		noIcon: true,
+		price: 400,
+		items: [
+			...rep("Aluminium", 20),
+		],
+	},
+
+    "Citations:": {
+		header: true,
+	},
+    "Driving without a License": {
+		noIcon: true,
+		price: 300,
+		items: [
+			...rep("Aluminium", 0),
+		],
+	},
+    "Speeding": {
+		noIcon: true,
+		price: 300,
+		items: [
+			...rep("Aluminium", 0),
+		],
+	},
+    "Speeding (+30mph)": {
+		noIcon: true,
+		price: 600,
+		items: [
+			...rep("Aluminium", 30),
+		],
+	},
+    "Hit and Run": {
+		noIcon: true,
+		price: 750,
+		items: [
+			...rep("Aluminium", 25),
+		],
+	},
+    "Traffic / Parking Violation": {
+		noIcon: true,
+		price: 200,
+		items: [
+			...rep("Aluminium", 0),
+		],
+	},
+    
+
 };
 
 const INDIVIDUAL_ITEMS = [
