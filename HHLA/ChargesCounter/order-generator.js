@@ -4,14 +4,82 @@ let darkmodeState;
 
 const Settings = {
 	'MAIN_TABLE_WIDTH': 3,
-	'DEFAULT_MAX_CAP': 100,
+	'DEFAULT_MAX_CAP': 200,
 }
 function rep(elem, quantity) {
 	return `${elem}|`.repeat(quantity).split('|').slice(0, -1);
 }
 
 const Menu = {
-	"Main Charges:": {
+	"Basic Robbery:": {
+		header: true,
+	},
+    "Armed Robbery of a Shop": {
+		noIcon: true,
+		price: 1500,
+		items: [
+			...rep("Steel", 40),
+		],
+	},
+    "Armed Robbery of a Bank": {
+		noIcon: true,
+		price: 3200,
+		items: [
+			...rep("Steel", 90),
+		],
+	},
+    "Armed Robbery of a Jewelry Store": {
+		noIcon: true,
+		price: 5000,
+		items: [
+			...rep("Aluminium", 150),
+		],
+	},
+    "Kidnapping": {
+		noIcon: true,
+		price: 1200,
+		items: [
+			...rep("Aluminium", 70),
+		],
+	},
+    "Evading a Police Officer": {
+		noIcon: true,
+		price: 350,
+		items: [
+			...rep("Steel", 15),
+		],
+	},
+    "Felony Evading a Police Officer": {
+		noIcon: true,
+		price: 700,
+		items: [
+			...rep("Steel", 30),
+		],
+	},
+    "Possession of Unregistered Weapon": {
+		noIcon: true,
+		price: 500,
+		items: [
+			...rep("Aluminium", 10),
+		],
+	},
+    "Possession of Class 2 Weapon": {
+		noIcon: true,
+		price: 600,
+		items: [
+			...rep("Aluminium", 30),
+		],
+	},
+    "Possession of Class 3 Weapon": {
+		noIcon: true,
+		price: 1000,
+		items: [
+			...rep("Aluminium", 50),
+		],
+	},
+
+
+    "Assault Charges:": {
 		header: true,
 	},
 	"Aggravated Assault and Battery": {
@@ -42,6 +110,9 @@ const Menu = {
 			...rep("Steel", 48),
 		],
 	},
+    "Evading:": {
+		header: true,
+	},
 	"Evading a Police Officer": {
 		noIcon: true,
 		price: 350,
@@ -58,6 +129,20 @@ const Menu = {
 	},
 	"Robberies:": {
 		header: true,
+	},
+    "Robbery": {
+		noIcon: true,
+		price: 40,
+		items: [
+			...rep("Aluminium", 1000),
+		],
+	},
+    "Armed Robbery": {
+		noIcon: true,
+		price: 1500,
+		items: [
+			...rep("Aluminium", 70),
+		],
 	},
 	"Armed Robbery of a Shop": {
 		noIcon: true,
@@ -85,28 +170,23 @@ const Menu = {
 		price: 4100,
 		items: [
 			...rep("Aluminium", 120),
-
 		],
 	},
 	"Lockpicks:": {
 		header: true,
 	},
-	"Adv Lock Pick": {
+	"Kidnapping": {
 		noIcon: true,
-		price: 3000,
+		price: 1200,
 		items: [
-			...rep("Aluminium", 50),
-			...rep("Plastic", 50),
-			...rep("Rubber", 50),
+			...rep("Aluminium", 70),
 		],
 	},
-	"Lockpick Set": {
+	"Possession of Class 2 Weapon": {
 		noIcon: true,
-		price: 300,
+		price: 600,
 		items: [
-			...rep("Aluminium", 5),
-			...rep("Plastic", 3),
-			...rep("Rubber", 3),
+			...rep("Aluminium", 30),
 		],
 	},
 	"Misc:": {
@@ -282,7 +362,7 @@ function getEmptyOrder() {
 	buffer.push("<strong>CHARGES:</strong>");
 	buffer.push("");
 	buffer.push("");
-	buffer.push(`<strong>TOTAL MONEY:</strong> <span class="green">$0</span>`);
+	buffer.push(`<strong>TOTAL FINE:</strong> <span class="green">$0</span>`);
 	document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }
 
@@ -327,7 +407,7 @@ function report() {
 	if (allItemsOrdered.length) buffer.push(allItemsOrdered.join("\n"));
 	buffer.push("");
 	buffer.push("");
-	buffer.push(`<strong>TOTAL MONEY:</strong> <span class="green">$${total}</span>`);
+	buffer.push(`<strong>TOTAL FINE:</strong> <span class="green">$${total}</span>`);
     buffer.push("");
 	buffer.push("");
 	buffer.push(`<strong>TOTAL TIME:</strong> <span class="blue">${totalItems} months</span>`);
