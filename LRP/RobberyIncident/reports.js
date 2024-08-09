@@ -18,7 +18,7 @@ function reportTitle () {
 		robberyString = `${specific} ${robbery}`;
 		ROBBERY_STATE = 'FLEECA';
 	}
-	if (robbery.trim() === '24/7 Store') {
+	if (robbery.trim() === 'Store') {
 		document.getElementById('whatFleeca').style.display = 'none';
 		document.getElementById('whatStore').style.display = 'block';
 		let specific = document.getElementById('specificStore').value;
@@ -118,7 +118,7 @@ function report() {
 		robberyString = `${robbery} at ${specific}`;
 		ROBBERY_STATE = 'FLEECA';
 	}
-	if (robbery.trim() === '24/7 Store') {
+	if (robbery.trim() === 'Store') {
 		document.getElementById('whatFleeca').style.display = 'none';
 		document.getElementById('whatStore').style.display = 'block';
 		let specific = document.getElementById('specificStore').value;
