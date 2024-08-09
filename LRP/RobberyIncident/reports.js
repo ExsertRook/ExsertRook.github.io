@@ -78,7 +78,7 @@ function report() {
 	if (hostagestayer) buffer.push(`Hostage Taker: ${hostagestayer}`);
 	
 	buffer.push('');
-	buffer.push(`[PURSUIT ORDER]:`);
+	if (primary || secondary || tertiary || parallel || bikeunit || airunit) buffer.push(`[PURSUIT ORDER]:`);
 
 	let primaryfinal = ''
 	if (primary || !primaryp) primaryfinal = (`${primary}`);
@@ -106,7 +106,7 @@ function report() {
 	if (airfinal) buffer.push(`Air-1: ${airfinal}`);
 
 	if (bikeunit) buffer.push(`Bike-Unit: ${bikeunit}`);
-	buffer.push('');
+	if (primary || secondary || tertiary || parallel || bikeunit || airunit) buffer.push('');
 
 	let robbery = document.getElementById('robberytype').value;
 	let robberyString = '';
