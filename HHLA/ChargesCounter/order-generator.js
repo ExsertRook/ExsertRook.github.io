@@ -56,7 +56,11 @@ const Menu = {
 			...rep("Steel", 30),
 		],
 	},
-    "Possession of Unregistered Weapon": {
+
+	"Weapon Charges:": {
+		header: true,
+	},
+	"Possession of Unregistered Weapon": {
 		noIcon: true,
 		price: 500,
 		items: [
@@ -77,11 +81,60 @@ const Menu = {
 			...rep("Aluminium", 50),
 		],
 	},
-
+	"Carrying a Firearm Without a License": {
+		noIcon: true,
+		price: 400,
+		items: [
+			...rep("Aluminium", 25),
+		],
+	},
+	"Brandishing a Weapon": {
+		noIcon: true,
+		price: 350,
+		items: [
+			...rep("Aluminium", 20),
+		],
+	},
+	"Weapons Discharge Violation": {
+		noIcon: true,
+		price: 200,
+		items: [
+			...rep("Aluminium", 10),
+		],
+	},
+	"Felony Weapons Discharge Violation": {
+		noIcon: true,
+		price: 400,
+		items: [
+			...rep("Aluminium", 20),
+		],
+	},
+	"Trafficking of Class 1 Weapon": {
+		noIcon: true,
+		price: 5000,
+		items: [
+			...rep("Aluminium", 100),
+		],
+	},
+	"Trafficking of Class 2 Weapon": {
+		noIcon: true,
+		price: 7000,
+		items: [
+			...rep("Aluminium", 150),
+		],
+	},
+	"Trafficking of Class 3 Weapon": {
+		noIcon: true,
+		price: 10000,
+		items: [
+			...rep("Aluminium", 200),
+		],
+	},
 
 	"Robberies:": {
 		header: true,
 	},
+
     "Robbery": {
 		noIcon: true,
 		price: 40,
@@ -142,11 +195,11 @@ const Menu = {
 			...rep("Aluminium", 18),
 		],
 	},
-    "Felony Weapons Discharge": {
+	"Display of Tactital Gear": {
 		noIcon: true,
-		price: 400,
+		price: 200,
 		items: [
-			...rep("Aluminium", 20),
+			...rep("Aluminium", 5),
 		],
 	},
     "Verbal Harassment": {
@@ -175,6 +228,20 @@ const Menu = {
 		price: 200,
 		items: [
 			...rep("Aluminium", 0),
+		],
+	},
+	"Possession of Extended Magazines": {
+		noIcon: true,
+		price: 500,
+		items: [
+			...rep("Aluminium", 10),
+		],
+	},
+	"Possession of Silencers": {
+		noIcon: true,
+		price: 1500,
+		items: [
+			...rep("Aluminium", 30),
 		],
 	},
 
