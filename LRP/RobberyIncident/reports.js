@@ -420,6 +420,11 @@ function showCopiedPopup() {
 	}, 3500);
 }
 
+if (ROBBERY_STATE === 'JEWLERY') {
+	document.getElementById('whatFleeca').style.display = 'none';
+	document.getElementById('whatStore').style.display = 'none';
+}
+
 document.getElementById('copyReport').addEventListener('click', copy, false);
 function clearSelection() {
 	if (window.getSelection) {
