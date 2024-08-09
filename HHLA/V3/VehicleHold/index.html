@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Vehicle Hold Report Generator</title>
+	<link rel="shortcut icon" href="impound.png" />
+	<link rel="stylesheet" href="index.css" />
+	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> 
+</head>
+
+<body>
+	<div id="form">
+		<datalist id="roster">
+			<option value="[X-100] Thomas Sucher">Chief of Police</option>
+			<option value="[X-102] Jiggle Billy">Deputy Chief</option>
+			<option value="[A-110] Nick Amaro">Captain</option>
+			<option value="[A-111] Richeard Paul">Captain</option>
+			<option value="[A-112] Annabelle Taylor">Captain</option>
+			<option value="[A-116] Nigel Andrews">Captain</option>
+			<option value="[LT-120] Johnny Houseman">Lieutenant</option>
+			<option value="[SF-202] Hugo Armando">Sergeant First Class</option>
+			<option value="[SF-206] Chester Hamcheck">Sergeant First Class</option>
+			<option value="[SF-207] Tate Degirth">Sergeant First Class</option>
+			<option value="[SF-208] Jason Teapot">Sergeant First Class</option>
+			<option value="[S-220] Carl Smither">Sergeant</option>
+			<option value="[S-220] Michael Clarkson">Sergeant</option>
+			<option value="[CO-301] Jim Dweller">Corporal</option>
+			<option value="[CO-302] Nate Flake">Corporal</option>
+			<option value="[CO-304] Steve Gavins">Corporal</option>
+			<option value="[CO-305] Jake Hall">Corporal</option>
+			<option value="[CO-308] Austin roberts">Corporal</option>
+			<option value="[CO-309] Christian Duvall">Trooper</option>
+			<option value="[CO-310] No Hoe">Corporal</option>
+			<option value="[CO-311] Alejandro Teapot">Corporal</option>
+			<option value="[CO-345] Robbie Smith">Corporal</option>
+			<option value="[ST-402] Johnny Lee">Senior Trooper</option>
+			<option value="[ST-405] Billy Baker">Senior Trooper</option>
+			<option value="[ST-409] Liam Salvatore">Senior Trooper</option>
+			<option value="[ST-410] Jim Bop">Senior Trooper</option>
+			<option value="[ST-411] Jayden Hunter">Senior Trooper</option>
+			<option value="[T-602] Grizz Leebur">Trooper</option>
+			<option value="[T-604] Jarad Anthony Higgins">Trooper</option>
+			<option value="[T-669] Gingy Garza Li">Trooper</option>
+			<option value="[TA-701] Missy Cooper">Cadet</option>
+			<option value="[TA-702] Dallas Huckleberry">Cadet</option>
+			<option value="[TA-703] Carlitos De La Cruz">Cadet</option>
+			<option value="[TA-704] Clive Winston">Cadet</option>
+			<option value="[TA-705] Grayson Bone">Cadet</option>
+			<option value="[TA-706] Spencer Jamess">Cadet</option>
+			<option value="[TA-707] Wyatt Morgan">Cadet</option>
+			<option value="[TA-708] Nakana Andres">Cadet</option>
+			<option value="[TA-709] Ballo Scurry">Cadet</option> 
+			<option value="[TA-710] Draco Height">Cadet</option>
+			<option value="[TA-711] Mose Shrute">Cadet</option>
+			<option value="[TA-712] Jamal Genkins">Cadet</option>
+			<option value="[TA-713] Trippy Hippy">Cadet</option>
+			<option value="[TA-714] Kyle Newman">Cadet</option>
+			<option value="[TA-715] Milky Garza">Cadet</option>
+			<option value="[TA-716] Luke Bentley">Cadet</option>
+			<option value="[TA-718] Beefy Krey">Cadet</option>
+			<option value="[TA-719] Deano Burrows">Cadet</option>
+			<option value="[TA-721] Harry Jonson">Cadet</option>
+			<option value="[TA-750] Sam Losco">Cadet</option>
+			<option value="[FIB] Johnny Walker">FIB</option>
+		</datalist>
+		<div class="form-group">
+			<style>
+    			body {
+        		    font-family: 'Nunito';font-size: 16px;
+    			}
+                table, th, td {
+                    border:2px solid #000000;
+                    border-collapse: collapse;
+                }
+                th {
+                    height: 50px;
+					background-color: rgb(56, 44, 221);
+					color: black;
+                }
+				th-2 {
+					background-color: aqua;
+				}
+
+    		</style>
+        
+			<span style="font-weight: bold; font-size: 24px; text-align: center;">Vehicle Hold Report Generator</span>
+			<br />
+			<label class="inline" title="(You only have to do this once - it will cache)" style="text-decoration: none;">Your callsign & name:</label>
+			<input type="text" autocomplete="on" list="roster" id="yourself" name="yourself" placeholder="[X-100] Thomas Sucher" /><br />
+			<div class="popup" id="copyTitle">
+				<div class="btn" title="Copy the generated title to your clipboard">Copy The Title</div> <span class="popuptext" id="myPopup">Title copied!</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			</div>
+			<div class="popup" id="copyReport">
+				<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
+			</div>
+			
+		</div>
+        
+		<div class="form-group">
+			<label>Incident Report Nr:</label>
+			<input type="text2" id="incidentnr" name="incidentnr" placeholder="12345">
+		</div>
+		<div class="form-group">
+			<label>Hold Reason:</label>
+			<select id="holdreason">
+				<option>Involuntary / Voluntary Manslaughter</option>
+				<option>First / Second Degree Murder</option>
+				<option>Terrorism</option>
+				<option>Exception (Approval from one of the Chiefs)</option>
+				<option></option>
+				<option>2nd Felony Evasion of the day</option>
+				<option selected>Robbery of a Stockade, Bank, J-Store</option>
+				<option>Kidnapping</option>
+				<option>Shooting, or commission of a crime associated</option>
+				<option>Trafficking of Class 2/3 Weapons</option>
+				<option></option>
+				<option>Reckless Driving while Street Racing</option>
+				<option>Robbery of a Store</option>
+				<option>Armed Robbery of a Person</option>
+				<option>Drug Trafficking Class A/B</option>
+				<option></option>
+				<option>Driving Under the Influence</option>
+				<option>1st Felony Evasion of the day</option>
+			</select>
+		</div>
+		<div>
+			<label>Vehicle Information:</label><br />
+			VIN Number:<br />
+			<input type="text" id="vin" name="vin" placeholder="12AB34CDE567890"><br />
+			Plate Number:<br />
+			<input type="text" id="plate" name="plate" placeholder="12ABC345"><br />
+			Registered Owner:<br />
+			<input type="text" id="owner" name="owner" placeholder="Firstname Lastname"><br />
+			Model / Name:<br />
+			<input type="text" id="vehiclename" name="vehiclename" placeholder="Mustang"><br />
+			Color:<br />
+			<input type="text" id="vehiclecolor" name="vehiclecolor" placeholder="Black"><br />
+	</div>
+    <table class="center" style="width:120%" >
+        <thead>
+            <tr>
+                <th colspan="2" style="font-size: 26px;">Class A Hold &nbsp - &nbsp 9 Hours (540 Minutes)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Involuntary / Voluntary Manslaughter</td></tr>
+                <td>First / Second Degree Murder</td></tr>
+                <td>Terrorism</td></tr>
+				<td>Exception (Approval from one of the Chiefs)</td></tr>
+				<td>&nbsp;</td>
+            </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th colspan="2" style="font-size: 26px;">Class B Hold &nbsp - &nbsp 6 Hours (360 Minutes)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2nd Felony Evasion of the day</td></tr>
+                <td>Robbery of an Armored Truck, Bank, or Jewelry</td></tr>
+                <td>Kidnapping</td></tr>
+                <td>Shooting, or the commission of a crime associated with the use of a firearm</td></tr>
+                <td>Trafficking of Class 2/3 weapons</td></tr>
+				<td>&nbsp;</td>
+            </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th colspan="2" style="font-size: 26px;">Class C Hold &nbsp - &nbsp 4 Hours (240 Minutes)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Reckless Driving whilst Street Racing</td></tr>
+                <td>Robbery of a Store</td></tr>
+                <td>Armed Robbery of a Person</td></tr>
+                <td>Drug Trafficking Class A/B</td></tr>
+				<td>&nbsp;</td>
+            </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th colspan="2" style="font-size: 26px;">Class D Hold &nbsp - &nbsp 2 Hours (120 Minutes)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Driving Under the Influence</td></tr>
+                <td>1st Felony Evasion of the day</td></tr>
+            </tr>
+        </tbody>
+    </table>
+	<textarea class="wide" id="reportBody2">The Title of the MDT Report will generate here</textarea>
+	<textarea class="wide" id="reportBody">The Report will automatically generate as you fill out the form to the left.&#10;&#10;(Note: the generated report will be editable, but once you edit it, you can no longer update it based on the form)&#10;&#10;If you have any questions or concerns, feel free to fill the feedback form on the main website :)&#10;&#10;Also if you want to show love, make sure to thank Sucher :)</textarea>
+	<!--<pre id="reportBody">[report will automatically generate as you fill out the form to the left]</pre> -->
+	
+	<script src="reports.js"></script>
+</body>
+
+</html>
