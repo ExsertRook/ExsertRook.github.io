@@ -138,6 +138,12 @@ input[type="checkbox"] + label {
     margin-bottom: 7px;
     width: 50%;
 }
+.form-group2:not(.layer-2) {
+    padding-bottom: 7px;
+    border-bottom: 2px solid rgb(74, 85, 244);
+    margin-bottom: 7px;
+    width: 50%;
+}
 
 /* Text input box size */
 input[type="text"] {
@@ -443,6 +449,6 @@ body::-webkit-scrollbar{
     resize: none;    /* Prevents the user from resizing the textarea */
 }
 
-#options option {
-    display: none;
+#robberytype {
+    width: 190px;
 }
