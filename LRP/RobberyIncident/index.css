@@ -146,7 +146,7 @@ input[type="text"] {
 }
 input[type="text2"] {
     padding: 3px;
-    width: 90px;
+    width: 110px;
 }
 input[type="number"] {
     width: 60px;
@@ -441,4 +441,8 @@ body::-webkit-scrollbar{
 #reportbody2 {
     overflow: hidden; /* Prevents scrolling */
     resize: none;    /* Prevents the user from resizing the textarea */
+}
+
+#options option {
+    display: none;
 }

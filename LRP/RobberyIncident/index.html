@@ -18,7 +18,7 @@
 	<!--<buttonsasp onclick="saspchange()">SASP</buttonsasp> &nbsp&nbsp&nbsp <buttonbcso onclick="bcsochange()">BCSO</buttonbcso> &nbsp&nbsp&nbsp <buttonsahp onclick="sahpchange()">SAHP</buttonsahp>-->
 	<br />
 	<label class="inline" style="font-size: 14px;">Your Callsign & Name:</label><br />
-    <input type="text" autocomplete="on" list="roster" id="yourself" name="yourself" placeholder="Thomas Sucher"/><br />
+    <input type="text" autocomplete="on" list="roster" id="yourself" name="yourself" placeholder="[X-100] Thomas Sucher"/><br />
 	<div class="popup" id="copyReport">
 		<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
 	</div>
@@ -37,13 +37,13 @@
 		</div>
 		<div class="lineup">
 			<label style="text-align: left;">Pursuit Order:</label>
-			Primary: &nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" autocomplete="on" list="roster" id="primary" name="primary" placeholder="[XX-XXX] Name">
+			Primary: &nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" autocomplete="on" list="roster" id="primary" name="primary" placeholder="[XX-XXX] Name"><span style="margin-left: 20px;"></span>
 			Passenger: <input type="text" autocomplete="on" list="roster" id="primaryp" name="primaryp" placeholder="[XX-XXX] Name"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Optionals:<br />
-			Secondary: <input type="text" autocomplete="on" list="roster" id="secondary" name="secondary" placeholder="[XX-XXX] Name">
+			Secondary: <input type="text" autocomplete="on" list="roster" id="secondary" name="secondary" placeholder="[XX-XXX] Name"><span style="margin-left: 20px;"></span>
 			Passenger: <input type="text" autocomplete="on" list="roster" id="secondaryp" name="secondaryp" placeholder="[XX-XXX] Name"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Bike-Unit: <input type="text" autocomplete="on" list="roster" id="bikeunit" name="bikeunit" placeholder="[XX-XXX] Name"><br />
-			Tertiary: &nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" autocomplete="on" list="roster" id="tertiary" name="tertiary" placeholder="[XX-XXX] Name"> 
+			Tertiary: &nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" autocomplete="on" list="roster" id="tertiary" name="tertiary" placeholder="[XX-XXX] Name"> <span style="margin-left: 20px;"></span>
 			Passenger: <input type="text" autocomplete="on" list="roster" id="tertiaryp" name="tertiaryp" placeholder="[XX-XXX] Name">  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Air-1: <input type="text" autocomplete="on" list="roster" id="airunit" name="airunit" placeholder="Probably Johnson"><br />
-			Parallel: &nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" autocomplete="on" list="roster" id="parallel" name="parallel" placeholder="[XX-XXX] Name"> 
+			Parallel: &nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" autocomplete="on" list="roster" id="parallel" name="parallel" placeholder="[XX-XXX] Name"> <span style="margin-left: 20px;"></span>
 			Passenger: <input type="text" autocomplete="on" list="roster" id="parallelp" name="parallelp" placeholder="[XX-XXX] Name"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Co-Pilot: <input type="text" autocomplete="on" list="roster" id="airp" name="airp" placeholder="[XX-XXX] Name"><br />	
 		</div>
 		<div class="form-group">
@@ -129,24 +129,24 @@
 		<div class="form-group">
 			<label>Demands:</label>
 			<input type="checkbox" id="fpassagensp" name="fpassagensp" value="fpassagensp" checked/>
-			<label for="fpassagensp">free passage with no spikes on perimeter</label><br />
+			<label2 for="fpassagensp">free passage with no spikes on perimeter</label><br />
 			<input type="checkbox" id="fpassagensf" name="fpassagensf" value="fpassagensf" />
-			<label for="fpassagensf">free passage with no spikes on the whole chase</label><br />
+			<label2 for="fpassagensf">free passage with no spikes on the whole chase</label><br />
 			<input type="checkbox" id="nair" name="nair" value="nair" />
-			<label for="nair">no helicopter</label><br />
+			<label2 for="nair">no helicopter</label><br />
 			<input type="checkbox" id="nspeed" name="nspeed" value="nspeed" />
-			<label for="nspeed">no speed unit</label><br />
+			<label2 for="nspeed">no speed unit</label><br />
 			<input type="checkbox" id="nbike" name="nbike" value="nbike" />
-			<label for="nbike">no bike unit</label><br />
+			<label2 for="nbike">no bike unit</label><br />
 			Other:<br />
 			<textarea id="otherdemands" name="otherdemands" placeholder="Anything else they demanded, or if they dropped a weapon for a demand"></textarea>
 		</div>
 		<div class="form-group">
 			<label>Vehicle Information:</label>
-			Description: <input type="text" id="vehicledesc" name="vehicledesc" placeholder="Probably a Mustang"><br />
-			Color: <input type="text2" id="carcolor" name="carcolor" placeholder="Blue"><br />
-			Plate: <input type="text2" id="vehicleplate" name="vehicleplate" placeholder="12ABC345"><br />
-			Registered To: <input type="text" id="vehiclereg" name="vehiclereg" placeholder="FirstName LastName">
+			Description: <span style="margin-left: 18px;"></span> <input type="text" id="vehicledesc" name="vehicledesc" placeholder="Probably a Mustang"><br />
+			Color: <span style="margin-left: 101px;"></span><input type="text2" id="carcolor" name="carcolor" placeholder="Dark Blue"><br />
+			Plate: <span style="margin-left: 102px;"></span><input type="text2" id="vehicleplate" name="vehicleplate" placeholder="12ABC345"><br />
+			Registration: <span style="margin-left: 12px;"></span><input type="text" id="vehiclereg" name="vehiclereg" placeholder="FirstName LastName">
 		</div>
 		<div class="form-group">
 			<label>How did the chase end? Did they get caught?</label>
