@@ -31,9 +31,9 @@
 		<div class="form-group">
 			<label>Assignment:</label>
 			Scene command: <input type="text" autocomplete="on" list="roster" id="scenecommand" name="scenecommand" placeholder="[XX-XXX] Name"><br />
-			Negotiator: <input type="text" autocomplete="on" list="roster" id="negotiator" name="negotiator" placeholder="[XX-XXX] Name"><br />
-			Pictures: <input type="text" autocomplete="on" list="roster" id="pictures" name="pictures" placeholder="[XX-XXX] Name"><br />
-			Hostage Taker: <input type="text" autocomplete="on" list="roster" id="hostagestayer" name="hostagestayer" placeholder="[XX-XXX] Name">
+			Negotiator: <span style="margin-left: 41.5px;"><input type="text" autocomplete="on" list="roster" id="negotiator" name="negotiator" placeholder="[XX-XXX] Name"><br />
+			Picture Taker: <span style="margin-left: 25px;"></span><input type="text" autocomplete="on" list="roster" id="pictures" name="pictures" placeholder="[XX-XXX] Name"><br />
+			Hostage Taker: <span style="margin-left: 14px;"></span><input type="text" autocomplete="on" list="roster" id="hostagestayer" name="hostagestayer" placeholder="[XX-XXX] Name">
 		</div>
 		<div class="lineup">
 			<label style="text-align: left;">Pursuit Order:</label>
@@ -47,7 +47,7 @@
 			Passenger: <input type="text" autocomplete="on" list="roster" id="parallelp" name="parallelp" placeholder="[XX-XXX] Name"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Co-Pilot: <input type="text" autocomplete="on" list="roster" id="airp" name="airp" placeholder="[XX-XXX] Name"><br />	
 		</div>
 		<div class="form-group">
-			<label>Robbery Location:</label>
+			<label for="robberytype">Robbery Location:</label>
 			<select id="robberytype">
 				<option value="Jewelry Store" selected>Jewelry Store</option>
 				<option value="Fleeca Bank">Fleeca Bank</option>
@@ -92,7 +92,7 @@
 		</div>
 		<div class="form-group">
 			<label>Numbers:</label>
-			Robbers inside: 
+			Robbers inside: <span style="margin-left: 11px;"></span>
 			<select id="robbersinside">
 				<option>1</option>
 				<option selected>2</option>
@@ -100,17 +100,7 @@
 				<option>4</option>
 				<option>5</option>
 				<option>6</option>
-			</select><br />
-			Robbers outside:
-			<select id="robbersoutside">
-				<option selected>0</option>
-				<option>1</option>
-				<option>2</option>
-				<option>3</option>
-				<option>4</option>
-				<option>5</option>
-				<option>6</option>
-			</select><br />
+			</select><span style="margin-left: 30px;"></span>
 			Hostages:
 			<select id="hostages">
 				<option>0</option>
@@ -124,6 +114,16 @@
 				<option>8</option>
 				<option>9</option>
 				<option>10</option>
+			</select><br />
+			Robbers outside:
+			<select id="robbersoutside">
+				<option selected>0</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
 			</select>
 		</div>
 		<div class="form-group">
