@@ -452,3 +452,11 @@ body::-webkit-scrollbar{
 #robberytype {
     width: 190px;
 }
+
+#specificBank {
+    width: 190px;
+}
+
+.form-group2 {
+    display: flex;
+}
