@@ -11,7 +11,7 @@ html, body {
     color: #ffffff;
     margin: auto;
     line-height: 22.5px;
-    margin-top: 140px;
+    margin-top: 90px;
     background: url('underwater.png') no-repeat
         center center fixed; 
     -webkit-background-size: cover;
