@@ -131,6 +131,53 @@ const Menu = {
 		],
 	},
 
+	"Assault Charges:": {
+		header: true,
+	},
+	"Assault and Battery": {
+		noIcon: true,
+		price: 1000,
+		items: [
+			...rep("Aluminium", 40),
+		],
+	},
+	"Aggravated Assault and Battery": {
+		noIcon: true,
+		price: 1200,
+		items: [
+			...rep("Aluminium", 60),
+		],
+	},
+	"Attempted Murder": {
+		noIcon: true,
+		price: 2500,
+		items: [
+			...rep("Aluminium", 120),
+		],
+	},
+	"Assault and Battery (PP)": {
+		noIcon: true,
+		price: 1150,
+		items: [
+			...rep("Aluminium", 46),
+		],
+	},
+	"Aggravated Assault and Battery (PP)": {
+		noIcon: true,
+		price: 1380,
+		items: [
+			...rep("Aluminium", 69),
+		],
+	},
+	"Attempted Murder (PP)": {
+		noIcon: true,
+		price: 2875,
+		items: [
+			...rep("Aluminium", 138),
+		],
+	},
+
+
 	"Robberies:": {
 		header: true,
 	},
