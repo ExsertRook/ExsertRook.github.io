@@ -180,6 +180,8 @@ input[type="checkbox"] {
     position: relative;
     top: 1px;
     accent-color: rgb(74, 85, 245);
+    width: 20px;
+    height: 15px;
 }
 
 input.invisible {
