@@ -131,16 +131,16 @@
 		</div>
 		<div class="form-group">
 			<label>Demands:</label>
-			<input type="checkbox" id="fpassagensp" name="fpassagensp" value="fpassagensp" checked/>
-			<label2 for="fpassagensp">free passage with no spikes on perimeter</label><br />
-			<input type="checkbox" id="fpassagensf" name="fpassagensf" value="fpassagensf" />
-			<label2 for="fpassagensf">free passage with no spikes on the whole chase</label><br />
-			<input type="checkbox" id="nair" name="nair" value="nair" />
-			<label2 for="nair">no helicopter</label><br />
-			<input type="checkbox" id="nspeed" name="nspeed" value="nspeed" />
-			<label2 for="nspeed">no speed unit</label><br />
-			<input type="checkbox" id="nbike" name="nbike" value="nbike" />
-			<label2 for="nbike">no bike unit</label><br />
+				<label><input type="checkbox" id="fpassagensp" name="fpassagensp" value="fpassagensp" checked/><span></span>
+				- Free passage with no spikes on perimeter</label>
+				<label><input style="margin-top: 10px;" type="checkbox" id="fpassagensf" name="fpassagensf" value="fpassagensf" /><span></span>
+				- Free passage with no spikes on the whole chase</label>
+				<label><input style="margin-top: 10px;" type="checkbox" id="nair" name="nair" value="nair" /><span></span>
+				- No helicopter</label>
+				<label><input style="margin-top: 10px;" type="checkbox" id="nspeed" name="nspeed" value="nspeed" /><span></span>
+				- No speed unit</label>
+				<label><input style="margin-top: 10px;" type="checkbox" id="nbike" name="nbike" value="nbike" /><span></span>
+				- No bike unit</label><br />
 			Other:<br />
 			<textarea id="otherdemands" name="otherdemands" placeholder="Anything else they demanded, or if they dropped a weapon for a demand"></textarea>
 		</div>
@@ -234,12 +234,15 @@
 			</select><br />
 		</div>
 		<div class="form-group">
-			<input type="checkbox" id="cend" name="cend" value="cend">
-			<label for="checkedoff">- Only check this once they have been caught!
+			<label><input type="checkbox" id="cend" name="cend" value="cend"><span></span>
+			- Only check this once they have been caught!</label>
 		</div>	
 		<div class="form-group">
 			<label>Medical Attention...</label>
-			Was needed? <input type="checkbox" id="medneed" name="medneed" value="medneed"><br /><br />
+			 
+			<label>
+			<input type="checkbox" id="medneed" name="medneed" value="medneed"><span></span> - Was needed?<br /><br />
+			</label>
 			<!-- - Were EMS present?
 			<select id="emspresent">
 				<option selected>?</option>
@@ -251,7 +254,7 @@
 				<input type="text" placeholder="[XXX] Name" autocomplete="on" list="emsroster" id="emsonscene" name="emsonscene">&nbsp
 				<input type="text" placeholder="[XXX] Name" autocomplete="on" list="emsroster" id="emsonscene2" name="emsonscene2">
 			</div> --> 
-			Received medical: &nbsp Suspects: 
+			Patients: &nbsp Suspects: 
 			<select id="medneedsus">
 				<option>1</option>
 				<option>2</option>
@@ -284,8 +287,7 @@
 				<option>Cayo Perico</option>
 			</select>
 			<br />
-			Attempted to flee at hospital?
-			<input type="checkbox" id="runhospital" name="runhospital" value="runhospital">
+			<label><input type="checkbox" id="runhospital" name="runhospital" value="runhospital"><span></span> - Attempted to flee at hospital?</label>
 		</div>
 		<div class="form-group">
 			<label>Processed at...</label>
@@ -299,10 +301,6 @@
 				<option>Del Perro Pier PD</option>
 				<option>Cayo Perico</option>
 			</select>
-		</div>
-		<div>
-			<label>Optional:</label>
-			Plead no contest<input type="checkbox" id="nocontest" name="nocontest" value="nocontest">
 		</div>
 	</div>
 	<textarea class="wide" id="reportBody2">The Title of the MDT Report will appear here</textarea>
