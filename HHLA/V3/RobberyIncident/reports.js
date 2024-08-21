@@ -133,7 +133,7 @@ function report() {
 	}
 
 	buffer.push(`[SCENE DETAILS]:`);
-	buffer.push(`Whilst on duty, we received a dispatch call regarding an alarm going off at the ${robberyString}. Once a scene commander was established, they assigned officer ${callsign} to create and write the incident report.`);
+	buffer.push(`Whilst on duty, we received a dispatch call regarding an alarm going off at the ${robberyString}. Once units arrived on scene and a scene commander was established, they assigned officer ${callsign} to create and write the incident report.`);
 	buffer.push('');
 	let hostages = document.getElementById('hostages').value;
 	let robbersinside = document.getElementById('robbersinside').value;
@@ -162,7 +162,7 @@ function report() {
 
 	let stayedBack = (hostagestayer ? hostagestayer.trim() : 'a unit');
 	buffer.push(`The ${robbersinside} suspect(s) demanded ${demandsText} for the safety of the ${hostages} hostage(s).` +
-		` Once the suspect(s) confirmed that they were ready on the inside, scene commander prepared a pursuit lineup. Scene commander assigned officer ${stayedBack} to collect the hostage and their contact information.`);
+		` Once the suspect(s) confirmed that they were ready on the inside, scene commander prepared a pursuit lineup. Scene commander assigned ${stayedBack} to collect the hostage and their contact information. After the hostage was safe, the ${robberyString} building was cleared out.`);
 	buffer.push('');
 
 	buffer.push(`[VEHICLE | CHASE]:`);
@@ -381,9 +381,6 @@ function report() {
     	buffer.push('[PROCESSED]:');
 		buffer.push(`All of the apprehended suspects were processed at ${processed}.`);
 
-		if (document.getElementById('nocontest').checked) {
-			buffer.push(`The suspect plead no contest.`);
-		}
     }
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }
