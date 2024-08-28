@@ -11,7 +11,7 @@ html, body {
     color: #ffffff;
     margin: auto;
     line-height: 22.5px;
-    margin-top: 140px;
+    margin-top: 100px;
     background: url('razer.png') no-repeat
         center center fixed; 
     -webkit-background-size: cover;
@@ -313,4 +313,14 @@ body.dark-theme a {
 body.dark-theme select {
 	background-color: #2F3136;
 	color:#f9f9f9;
+}
+
+.centered {
+    text-align: center;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
