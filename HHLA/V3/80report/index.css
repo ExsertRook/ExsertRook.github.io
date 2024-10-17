@@ -18,16 +18,17 @@ header {
     font-weight: bold;
     display: block;
     font-size: 24px;
-    width: 100%;
+    width: 97.5%;
     height: 200px;
     top: 0;
     position: fixed;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border-bottom: 2px solid rgb(56, 44, 221);
     color: white;
     background-image: url(3departments.png);
     background-repeat: no-repeat;
     background-size: 600px;
+    z-index: 1;
 }
 
 pre, code {
@@ -139,12 +140,12 @@ input[type="checkbox"] + label {
 }
 
 input[type="text"] {
-    width: 180px;
+    width: 190px;
     padding: 3px;
 }
 input[type="text2"] {
     padding: 3px;
-    width: 90px;
+    width: 110px;
 }
 input[type="number"] {
     width: 60px;
@@ -158,9 +159,48 @@ label + .form-group.layer-2 {
 
 input[type="checkbox"] {
     position: relative;
-    top: 1px;
-    accent-color: rgb(56, 44, 221);
+    accent-color: rgb(25, 145, 41);
+    width: 20px;
+    height: 15px;
+    opacity: 0;
 }
+
+label + input[type="checkbox"]{
+    position: absolute;
+}
+
+label span{
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: -22px;
+    
+}
+
+label span::after{
+    content: '';
+    position: absolute;
+    left: 3.5px;
+    bottom: 4px;
+    width: 10px;
+    height: 15px;
+    border: solid rgb(42, 182, 24);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: width 0.5s, height 0.5s, opacity 0.8s;
+}
+input:checked ~ span::after{
+    width: 6px;
+    height: 10px;
+    opacity: 1;
+}
+
 
 input.invisible {
     width: 50px;
@@ -251,7 +291,7 @@ a.button {
     border-radius: 4px;
     text-decoration: none;
 
-    color: #333;
+    color: #020202;
     background-color: rgb(56, 44, 221);
     border-color: rgb(28, 37, 167);
 }
@@ -363,7 +403,7 @@ select {
 
 .btn {
     display: inline-block;
-    padding: 6px 12px;
+    padding: 6px 50px;
     margin-bottom: 0;
     font-size: 14px;
     font-weight: 400;
@@ -382,7 +422,7 @@ select {
     border: 1px solid transparent;
     border-radius: 4px;
 
-    color: #333;
+    color: #000000;
     background-color: rgb(56, 44, 221);
     border-color: rgb(28, 37, 167);
 }
