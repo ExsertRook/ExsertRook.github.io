@@ -71,7 +71,7 @@
 			</div>
 		</div>
         <div class="form-group">
-            <label>How did it end?:</label>
+            <br /><label>How did it end?:</label>
             <select id="ending">
                 <option>Surrendered</option>
                 <option>Had no Hostage</option>
@@ -82,8 +82,11 @@
         </div>
 		<div class="form-group">
 			<label>Medical Attention...</label>
-			Was it needed? <input type="checkbox" id="medneed" name="medneed" value="medneed"><br />
-			If needed, how many? &nbsp Suspects:
+			<label>
+			<input type="checkbox" id="medneed" name="medneed" value="medneed"><span></span> - Was needed?<br /><br />
+			</label>
+
+			Patients: &nbsp Suspects:
 			<select id="medneedsus">
 				<option>1</option>
 				<option>2</option>
@@ -109,21 +112,21 @@
 				<option>12</option>
 			</select><br />
 			Which hospital? <select id="hospitalname">
-				<option selected>Saint Fiacre</option>
-				<option>Mount Zonah</option>
+				<option selected>Mount Zonah</option>
 				<option>Sandy Shores Medical</option>
 				<option>Paleto Hospital</option>
 				<option>Cayo Perico</option>
 			</select>
 			<br />
-			<input type="checkbox" id="runhospital" name="runhospital" value="runhospital"> - Check if Attempted to flee at hospital
+			<label><input type="checkbox" id="runhospital" name="runhospital" value="runhospital"><span></span> - Attempted to flee at hospital?</label>
 		</div>
 		<div class="form-group">
 			<label>Processed at...</label>
 			<select id="processedat">
 				<option selected>MRPD</option>
+				<option>Rockford Hills Police Department</option>
 				<option>Sandy Shores Sheriff's Office</option>
-				<option>Davis PD</option>
+				<option>Davis Police Department</option>
 				<option>Paleto Police Department</option>
 				<option>Highway Police Department</option>
 				<option>Del Perro Pier PD</option>
