@@ -158,9 +158,48 @@ label + .form-group.layer-2 {
 
 input[type="checkbox"] {
     position: relative;
-    top: 1px;
-    accent-color: rgb(74, 85, 244);
+    accent-color: rgb(25, 145, 41);
+    width: 20px;
+    height: 15px;
+    opacity: 0;
 }
+
+label + input[type="checkbox"]{
+    position: absolute;
+}
+
+label span{
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: -22px;
+    
+}
+
+label span::after{
+    content: '';
+    position: absolute;
+    left: 3.5px;
+    bottom: 4px;
+    width: 10px;
+    height: 15px;
+    border: solid rgb(42, 182, 24);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: width 0.5s, height 0.5s, opacity 0.8s;
+}
+input:checked ~ span::after{
+    width: 6px;
+    height: 10px;
+    opacity: 1;
+}
+
 
 input.invisible {
     width: 50px;
