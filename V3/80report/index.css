@@ -421,6 +421,7 @@ select {
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
+    margin-left: 70px;
 
     color: #000000;
     background-color: rgb(56, 44, 221);
