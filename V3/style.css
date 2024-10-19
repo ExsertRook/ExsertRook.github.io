@@ -40,7 +40,7 @@ body {
 
 input[type="text"] {
     background-color: rgb(54, 54, 54);
-    color: rgb(146, 245, 223);
+    color: rgb(255, 255, 255);
     font-weight: 500;
 }
 input[type="text"]::placeholder {
@@ -79,7 +79,7 @@ input[type="text"]::placeholder {
 .card {
     display: flex;
     align-items: center;
-    border: 1px solid rgb(146, 245, 223);
+    border: 1px solid rgb(212, 37, 183);
     padding: .5rem;
     font-size: .8rem;
     padding-bottom: 15px;
@@ -118,8 +118,8 @@ a.button {
     text-decoration: none;
 
     color: black;
-    background-color: rgb(146, 245, 223);
-    border-color: rgb(54, 94, 85);
+    background-color: rgb(212, 37, 183);
+    border-color: rgb(63, 11, 54);
 }
 
 a.bigbutton {
@@ -148,14 +148,14 @@ a.bigbutton {
     text-decoration: none;
     width: 100%;
     color: black;
-    background-color: rgb(146, 245, 223);
-    border-color: rgb(54, 94, 85);
+    background-color: rgb(212, 37, 183);
+    border-color: rgb(63, 11, 54);
 }
 
 a.button:hover, a.bigbutton:hover {
-    color: white;
-    background-color: rgb(54, 94, 85);
-    border-color: rgb(21, 36, 32);
+    color: rgb(255, 255, 255);
+    background-color: rgb(63, 11, 54);
+    border-color: rgb(27, 5, 24);
 }
 
 .card img{
@@ -191,12 +191,12 @@ a.button:hover, a.bigbutton:hover {
 
 a:link
 {
-   color: rgb(146, 245, 223);
+   color: rgb(212, 37, 183);
    text-decoration: none;
 }
 a:visited
 {
-   color: rgb(146, 245, 223);
+   color: rgb(212, 37, 183);
    text-decoration: none;
 }
 a:hover
@@ -206,6 +206,6 @@ a:hover
 }
 a:active
 {
-   color: rgb(146, 245, 223);
+   color: rgb(212, 37, 183);
    text-decoration: none;
 }
