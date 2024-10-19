@@ -80,7 +80,7 @@ input[type="text"]::placeholder {
 .card {
     display: flex;
     align-items: center;
-    border: 1px solid rgb(212, 37, 183);
+    border: 3px solid rgb(212, 37, 183);
     padding: .5rem;
     font-size: .8rem;
     padding-bottom: 15px;
