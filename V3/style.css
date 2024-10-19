@@ -20,6 +20,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: rgb(243, 236, 236)
 }
 
 .webtitle {
