@@ -30,7 +30,7 @@ function report() {
 	let bikeunit = document.getElementById('bikeunit').value;
 	buffer.push('');
 	
-	buffer.push(`[INVOLVED IN PURSUIT]:`);
+	buffer.push(`[PURSUIT ORDER]:`);
 
 	let primaryfinal = ''
 	if (primary || !primaryp) primaryfinal = (`${primary}`);
@@ -75,61 +75,61 @@ function report() {
 			text: 'During patrol, ...',
 		},
 		'Refusing to pull over': {
-			text: 'During patrol, we noticed that there was a vehicle breaking traffic laws. Upon attempting to pull them over, they did not even acknowledge it and refused to pull over their vehicle. With that they initiated a 10-80 with us pursuing the vehicle.',
+			text: 'During patrol, we noticed that there was a vehicle breaking traffic laws. Upon attempting to pull the vehicle over, they did not acknowledge it and refused to pull over the vehicle. From that, a 10-80 vehicle pursuit was initiated with the vehicle.',
 		},
 		'Excessive Speeding': {
-			text: 'During patrol, we noticed that there was a vehicle who excessively sped past us. In an attempt to pull the vehicle over for a welfare check, they did not even pull over, initiating a 10-80.',
+			text: 'During patrol, we spotted a vehicle who excessively sped past our patrol car. In an attempt to pull the vehicle over for a welfare check, they refused to pull over, initiating a 10-80.',
 		},
 		'Drug-Sales': {
-			text: 'During patrol, we responded to some drug sale calls. Upon arrival, an individual that was in the area noticed the patrol vehicle and decided to get into their car and flee, initiating a 10-80.',
+			text: 'During patrol, we responded to dispatch calls of some drug sales. Upon arrival, an individual that was in the immediate area noticed the patrol vehicle and decided to get into their vehicle and began fleeing, initiating a 10-80.',
 		},
 		'Drug-Sales (Confirmed Handoff)': {
-			text: 'During patrol, we responded to some drug sale calls. Upon arrival, we notice and confirm an individual doing a handoff to a pedestrian passing by. Once we made a move and go up to the suspect, they got into their vehicle and fled, initiating a 10-80.',
+			text: 'During patrol, we responded to some drug sale calls. Upon arrival, we noticed and confirmed an individual doing a handoff to a pedestrian passing by. Once we made a move and go up to the suspect, they got into their vehicle and began fleeing, initiating a 10-80.',
 		},
 		'Hit and Run': {
-			text: 'During patrol, we were driving around and then all of a sudden, an individual had crashed into the side of our patrol cruiser. When we went to pull them over, they kept fleeing, initiating a 10-80.',
+			text: 'During patrol, we were driving around and then all of a sudden, an individual had commited a hit and run. When we attempted to pull them over, they kept fleeing, initiating a 10-80.',
 		},
 		'Vehicle Tampering Call (Class M)': {
-			text: 'During patrol, we responded to a Vehicle Tampering Dispatch call (Class M). Upon we arrived and the suspect had noticed us, they suspect decided to flee, initiating a 10-80.',
+			text: 'During patrol, we responded to a Vehicle Tampering Dispatch call (Class M). Upon we arrived and the suspect had noticed us, the suspect decided to flee, initiating a 10-80.',
 		},
 		'Vehicle Tampering Call (Class A+)': {
-			text: 'During patrol, we responded to a Vehicle Tampering Dispatch call (Class A+). Upon we arrived and the suspect had noticed us, they suspect decided to flee, initiating a 10-80.',
+			text: 'During patrol, we responded to a Vehicle Tampering Dispatch call (Class A+). Upon we arrived and the suspect had noticed us, the suspect decided to flee, initiating a 10-80.',
 		},
 		'Vehicle Tampering Call (Class A)': {
-			text: 'During patrol, we responded to a Vehicle Tampering Dispatch call (Class A). Upon we arrived and the suspect had noticed us, they suspect decided to flee, initiating a 10-80.',
+			text: 'During patrol, we responded to a Vehicle Tampering Dispatch call (Class A). Upon we arrived and the suspect had noticed us, the suspect decided to flee, initiating a 10-80.',
 		},
 		'Vehicle Tampering Call (Class B)': {
-			text: 'During patrol, we responded to a Vehicle Tampering Dispatch call (Class B). Upon we arrived and the suspect had noticed us, they suspect decided to flee, initiating a 10-80.',
+			text: 'During patrol, we responded to a Vehicle Tampering Dispatch call (Class B). Upon we arrived and the suspect had noticed us, the suspect decided to flee, initiating a 10-80.',
 		},
 		'Vehicle Tampering Call (Class C)': {
-			text: 'During patrol, we responded to a Vehicle Tampering Dispatch call (Class C). Upon we arrived and the suspect had noticed us, they suspect decided to flee, initiating a 10-80.',
+			text: 'During patrol, we responded to a Vehicle Tampering Dispatch call (Class C). Upon we arrived and the suspect had noticed us, the suspect decided to flee, initiating a 10-80.',
 		},
 		'Vehicle Tampering Call (Class D)': {
-			text: 'During patrol, we responded to a Vehicle Tampering Dispatch call (Class D). Upon we arrived and the suspect had noticed us, they suspect decided to flee, initiating a 10-80.',
+			text: 'During patrol, we responded to a Vehicle Tampering Dispatch call (Class D). Upon we arrived and the suspect had noticed us, the suspect decided to flee, initiating a 10-80.',
 		},
 		'10-11': {
-			text: 'During patrol, we pulled over a vehicle that had broken a traffic law. While questioning the suspect, they decided to turn their vehicle back on and evade from us, initiating a 10-80.',
+			text: 'During patrol, we pulled over a vehicle that had commited a traffic violation. While questioning the suspect, they decided to turn their engine back on and begin evading from us, initiating a 10-80.',
 		},
 		'10-11 (Stolen Vehicle)': {
-			text: 'During patrol, we pulled over a vehicle and conducted a traffic stop on it. While questioning the driver, we realised that the vehicle was stolen. After we asked them to step out of their vehicle, they decided to turn their vehicle back on and evade from us, initiating a 10-80.',
+			text: 'During patrol, we pulled over a vehicle and conducted a traffic stop on it. While questioning the driver, we realised that the vehicle was flagged stolen. After we asked them to step out of their vehicle, they decided to turn their vehicle back on and evade from us, initiating a 10-80.',
 		},
 		'10-11 (Code 5)': {
 			text: 'During patrol, we pulled over a vehicle. Later realizing that the vehicle had a BOLO (Be On the Look Out) on it, we performed a Code 5 felony stop on them. The moment the occupants in the vehicle noticed that weapons are being drawn at them by the police, they quickly switched the engine on and fled the scene, initiating a 10-80.',
 		},
 		'House Burglary': {
-			text: 'During patrol, we responded to 10-31 house burglary calls at the location mentioned earlier. Upon arrival, an individual ran from a house that was in the area into their vehicle and fled the scene, initiating a 10-80.',
+			text: 'During patrol, we responded to 10-31 house burglary calls at the location mentioned above. Upon arrival, an individual ran from a house that was in the area into their vehicle and fled the scene, initiating a 10-80.',
 		},
 		'Assault and Battery': {
 			text: 'During patrol, we had noticed an individual assaulting another individual without a weapon. When we went to confront them, they decided to hop in a vehicle and flee, initiating a 10-80.',
 		},
 		'Assault and Battery (PP)': {
-			text: 'During patrol, we had noticed an individual assaulting an EMS/PD worker without a weapon. When we went to confront them, they decided to hop in a vehicle and flee, initiating a 10-80.',
+			text: 'During patrol, we had noticed an individual assaulting an LEO worker without a weapon. When we went to confront them, they decided to hop in a vehicle and flee, initiating a 10-80.',
 		},
 		'Aggravated Assault and Battery': {
 			text: 'During patrol, we had noticed an individual assaulting another individual with a weapon. When we went to confront them, they decided to hop in a vehicle and flee, initiating a 10-80.',
 		},
 		'Aggravated Assault and Battery (PP)': {
-			text: 'During patrol, we had noticed an individual assaulting an EMS/PD worker with a weapon. When we went to confront them, they decided to hop in a vehicle and flee, initiating a 10-80.',
+			text: 'During patrol, we had noticed an individual assaulting an LEO worker with a weapon. When we went to confront them, they decided to hop in a vehicle and flee, initiating a 10-80.',
 		},
 		'10-66': {
 			text: 'During patrol, we responded to some 10-66 calls. Once arriving there, we noticed an individual acting suspicious so we approached them for further investigation. Upon approaching them, they then decided to get into their vehicle and flee, initiating a 10-80.',
@@ -149,7 +149,7 @@ function report() {
 		'Stolen PD Helicopter': {
 			text: 'During patrol, there was someone who had stolen a Police Helicopter. Once we had eyes on the helicopter, we began pursuing it.',
 		},
-		'Stolen PD Helicopter': {
+		'Rogue Helicopter': {
 			text: 'During patrol, we noticed a rogue helicopter flying recklessly. Once we had closer eyes on the helicopter, we began pursuing it.',
 		},
 		'10-67': {
