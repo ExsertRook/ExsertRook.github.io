@@ -211,7 +211,7 @@ input.invisible {
 
 button {
     border: 1px solid transparent;
-    color: #333;
+    color: #020202;
     background-color: rgb(74, 85, 245);
     border-color: rgb(28, 37, 167);
     border-radius: 4px;
@@ -290,7 +290,7 @@ a.button {
     border-radius: 4px;
     text-decoration: none;
 
-    color: #333;
+    color: #000000;
     background-color: rgb(56, 44, 221);
     border-color: rgb(28, 37, 167);
 }
@@ -421,7 +421,7 @@ select {
     border: 1px solid transparent;
     border-radius: 4px;
 
-    color: #333;
+    color: #000000;
     background-color: rgb(56, 44, 221);
     border-color: rgb(28, 37, 167);
     z-index: 1;
