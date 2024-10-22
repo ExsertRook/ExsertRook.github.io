@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>10-11 / Code 5 > Arrest Incident Report Generator</title>
+	<title>10-11 / Code 5 > Arrest Incident Report Generator V2</title>
 	<link rel="shortcut icon" href="stop.png" />
 	<link rel="stylesheet" href="index.css" />
 	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
@@ -11,10 +11,10 @@
 </head>
 <header>
 	<br />
-    <div class="headerbuttons"><a href="https://exsertrook.github.io/HHLA/vehicleholdreport/" target="_blank" class="button">PD Impound Generator</a> &nbsp <a href="https://exsertrook.github.io/HHLA" class="button">Back to HUB</a>
+    <div class="headerbuttons"><a href="https://exsertrook.github.io/V3/VehicleHold/" target="_blank" class="button">PD Impound Generator</a> &nbsp <a href="https://exsertrook.github.io/V3" class="button">Back to HUB</a>
 	</div>
 	<br />
-	10-11 / Code 5 > Arrest Incident Report Generator<br />
+	10-11 / Code 5 > Arrest Incident Report Generator V2<br />
 	<!--<buttonsasp onclick="saspchange()">SASP</buttonsasp> &nbsp&nbsp&nbsp <buttonbcso onclick="bcsochange()">BCSO</buttonbcso> &nbsp&nbsp&nbsp <buttonsahp onclick="sahpchange()">SAHP</buttonsahp>-->
 	<br />
 	<label class="inline" style="font-size: 14px;">Your Callsign & Name:</label><br />
@@ -25,59 +25,6 @@
 </header>
 <body>
 	<div id="form">
-		<datalist id="roster">
-			<option value="[X-100] Thomas Sucher">Chief of Police</option>
-			<option value="[X-102] Jiggle Billy">Deputy Chief</option>
-			<option value="[A-110] Nick Amaro">Captain</option>
-			<option value="[A-111] Richeard Paul">Captain</option>
-			<option value="[A-112] Annabelle Taylor">Captain</option>
-			<option value="[A-116] Nigel Andrews">Captain</option>
-			<option value="[LT-120] Johnny Houseman">Lieutenant</option>
-			<option value="[SF-202] Hugo Armando">Sergeant First Class</option>
-			<option value="[SF-206] Chester Hamcheck">Sergeant First Class</option>
-			<option value="[SF-207] Tate Degirth">Sergeant First Class</option>
-			<option value="[SF-208] Jason Teapot">Sergeant First Class</option>
-			<option value="[S-220] Carl Smither">Sergeant</option>
-			<option value="[S-220] Michael Clarkson">Sergeant</option>
-			<option value="[CO-301] Jim Dweller">Corporal</option>
-			<option value="[CO-302] Nate Flake">Corporal</option>
-			<option value="[CO-304] Steve Gavins">Corporal</option>
-			<option value="[CO-305] Jake Hall">Corporal</option>
-			<option value="[CO-308] Austin roberts">Corporal</option>
-			<option value="[CO-309] Christian Duvall">Trooper</option>
-			<option value="[CO-310] No Hoe">Corporal</option>
-			<option value="[CO-311] Alejandro Teapot">Corporal</option>
-			<option value="[CO-345] Robbie Smith">Corporal</option>
-			<option value="[ST-402] Johnny Lee">Senior Trooper</option>
-			<option value="[ST-405] Billy Baker">Senior Trooper</option>
-			<option value="[ST-409] Liam Salvatore">Senior Trooper</option>
-			<option value="[ST-410] Jim Bop">Senior Trooper</option>
-			<option value="[ST-411] Jayden Hunter">Senior Trooper</option>
-			<option value="[T-602] Grizz Leebur">Trooper</option>
-			<option value="[T-604] Jarad Anthony Higgins">Trooper</option>
-			<option value="[T-669] Gingy Garza Li">Trooper</option>
-			<option value="[TA-701] Missy Cooper">Cadet</option>
-			<option value="[TA-702] Dallas Huckleberry">Cadet</option>
-			<option value="[TA-703] Carlitos De La Cruz">Cadet</option>
-			<option value="[TA-704] Clive Winston">Cadet</option>
-			<option value="[TA-705] Grayson Bone">Cadet</option>
-			<option value="[TA-706] Spencer Jamess">Cadet</option>
-			<option value="[TA-707] Wyatt Morgan">Cadet</option>
-			<option value="[TA-708] Nakana Andres">Cadet</option>
-			<option value="[TA-709] Ballo Scurry">Cadet</option> 
-			<option value="[TA-710] Draco Height">Cadet</option>
-			<option value="[TA-711] Mose Shrute">Cadet</option>
-			<option value="[TA-712] Jamal Genkins">Cadet</option>
-			<option value="[TA-713] Trippy Hippy">Cadet</option>
-			<option value="[TA-714] Kyle Newman">Cadet</option>
-			<option value="[TA-715] Milky Garza">Cadet</option>
-			<option value="[TA-716] Luke Bentley">Cadet</option>
-			<option value="[TA-718] Beefy Krey">Cadet</option>
-			<option value="[TA-719] Deano Burrows">Cadet</option>
-			<option value="[TA-721] Harry Jonson">Cadet</option>
-			<option value="[TA-750] Sam Losco">Cadet</option>
-			<option value="[FIB] Johnny Walker">FIB</option>
-		</datalist>
 		<div class="form-group">
 			<label>Location:</label>
 			10-11 / Code 5 Location: <input type="text" id="location" name="location" placeholder="e.g. Hawick Ave">
@@ -111,13 +58,16 @@
 		</div>
 		<div class="form-group">
 			<label>Vehicle Information:</label>
-			Description: <input type="text" id="vehicledesc" name="vehicledesc" placeholder="E.g. Blue Sultan"><br />
-			Plate: <input type="text" id="vehicleplate" name="vehicleplate" placeholder="12ABC345"><br />
-			Registered To: <input type="text" id="vehiclereg" name="vehiclereg" placeholder="FirstName LastName">
+			Description: <span style="margin-left: 18px;"></span><input type="text" id="vehicledesc" name="vehicledesc" placeholder="E.g. Blue Sultan"><br />
+			Plate: <span style="margin-left: 61px;"></span><input type="text" id="vehicleplate" name="vehicleplate" placeholder="12ABC345"><br />
+			Registration: <span style="margin-left: 12px;"></span><input type="text" id="vehiclereg" name="vehiclereg" placeholder="FirstName LastName">
 		</div>
 		<div class="form-group">
 			<label>Medical Attention...</label>
-			Was it needed? <input type="checkbox" id="medneed" name="medneed" value="medneed"><br />
+			<label>
+			<input type="checkbox" id="medneed" name="medneed" value="medneed"><span></span> - Was needed? <br /><br />
+			</label>			
+			
 			If needed, how many? &nbsp Suspects:
 			<select id="medneedsus">
 				<option>1</option>
@@ -144,21 +94,22 @@
 				<option>12</option>
 			</select><br />
 			Which hospital? <select id="hospitalname">
-				<option selected>Saint Fiacre</option>
-				<option>Mount Zonah</option>
+				<option selected>Mount Zonah</option>
 				<option>Sandy Shores Medical</option>
 				<option>Paleto Hospital</option>
 				<option>Cayo Perico</option>
 			</select>
 			<br />
-			<input type="checkbox" id="runhospital" name="runhospital" value="runhospital"> - Check if Attempted to flee at hospital
+			<label><input type="checkbox" id="runhospital" name="runhospital" value="runhospital"><span></span> - Attempted to flee at hospital?
+			</label>
 		</div>
 		<div class="form-group">
 			<label>Processed at...</label>
 			<select id="processedat">
-				<option selected>MRPD</option>
+				<option>MRPD</option>
+				<option selected>Rockford Hills Police Department</option>
 				<option>Sandy Shores Sheriff's Office</option>
-				<option>Davis PD</option>
+				<option>Davis Police Department</option>
 				<option>Paleto Police Department</option>
 				<option>Highway Police Department</option>
 				<option>Del Perro Pier PD</option>
