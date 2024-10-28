@@ -19,12 +19,12 @@ function report() {
 	let location = document.getElementById('location').value;
 	let locationother = document.getElementById('locationother').value;
 	buffer.push('');
-	buffer.push(`[DETAILS OF THE INCIDENT]:`);
+	buffer.push(`[INCIDENT DETAILS]:`);
 	
 	let locationfinal = ''
 	if (location || !locationother) locationfinal = (`${location}`);
 	if (locationother) locationfinal = (`${locationother}`);
-	if (locationfinal) buffer.push(`While being out on regular patrol, we responded to 10-66 dispatch calls at ${locationfinal}. When we arrived at the general vicinity, we started looking for anybody that was doing any sort of suspicious activities.`);
+	if (locationfinal) buffer.push(`Whilst on patrol, we responded to 10-66 dispatch calls at ${locationfinal}. When we arrived at the area of the calls, we started looking for anybody that was doing any sort of suspicious activities or acting out of the ordinary.`);
 	
 	let pospicSelected = document.getElementById('pospic');
 	let pospicInformation = {
@@ -55,6 +55,9 @@ function report() {
 	
 	let testresultsSelected = document.getElementById('testresults');
 	let testresultsInformation = {
+		'No Drugtest Was Performed': {
+			text: 'No drugtest was performed on the suspect.',
+		},
 		'Negative': {
 			text: 'Once we swabbed their hands for any possible drug residue and ran it through a test, the results came back negative for any drug residue.',
 		},
@@ -72,22 +75,25 @@ function report() {
 	let drugSelected = document.getElementById('drugtype');
 	let drugInformation = {
 		'Weed (Class B)': {
-			text: 'The drug specifically in question was weed (Class B).',
+			text: 'The drug specifically in question was Weed (Class B).',
 		},
 		'Shrooms (Class A)': {
-			text: 'The drug specifically in question was shrooms (Class A).',
+			text: 'The drug specifically in question was Shrooms (Class A).',
 		},
 		'Cocaine (Class A)': {
-			text: 'The drug specifically in question was cocaine (Class A).',
+			text: 'The drug specifically in question was Cocaine (Class A).',
+		},
+		'Crack Cocaine (Class A)': {
+			text: 'The drug specifically in question was Crack Cocaine (Class A).',
 		},
 		'Oxy (Class A)': {
-			text: 'The drug specifically in question was oxy (Class A).',
+			text: 'The drug specifically in question was Oxy (Class A).',
 		},
 		'Acid (Class B)': {
-			text: 'The drug specifically in question was acid (Class B).',
+			text: 'The drug specifically in question was Acid (Class B).',
 		},
 		'Meth (Class A)': {
-			text: 'The drug specifically in question was meth (Class A).',
+			text: 'The drug specifically in question was Meth (Class A).',
 		}
 	};
 	
