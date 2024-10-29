@@ -66,6 +66,9 @@ function report() {
 		},
 		'Moderate amounts': {
 			text: 'Once we swabbed their hands for any possible drug residue and ran it through a test, the results came back positive for moderate amounts of drug residue.',
+		},
+		'Excessive amounts': {
+			text: 'Once we swabbed their hands for any possible drug residue and ran it through a test, the results came back positive for excessive amounts of drug residue.',
 		}
 	};
 	
