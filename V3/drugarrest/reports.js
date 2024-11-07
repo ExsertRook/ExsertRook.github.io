@@ -13,6 +13,7 @@ function report() {
 	loadName();
 
 	buffer = [];
+	buffer.push("RGV3");
 	buffer.push("[REPORTING OFFICER]:");
 	buffer.push(callsign);	
 

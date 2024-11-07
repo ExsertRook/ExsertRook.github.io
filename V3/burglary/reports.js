@@ -14,6 +14,7 @@ function report() {
 	let date = new Date().toLocaleDateString('en-US');
 
 	buffer = [];
+	buffer.push("RGV3");
 	buffer.push("[REPORTING OFFICER]:");
 	buffer.push(callsign);	
     buffer.push('');
