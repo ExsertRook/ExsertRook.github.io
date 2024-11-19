@@ -52,6 +52,12 @@ function report() {
 		robberyString = robbery;
 		ROBBERY_STATE = 'JEWLERY';
 	}
+	if (robbery.trim() === 'Pacific Bank') {
+		document.getElementById('whatFleeca').style.display = 'none';
+		document.getElementById('whatStore').style.display = 'none';
+		robberyString = robbery;
+		ROBBERY_STATE = 'PACIFIC';
+	}
 
     buffer.push(`[ROBBERY TYPE]:`);
     buffer.push(`${robberyString}`);
