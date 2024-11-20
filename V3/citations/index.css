@@ -23,7 +23,7 @@ header {
     top: 0;
     position: fixed;
     margin-bottom: 10px;
-    border-bottom: 2px solid rgb(146, 245, 223);
+    border-bottom: 2px solid rgb(56, 44, 221);
     color: white;
     background-image: url(3departments.png);
     background-repeat: no-repeat;
@@ -115,7 +115,7 @@ textarea {
 }
 /*Textbox border*/
 textarea, input[type="text"], input[type="text2"], input[type="number"] {
-    border: 2px solid rgb(146, 245, 223);
+    border: 2px solid rgb(56, 44, 221);
     border-radius: 10px;
     font-family: 'Nunito';
     font-size: 13px;
@@ -134,7 +134,7 @@ input[type="checkbox"] + label {
 /*Inbetween lines*/
 .form-group:not(.layer-2) {
     padding-bottom: 7px;
-    border-bottom: 2px solid rgb(146, 245, 223);
+    border-bottom: 2px solid rgb(56, 44, 221);
     margin-bottom: 7px;
     width: 50%;
 }
@@ -160,7 +160,7 @@ label + .form-group.layer-2 {
 input[type="checkbox"] {
     position: relative;
     top: 1px;
-    accent-color: rgb(146, 245, 223);
+    accent-color: rgb(56, 44, 221);
 }
 
 input.invisible {
@@ -173,9 +173,9 @@ input.invisible {
 
 button {
     border: 1px solid transparent;
-    color: #333;
-    background-color: rgb(146, 245, 223);
-    border-color: rgb(54, 94, 85);
+    color: #000000;
+    background-color: rgb(56, 44, 221);
+    border-color: rgb(28, 37, 167);
     border-radius: 4px;
     padding: 5px 15px;
     cursor: pointer;
@@ -252,15 +252,15 @@ a.button {
     border-radius: 4px;
     text-decoration: none;
 
-    color: #333;
-    background-color: rgb(146, 245, 223);
-    border-color: rgb(54, 94, 85);
+    color: #000000;
+    background-color: rgb(56, 44, 221);
+    border-color: rgb(28, 37, 167);
 }
 
 a.button:hover {
     color: white;
-    background-color: rgb(54, 94, 85);
-    border-color: rgb(21, 36, 32);
+    background-color: rgb(23, 30, 128);
+    border-color: rgb(9, 12, 54);
 }
 
 .chip {
@@ -287,7 +287,7 @@ a.button:hover {
 select {
 	background-color: #242424;
 	color:#f9f9f9;
-    border: 2px solid rgb(146, 245, 223);
+    border: 2px solid rgb(56, 44, 221);
     border-radius: 10px;
     font-family: 'Nunito';
     text-align: center;
@@ -384,14 +384,14 @@ select {
     border-radius: 4px;
 
     color: #333;
-    background-color: rgb(146, 245, 223);
-    border-color: rgb(54, 94, 85);
+    background-color: rgb(56, 44, 221);
+    border-color: rgb(28, 37, 167);
 }
 
 .btn:hover{
     color: white;
-    background-color: rgb(54, 94, 85);
-    border-color: rgb(21, 36, 32);
+    background-color: rgb(23, 30, 128);
+    border-color: rgb(9, 12, 54);
 }
 
 .lineup:not(.layer-2) > label {
@@ -407,7 +407,7 @@ select {
 }
 .lineup:not(.layer-2) {
     padding-bottom: 7px;
-    border-bottom: 2px solid rgb(146, 245, 223);
+    border-bottom: 2px solid rgb(56, 44, 221);
     margin-bottom: 7px;
     width: 50%;
 }

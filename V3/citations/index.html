@@ -28,27 +28,24 @@
 			<label>Citation Info</label>
 			Type of citation?
 			<select id="citationType">
-				<option value="Parking Citation">Parking Violation</option>
-				<option value="Traffic Violation Citation">Traffic Violation</option>
-				<option value="Jaywalking Citation">Jaywalking</option>
-				<option value="Speeding Citation">Speeding</option>
+				<option value="Parking Citation">Parking Violation ($200)</option>
+				<option value="Traffic Violation Citation">Traffic Violation ($200)</option>
+				<option value="Jaywalking Citation">Jaywalking ($50)</option>
+				<option value="Speeding Citation">Speeding ($300)</option>
 				<option></option>
-				<option value="Disturbing the Peace Citation">Disturbing the Peace</option>
-				<option value="Driving without a License Citation">Driving without a License</option>
+				<option value="Driving without a License Citation">Driving without a License ($300)</option>
 			</select><br /><br />
-			Location of the law break: <input type="text" id="location" name="location" placeholder="e.g. Hawick Ave">
+			Violation Location: <input type="text" id="location" name="location" placeholder="e.g. Hawick Ave">
 			<br /><br />
-			Reason: <input type="text" id="reason" name="reason" placeholder="e.g. Parked on a curb">
+			Reasoning: <input type="text" id="reason" name="reason" placeholder="e.g. Parked on a curb">
 		</div>
 		<div class="form-group">
 			<label>Fine Info</label>
-			Fine Amount: 
+			Select corresponding Fine: 
 			<select id="fineAmount">
 				<option>$50</option>
-				<option>$200</option>
-				<option>$350</option>
-				<option>$400</option>
-				<option>$600</option>
+				<option selected>$200</option>
+				<option>$300</option>
 			</select><br /><br />
 			Fine Status:
 			<select id="fineStatus">
