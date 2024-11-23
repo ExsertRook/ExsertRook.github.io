@@ -23,7 +23,7 @@ header {
     top: 0;
     position: fixed;
     margin-bottom: 20px;
-    border-bottom: 2px solid rgb(74, 85, 245);
+    border-bottom: 2px solid rgb(255, 255, 255);
     color: white;
     background-image: url(3departments.png);
     background-repeat: no-repeat;
@@ -115,7 +115,7 @@ textarea {
 }
 /*Textbox border*/
 textarea, input[type="text"], input[type="text2"], input[type="number"] {
-    border: 2px solid rgb(74, 85, 245);
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 10px;
     font-family: 'Nunito';
     font-size: 13px;
@@ -134,13 +134,13 @@ input[type="checkbox"] + label {
 /*Inbetween lines*/
 .form-group:not(.layer-2) {
     padding-bottom: 7px;
-    border-bottom: 2px solid rgb(74, 85, 244);
+    border-bottom: 2px solid rgb(255, 255, 255);
     margin-bottom: 7px;
     width: 50%;
 }
 .form-group2:not(.layer-2) {
     padding-bottom: 7px;
-    border-bottom: 2px solid rgb(74, 85, 244);
+    border-bottom: 2px solid rgb(255, 255, 255);
     margin-bottom: 7px;
     width: 50%;
 }
@@ -233,56 +233,14 @@ input.invisible {
 button {
     border: 1px solid transparent;
     color: #333;
-    background-color: rgb(74, 85, 245);
-    border-color: rgb(28, 37, 167);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(119, 119, 119);
     border-radius: 4px;
     padding: 5px 15px;
     cursor: pointer;
     display: inline-block;
     margin-top: 5px;
     transition: 250ms;
-}
-buttonsasp {
-    border: 1px solid transparent;
-    color: #333;
-    background-color: rgb(74, 85, 245);
-    border-color: rgb(28, 37, 167);
-    border-radius: 4px;
-    padding: 5px 15px;
-    cursor: pointer;
-    display: inline-block;
-    margin-top: 5px;
-    transition: 250ms;
-    font-size: 14px;
-    font-weight: bold;
-}
-buttonbcso {
-    border: 1px solid transparent;
-    color: #333;
-    background-color: rgb(245, 210, 146);
-    border-color: rgb(114, 98, 69);
-    border-radius: 4px;
-    padding: 5px 15px;
-    cursor: pointer;
-    display: inline-block;
-    margin-top: 5px;
-    transition: 250ms;
-    font-size: 14px;
-    font-weight: bold;
-}
-buttonsahp {
-    border: 1px solid transparent;
-    color: #333;
-    background-color: rgb(56, 44, 221);
-    border-color: rgb(19, 16, 73);
-    border-radius: 4px;
-    padding: 5px 15px;
-    cursor: pointer;
-    display: inline-block;
-    margin-top: 5px;
-    transition: 250ms;
-    font-size: 14px;
-    font-weight: bold;
 }
 
 a.button {
@@ -311,14 +269,14 @@ a.button {
     text-decoration: none;
 
     color: #000000;
-    background-color: rgb(56, 44, 221);
-    border-color: rgb(28, 37, 167);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(119, 119, 119);
 }
 
 a.button:hover {
     color: white;
-    background-color: rgb(23, 30, 128);
-    border-color: rgb(9, 12, 54);
+    background-color: rgb(82, 82, 82);
+    border-color: rgb(29, 29, 29);
 }
 
 .chip {
@@ -345,7 +303,7 @@ a.button:hover {
 select {
 	background-color: #242424;
 	color:#f9f9f9;
-    border: 2px solid rgb(56, 44, 221);
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 10px;
     font-family: 'Nunito';
     text-align: center;
@@ -446,15 +404,15 @@ select {
     border-radius: 4px;
 
     color: #000000;
-    background-color: rgb(56, 44, 221);
-    border-color: rgb(28, 37, 167);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(119, 119, 119);
     z-index: 1;
 }
 
 .btn:hover{
     color: white;
-    background-color: rgb(23, 30, 128);
-    border-color: rgb(9, 12, 54);
+    background-color: rgb(82, 82, 82);
+    border-color: rgb(29, 29, 29);
 }
 
 .lineup:not(.layer-2) > label {
@@ -470,7 +428,7 @@ select {
 }
 .lineup:not(.layer-2) {
     padding-bottom: 7px;
-    border-bottom: 2px solid rgb(56, 44, 221);
+    border-bottom: 2px solid rgb(255, 255, 255);
     margin-bottom: 7px;
     width: 50%;
 }
