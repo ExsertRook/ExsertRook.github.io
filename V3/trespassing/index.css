@@ -18,12 +18,12 @@ header {
     font-weight: bold;
     display: block;
     font-size: 24px;
-    width: 100%;
+    width: 97.5%;
     height: 200px;
     top: 0;
     position: fixed;
     margin-bottom: 10px;
-    border-bottom: 2px solid rgb(146, 245, 223);
+    border-bottom: 2px solid rgb(255, 255, 255);
     color: white;
     background-image: url(3departments.png);
     background-repeat: no-repeat;
@@ -114,7 +114,7 @@ textarea {
 }
 /*Textbox border*/
 textarea, input[type="text"], input[type="text2"], input[type="number"] {
-    border: 2px solid rgb(146, 245, 223);
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 10px;
     font-family: 'Nunito';
     font-size: 13px;
@@ -133,7 +133,7 @@ input[type="checkbox"] + label {
 /*Inbetween lines*/
 .form-group:not(.layer-2) {
     padding-bottom: 7px;
-    border-bottom: 2px solid rgb(146, 245, 223);
+    border-bottom: 2px solid rgb(255, 255, 255);
     margin-bottom: 7px;
     width: 50%;
 }
@@ -158,9 +158,48 @@ label + .form-group.layer-2 {
 
 input[type="checkbox"] {
     position: relative;
-    top: 1px;
-    accent-color: rgb(146, 245, 223);
+    accent-color: rgb(25, 145, 41);
+    width: 20px;
+    height: 15px;
+    opacity: 0;
 }
+
+label + input[type="checkbox"]{
+    position: absolute;
+}
+
+label span{
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: -22px;
+    
+}
+
+label span::after{
+    content: '';
+    position: absolute;
+    left: 3.5px;
+    bottom: 4px;
+    width: 10px;
+    height: 15px;
+    border: solid rgb(42, 182, 24);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: width 0.5s, height 0.5s, opacity 0.8s;
+}
+input:checked ~ span::after{
+    width: 6px;
+    height: 10px;
+    opacity: 1;
+}
+
 
 input.invisible {
     width: 50px;
@@ -173,8 +212,8 @@ input.invisible {
 button {
     border: 1px solid transparent;
     color: #333;
-    background-color: rgb(146, 245, 223);
-    border-color: rgb(54, 94, 85);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(119, 119, 119);
     border-radius: 4px;
     padding: 5px 15px;
     cursor: pointer;
@@ -251,15 +290,15 @@ a.button {
     border-radius: 4px;
     text-decoration: none;
 
-    color: #333;
-    background-color: rgb(146, 245, 223);
-    border-color: rgb(54, 94, 85);
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(90, 90, 90);
 }
 
 a.button:hover {
     color: white;
-    background-color: rgb(54, 94, 85);
-    border-color: rgb(21, 36, 32);
+    background-color: rgb(82, 82, 82);
+    border-color: rgb(29, 29, 29);
 }
 
 .chip {
@@ -286,7 +325,7 @@ a.button:hover {
 select {
 	background-color: #242424;
 	color:#f9f9f9;
-    border: 2px solid rgb(146, 245, 223);
+    border: 2px solid rgb(252, 252, 252);
     border-radius: 10px;
     font-family: 'Nunito';
     text-align: center;
@@ -383,14 +422,14 @@ select {
     border-radius: 4px;
 
     color: #333;
-    background-color: rgb(146, 245, 223);
-    border-color: rgb(54, 94, 85);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(90, 90, 90);
 }
 
 .btn:hover{
     color: white;
-    background-color: rgb(54, 94, 85);
-    border-color: rgb(21, 36, 32);
+    background-color: rgb(82, 82, 82);
+    border-color: rgb(29, 29, 29);
 }
 
 .lineup:not(.layer-2) > label {
@@ -406,7 +445,7 @@ select {
 }
 .lineup:not(.layer-2) {
     padding-bottom: 7px;
-    border-bottom: 2px solid rgb(146, 245, 223);
+    border-bottom: 2px solid rgb(255, 255, 255);
     margin-bottom: 7px;
     width: 50%;
 }

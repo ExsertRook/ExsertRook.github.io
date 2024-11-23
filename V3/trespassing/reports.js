@@ -17,9 +17,10 @@ function report() {
 	buffer.push(callsign);	
 
 	buffer.push('');
-	
+	let pdlocationSelected = document.getElementById('pdlocation');
+
 	buffer.push(`[DETAILS OF THE INCIDENT]:`);
-	buffer.push(`While taking a small break from patrolling, we had noticed an individual who was not an officer on the premises of MRPD where they should not be.`);
+	buffer.push(`While taking a small break from patrolling, we had noticed an individual who was not an officer on the premises of ${pdlocationSelected} where they should not be.`);
 	
 	let locationSelected = document.getElementById('location');
 	let locationInformation = {
