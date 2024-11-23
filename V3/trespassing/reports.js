@@ -24,11 +24,11 @@ function report() {
 	
 	let locationSelected = document.getElementById('location');
 	let locationInformation = {
-		'Inside of MRPD': {
-			text: 'We initially spotted the trespasser inside of MRPD.',
+		'Inside': {
+			text: 'We initially spotted the trespasser inside.',
 		},
 		'Roof': {
-			text: 'We initially spotted the trespasser on the roof of MRPD.',
+			text: 'We initially spotted the trespasser on the roof.',
 		},
 		'Side Parking Lot': {
 			text: 'We initially spotted the trespasser outside at the side parking lot.',
@@ -37,7 +37,7 @@ function report() {
 			text: 'We initially spotted the trespasser downstairs inside the carpool.',
 		},
 		'Back Parking Lot': {
-			text: 'We initially spotted the trespasser outside at the parking lot behind MRPD where we bring in suspects.',
+			text: 'We initially spotted the trespasser outside at the parking lot behind where we bring in suspects.',
 		}
 	};
 	
