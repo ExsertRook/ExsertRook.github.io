@@ -132,6 +132,12 @@ function report() {
 		robberyString = robbery;
 		ROBBERY_STATE = 'JEWLERY';
 	}
+	if (robbery.trim() === 'Pacific Bank') {
+		document.getElementById('whatFleeca').style.display = 'none';
+		document.getElementById('whatStore').style.display = 'none';
+		robberyString = robbery;
+		ROBBERY_STATE = 'PACIFIC';
+	}
 
 	buffer.push(`[SCENE DETAILS]:`);
 	buffer.push(`Whilst on duty, we received a dispatch call regarding an alarm going off at the ${robberyString}. Once units arrived on scene and a scene commander was established, they assigned officer ${callsign} to create and write the incident report.`);
