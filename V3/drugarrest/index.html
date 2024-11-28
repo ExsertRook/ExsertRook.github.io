@@ -144,22 +144,26 @@
 		<option value="[TA-732] Mack Diesel"></option>
 	</datalist>
 
+	<datalist id="locations">
+			<option>Vinewood Blvd</option>
+			<option value="Legion Square">Legion Square</option>
+			<option value="Richman St">Richman St | College | University</option>
+			<option value="Trash Headquarters">Trash HQ | Popular St</option>
+			<option>Vespucci Canals</option>
+			<option>Vespucci Beach</option>
+			<option>Del Perro Pier</option>
+			<option>Sandy Shores</option>
+			<option>Grapeseed Hangar</option>
+			<option>Grapeseed Main St</option>
+			<option>Paleto Bay</option>
+	</datalist>
+
 	<div id="form">
 		<div class="form-group">
 			<label>Location:</label>
 			Location of the 10-66 calls:
-			<select id="location">
-				<option>Vinewood Blvd</option>
-				<option>Legion Square</option>
-				<option selected>Richman St | Campus</option>
-				<option>Trash HQ</option>
-				<option>Vespucci Canals</option>
-				<option>Vespucci Beach</option>
-				<option>Del Perro Pier</option>
-				<option>Sandy Shores</option>
-				<option>Grapeseed</option>
-				<option>Paleto</option>
-			</select><br />
+			<input list="locations" id="location" placeholder="Search here...">
+			<br /><br />
 			Other: <input type="text" id="locationother" name="locationother" placeholder="Carson Ave">
 		</div>
 		<div class="form-group">
