@@ -363,14 +363,14 @@ const Menu = {
     "Citations:": {
 		header: true,
 	},
-    "Driving without a License": {
+    "Driving without a License ($300)": {
 		noIcon: true,
 		price: 300,
 		items: [
 			...rep("Aluminium", 0),
 		],
 	},
-    "Speeding": {
+    "Speeding ($300)": {
 		noIcon: true,
 		price: 300,
 		items: [
@@ -391,7 +391,7 @@ const Menu = {
 			...rep("Aluminium", 25),
 		],
 	},
-    "Traffic / Parking Violation": {
+    "Traffic / Parking Violation ($200)": {
 		noIcon: true,
 		price: 200,
 		items: [
