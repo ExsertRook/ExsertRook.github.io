@@ -23,6 +23,13 @@ body {
   flex-direction: column;
 }
 
+.right-panel {
+  width: 320px; /* or desired width */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* space between description and modifiers */
+}
+
 input[type="text"] {
   width: 98%;
   padding: 0.5rem;
@@ -145,7 +152,7 @@ button.remove-btn:hover {
   width: 300px;
   background-color: #3a3a3a;
   border: 1px solid #555;
-  border-radius: 4px;
+  border-radius: 14px;
   padding: 1rem;
   box-sizing: border-box;
   min-height: 150px;
