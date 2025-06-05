@@ -436,6 +436,75 @@ const discounts = {
 	},
 };
 
+function filterTable() {
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toLowerCase();
+    const tableElement = document.getElementById('table');
+
+    let table = '<table><tr>';
+    let count = 0;
+
+    const entries = Object.keys(Menu);
+    let i = 0;
+
+    while (i < entries.length) {
+        const key = entries[i];
+
+        if (Menu[key].header) {
+            // Identify this header section
+            const headerTitle = key;
+            const sectionItems = [];
+
+            i++;
+
+            // Collect items under this header until the next header or end
+            while (i < entries.length && !Menu[entries[i]].header) {
+                sectionItems.push(entries[i]);
+                i++;
+            }
+
+            // Filter items in this section
+            const matchingItems = sectionItems.filter(item =>
+                item.toLowerCase().includes(filter)
+            );
+
+            // Only show header if at least one item in this section matches
+            if (matchingItems.length > 0 || filter === '') {
+                for (let j = count; j < Settings.MAIN_TABLE_WIDTH; j++) {
+                    table += `<td></td>`;
+                }
+                table += `</tr><tr><td colspan="${Settings.MAIN_TABLE_WIDTH}"><center><strong><u>${headerTitle}</u></strong></center></td></tr><tr>`;
+                count = 0;
+
+                matchingItems.forEach(item => {
+                    const icon = getIcon(item);
+                    let qty = 0;
+                    const qtyElement = document.getElementById(`${item}-#`);
+                    if (qtyElement) qty = qtyElement.innerText;
+
+                    table += "<td><center><button class=\"btn\" title='Add 1x " + item + "' onClick='add(\"" + item + "\")'><strong>" + icon + item + "</strong></button><br />" +
+                        `Qty: <strong><span id="${item}-#">${qty}</span></strong>` +
+                        "<i class=\"fa fa-pencilfa fa-pencil-square\" aria-hidden=\"true\" title='Manually edit " + item + " quantity' onClick='editQuantity(\"" + item + "\")'></i> " +
+                        "<i class=\"fa fa-minus-circle\" aria-hidden=\"true\" title='Remove 1x " + item + "' onClick='remove(\"" + item + "\")'></i></td>";
+
+                    count++;
+                    if (count === Settings.MAIN_TABLE_WIDTH) {
+                        table += `</tr><tr>`;
+                        count = 0;
+                    }
+                });
+            }
+        }
+    }
+
+    // Finish the last row if it’s incomplete
+    for (let j = count; j < Settings.MAIN_TABLE_WIDTH; j++) {
+        table += `<td></td>`;
+    }
+    table += `</tr></table>`;
+    tableElement.innerHTML = table;
+}
+
 function getOccurrence(array, value) {
 	return array.filter((v) => (v === value)).length;
 }
