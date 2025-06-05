@@ -199,6 +199,8 @@ function renderItemList(filter = "") {
     div.addEventListener("click", () => {
       addItem(item);
       setSelectedItem(item);
+	  searchInput.value = "";         // ✅ Clear the search input
+  	  renderItemList();  
     });
 
     // On hover, show description temporarily
@@ -332,6 +334,7 @@ discountCheckbox.addEventListener("change", updateTotals);
 // Initial render
 renderItemList();
 setSelectedItem(null);
+
 
 // Make removeItem globally accessible for inline onclick to work
 window.removeItem = removeItem;
