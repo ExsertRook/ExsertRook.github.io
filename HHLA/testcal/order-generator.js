@@ -362,11 +362,27 @@ function showModifierOptions(container, item, index) {
   });
 
   container.appendChild(optionsDiv);
+  
+  // Trigger fade-in by adding 'show' class on next tick
+  requestAnimationFrame(() => {
+    optionsDiv.classList.add("show");
+  });
+}
+
+function hideModifierOptionsContainer() {
+  modifierOptionsContainer.classList.remove("show");
+  // Wait for transition duration (300ms) before hiding to allow fade-out
+  setTimeout(() => {
+    modifierOptionsContainer.style.display = "none";
+  }, 600);
 }
 
 function showModifierOptionsForSelected(item) {
   modifierOptionsContainer.style.display = "block";
   modifierOptionsDiv.innerHTML = "";
+  modifierOptionsContainer.classList.remove("show"); // reset
+
+
 
   modifierOptionsData.forEach(({ label, percent }) => {
     const btn = document.createElement("div");
@@ -374,21 +390,25 @@ function showModifierOptionsForSelected(item) {
     btn.textContent = `${label} (${percent >= 0 ? "+" : ""}${percent}%)`;
 
     btn.addEventListener("click", () => {
-  const factor = 1 + percent / 100;
-  item.val1 = Math.round(item.baseVal1 * factor);
-  item.val2 = Math.round(item.baseVal2 * factor);
+  	const factor = 1 + percent / 100;
+  	item.val1 = Math.round(item.baseVal1 * factor);
+  	item.val2 = Math.round(item.baseVal2 * factor);
 
-  // Initialize and update modifiers
-  if (!item.modifiers) item.modifiers = [];
-  if (!item.modifiers.includes(label)) {
-    item.modifiers.push(label);
-  }
+	// Initialize and update modifiers
+	if (!item.modifiers) item.modifiers = [];
+	if (!item.modifiers.includes(label)) {
+		item.modifiers.push(label);
+	}
 
-  renderAddedItems();
-  modifierOptionsContainer.style.display = "none";
-});
+	renderAddedItems();
+	hideModifierOptionsContainer();
+
+	});
 
     modifierOptionsDiv.appendChild(btn);
+  });
+  requestAnimationFrame(() => {
+    modifierOptionsContainer.classList.add("show");
   });
 }
 
@@ -447,3 +467,4 @@ copyButton.addEventListener("click", () => {
     }, 2000);
   });
 });
+

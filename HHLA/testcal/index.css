@@ -72,7 +72,7 @@ input[type="text"]::placeholder {
 }
 
 .added-items {
-  max-height: 250px;
+  max-height: 300px;
   overflow-y: auto;
   border: 1px solid #555;
   padding: 0.5rem;
@@ -267,13 +267,6 @@ button.remove-btn:hover {
   z-index: 10;
 }
 
-.modifier-options {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.25rem;
-  margin-top: 0.5rem;
-}
-
 .modifier-option {
   background-color: #444;
   border: 1px solid #666;
@@ -290,7 +283,7 @@ button.remove-btn:hover {
   margin-top: 1rem;
   background-color: #2b2b2b;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 8px; 
   border: 1px solid #555;
   color: #eee;
   max-width: 250px;
@@ -344,4 +337,16 @@ button.remove-btn:hover {
 
 #copyButton:hover {
   background-color: #45a049;
+}
+
+/* Animate the container */
+#modifierOptionsContainer {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#modifierOptionsContainer.show {
+  opacity: 1;
+  transform: translateY(0);
 }
