@@ -1,6 +1,25 @@
 const discountCheckbox = document.getElementById("discountCheckbox");
 const discountContainer = document.getElementById("discountContainer");
 
+const modifierOptionsData = [
+  { label: "Accessory-Before-the-Fact", percent: -75 },
+  { label: "Accessory-After-the-Fact", percent: -25 },
+  { label: "Aiding and Abetting", percent: 0 },
+  { label: "Applicability", percent: 0 },
+  { label: "Attempt", percent: 0 },
+  { label: "Conspiracy", percent: 0 },
+  { label: "Soliciting", percent: -50 },
+  { label: "Gang Enhancement", percent: +50 },
+  { label: "Protected Persons", percent: +40 },
+  { label: "Public Menace (Add 600 months)", percent: 0 },
+  { label: "Intent to Sell", percent: +50 },
+  { label: "Protected Property", percent: +20 },
+];
+
+const modifierOptionsContainer = document.getElementById("modifierOptionsContainer");
+const modifierOptionsDiv = document.getElementById("modifierOptions");
+
+let selectedItemIndex = null; // track which item is selected for modifier
 
 // Customizable items: each has a name, two number values (val1, val2), and a description
 const items = [
@@ -145,6 +164,22 @@ let addedItems = [];
 // Track selected item for description
 let selectedItem = null;
 
+function updateTotals() {
+  let totalVal1 = 0;
+  let totalVal2 = 0;
+
+  addedItems.forEach((item) => {
+    totalVal1 += item.val1;
+    totalVal2 += item.val2;
+  });
+
+  if (discountCheckbox.checked) {
+    totalVal2 = Math.round(totalVal2 * 0.8);
+  }
+
+  totalsDiv.innerHTML = `Total: $${totalVal1} | ${totalVal2} Months`;
+}
+
 // Render the filtered item list
 function renderItemList(filter = "") {
   itemList.innerHTML = "";
@@ -218,13 +253,36 @@ function renderAddedItems() {
   addedItems.forEach((item, index) => {
     const div = document.createElement("div");
     div.className = "added-item";
-    div.innerHTML = `
-      <span>${item.name}</span>
-      <div class="right-group">
-        <span class="values">$${item.val1} | ${item.val2} Months</span>
-        <button class="remove-btn" title="Remove" onclick="removeItem(${index})">×</button>
-      </div>
-    `;
+
+	
+	const itemHeader = document.createElement("div");
+    itemHeader.className = "added-item-header";
+    // Determine base name and modifier
+let nameWithModifiers = item.name;
+
+if (item.modifiers && item.modifiers.length > 0) {
+  const modifierText = item.modifiers.map(mod => `(${mod})`).join('');
+  nameWithModifiers = item.name.replace(
+    /(Felony|Misdemeanor)\)/,
+    (match) => `${match} - ${modifierText}`
+  );
+}
+
+	itemHeader.innerHTML = `
+  	<span>${nameWithModifiers}</span>
+  	<div class="right-group">
+    <span class="values">${item.val1} | ${item.val2}</span>
+    <button class="remove-btn" title="Remove" onclick="removeItem(${index})">×</button>
+  	</div>
+	`;
+
+	 // Click toggles modifier options
+      itemHeader.addEventListener("click", () => {
+  	selectedItemIndex = index;
+  	showModifierOptionsForSelected(item);
+	});
+
+    div.appendChild(itemHeader);
     addedItemsDiv.appendChild(div);
   });
 
@@ -247,6 +305,9 @@ function renderAddedItems() {
   	discountContainer.style.display = "none";
   	discountCheckbox.checked = false; // reset if nothing selected
 }
+
+updateTotals();
+
 }
 
 // Event listener for search input
@@ -254,9 +315,7 @@ searchInput.addEventListener("input", (e) => {
   renderItemList(e.target.value);
 });
 
-discountCheckbox.addEventListener("change", () => {
-  renderAddedItems();
-});
+discountCheckbox.addEventListener("change", updateTotals);
 
 // Initial render
 renderItemList();
@@ -264,3 +323,56 @@ setSelectedItem(null);
 
 // Make removeItem globally accessible for inline onclick to work
 window.removeItem = removeItem;
+
+function showModifierOptions(container, item, index) {
+  const optionsDiv = document.createElement("div");
+  optionsDiv.className = "modifier-options";
+
+  modifierOptionsData.forEach(({ label, percent }) => {
+    const btn = document.createElement("div");
+    btn.className = "modifier-option";
+    btn.textContent = `${label} (${percent >= 0 ? "+" : ""}${percent}%)`;
+
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation(); // prevent toggling modifier options box
+
+      const factor = 1 + percent / 100;
+      item.val1 = Math.round(item.val1 * factor);
+      item.val2 = Math.round(item.val2 * factor);
+
+      renderAddedItems(); // refresh list and close options
+    });
+
+    optionsDiv.appendChild(btn);
+  });
+
+  container.appendChild(optionsDiv);
+}
+
+function showModifierOptionsForSelected(item) {
+  modifierOptionsContainer.style.display = "block";
+  modifierOptionsDiv.innerHTML = "";
+
+  modifierOptionsData.forEach(({ label, percent }) => {
+    const btn = document.createElement("div");
+    btn.className = "modifier-option";
+    btn.textContent = `${label} (${percent >= 0 ? "+" : ""}${percent}%)`;
+
+    btn.addEventListener("click", () => {
+  const factor = 1 + percent / 100;
+  item.val1 = Math.round(item.val1 * factor);
+  item.val2 = Math.round(item.val2 * factor);
+
+  // Initialize and update modifiers
+  if (!item.modifiers) item.modifiers = [];
+  if (!item.modifiers.includes(label)) {
+    item.modifiers.push(label);
+  }
+
+  renderAddedItems();
+  modifierOptionsContainer.style.display = "none";
+});
+
+    modifierOptionsDiv.appendChild(btn);
+  });
+}

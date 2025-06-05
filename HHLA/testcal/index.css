@@ -275,16 +275,57 @@ button.remove-btn:hover {
 .modifier-option {
   background-color: #444;
   border: 1px solid #666;
-  color: #eee;
   padding: 0.4rem;
   text-align: center;
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.85rem;
+  user-select: none;
+}
+
+/* Modifier container */
+.modifier-options-container {
+  margin-top: 1rem;
+  background-color: #2b2b2b;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #555;
+  color: #eee;
+  max-width: 250px;
+  max-height: 500px; /* adjust based on layout */
+  overflow-y: auto;
+}
+
+/* Modifier vertical list */
+.modifier-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Individual modifier button */
+.modifier-option {
+  background-color: #444;
+  border: 1px solid #666;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 0.85rem;
+  user-select: none;
+  transition: background-color 0.2s ease;
 }
 
 .modifier-option:hover {
   background-color: #00e676;
   color: #000;
   font-weight: bold;
+}
+.modifier-label {
+  margin-left: 0.5rem;
+  background-color: #555;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: #fff;
 }
