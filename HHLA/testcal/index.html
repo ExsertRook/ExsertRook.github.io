@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Charges Calculator / Sucherrr</title>
+<link rel="shortcut icon" href="suchersuit.png" />
+<link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+<div class="container">
+  <div class="main-content">
+    <h1>Arrest Charges Calculator</h1>
+
+    <input type="text" id="searchInput" placeholder="Search charges..." />
+
+    <div class="item-list" id="itemList"></div>
+
+    <div class="added-items" id="addedItemsContainer">
+      <h2>Charges</h2>
+      <div id="addedItems"></div>
+    </div>
+    <div class="totals" id="totals"></div>
+	<div class="discount-container" id="discountContainer">
+  <label  class="custom-checkbox">
+    <input type="checkbox" id="discountCheckbox" />
+	<span class="checkmark"></span>
+    Apply 20% off time
+  </label>
+  </div>
+  </div>
+
+  <div class="description-panel" id="descriptionPanel">
+    <h2>Charge Description</h2>
+    <div id="descriptionContent">Select or hover over a charge to see its description.</div>
+  </div>
+</div>
+
+<script src="order-generator.js"></script>
+
+
+<footer class="footer">
+  All content is free to be used but is prohibited to be copied under the proprietary license. - Sucherrr 2025
+</footer>
+
+</body>
+</html>
