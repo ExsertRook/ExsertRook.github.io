@@ -165,21 +165,16 @@ let addedItems = [];
 let selectedItem = null;
 
 function updateTotals() {
-  let totalVal1 = 0;
-  let totalVal2 = 0;
-
-  addedItems.forEach((item) => {
-    totalVal1 += item.val1;
-    totalVal2 += item.val2;
-  });
+  let totalVal1 = addedItems.reduce((acc, i) => acc + i.val1 * i.count, 0);
+  let totalVal2 = addedItems.reduce((acc, i) => acc + i.val2 * i.count, 0);
 
   if (discountCheckbox.checked) {
     totalVal2 = Math.round(totalVal2 * 0.8);
+    totalsDiv.textContent = `Total: $${totalVal1} | ${totalVal2} Months (20% off)`;
+  } else {
+    totalsDiv.textContent = `Total: $${totalVal1} | ${totalVal2} Months`;
   }
-
-  totalsDiv.innerHTML = `Total: $${totalVal1} | ${totalVal2} Months`;
 }
-
 // Render the filtered item list
 function renderItemList(filter = "") {
   itemList.innerHTML = "";
@@ -197,7 +192,7 @@ function renderItemList(filter = "") {
     div.className = "item";
     div.innerHTML = `
       <span class="item-name">${item.name}</span>
-      <span class="item-values">$${item.val1} | ${item.val2} Months</span>
+	<span class="values">$${item.val1 * (item.count || 1)} | ${item.val2 * (item.count || 1)} Months</span>
     `;
 
     // Click adds the item and sets selected item permanently
@@ -236,7 +231,22 @@ function setSelectedItem(item) {
 
 // Add item to the added items list and update totals
 function addItem(item) {
-  addedItems.push(item);
+  const existing = addedItems.find(i => i.name === item.name);
+
+  if (existing) {
+    existing.count = (existing.count || 1) + 1;
+  } else {
+    addedItems.push({
+      ...item,
+      count: 1,
+      modifiers: [], // start with no modifiers
+      baseVal1: item.val1,
+      baseVal2: item.val2,
+      val1: item.val1,
+      val2: item.val2,
+    });
+  }
+
   renderAddedItems();
 }
 
@@ -254,24 +264,26 @@ function renderAddedItems() {
     const div = document.createElement("div");
     div.className = "added-item";
 
-	
+	const displayVal1 = item.val1 * item.count;
+    const displayVal2 = item.val2 * item.count;
 	const itemHeader = document.createElement("div");
     itemHeader.className = "added-item-header";
     // Determine base name and modifier
-let nameWithModifiers = item.name;
 
-if (item.modifiers && item.modifiers.length > 0) {
-  const modifierText = item.modifiers.map(mod => `(${mod})`).join('');
-  nameWithModifiers = item.name.replace(
+	let nameWithModifiers = item.name;
+	if (item.modifiers && item.modifiers.length > 0) {
+  	const modifierText = item.modifiers.map(mod => `(${mod})`).join('');
+  	nameWithModifiers = item.name.replace(
     /(Felony|Misdemeanor)\)/,
     (match) => `${match} - ${modifierText}`
-  );
-}
+  		);
+	}
 
+    
 	itemHeader.innerHTML = `
-  	<span>${nameWithModifiers}</span>
+  	<span>${item.count > 1 ? item.count + "x " : ""}${nameWithModifiers}</span>
   	<div class="right-group">
-    <span class="values">${item.val1} | ${item.val2}</span>
+    <span class="values">${displayVal1} | ${displayVal2}</span>
     <button class="remove-btn" title="Remove" onclick="removeItem(${index})">×</button>
   	</div>
 	`;
@@ -285,10 +297,9 @@ if (item.modifiers && item.modifiers.length > 0) {
     div.appendChild(itemHeader);
     addedItemsDiv.appendChild(div);
   });
-
   // Calculate totals
-  let totalVal1 = addedItems.reduce((acc, i) => acc + i.val1, 0);
-  const totalVal2 = addedItems.reduce((acc, i) => acc + i.val2, 0);
+  let totalVal1 = addedItems.reduce((acc, i) => acc + i.val1 * i.count, 0);
+  let totalVal2 = addedItems.reduce((acc, i) => acc + i.val2 * i.count, 0);
 
   // Apply discount if checkbox is checked
   if (discountCheckbox.checked) {
@@ -307,6 +318,7 @@ if (item.modifiers && item.modifiers.length > 0) {
 }
 
 updateTotals();
+
 
 }
 
@@ -360,8 +372,8 @@ function showModifierOptionsForSelected(item) {
 
     btn.addEventListener("click", () => {
   const factor = 1 + percent / 100;
-  item.val1 = Math.round(item.val1 * factor);
-  item.val2 = Math.round(item.val2 * factor);
+  item.val1 = Math.round(item.baseVal1 * factor);
+  item.val2 = Math.round(item.baseVal2 * factor);
 
   // Initialize and update modifiers
   if (!item.modifiers) item.modifiers = [];
@@ -376,3 +388,59 @@ function showModifierOptionsForSelected(item) {
     modifierOptionsDiv.appendChild(btn);
   });
 }
+
+function removeItem(index) {
+  if (addedItems[index].count > 1) {
+    addedItems[index].count--;
+  } else {
+    addedItems.splice(index, 1);
+  }
+  renderAddedItems();
+}
+
+
+const copyButton = document.getElementById("copyButton");
+
+copyButton.addEventListener("click", () => {
+  if (addedItems.length === 0) return;
+
+  let output = "Charges\n";
+
+  let totalVal1 = 0;
+  let totalVal2 = 0;
+
+  addedItems.forEach(item => {
+    const countPrefix = item.count > 1 ? `${item.count}x ` : "";
+
+    let nameWithModifiers = item.name;
+    if (item.modifiers && item.modifiers.length > 0) {
+      const modifierText = item.modifiers.map(mod => `(${mod})`).join('');
+      nameWithModifiers = item.name.replace(
+        /(Felony|Misdemeanor)\)/,
+        (match) => `${match} - ${modifierText}`
+      );
+    }
+
+    output += `${countPrefix}${nameWithModifiers}\n`;
+
+    totalVal1 += item.val1 * item.count;
+    totalVal2 += item.val2 * item.count;
+  });
+
+  const originalVal2 = totalVal2;
+
+  if (discountCheckbox.checked) {
+    totalVal2 = Math.round(totalVal2 * 0.8);
+    output += `\nTotal: $${totalVal1} | ~~${originalVal2}~~ ${totalVal2} Months (20% off)`;
+  } else {
+    output += `\nTotal: $${totalVal1} | ${totalVal2} Months`;
+  }
+
+  // Copy to clipboard
+  navigator.clipboard.writeText(output.trim()).then(() => {
+    copyButton.textContent = "Copied!";
+    setTimeout(() => {
+      copyButton.textContent = "Copy Charges to Clipboard";
+    }, 2000);
+  });
+});

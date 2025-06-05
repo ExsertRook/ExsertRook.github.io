@@ -148,6 +148,8 @@ button.remove-btn:hover {
   border-radius: 4px;
   padding: 1rem;
   box-sizing: border-box;
+  min-height: 150px;
+  margin-top: 1rem;
   overflow-y: auto;
   color: #ddd;
   /* Align top with main content */
@@ -328,4 +330,18 @@ button.remove-btn:hover {
   border-radius: 4px;
   font-size: 0.75rem;
   color: #fff;
+}
+
+#copyButton {
+  margin-top: 15px;
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#copyButton:hover {
+  background-color: #45a049;
 }
