@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Citation / Ticket Generator</title>
+	<link rel="shortcut icon" href="paper.png" />
+	<link rel="stylesheet" href="index.css" />
+	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<header>
+	<br />
+    <div class="headerbuttons"><a href="https://exsertrook.github.io/LGND/VehicleHold/" target="_blank" class="button">PD Impound Generator</a> &nbsp <a href="https://exsertrook.github.io/LGND" class="button">Back to HUB</a>
+	</div>
+	<br />
+	Citation / Ticket Generator<br />
+	<br />
+	<label class="inline" style="font-size: 14px;">Your Callsign & Name:</label><br />
+    <input type="text" autocomplete="on" list="roster" id="yourself" name="yourself" placeholder="[X-101] Thomas Sucher"/><br />
+	<div class="popup" id="copyReport">
+		<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
+	</div>
+</header>
+<body>
+	<div id="form">
+		<div class="form-group">
+			<label>Citation Info</label>
+			Type of citation?
+			<select id="citationType">
+				<option value="Parking Citation">Parking Violation ($200)</option>
+				<option value="Traffic Violation Citation">Traffic Violation ($200)</option>
+				<option value="Jaywalking Citation">Jaywalking ($50)</option>
+				<option value="Speeding Citation">Speeding ($300)</option>
+				<option></option>
+				<option value="Driving without a License Citation">Driving without a License ($300)</option>
+			</select><br /><br />
+			Violation Location: <input type="text" id="location" name="location" placeholder="e.g. Hawick Ave">
+			<br /><br />
+			Reasoning: <input type="text" id="reason" name="reason" placeholder="e.g. Parked on a curb">
+		</div>
+		<div class="form-group">
+			<label>Fine Info</label>
+			Select corresponding Fine: 
+			<select id="fineAmount">
+				<option>$50</option>
+				<option selected>$200</option>
+				<option>$300</option>
+			</select><br /><br />
+			Fine Status:
+			<select id="fineStatus">
+				<option>Has Been Paid</option>
+			</select><br /><br />
+			Recipient: <input type="text" id="recipient" name="recipient" placeholder="Adam Machete">	
+		</div>
+		<div class="form-group">
+			<label>Officer Info</label>
+			Department:
+			<select id="department">
+				<option>San Andreas State Police</option>
+				<option>Blaine County Sheriffs Office</option>
+				<option>San Andreas Highway Patrol</option>
+			</select>
+		</div>
+	</div>
+    <textarea class="wide" id="reportBody">This is for copying the text onto a notepad and handing it to the individual you gave a citation to!&#10;&#10;The Report will automatically generate as you fill out the form to the left.&#10;&#10;(Note: the generated report will be editable, but once you edit it, you can no longer update it based on the form)&#10;&#10;If you have any questions or concerns, feel free to fill the feedback form on the main website :)&#10;&#10;Also if you want to show love, make sure to thank Sucher :)</textarea>
+	
+	<script src="reports.js"></script>
+</body>
+
+</html>

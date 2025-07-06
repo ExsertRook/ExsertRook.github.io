@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Vehicle Hold Report Generator</title>
+	<link rel="shortcut icon" href="impound.png" />
+	<link rel="stylesheet" href="index.css" />
+	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css"> 
+</head>
+
+<body>
+	<datalist id="roster">
+		<option value="[X-100] Alexander Murphy"></option>
+		<option value="[X-101] Thomas Sucher"></option>
+		<option value="[A-111] Jax Hayward"></option>
+		<option value="[A-112] Jessika Hayward"></option>
+		<option value="[S-201] James Jackson"></option>
+		<option value="[S-203] Hugo Armando"></option>
+		<option value="[S-205] Timothy Martinez"></option>
+		<option value="[CO-303] Johnny Smithers"></option>
+		<option value="[SO-401] Kaylee Benson"></option>
+		<option value="[SO-402] Maverick Storm"></option>
+		<option value="[SO-404] Joseph Randy"></option>
+		<option value="[SO-405] Ivy Snow"></option>
+		<option value="[SO-408] Michael Price"></option>
+		<option value="[SO-420] Davie Smith"></option>
+		<option value="[SO-424] Austin Johnson"></option>
+		<option value="[SO-478] Riley Easterman"></option>
+		<option value="[O-501] Derm Worma"></option>
+		<option value="[O-502] Jeff Barefoot"></option>
+		<option value="[O-503] Damien Striker"></option>
+		<option value="[O-505] Akiko Kurokawa"></option>
+		<option value="[O-510] Johnny Houseman"></option>
+		<option value="[O-513] Del Powers"></option>
+		<option value="[O-545] Alex Stone"></option>
+		<option value="[O-556] Chris Astro"></option>
+		<option value="[PO-601] Atlas Cohen"></option>
+		<option value="[PO-669] Damian White"></option>
+		<option value="[TA-701] Edward Dean"></option>
+		<option value="[TA-702] John Maddison"></option>
+		<option value="[TA-703] Petichini Alfredo"></option>
+		<option value="[TA-704] Cleetus Jenkins"></option>
+		<option value="[TA-705] Jayden Pache"></option>
+	</datalist>
+	
+	<div id="form">
+		<div class="form-group">
+			<style>
+    			body {
+        		    font-family: 'Nunito';font-size: 16px;
+    			}
+                table, th, td {
+                    border:2px solid #000000;
+                    border-collapse: collapse;
+                }
+                th {
+                    height: 50px;
+					background-color: rgb(255, 255, 255);
+					color: black;
+                }
+				th-2 {
+					background-color: aqua;
+				}
+
+    		</style>
+        
+			<span style="font-weight: bold; font-size: 24px; text-align: center;">Vehicle Hold Report Generator</span>
+			<br />
+			<label class="inline" title="(You only have to do this once - it will cache)" style="text-decoration: none;">Your callsign & name:</label>
+			<input type="text" autocomplete="on" list="roster" id="yourself" name="yourself" placeholder="[X-100] Thomas Sucher" /><br />
+			<div class="popup" id="copyTitle">
+				<div class="btn" title="Copy the generated title to your clipboard">Copy The Title</div> <span class="popuptext" id="myPopup">Title copied!</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			</div>
+			<div class="popup" id="copyReport">
+				<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
+			</div>
+			
+		</div>
+        
+		<div class="form-group">
+			<label>Incident Report Nr:</label>
+			<input type="text2" id="incidentnr" name="incidentnr" placeholder="12345">
+		</div>
+		<div class="form-group">
+			<label>Hold Reason:</label>
+			<select id="holdreason">
+				<option>Involuntary / Voluntary Manslaughter</option>
+				<option>First / Second Degree Murder</option>
+				<option>Terrorism</option>
+				<option>Exception (Approval from one of the Chiefs)</option>
+				<option></option>
+				<option>2nd Felony Evasion of the day</option>
+				<option selected>Robbery of a Stockade, Bank, J-Store</option>
+				<option>Kidnapping</option>
+				<option>Shooting, or commission of a crime associated</option>
+				<option>Trafficking of Class 2/3 Weapons</option>
+				<option></option>
+				<option>Reckless Driving while Street Racing</option>
+				<option>Robbery of a Store</option>
+				<option>Armed Robbery of a Person</option>
+				<option>Drug Trafficking Class A/B</option>
+				<option></option>
+				<option>Driving Under the Influence</option>
+				<option>1st Felony Evasion of the day</option>
+			</select>
+		</div>
+		<div>
+			<label>Vehicle Information:</label><br /><br />
+			VIN Number:<br />
+			<input type="text" id="vin" name="vin" placeholder="12AB34CDE567890"><br />
+			Plate Number:<br />
+			<input type="text" id="plate" name="plate" placeholder="12ABC345"><br />
+			Registered Owner:<br />
+			<input type="text" id="owner" name="owner" placeholder="Firstname Lastname"><br />
+			Model / Name:<br />
+			<input type="text" id="vehiclename" name="vehiclename" placeholder="Mustang"><br />
+			Color:<br />
+			<input type="text" id="vehiclecolor" name="vehiclecolor" placeholder="Black"><br />
+	</div>
+    <table class="center" style="width:120%" >
+        <thead>
+            <tr>
+                <th colspan="2" style="font-size: 26px;">Class A Hold &nbsp - &nbsp 12 Hours (720 Minutes)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Involuntary / Voluntary Manslaughter</td></tr>
+                <td>First / Second Degree Murder</td></tr>
+                <td>Terrorism</td></tr>
+				<td>Exception (Approval from one of the Chiefs)</td></tr>
+				<td>&nbsp;</td>
+            </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th colspan="2" style="font-size: 26px;">Class B Hold &nbsp - &nbsp 6 Hours (360 Minutes)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2nd Felony Evasion of the day</td></tr>
+                <td>Robbery of an Armored Truck, Bank, or Jewelry</td></tr>
+                <td>Kidnapping</td></tr>
+                <td>Shooting, or the commission of a crime associated with the use of a firearm</td></tr>
+                <td>Trafficking of Class 2/3 weapons</td></tr>
+				<td>&nbsp;</td>
+            </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th colspan="2" style="font-size: 26px;">Class C Hold &nbsp - &nbsp 4 Hours (240 Minutes)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Reckless Driving whilst Street Racing</td></tr>
+                <td>Robbery of a Store</td></tr>
+                <td>Armed Robbery of a Person</td></tr>
+                <td>Drug Trafficking Class A/B</td></tr>
+				<td>&nbsp;</td>
+            </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th colspan="2" style="font-size: 26px;">Class D Hold &nbsp - &nbsp 3 Hours (180 Minutes)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Driving Under the Influence</td></tr>
+                <td>1st Felony Evasion of the day</td></tr>
+            </tr>
+        </tbody>
+    </table>
+	<textarea class="wide" id="reportBody2">The Title of the MDT Report will generate here</textarea>
+	<textarea class="wide" id="reportBody">The Report will automatically generate as you fill out the form to the left.&#10;&#10;(Note: the generated report will be editable, but once you edit it, you can no longer update it based on the form)&#10;&#10;If you have any questions or concerns, feel free to fill the feedback form on the main website :)&#10;&#10;Also if you want to show love, make sure to thank Sucher :)</textarea>
+	<!--<pre id="reportBody">[report will automatically generate as you fill out the form to the left]</pre> -->
+	
+	<script src="reports.js"></script>
+</body>
+
+</html>
