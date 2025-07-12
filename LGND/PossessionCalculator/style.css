@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Nunito', sans-serif;
   background-color: #2d2d2d;
   color: #f1f1f1;
   margin: 0;
@@ -35,6 +35,7 @@ label {
 /* Inputs & Dropdowns */
 input,
 select {
+  font-family: 'Nunito', sans-serif;
   width: 100%;
   padding: 10px;
   border: none;
