@@ -1,12 +1,18 @@
 const itemsByCategory = {
   contraband: {
+    red_decryption_key: { threshold: 11, traffickingLabel: 'Trafficking of Contraband', possessionLabel: 'Possession of Contraband' },
+    blue_decryption_key: { threshold: 11, traffickingLabel: 'Trafficking of Contraband', possessionLabel: 'Possession of Contraband' },
+    green_decryption_key: { threshold: 11, traffickingLabel: 'Trafficking of Contraband', possessionLabel: 'Possession of Contraband' },
+    chip: { threshold: 11, traffickingLabel: 'Trafficking of Contraband', possessionLabel: 'Possession of Contraband' },
+    raspberry_chip: { threshold: 11, traffickingLabel: 'Trafficking of Contraband', possessionLabel: 'Possession of Contraband' },
+    fake_plate: { threshold: 11, traffickingLabel: 'Trafficking of Contraband', possessionLabel: 'Possession of Contraband' },
     catalytic_converters: { threshold: 11, traffickingLabel: 'Trafficking of Contraband', possessionLabel: 'Possession of Contraband' },
     meth_tables: { threshold: 11, traffickingLabel: 'Trafficking of Contraband', possessionLabel: 'Possession of Contraband' },
     pagers: { threshold: 11, traffickingLabel: 'Trafficking of Contraband', possessionLabel: 'Possession of Contraband' },
   },
   drugs: {
     joints: { threshold: 25, traffickingLabel: 'Drug Trafficking of a Class B Substance', possessionLabel: 'Possession of Joints' },
-    weed_5oz: { threshold: 5, traffickingLabel: 'Drug Trafficking of a Class B Substance', possessionLabel: 'Possession of Weed' },
+    weed_ounce: { threshold: 5, traffickingLabel: 'Drug Trafficking of a Class B Substance', possessionLabel: 'Possession of Weed' },
     acid: { threshold: 5, traffickingLabel: 'Drug Trafficking of a Class B Substance', possessionLabel: 'Possession of Acid' },
     lean: { threshold: 7, traffickingLabel: 'Drug Trafficking of a Class B Substance', possessionLabel: 'Possession of Lean' },
     cocaine_bags: { threshold: 8, traffickingLabel: 'Trafficking of a Class A Substance', possessionLabel: 'Possession of Cocaine' },
