@@ -67,8 +67,8 @@ function report() {
 		holdtime = "360 Minutes"
 	}
 	if (holdreason === "Reckless Driving while Street Racing") {
-		holdtype = "C"
-		holdtime = "240 Minutes"
+		holdtype = "B"
+		holdtime = "360 Minutes"
 	}
 	if (holdreason === "Robbery of a Store") {
 		holdtype = "C"
