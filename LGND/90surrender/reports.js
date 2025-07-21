@@ -83,7 +83,10 @@ function report() {
         'Surrendered': {
             text: 'After the suspect(s) realised that there was no chance of them being able to flee the robbery, they decided to peacefully surrender.',
         },
-        'Had no Hostage': {
+        'Hit and dip (upon arrival)': {
+			text: 'Upon arriving, the suspect noticed the officers and made the run to their vehicle. They then fled the officers for some time until they were eventually apprehended.',
+		},
+		'Had no Hostage': {
             text: 'After the officers on scene noticed that the individuals robbing the place did not have a hostage, we made the move and convinced them to surrender.',
         },
         'Had a Hostage': {
