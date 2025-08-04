@@ -20,7 +20,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    color: rgb(243, 236, 236)
+    color: rgb(243, 236, 236);
 }
 
 .webtitle {
@@ -36,8 +36,8 @@ body {
     border-radius: 15px;
     padding: 20px;
     overflow-y: scroll;
+    margin-top: 140px; /* pushed further down from h1 and search bar */
 }
-
 
 input[type="text"] {
     background-color: rgb(54, 54, 54);
@@ -45,7 +45,7 @@ input[type="text"] {
     font-weight: 500;
 }
 input[type="text"]::placeholder {
-    color:rgb(168, 168, 168);
+    color: rgb(168, 168, 168);
     font-weight: 500;
 }
 
@@ -159,7 +159,7 @@ a.button:hover, a.bigbutton:hover {
     border-color: rgb(51, 51, 51);
 }
 
-.card img{
+.card img {
     width: 70px;
     height: 70px;
     object-fit: cover;
@@ -186,27 +186,23 @@ a.button:hover, a.bigbutton:hover {
     color: rgb(148, 148, 148);
 }
 
-.container::-webkit-scrollbar{
+.container::-webkit-scrollbar {
     display: none;
 }
 
-a:link
-{
+a:link {
    color: rgb(255, 255, 255);
    text-decoration: none;
 }
-a:visited
-{
+a:visited {
    color: rgb(255, 255, 255);
    text-decoration: none;
 }
-a:hover
-{
+a:hover {
    color: #fb3f00;
    text-decoration: none;
 }
-a:active
-{
+a:active {
    color: rgb(255, 255, 255);
    text-decoration: none;
 }
@@ -214,16 +210,19 @@ a:active
 .search-bar-container {
     display: flex;
     align-items: center;
-    border: 3px solid rgb(253, 253, 253);
-    border-radius: 30px;
+    border: 0.1875rem solid rgb(253, 253, 253);
+    border-radius: 1.875rem;
     padding: 0.5rem;
-    width: 600px;
+    width: 90%;
+    max-width: 37.5rem;
     background-color: rgb(54, 54, 54);
     color: rgb(243, 236, 236);
     position: fixed;
-    top: 180px;
-    z-index: 0000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    top: 7.5rem; /* moved further down from h1 */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
 }
 
 .search-bar-container i {
@@ -247,13 +246,21 @@ a:active
     font-weight: 500;
 }
 
-/* Add padding to the container for search bar height */
+/* Remove extra padding on container because we use margin-top instead */
 .container {
-    padding-top: 0px; /* Adjust to allow space for fixed search bar */
+    padding-top: 20px; /* optional if you want some internal spacing */
 }
 
 body h1 {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
     color: black;
-    font-size: 50px;
-    margin-bottom: 150px;
+    font-size: 3.125rem; /* 50px */
+    margin-bottom: 0;
+    z-index: 10;
+    padding: 0;
+    background: none; /* removed gray background */
+    border-radius: 0;
 }
