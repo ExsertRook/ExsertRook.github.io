@@ -179,6 +179,7 @@ function updateOrderList() {
       total += item.price;
     });
     totalPriceDisplay.textContent = total.toFixed(2);
+	updateFinalPrice();
   }
 
   // Add the dough note below the order list (only once)
@@ -200,9 +201,6 @@ function clearDetails() {
 }
 
 const discounts = {
-  none: {
-    description: "No discounts applied."
-  },
   discount1: {
     description: "Buy a pizza, get a pizza half off"
   },
@@ -221,4 +219,25 @@ function onDiscountChange() {
   } else {
     desc.textContent = "";
   }
+  updateFinalPrice();
+}
+
+function onTwentyPercentToggle() {
+  updateFinalPrice();
+}
+function updateFinalPrice() {
+  const totalPriceSpan = document.getElementById('totalPrice');
+  const checkbox = document.getElementById('twentyPercentOff');
+
+  // Calculate original total from addedItems
+  let total = 0;
+  addedItems.forEach(item => {
+    total += item.price;
+  });
+
+  if (checkbox.checked) {
+    total = total * 0.8; // Apply 20% discount
+  }
+
+  totalPriceSpan.textContent = total.toFixed(2);
 }

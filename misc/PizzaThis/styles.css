@@ -74,3 +74,43 @@ h2 {
 strong {
   color: #ffffff;
 }
+#fixedDiscountBox {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  color: #ccc;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  font-family: Arial, sans-serif;
+  max-width: 450px;
+  width: 90%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+  gap: 8px;
+}
+
+#fixedDiscountBox label {
+  font-weight: bold;
+  white-space: nowrap;
+  margin-bottom: 6px;
+}
+
+#fixedDiscountBox select {
+  background-color: #333;
+  color: #ccc;
+  border: 1px solid #555;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 1rem;
+  min-width: 180px;
+}
+
+#discountDescription {
+  font-style: italic;
+  margin-top: 6px;
+  white-space: normal;
+}
