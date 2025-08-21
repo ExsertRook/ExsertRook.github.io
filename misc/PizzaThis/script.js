@@ -96,16 +96,6 @@ const allMeals = {
       name: "Get Stuffed - Specialty - Diavola",
       ingredients: ["4x Pepperoni", "4x Olive", "4x Jalapeno", "4x Tomato Sauce", "4x Pizza Cheese", "4x Dough", "16x Drinks of choice"],
       price: 1000
-    },
-	{
-      name: "Monday - Wednesday",
-      ingredients: ["Buy 1 pizza, get a pizza half off"],
-      price: 0
-    },
-	{
-      name: "Thursday - Saturday",
-      ingredients: [""],
-      price: 1000
     }
   ]
 };
