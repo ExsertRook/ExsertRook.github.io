@@ -15,6 +15,7 @@
         <option value="classic">Classic Pizzas</option>
         <option value="specialty">Specialty Pizzas</option>
         <option value="sides">Sides and Drinks</option>
+		<option value="specials">Specials</option>
       </select>
 
       <label for="mealSelect"><strong>Select Item:</strong></label>
@@ -31,7 +32,31 @@
         <p>No items added.</p>
       </div>
       <p><strong>Total Price:</strong> $<span id="totalPrice">0.00</span></p>
-    </div>
+    <div id="discountBox" style="
+		margin-top: 30px; 
+		padding: 20px; 
+		background-color: #333; 
+		border-radius: 8px; 
+		color: #ccc;
+		max-width: 600px;
+		font-family: Arial, sans-serif;
+		">
+
+  <label for="discountSelect" style="font-weight: bold; margin-right: 10px;">Select Discount:</label>
+  <select id="discountSelect" onchange="onDiscountChange()" style="
+		padding: 5px 10px; 
+		background-color: #222; 
+		color: #ccc; 
+		border: 1px solid #555; 
+		border-radius: 4px;
+	">
+    <option value="">-- Choose a discount --</option>
+    <option value="none">No Specials</option>
+    <option value="discount1">Monday - Wednesday</option>
+    <option value="discount2">Thursday - Saturday</option>
+  </select>
+  <div id="discountDescription" style="margin-top: 15px; font-style: italic;"></div>
+</div>
   </div>
 
   <script src="script.js"></script>
