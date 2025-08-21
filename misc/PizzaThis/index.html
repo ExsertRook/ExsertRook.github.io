@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pizza Selector</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="left">
+      <label for="categorySelect"><strong>Select Category:</strong></label>
+      <select id="categorySelect" onchange="onCategoryChange()">
+        <option value="">-- Select Category --</option>
+        <option value="classic">Classic Pizzas</option>
+        <option value="specialty">Specialty Pizzas</option>
+        <option value="sides">Sides and Drinks</option>
+      </select>
+
+      <label for="mealSelect"><strong>Select Item:</strong></label>
+      <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterMeals()">
+      <select id="mealSelect" size="6">
+        <!-- Filtered items will show here -->
+      </select>
+      <button onclick="addItem()">Add Item</button>
+    </div>
+
+    <div class="right" id="detailsBox">
+      <h2>Order Summary</h2>
+      <div class="info" id="orderList">
+        <p>No items added.</p>
+      </div>
+      <p><strong>Total Price:</strong> $<span id="totalPrice">0.00</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
