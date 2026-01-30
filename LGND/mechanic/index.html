@@ -27,41 +27,84 @@
       <h2>Cart</h2>
       <ul id="cart"></ul>
 
-    <div class="discount">
+      <div class="discount">
         <label>
-            Discount: <span id="discountValue">0</span>%
+          Discount: <span id="discountValue">0</span>%
         </label>
         <br>
         <input
-            type="range"
-            id="discount"
-            min="0"
-            max="100"
-            value="0"
-            step="5"
+          type="range"
+          id="discount"
+          min="0"
+          max="100"
+          value="0"
+          step="5"
         >
-    </div>
-
-
+      </div>
 
       <h3>Total: $<span id="total">0.00</span></h3>
-      <button id="invoiceBtn">Generate Invoice</button>
 
+      <button id="invoiceBtn">Generate Invoice</button>
+      <button id="recipesBtn">📘 Recipes</button>
     </div>
   </div>
+
+  <!-- Invoice Modal -->
   <div id="invoiceModal" class="modal">
-  <div class="modal-content">
-    <h2>Invoice</h2>
-    <ul id="invoiceItems"></ul>
+    <div class="modal-content">
+      <h2>Invoice</h2>
+      <ul id="invoiceItems"></ul>
 
-    <p>Subtotal: $<span id="invoiceSubtotal"></span></p>
-    <p>Discount: $<span id="invoiceDiscount"></span></p>
-    <h3>Total: $<span id="invoiceTotal"></span></h3>
+      <p>Subtotal: $<span id="invoiceSubtotal"></span></p>
+      <p>Discount: $<span id="invoiceDiscount"></span></p>
+      <h3>Total: $<span id="invoiceTotal"></span></h3>
 
-    <button id="closeInvoice">Close</button>
+      <button id="closeInvoice">Close</button>
+    </div>
   </div>
-  <script src="script.js"></script>
-  
+
+  <!-- Recipes Modal -->
+  <div id="recipesModal" class="modal">
+  <div class="modal-content recipes-content">
+    <h2>📘 Recipes</h2>
+
+    <div class="recipes-grid">
+      <div class="recipe-card">
+        <h4>🛠️ Advanced Repair Kit</h4>
+        <ul>
+          <li>2x Glass</li>
+          <li>2x Aluminum</li>
+          <li>2x Scrap</li>
+          <li>4x Rubber</li>
+        </ul>
+      </div>
+
+      <div class="recipe-card">
+        <h4>🚪 Door</h4>
+        <ul>
+          <li>1x Scrap</li>
+        </ul>
+      </div>
+
+      <div class="recipe-card">
+        <h4>🪟 Window</h4>
+        <ul>
+          <li>1x Glass</li>
+        </ul>
+      </div>
+
+      <div class="recipe-card">
+      <h4>🛞 Tire</h4>
+      <ul>
+        <li>1x Rubber</li>
+      </ul>
+      </div>
+    </div>
+
+    <button id="closeRecipes">Close</button>
+  </div>
 </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

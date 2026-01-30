@@ -21,24 +21,66 @@ const discountValue = document.getElementById("discountValue");
 let cart = [];
 
 function renderItems() {
-  items.forEach((item, index) => {
-    const row = document.createElement("tr");
+  const categories = [
+    {
+      title: "Vehicle Parts",
+      items: [
+        { name: "Window", price: 45 },
+        { name: "Any Door", price: 75 },
+        { name: "Tire", price: 20 }
+      ]
+    },
+    {
+      title: "Materials",
+      items: [
+        { name: "Glass", price: 45 },
+        { name: "Scrap", price: 75 },
+        { name: "Aluminum", price: 100 },
+        { name: "Steel", price: 125 },
+        { name: "Rubber", price: 20 }
+      ]
+    },
+    {
+      title: "Consumables",
+      items: [
+        { name: "Repair Kit", price: 600 },
+        { name: "Motor Oil", price: 600 }
+      ]
+    }
+  ];
 
-    row.innerHTML = `
-      <td>${item.name}</td>
-      <td>$${item.price}</td>
-      <td>
-        <button class="qty-minus" onclick="changeQty(${index}, -1)">−</button>
-        <span id="qty-${index}">1</span>
-        <button class="qty-plus" onclick="changeQty(${index}, 1)">+</button>
-      </td>
-      <td>
-        <button onclick="addToCart(${index})">Add</button>
-        <button onclick="removeFromCart(${index})">Remove</button>
-      </td>
+  itemList.innerHTML = "";
+
+  categories.forEach(category => {
+    // Add category header row
+    const headerRow = document.createElement("tr");
+    headerRow.classList.add("category-row");
+    headerRow.innerHTML = `
+      <td colspan="4">${category.title}</td>
     `;
+    itemList.appendChild(headerRow);
 
-    itemList.appendChild(row);
+    // Add items under the category
+    category.items.forEach((item) => {
+      const index = items.findIndex(i => i.name === item.name);
+      const row = document.createElement("tr");
+
+      row.innerHTML = `
+        <td>${item.name}</td>
+        <td>$${item.price}</td>
+        <td>
+          <button class="qty-minus" onclick="changeQty(${index}, -1)">−</button>
+          <span id="qty-${index}">1</span>
+          <button class="qty-plus" onclick="changeQty(${index}, 1)">+</button>
+        </td>
+        <td>
+          <button onclick="addToCart(${index})">Add</button>
+          <button onclick="removeFromCart(${index})">Remove</button>
+        </td>
+      `;
+
+      itemList.appendChild(row);
+    });
   });
 }
 
@@ -161,4 +203,16 @@ invoiceBtn.addEventListener("click", () => {
 
 closeInvoice.addEventListener("click", () => {
   modal.style.display = "none";
+});
+
+const recipesBtn = document.getElementById("recipesBtn");
+const recipesModal = document.getElementById("recipesModal");
+const closeRecipes = document.getElementById("closeRecipes");
+
+recipesBtn.addEventListener("click", () => {
+  recipesModal.style.display = "flex";
+});
+
+closeRecipes.addEventListener("click", () => {
+  recipesModal.style.display = "none";
 });
