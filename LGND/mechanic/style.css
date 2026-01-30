@@ -1,0 +1,132 @@
+:root {
+  --bg: #121212;
+  --text: #ffffff;
+  --card: #1e1e1e;
+  --table-header: #333;
+  --border: #444;
+}
+
+body.light {
+  --bg: #f4f4f4;
+  --text: #000000;
+  --card: #ffffff;
+  --table-header: #333;
+  --border: #ddd;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+
+h1 {
+  text-align: center;
+}
+
+button {
+  padding: 8px 14px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+#themeToggle {
+  background: #ffcc00;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border-bottom: 1px solid var(--border);
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: var(--table-header);
+  color: white;
+}
+
+input {
+  padding: 5px;
+}
+
+.summary {
+  border-top: 2px solid var(--border);
+  padding-top: 15px;
+}
+
+#cart {
+  list-style: none;
+  padding: 0;
+}
+
+#cart li {
+  margin-bottom: 6px;
+}
+
+.discount {
+  margin-top: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--card);
+  color: var(--text);
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-content li {
+  margin-bottom: 6px;
+}
+
+#invoiceBtn {
+  margin-top: 10px;
+  background: #4CAF50;
+  color: white;
+}
+
+.qty-plus {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.qty-minus {
+  background-color: #e53935;
+  color: white;
+}

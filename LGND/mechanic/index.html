@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mechanic Shop Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Mechanic Shop Calculator</h1>
+  <button id="themeToggle">☀️ Light Mode</button>
+
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Add</th>
+        </tr>
+      </thead>
+      <tbody id="item-list"></tbody>
+    </table>
+
+    <div class="summary">
+      <h2>Cart</h2>
+      <ul id="cart"></ul>
+
+    <div class="discount">
+        <label>
+            Discount: <span id="discountValue">0</span>%
+        </label>
+        <br>
+        <input
+            type="range"
+            id="discount"
+            min="0"
+            max="100"
+            value="0"
+            step="5"
+        >
+    </div>
+
+
+
+      <h3>Total: $<span id="total">0.00</span></h3>
+      <button id="invoiceBtn">Generate Invoice</button>
+
+    </div>
+  </div>
+  <div id="invoiceModal" class="modal">
+  <div class="modal-content">
+    <h2>Invoice</h2>
+    <ul id="invoiceItems"></ul>
+
+    <p>Subtotal: $<span id="invoiceSubtotal"></span></p>
+    <p>Discount: $<span id="invoiceDiscount"></span></p>
+    <h3>Total: $<span id="invoiceTotal"></span></h3>
+
+    <button id="closeInvoice">Close</button>
+  </div>
+  <script src="script.js"></script>
+  
+</div>
+</body>
+</html>
