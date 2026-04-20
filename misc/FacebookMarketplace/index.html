@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turulistingute generaator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📦 Turulistingute generaator</h1>
+      <p>Täida vorm → Saa valmis Facebook Marketplace kuulutus</p>
+    </header>
+
+    <!-- Kategooria valik -->
+    <div class="section">
+      <label for="category">Vali toote tüüp:</label>
+      <select id="category" class="input">
+        <option value="">-- Vali kategooria --</option>
+        <option value="monitor">🖥️ Monitor</option>
+        <option value="id-card-reader">🪪 ID-kaardi lugeja</option>
+        <option value="computer">💻 Arvuti / Sülearvuti</option>
+        <option value="ikea">🪑 IKEA toode</option>
+      </select>
+    </div>
+
+    <!-- Dünaamiline vorm -->
+    <div id="form-container" class="section hidden">
+      <h2 id="form-title">Toote andmed</h2>
+      <div id="dynamic-fields"></div>
+    </div>
+
+    <!-- Mall -->
+    <div class="section">
+      <h2>Sinu kuulutuse mall</h2>
+      <textarea id="template" rows="12" placeholder="Kirjuta siia oma üldine kuulutuse mall... Kasuta {{väli_nimi}} kohahoidjaid"></textarea>
+      <small>Näide: Müün oma {{name}}! Ekraani suurus: {{screen_size}} jne.</small>
+    </div>
+
+    <!-- Tulemus -->
+    <div class="section">
+      <div class="flex-between">
+        <h2>✅ Valmis kuulutus</h2>
+        <button id="copy-btn" class="copy-btn">📋 Kopeeri lõikelauale</button>
+      </div>
+      <pre id="output" class="output"></pre>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
