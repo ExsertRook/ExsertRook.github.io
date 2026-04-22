@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Cost Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fuel Cost Calculator</h1>
+
+        <label>Trip Distance (km)</label>
+        <input type="number" id="distance" class="small-input" placeholder="e.g. 150">
+
+        <label>Fuel Efficiency (L/100km)</label>
+        <input type="number" id="efficiency" class="small-input" placeholder="e.g. 6.5">
+
+        <label>Fuel Price (€/L)</label>
+        <select id="fuelPriceSelect" class="small-input">
+            <option value="">Select price</option>
+            <option value="1.399">1.399</option>
+            <option value="1.499">1.499</option>
+            <option value="1.599">1.599</option>
+            <option value="1.699">1.699</option>
+            <option value="1.799">1.799</option>
+            <option value="1.899">1.899</option>
+        </select>
+
+        <label>Or enter custom price (€)</label>
+        <input type="number" id="customPrice" class="small-input" step="0.001" placeholder="Custom price">
+
+        <button id="calculateBtn">Calculate</button>
+    </div>
+    <div id="overlay"></div>
+    <div id="popup" class="popup">
+        <p id="popupText"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
