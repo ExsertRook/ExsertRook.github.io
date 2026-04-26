@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cadet Operation Generator</title>
+	<link rel="shortcut icon" href="sasp.png" />
+	<link rel="stylesheet" href="index.css" />
+	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+	<link rel="stylesheet" href="../style/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<header>
+	<br />
+    <div class="headerbuttons"><a href="https://exsertrook.github.io/LGND" target="_blank" class="button">Report Generator HUB</a>
+	</div>
+	<br />
+	Cadet Operation Generator<br />
+	<!--<buttonsasp onclick="saspchange()">SASP</buttonsasp> &nbsp&nbsp&nbsp <buttonbcso onclick="bcsochange()">BCSO</buttonbcso> &nbsp&nbsp&nbsp <buttonsahp onclick="sahpchange()">SAHP</buttonsahp>-->
+	<br />
+	<label class="inline" style="font-size: 14px;">Your Callsign & Name:</label><br />
+    <input type="text" autocomplete="off" autocorrect="off" list="roster" id="yourself" name="yourself" placeholder="[X-101] Thomas Sucher"/><br />
+	<div class="popup" id="copyReport">
+		<div class="btn" title="Copy the generated report to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Report copied!</span>
+	</div>
+</header>
+
+<body>
+    
+    <div id="form">
+		<datalist id="roster">
+		<option value="[X-100] Alexander Murphy">Chief</option>
+		<option value="[X-101] Thomas Sucher">Assistant Chief</option>
+		<option value="[X-102] Jessika Hayward">Deputy Chief</option>
+		<option value="[A-111] Jax Hayward">Commander</option>
+		<option value="[LT-140] Ethan Wolfe">Lieutenant</option>
+		<option value="[S-223] Michael Price">Sergeant</option>
+		<option value="[S-224] Amsii Valen">Sergeant</option>
+		<option value="[CO-301] Tom Dickson">Corporal</option>
+		<option value="[CO-302] Oshea Jordan">Corporal</option>
+		<option value="[CO-303] Christie Pitts">Corporal</option>
+		<option value="[CO-309] Mason Morgan">Corporal</option>
+		<option value="[CO-311] Richard Wright">Corporal</option>
+		<option value="[CO-348] Noah Höft">Corporal</option>
+		<option value="[SO-402] Catalina Winemixer">Senior Officer</option>
+		
+	</datalist>
+		<datalist id="cadetroster">
+			<option value="[TA-701] Jamie Keen">Cadet</option>
+			<option value="[TA-705] Avery Suki">Cadet</option>
+		</datalist>
+		<datalist id="activities">
+			<option value="MDT">Phase 2</option>
+			<option value="DOJ">Phase 2</option>
+			<option value="10-80 Comms">Phase 3 (1 per day)</option>
+			<option value="10-90 Negotiations">Phase 3 (1 per day)</option>
+			<option value="Suspect Processing">Phase 3 (1 per day)</option>
+			<option value="10-80 Primary">Phase 4</option>
+			<option value="10-80 Secondary">Phase 4</option>
+			<option value="10-80 Tertiary">Phase 4</option>
+			<option value="10-80 Parallel">Phase 4</option>
+			<option value="10-11 Traffic Stop">Phase 4 (1 per day)</option>
+			<option value="PIT">Phase 4</option>
+			<option value="Code 5 Stop">Phase 4</option>
+		</datalist>
+		<div class="form-group">
+			<label>Cadet Information:</label>
+			Cadet's Name: <input type="text" autocomplete="on" list="cadetroster" id="cadet" name="cadet" placeholder="[XX-XXX] Name"><br />
+			What Phase?
+			<button id="phaseButton" type="button" style="width:180px;">
+    			Select Phase
+			</button>
+			<input type="hidden" id="phase" value=""><br /><br />
+			<label>Optional:</label>
+			Patrol Start:
+			<button id="startTimeButton" type="button" style="width:180px;">Select Time</button>
+			<input type="hidden" id="timestart">
+			<br />
+
+			Patrol End:
+			<button id="endTimeButton" type="button" style="width:180px;">Select Time</button>
+			<input type="hidden" id="timeend">
+			<br />
+			<input type="hidden" id="timestart_hammer">
+			<input type="hidden" id="timeend_hammer">
+			
+		</div>
+		<div id="timeModal" class="modal" style="display:none;">
+		<div class="modal-content" id="timeModalContent" style="
+			background-color:#242424;
+			border:2px solid rgb(146,245,223);
+			border-radius:10px;
+			padding:25px;
+			max-width:380px;
+			margin:120px auto;
+			color:white;
+			text-align:center;
+		">
+			<h2 style="margin-top:0;">Select Time</h2>
+
+			<div style="display:flex; justify-content:center; gap:10px; margin-bottom:15px;">
+			<input type="number" id="timeHour" min="1" max="12" placeholder="HH"
+					style="width:70px; padding:5px;
+							border:2px solid rgb(146,245,223); border-radius:8px;
+							background-color:#242424; text-align:center;">
+
+			<input type="number" id="timeMinute" min="0" max="59" placeholder="MM"
+					style="width:70px; padding:5px;
+							border:2px solid rgb(146,245,223); border-radius:8px;
+							background-color:#242424; text-align:center;">
+
+			<select id="timePeriod" style="
+				width:70px;
+				padding:5px;
+				border:2px solid rgb(146,245,223);
+				border-radius:8px;
+				background-color:#242424;
+				color:white;
+				text-align:center;">
+				<option>AM</option>
+				<option>PM</option>
+			</select>
+			</div>
+
+			<button id="confirmTime" class="btn">Confirm</button>
+		</div>
+		</div>
+
+		<div class="form-group">
+			<label>Activities:</label>
+			Successfully completed:<br />
+			<button id="addActivityButton" type="button" class="btn">Add Activity</button>
+			<input type="hidden" id="activitiesList" value="">
+			
+		</div>
+		<div class="form-group">
+			<label>Notes:</label>
+			<textarea id="notes" name="notes" placeholder="Notes of the patrol. Write here in detail on how the cadet did at the different activities performed while being on duty."></textarea>
+		</div>
+		<div class="form-group">
+			<label>Patrol Work:</label>
+			How did the cadet do?
+			<select id="patrolwork">
+				<option>Really Good</option>
+				<option>Good</option>
+				<option>Great</option>
+				<option>Average</option>
+				<option>Bad</option>
+				<option>Really Bad</option>
+			</select>
+		</div>
+		<div>
+			<label>Cadet Logger:</label><br />
+			Is the Logger Updated? - <input type="checkbox" id="cadetlogger" name="cadetlogger">
+		</div>
+	</div>
+	<textarea class="wide" id="reportBody">The Report will automatically generate as you fill out the form to the left.&#10;&#10;(Note: the generated report will be editable, but once you edit it, you can no longer update it based on the form)&#10;&#10;If you have any questions or concerns, feel free to fill the feedback form on the main website :)&#10;&#10;Also if you want to show love, make sure to thank Sucher :)</textarea>
+	
+	<!-- Roster popup modal -->
+	<div id="rosterModal" class="modal" style="display:none;">
+	<div class="modal-content" id="rosterModalContent" style="
+		background-color:#242424;
+		border:2px solid rgb(146,245,223);
+		border-radius:10px;
+		padding:10px;
+		max-width:400px;
+		margin:100px auto;
+		color:white;">
+		<h2 style="margin-top:0; text-align:center;">Select Your Callsign</h2>
+		<input type="text" id="rosterSearch" placeholder="Search roster..."
+			style="width:100%; padding:5px; margin-bottom:8px;
+					border:2px solid rgb(146,245,223); border-radius:8px;
+					background-color:#242424; text-align:center;">
+		<div id="rosterList" style="max-height:250px; overflow-y:auto;"></div>
+	</div>
+	</div>
+	<!-- Cadet popup modal -->
+	<div id="cadetModal" class="modal" style="display:none;">
+	<div class="modal-content" id="cadetModalContent" style="
+		background-color:#242424;
+		border:2px solid rgb(146,245,223);
+		border-radius:10px;
+		padding:10px;
+		max-width:400px;
+		margin:100px auto;
+		color:white;">
+		<h2 style="margin-top:0; text-align:center;">Select Cadet</h2>
+
+		<input type="text" id="cadetSearch" placeholder="Search cadets..."
+			style="width:100%; padding:5px; margin-bottom:8px;
+					border:2px solid rgb(146,245,223); border-radius:8px;
+					background-color:#242424; text-align:center;">
+
+		<div id="cadetList" style="max-height:250px; overflow-y:auto;"></div>
+	</div>
+	</div>
+	<!-- Phase popup modal -->
+	<div id="phaseModal" class="modal" style="display:none;">
+	<div class="modal-content" id="phaseModalContent" style="
+		background-color:#242424;
+		border:2px solid rgb(146,245,223);
+		border-radius:10px;
+		padding:25px;                /* <-- increased padding */
+		max-width:420px;             /* <-- wider popup */
+		margin:120px auto;
+		color:white;
+		text-align:center;
+	">
+		<h2 style="margin-top:0;">Select Phase</h2>
+
+		<div id="phaseOptions" style="
+			display:flex;
+			justify-content:center;
+			gap:15px;                  /* <-- more spacing between buttons */
+			margin-top:20px;
+		">
+		<div class="phase-item" data-phase="1">Phase 1</div>
+		<div class="phase-item" data-phase="2">Phase 2</div>
+		<div class="phase-item" data-phase="3">Phase 3</div>
+		</div>
+	</div>
+	</div>
+	<!-- Time selection popup -->
+	<div id="timeModal" class="modal" style="display:none;">
+	<div class="modal-content" id="timeModalContent" style="
+		background-color:#242424;
+		border:2px solid rgb(146,245,223);
+		border-radius:10px;
+		padding:25px;
+		max-width:380px;
+		margin:120px auto;
+		color:white;
+		text-align:center;
+	">
+		<h2 style="margin-top:0;">Select Time</h2>
+
+		<div style="display:flex; justify-content:center; gap:10px; margin-bottom:15px;">
+		<input type="number" id="timeHour" min="1" max="12" placeholder="HH"
+				style="width:70px; padding:5px;
+						border:2px solid rgb(146,245,223); border-radius:8px;
+						background-color:#242424; text-align:center;">
+
+		<input type="number" id="timeMinute" min="0" max="59" placeholder="MM"
+				style="width:70px; padding:5px;
+						border:2px solid rgb(146,245,223); border-radius:8px;
+						background-color:#242424; text-align:center;">
+
+		<select id="timePeriod" style="
+			width:70px;
+			padding:5px;
+			border:2px solid rgb(146,245,223);
+			border-radius:8px;
+			background-color:#242424;
+			color:white;
+			text-align:center;">
+			<option>AM</option>
+			<option>PM</option>
+		</select>
+		</div>
+
+		<button id="confirmTime" class="btn">Confirm</button>
+	</div>
+	</div>
+	<div id="activityModal" class="modal" style="display:none;">
+	<div class="modal-content" style="
+		background-color:#242424;
+		border:2px solid rgb(146,245,223);
+		border-radius:10px;
+		padding:20px;
+		max-width:450px;
+		margin:120px auto;
+		color:white;
+		text-align:center;
+	">
+
+		<h2>Select Activity</h2>
+
+		<!-- Tabs -->
+		<div id="activityTabs" style="display:flex; justify-content:center; gap:10px; margin-bottom:15px;">
+		<button class="activity-tab active" data-phase="1">Phase 1</button>
+		<button class="activity-tab" data-phase="2">Phase 2</button>
+		<button class="activity-tab" data-phase="3">Phase 3</button>
+		</div>
+
+		<!-- Activity List -->
+		<div id="activityList"></div>
+		<button id="customActivityButton" class="btn" style="margin-top:20px; width:90%;">
+			Add Custom Activity
+		</button>
+
+	</div>
+	</div>
+	<div id="customActivityModal" class="modal" style="display:none;">
+	<div class="modal-content" style="
+		background-color:#242424;
+		border:2px solid rgb(146,245,223);
+		border-radius:10px;
+		padding:20px;
+		max-width:350px;
+		margin:150px auto;
+		color:white;
+		text-align:center;
+	">
+		<h3>Add Custom Activity</h3>
+
+		<input id="customActivityInput" type="text" placeholder="Enter activity"
+			style="width:90%; padding:8px; margin-bottom:15px;
+					border:2px solid rgb(146,245,223); border-radius:8px;
+					background-color:#242424; color:white;">
+
+		<button id="addCustomActivityBtn" class="btn">Add</button>
+		<button id="cancelCustomActivityBtn" class="btn" style="margin-left:10px;">Cancel</button>
+	</div>
+	</div>
+
+
+
+	<script src="reports.js"></script>
+</body>
+</html>
