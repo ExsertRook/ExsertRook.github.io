@@ -33,13 +33,13 @@ function reportTitle () {
 	}
 
 	let vehicle = document.getElementById('vehicledesc').value;
-	buffer.push(`10-90 | ${robberyString} | ${vehicle} `);
+	buffer.push(`10-90 | ${robberyString} | ${vehicle}`);
 
 	return document.getElementById('reportBody2').innerHTML = buffer.join("\n");
 }
 
 function report() {
-	let callsign = document.getElementById('yourself').value.trim();
+	let callsign = document.getElementById('yourname').value.trim();
 	if (callsign) {
 		localStorage.setItem('callsign', callsign);
 	}
@@ -447,3 +447,370 @@ function copy() {
 		console.log("Copy error: " + e);
 	}
 }
+
+/* ------------------------------
+   OFFICER SELECT POPUP SYSTEM
+------------------------------ */
+
+let activeOfficerInput = null;
+
+// Open modal when clicking any officer input
+document.querySelectorAll('.officer-select').forEach(input => {
+    input.addEventListener('click', () => {
+        activeOfficerInput = input;
+        openOfficerModal();
+    });
+});
+
+function openOfficerModal() {
+    const modal = document.getElementById('officerModal');
+    const list = document.getElementById('officerList');
+    const search = document.getElementById('officerSearch');
+
+    modal.style.display = "block";
+    search.value = "";
+
+    // Load roster options
+    const options = [...document.querySelectorAll('#roster option')].map(o => o.value);
+
+    renderOfficerList(options);
+
+    // Live search
+    search.onkeyup = () => {
+        const filtered = options.filter(name =>
+            name.toLowerCase().includes(search.value.toLowerCase())
+        );
+        renderOfficerList(filtered);
+    };
+}
+
+function renderOfficerList(names) {
+    const list = document.getElementById('officerList');
+    list.innerHTML = "";
+
+    names.forEach(name => {
+        const div = document.createElement('div');
+        div.className = "officer-item";
+        div.textContent = name;
+
+        div.onclick = () => {
+            if (activeOfficerInput) {
+                activeOfficerInput.value = name;
+                report();       // update report
+                reportTitle();  // update title
+            }
+            closeOfficerModal();
+        };
+
+        list.appendChild(div);
+    });
+}
+
+function closeOfficerModal() {
+    document.getElementById('officerModal').style.display = "none";
+}
+
+// Close modal when clicking outside the box
+window.onclick = function(event) {
+    const modal = document.getElementById('officerModal');
+    if (event.target === modal) {
+        closeOfficerModal();
+    }
+};
+
+/* ------------------------------
+   VEHICLE COLOR PICKER POPUP
+------------------------------ */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const colorInput = document.getElementById('carcolor');
+    const colorModal = document.getElementById('colorModal');
+    const colorWheel = document.getElementById('colorWheel');
+    const colorPreviewText = document.getElementById('colorPreviewText');
+    const selectColorBtn = document.getElementById('selectColorBtn');
+
+    // Debug
+    console.log("Color picker loaded:", {
+        colorInput,
+        colorModal,
+        colorWheel,
+        selectColorBtn
+    });
+
+    // If any element is missing, stop
+    if (!colorInput || !colorModal || !colorWheel || !selectColorBtn) {
+        console.error("Color picker elements missing — check IDs.");
+        return;
+    }
+
+    // Open modal
+    colorInput.addEventListener('click', () => {
+        colorModal.style.display = "block";
+    });
+
+    // Live preview
+    colorWheel.addEventListener('input', () => {
+        colorPreviewText.textContent = colorWheel.value;
+    });
+
+    // Select color
+    selectColorBtn.addEventListener('click', () => {
+        console.log("Select button clicked");
+
+        const hex = colorWheel.value;
+        const name = getNearestColorName(hex);
+
+        console.log("hex:", hex, "name:", name);
+
+        colorInput.value = name;
+        report();
+        reportTitle();
+        colorModal.style.display = "none";
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (event) => {
+        if (event.target === colorModal) {
+            colorModal.style.display = "none";
+        }
+    });
+
+	const typeColorBtn = document.getElementById("typeColorBtn");
+	const typeColorModal = document.getElementById("typeColorModal");
+	const typedColorInput = document.getElementById("typedColorInput");
+	const applyTypedColorBtn = document.getElementById("applyTypedColorBtn");
+
+	// Open typing popup
+	typeColorBtn.addEventListener("click", () => {
+		typeColorModal.style.display = "block";
+	});
+
+	// Apply typed color
+	applyTypedColorBtn.addEventListener("click", () => {
+		const typed = typedColorInput.value.trim();
+
+		if (!typed) return;
+
+		// Hex input
+		if (/^#?[0-9A-Fa-f]{6}$/.test(typed)) {
+			const hex = typed.startsWith("#") ? typed : "#" + typed;
+			const name = getNearestColorName(hex);
+			colorInput.value = name;
+			colorWheel.value = hex;
+		} 
+		else {
+			// Color name input
+			const lower = typed.toLowerCase();
+			let matched = false;
+
+			for (let name in namedColors) {
+				if (name.toLowerCase() === lower) {
+					colorInput.value = name;
+					colorWheel.value = namedColors[name];
+					matched = true;
+					break;
+				}
+			}
+
+			if (!matched) {
+				alert("Unknown color. Try a hex code or a known color name.");
+				return;
+			}
+		}
+
+		report();
+		reportTitle();
+		typeColorModal.style.display = "none";
+		colorModal.style.display = "none";
+});
+
+// Close typing popup when clicking outside
+window.addEventListener("click", (event) => {
+    if (event.target === typeColorModal) {
+        typeColorModal.style.display = "none";
+    }
+});
+
+
+});
+
+
+const namedColors = {
+    "Alice Blue": "#F0F8FF",
+    "Antique White": "#FAEBD7",
+    "Aqua": "#00FFFF",
+    "Aquamarine": "#7FFFD4",
+    "Azure": "#F0FFFF",
+    "Beige": "#F5F5DC",
+    "Bisque": "#FFE4C4",
+    "Black": "#000000",
+    "Blue": "#0000FF",
+    "Brown": "#A52A2A",
+    "Burly Wood": "#DEB887",
+    "Cadet Blue": "#5F9EA0",
+    "Chartreuse": "#7FFF00",
+    "Chocolate": "#D2691E",
+    "Coral": "#FF7F50",
+    "Cornflower Blue": "#6495ED",
+    "Crimson": "#DC143C",
+    "Cyan": "#00FFFF",
+    "Dark Blue": "#00008B",
+    "Dark Cyan": "#008B8B",
+    "Dark Golden Rod": "#B8860B",
+    "Dark Gray": "#A9A9A9",
+    "Dark Green": "#006400",
+    "Dark Khaki": "#BDB76B",
+    "Dark Magenta": "#8B008B",
+    "Dark Olive Green": "#556B2F",
+    "Dark Orange": "#FF8C00",
+    "Dark Orchid": "#9932CC",
+    "Dark Red": "#8B0000",
+    "Dark Salmon": "#E9967A",
+    "Dark Sea Green": "#8FBC8F",
+    "Dark Slate Blue": "#483D8B",
+    "Dark Slate Gray": "#2F4F4F",
+    "Dark Turquoise": "#00CED1",
+    "Dark Violet": "#9400D3",
+    "Deep Pink": "#FF1493",
+    "Deep SkyBlue": "#00BFFF",
+    "Dodger Blue": "#1E90FF",
+    "Fire Brick": "#B22222",
+    "Forest Green": "#228B22",
+    "Fuchsia": "#FF00FF",
+    "Gold": "#FFD700",
+    "Golden Rod": "#DAA520",
+    "Gray": "#808080",
+    "Green": "#008000",
+    "Hot Pink": "#FF69B4",
+    "Indian Red": "#CD5C5C",
+    "Indigo": "#4B0082",
+    "Ivory": "#FFFFF0",
+    "Khaki": "#F0E68C",
+    "Lavender": "#E6E6FA",
+    "LawnGreen": "#7CFC00",
+    "Light Blue": "#ADD8E6",
+    "Light Coral": "#F08080",
+    "Light Cyan": "#E0FFFF",
+    "Light Gray": "#D3D3D3",
+    "Light Green": "#90EE90",
+    "Light Pink": "#FFB6C1",
+    "Light Salmon": "#FFA07A",
+    "Light Sea Green": "#20B2AA",
+    "Light Sky Blue": "#87CEFA",
+    "Light Slate Gray": "#778899",
+    "Light Steel Blue": "#B0C4DE",
+    "Lime": "#00FF00",
+    "Lime Green": "#32CD32",
+    "Magenta": "#FF00FF",
+    "Maroon": "#800000",
+    "Medium Aqua Marine": "#66CDAA",
+    "Medium Blue": "#0000CD",
+    "Medium Orchid": "#BA55D3",
+    "Medium Purple": "#9370DB",
+    "Medium Sea Green": "#3CB371",
+    "Medium Slate Blue": "#7B68EE",
+    "Medium Spring Green": "#00FA9A",
+    "Medium Turquoise": "#48D1CC",
+    "Midnight Blue": "#191970",
+    "Mint Cream": "#F5FFFA",
+    "Misty Rose": "#FFE4E1",
+    "Moccasin": "#FFE4B5",
+    "Navy": "#000080",
+    "Olive": "#808000",
+    "Olive Drab": "#6B8E23",
+    "Orange": "#FFA500",
+    "Orange Red": "#FF4500",
+    "Orchid": "#DA70D6",
+    "Pale GoldenRod": "#EEE8AA",
+    "Pale Green": "#98FB98",
+    "Pale Turquoise": "#AFEEEE",
+    "Pale Violet Red": "#DB7093",
+    "Papaya Whip": "#FFEFD5",
+    "Peach Puff": "#FFDAB9",
+    "Peru": "#CD853F",
+    "Pink": "#FFC0CB",
+    "Plum": "#DDA0DD",
+    "Powder Blue": "#B0E0E6",
+    "Purple": "#800080",
+    "Red": "#FF0000",
+    "Rosy Brown": "#BC8F8F",
+    "Royal Blue": "#4169E1",
+    "Saddle Brown": "#8B4513",
+    "Salmon": "#FA8072",
+    "Sandy Brown": "#F4A460",
+    "Sea Green": "#2E8B57",
+    "Sienna": "#A0522D",
+    "Silver": "#C0C0C0",
+    "Sky Blue": "#87CEEB",
+    "Slate Blue": "#6A5ACD",
+    "Slate Gray": "#708090",
+    "Spring Green": "#00FF7F",
+    "Steel Blue": "#4682B4",
+    "Tan": "#D2B48C",
+    "Teal": "#008080",
+    "Thistle": "#D8BFD8",
+    "Tomato": "#FF6347",
+    "Turquoise": "#40E0D0",
+    "Violet": "#EE82EE",
+    "Wheat": "#F5DEB3",
+    "White": "#FFFFFF",
+    "Yellow": "#FFFF00",
+    "Yellow Green": "#9ACD32"
+};
+
+function hexToRgb(hex) {
+    hex = hex.replace("#", "");
+    return {
+        r: parseInt(hex.substring(0, 2), 16),
+        g: parseInt(hex.substring(2, 4), 16),
+        b: parseInt(hex.substring(4, 6), 16)
+    };
+}
+
+function colorDistance(c1, c2) {
+    return Math.sqrt(
+        Math.pow(c1.r - c2.r, 2) +
+        Math.pow(c1.g - c2.g, 2) +
+        Math.pow(c1.b - c2.b, 2)
+    );
+}
+
+function getNearestColorName(hex) {
+    let rgb = hexToRgb(hex);
+    let closestName = null;
+    let smallestDistance = Infinity;
+
+    for (let name in namedColors) {
+        let rgb2 = hexToRgb(namedColors[name]);
+        let dist = colorDistance(rgb, rgb2);
+
+        if (dist < smallestDistance) {
+            smallestDistance = dist;
+            closestName = name;
+        }
+    }
+
+    return closestName;
+}
+
+
+selectColorBtn.addEventListener('click', () => {
+    console.log("Select button clicked");
+
+    console.log("colorWheel:", colorWheel);
+    console.log("colorInput:", colorInput);
+    console.log("colorModal:", colorModal);
+
+    const hex = colorWheel.value;
+    console.log("hex:", hex);
+
+    const name = getNearestColorName(hex);
+    console.log("name:", name);
+
+    colorInput.value = name;
+    report();
+    reportTitle();
+    colorModal.style.display = "none";
+});
+
