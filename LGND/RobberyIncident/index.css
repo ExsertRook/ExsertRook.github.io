@@ -534,3 +534,53 @@ body::-webkit-scrollbar{
 #typeColorBtn:hover {
     opacity: 1;
 }
+
+#robberyTypeList div,
+#robberySubList div {
+    padding: 10px;
+    border-bottom: 1px solid #555;
+    cursor: pointer;
+    text-align: left;
+}
+
+#robberyTypeList div:hover,
+#robberySubList div:hover {
+    background: #444;
+}
+
+.selected-option {
+    background: #1f8f3a !important;
+    color: white;
+}
+
+.robbery-btn {
+    margin-left: 10px;
+    position: relative;
+    z-index: 20; /* ensures button is clickable */
+}
+
+/* Popup list scroll fix */
+#robberySubList, #robberyTypeList {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+/* Search bar inside popup */
+#robberySearch {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 2px solid white;
+    background: #1e1e1e;
+    color: white;
+}
+.robbery-btn {
+    width: 190px;      /* same as text input */
+    height: 25px;      /* matches input height */
+    padding: 3px;      /* same padding */
+    font-size: 13px;   /* matches input font */
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}

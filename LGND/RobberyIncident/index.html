@@ -62,54 +62,16 @@
 			Parallel: &nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" class="officer-select" autocomplete="off" id="parallel" name="parallel" placeholder="[XX-XXX] Name"> <span style="margin-left: 20px;"></span>
 			Passenger: <input type="text" class="officer-select" autocomplete="off" id="parallelp" name="parallelp" placeholder="[XX-XXX] Name"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Co-Pilot: <input type="text" class="officer-select" autocomplete="off" id="airp" name="airp" placeholder="[XX-XXX] Name"><br />	
 		</div>
-
-		<label for="robberytype">Robbery Location: </label><br />
 		
-		<div class="form-group2">
-			Type: <span style="margin-left: 5px;"></span>
-			<select id="robberytype">
-				<option value="Jewelry Store" selected>Jewelry Store</option>
-				<option value="Pacific Bank">Pacific Bank</option>
-				<option value="Fleeca Bank">Fleeca Bank</option>
-				<option value="Store">24/7 Store</option>
-			</select>
-			<div id="whatFleeca">
-				<span style="margin-left: 10px;"></span> Which Fleeca: 
-				<select id="specificBank">
-					<option value="Legion Square">Legion Square</option>
-					<option value="Burton">Burton</option>
-					<option value="Rockford Hills (Lifeinvader)">Rockford Hills (Lifeinvader)</option>
-					<option value="Alta">Alta</option>
-					<option value="Great Ocean">Great Ocean</option>
-					<option value="Route 68">Route 68</option>
-					<option value="Paleto">Paleto</option>
-				</select>
-			</div>
-			<div id="whatStore">
-				<span style="margin-left: 10px;"></span> Which 24/7:
-				<select id="specificStore">
-					<option value="Strawberry 24/7">Strawberry 24/7</option>
-					<option value="Davis LTD 24/7">Davis LTD 24/7</option>
-					<option value="Murrieta Heights Rob's Liquor">Murrieta Heights Rob's Liquor</option>
-					<option value="Little Seoul LTD 24/7">Little Seoul LTD 24/7</option>
-					<option value="Vespucci Canals Rob's Liquor">Vespucci Canals Rob's Liquor</option>
-					<option value="Morningwood Rob's Liquor">Morningwood Rob's Liquor</option>
-					<option value="Mirror Park LTD 24/7">Mirror Park LTD 24/7</option>
-					<option value="Downtown Vinewood 24/7">Downtown Vinewood 24/7</option>
-					<option value="Tataviam Mountains 24/7">Tataviam Mountains 24/7</option>
-					<option value="Banham Canyon Rob's Liquor">Banham Canyon Rob's Liquor</option>
-					<option value="Banham Canyon 24/7">Banham Canyon 24/7</option>
-					<option value="Richman Glen LTD 24/7">Richman Glen LTD 24/7</option>
-					<option value="Chumash 24/7">Chumash 24/7</option>
-					<option value="Harmony 24/7">Harmony 24/7</option>
-					<option value="Grand Senora Rob's Liquor">Grand Senora Rob's Liquor</option>
-					<option value="Grand Senora 24/7/">Grand Senora 24/7</option>
-					<option value="Grapeseed LTD 24/7">Grapeseed LTD 24/7</option>
-					<option value="Mount Chilliad 24/7">Mount Chilliad 24/7</option>
-					<option value="Paleto 24/7">Paleto 24/7</option>
-				</select>
-			</div>
-		</div>
+		<div class="form-group">
+    <label>Robbery Location:</label>
+    Type:
+    <button id="openRobberySelector" class="btn" style="margin-left: 10px; width: 190px; height: 25px; padding: 3px;" >
+        Select Location
+    </button>
+</div>
+
+<input type="hidden" id="robberyFinal">
 		<div class="form-group">
 			<label>Numbers:</label>
 			Robbers inside: <span style="margin-left: 11px;"></span>
@@ -352,6 +314,27 @@
         <button id="applyTypedColorBtn" class="btn">Apply Color</button>
     </div>
 	</div>
+	<!-- Robbery Location Modal -->
+	<div id="robberyModal" class="modal">
+		<div class="modal-content" style="width: 380px;">
+			<h2>Select Robbery Location</h2>
+
+			<!-- Search bar (only shown for Fleeca / Store) -->
+			<input id="robberySearch" placeholder="Search..." style="display:none;">
+
+			<!-- Step 1: Robbery Type -->
+			<div id="robberyTypeList"></div>
+
+			<!-- Step 2: Sub‑locations -->
+			<div id="robberySubList" style="display:none; margin-top: 15px;"></div>
+
+			<button id="confirmRobberyBtn" class="btn"
+				style="margin-top: 20px; background-color: #1f8f3a; color: white; border-color: #0f5f22; opacity: 0.4; pointer-events: none;">
+				Confirm
+			</button>
+		</div>
+	</div>
+
 	<script src="reports.js"></script>
 </body>
 </html>

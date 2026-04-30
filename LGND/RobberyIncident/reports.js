@@ -9,28 +9,8 @@ function reportTitle () {
 	const ind = "        ";
 	buffer = [];
 
-	let robbery = document.getElementById('robberytype').value;
-	let robberyString = '';
-	if (robbery.trim() === 'Fleeca Bank') {
-		document.getElementById('whatStore').style.display = 'none';
-		document.getElementById('whatFleeca').style.display = 'block';
-		let specific = document.getElementById('specificBank').value;
-		robberyString = `${specific} ${robbery}`;
-		ROBBERY_STATE = 'FLEECA';
-	}
-	if (robbery.trim() === 'Store') {
-		document.getElementById('whatFleeca').style.display = 'none';
-		document.getElementById('whatStore').style.display = 'block';
-		let specific = document.getElementById('specificStore').value;
-		robberyString = `${specific} ${robbery}`;
-		ROBBERY_STATE = '24/7';
-	} 
-	if (robbery.trim() === 'Jewelry Store') {
-		document.getElementById('whatFleeca').style.display = 'none';
-		document.getElementById('whatStore').style.display = 'none';
-		robberyString = robbery;
-		ROBBERY_STATE = 'JEWLERY';
-	}
+	let robberyString = document.getElementById("robberyFinal").value || "";
+	
 
 	let vehicle = document.getElementById('vehicledesc').value;
 	buffer.push(`10-90 | ${robberyString} | ${vehicle}`);
@@ -109,35 +89,25 @@ function report() {
 	if (bikeunit) buffer.push(`Bike-Unit: ${bikeunit}`);
 	if (primary || secondary || tertiary || parallel || bikeunit || airunit) buffer.push('');
 
-	let robbery = document.getElementById('robberytype').value;
-	let robberyString = '';
+	// NEW robbery location system
+let robberyString = document.getElementById("robberyFinal").value || "Unknown Location";
 
-	if (robbery.trim() === 'Fleeca Bank') {
-		document.getElementById('whatStore').style.display = 'none';
-		document.getElementById('whatFleeca').style.display = 'block';
-		let specific = document.getElementById('specificBank').value;
-		robberyString = `${robbery} at ${specific}`;
-		ROBBERY_STATE = 'FLEECA';
-	}
-	if (robbery.trim() === 'Store') {
-		document.getElementById('whatFleeca').style.display = 'none';
-		document.getElementById('whatStore').style.display = 'block';
-		let specific = document.getElementById('specificStore').value;
-		robberyString = `${robbery} at ${specific}`;
-		ROBBERY_STATE = '24/7';
-	} 
-	if (robbery.trim() === 'Jewelry Store') {
-		document.getElementById('whatFleeca').style.display = 'none';
-		document.getElementById('whatStore').style.display = 'none';
-		robberyString = robbery;
-		ROBBERY_STATE = 'JEWLERY';
-	}
-	if (robbery.trim() === 'Pacific Bank') {
-		document.getElementById('whatFleeca').style.display = 'none';
-		document.getElementById('whatStore').style.display = 'none';
-		robberyString = robbery;
-		ROBBERY_STATE = 'PACIFIC';
-	}
+// Determine ROBBERY_STATE based on popup selection
+if (robberyString.startsWith("Fleeca Bank")) {
+    ROBBERY_STATE = "FLEECA";
+}
+else if (robberyString.startsWith("24/7 Store")) {
+    ROBBERY_STATE = "24/7";
+}
+else if (robberyString.startsWith("Jewelry Store")) {
+    ROBBERY_STATE = "JEWELRY";
+}
+else if (robberyString.startsWith("Pacific Bank")) {
+    ROBBERY_STATE = "PACIFIC";
+}
+else {
+    ROBBERY_STATE = "UNKNOWN";
+}
 
 	buffer.push(`[SCENE DETAILS]:`);
 	buffer.push(`Whilst on duty, we received a dispatch call regarding an alarm going off at the ${robberyString}. Once units arrived on scene and a scene commander was established, they assigned officer ${callsign} to create and write the incident report.`);
@@ -422,11 +392,6 @@ function showCopiedPopup() {
 	setTimeout(function() {
 		popup.classList.toggle("show");
 	}, 3500);
-}
-
-if (ROBBERY_STATE === 'JEWLERY') {
-	document.getElementById('whatFleeca').style.display = 'none';
-	document.getElementById('whatStore').style.display = 'none';
 }
 
 document.getElementById('copyReport').addEventListener('click', copy, false);
@@ -814,3 +779,174 @@ selectColorBtn.addEventListener('click', () => {
     colorModal.style.display = "none";
 });
 
+/* ------------------------------
+   ROBBERY LOCATION POPUP SYSTEM
+------------------------------ */
+
+const robberyTypes = [
+    "Jewelry Store",
+    "Pacific Bank",
+    "Fleeca Bank",
+    "24/7 Store"
+];
+
+const fleecaLocations = [
+    "Legion Square",
+    "Burton",
+    "Rockford Hills (Lifeinvader)",
+    "Alta",
+    "Great Ocean",
+    "Route 68",
+    "Paleto"
+];
+
+const storeLocations = [
+    "Strawberry 24/7",
+    "Davis LTD 24/7",
+    "Murrieta Heights Rob's Liquor",
+    "Little Seoul LTD 24/7",
+    "Vespucci Canals Rob's Liquor",
+    "Morningwood Rob's Liquor",
+    "Mirror Park LTD 24/7",
+    "Downtown Vinewood 24/7",
+    "Tataviam Mountains 24/7",
+    "Banham Canyon Rob's Liquor",
+    "Banham Canyon 24/7",
+    "Richman Glen LTD 24/7",
+    "Chumash 24/7",
+    "Harmony 24/7",
+    "Grand Senora Rob's Liquor",
+    "Grand Senora 24/7",
+    "Grapeseed LTD 24/7",
+    "Mount Chilliad 24/7",
+    "Paleto 24/7"
+];
+
+let selectedRobberyType = null;
+let selectedRobberyLocation = null;
+
+const robberyModal = document.getElementById("robberyModal");
+const robberyTypeList = document.getElementById("robberyTypeList");
+const robberySubList = document.getElementById("robberySubList");
+const robberySearch = document.getElementById("robberySearch");
+const confirmRobberyBtn = document.getElementById("confirmRobberyBtn");
+const robberyFinal = document.getElementById("robberyFinal");
+
+// Open modal
+document.getElementById("openRobberySelector").addEventListener("click", () => {
+    robberyModal.style.display = "block";
+    loadRobberyTypes();
+});
+
+// Close modal when clicking outside
+window.addEventListener("click", (event) => {
+    if (event.target === robberyModal) {
+        robberyModal.style.display = "none";
+    }
+});
+
+// Enable/disable confirm button
+function updateConfirmState() {
+    let valid = false;
+
+    if (selectedRobberyType === "Jewelry Store" || selectedRobberyType === "Pacific Bank") {
+        valid = true;
+    }
+
+    if (selectedRobberyType === "Fleeca Bank" && selectedRobberyLocation) {
+        valid = true;
+    }
+
+    if (selectedRobberyType === "24/7 Store" && selectedRobberyLocation) {
+        valid = true;
+    }
+
+    confirmRobberyBtn.style.opacity = valid ? "1" : "0.4";
+    confirmRobberyBtn.style.pointerEvents = valid ? "auto" : "none";
+}
+
+// Load robbery types
+function loadRobberyTypes() {
+    robberyTypeList.innerHTML = "";
+    robberySubList.style.display = "none";
+    robberySearch.style.display = "none";
+    selectedRobberyType = null;
+    selectedRobberyLocation = null;
+    updateConfirmState();
+
+    robberyTypes.forEach(type => {
+        const div = document.createElement("div");
+        div.textContent = type;
+
+        div.onclick = () => {
+            selectedRobberyType = type;
+            selectedRobberyLocation = null;
+
+            [...robberyTypeList.children].forEach(c => c.classList.remove("selected-option"));
+            div.classList.add("selected-option");
+
+            if (type === "Fleeca Bank") {
+                loadSubLocations(fleecaLocations);
+            } else if (type === "24/7 Store") {
+                loadSubLocations(storeLocations);
+            } else {
+                robberySubList.style.display = "none";
+                robberySearch.style.display = "none";
+            }
+
+            updateConfirmState();
+        };
+
+        robberyTypeList.appendChild(div);
+    });
+}
+
+// Load sub‑locations with search
+function loadSubLocations(list) {
+    robberySubList.innerHTML = "";
+    robberySubList.style.display = "block";
+    robberySearch.style.display = "block";
+
+    function renderList(filter = "") {
+        robberySubList.innerHTML = "";
+        list
+            .filter(loc => loc.toLowerCase().includes(filter.toLowerCase()))
+            .forEach(loc => {
+                const div = document.createElement("div");
+                div.textContent = loc;
+
+                div.onclick = () => {
+                    selectedRobberyLocation = loc;
+
+                    [...robberySubList.children].forEach(c => c.classList.remove("selected-option"));
+                    div.classList.add("selected-option");
+
+                    updateConfirmState();
+                };
+
+                robberySubList.appendChild(div);
+            });
+    }
+
+    robberySearch.onkeyup = () => {
+        renderList(robberySearch.value);
+    };
+
+    renderList();
+}
+
+// Confirm selection
+confirmRobberyBtn.addEventListener("click", () => {
+    let finalText = selectedRobberyType;
+
+    if (selectedRobberyLocation) {
+        finalText += " – " + selectedRobberyLocation;
+    }
+
+    robberyFinal.value = finalText;
+
+    report();
+    reportTitle();
+
+    robberyModal.style.display = "none";
+});
