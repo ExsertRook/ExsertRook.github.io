@@ -4,14 +4,33 @@ const categories = {
     name: "Monitor",
     fields: [
       { key: "name", label: "Toote nimi / mudel", type: "text", placeholder: "nt. Dell S2721QS" },
+
       { key: "screen_size", label: "Ekraani suurus", type: "select", 
         options: ["19 tolli", "21.5 tolli", "22 tolli", "23 tolli", "24 tolli", "27 tolli"], 
         defaultValue: "24 tolli" },
+
       { key: "resolution", label: "Resolutsioon", type: "select", 
         options: ["1366 x 768", "1600 x 900", "1680 x 1050", "1920x1080", "1920 x 1200", "2560 x 1080", "2560 x 1440"], 
         defaultValue: "1920x1080" },
+
+      { key: "refresh_rate", label: "Ekraani värskendussagedus", type: "select",
+        options: ["60Hz", "75Hz", "100Hz", "120Hz", "144Hz", "165Hz", "240Hz"],
+        defaultValue: "60Hz" },
+
+      // DEFAULT = BLANK
+      { key: "response_time", label: "Reageerimisaeg (ms)", type: "select",
+        options: ["", "1ms", "2ms", "4ms", "5ms", "6ms", "8ms"],
+        defaultValue: "" },
+
+      // DEFAULT = BLANK
       { key: "panel_type", label: "Paneeli tüüp", type: "select", 
-        options: ["TN", "IPS", "VA", "OLED"] },
+        options: ["", "TN", "IPS", "VA", "OLED"],
+        defaultValue: "" },
+
+      { key: "brightness", label: "Heledus (nits)", type: "select",
+        options: ["200 nits", "250 nits", "300 nits", "350 nits", "400 nits", "450 nits"],
+        defaultValue: "250 nits" },
+
       { key: "video_ports", label: "Video pesad", type: "select", 
         options: [
           "VGA", 
@@ -27,8 +46,18 @@ const categories = {
           "2x HDMI",
           "HDMI / DisplayPort / USB-C"
         ] },
+
       { key: "usb_ports", label: "Kas monitoril on USB pesad?", type: "select", 
         options: ["Jah", "Ei"], defaultValue: "Ei" },
+
+      { 
+        key: "usb_count", 
+        label: "Mitu USB pesa on monitoril?", 
+        type: "select",
+        options: ["1", "2", "3", "4", "5", "6"],
+        hidden: true
+      },
+
       { key: "aux_port", label: "Kas on AUX helipesa?", type: "select", 
         options: ["Jah", "Ei"], defaultValue: "Ei" }
     ]
@@ -36,7 +65,7 @@ const categories = {
 
   "id-card-reader": {
     name: "ID-kaardi lugeja",
-    fields: [] // no fields
+    fields: []
   },
 
   computer: {
@@ -68,6 +97,9 @@ const defaultTemplates = {
 Tehnilised andmed:
 Ekraani suurus: {{screen_size}}
 Resolutsioon: {{resolution}}
+Värskendussagedus: {{refresh_rate}}
+Reageerimisaeg: {{response_time}}
+Heledus: {{brightness}}
 Paneeli tüüp: {{panel_type}}
 Video pesad: {{video_ports}}
 {{usb_text}}
@@ -108,10 +140,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const outputArea = document.getElementById('output');
   const copyBtn = document.getElementById('copy-btn');
 
-  // Esialgne mall (monitor)
   templateArea.value = defaultTemplates.monitor;
 
-  // Kategooria muutus
   categorySelect.addEventListener('change', () => {
     const selected = categorySelect.value;
     
@@ -126,18 +156,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     dynamicFields.innerHTML = '';
 
-    // Lae kategooria mall
     if (defaultTemplates[selected]) {
       templateArea.value = defaultTemplates[selected];
     }
 
-    // Kui kategoorial pole välju → ära loo midagi
     if (cat.fields.length === 0) {
       generateOutput();
       return;
     }
 
-    // Loo väljad
     cat.fields.forEach(field => {
       const div = document.createElement('div');
       div.className = 'field';
@@ -157,13 +184,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       div.innerHTML = fieldHTML;
+
+      if (field.hidden) {
+        div.style.display = "none";
+        div.dataset.hiddenField = field.key;
+      }
+
       dynamicFields.appendChild(div);
     });
 
     generateOutput();
   });
 
-  // Live uuendus
   document.addEventListener('input', generateOutput);
   document.addEventListener('change', generateOutput);
 
@@ -180,32 +212,43 @@ document.addEventListener('DOMContentLoaded', () => {
       values[field.key] = element ? element.value.trim() : '';
     });
 
-    // Asenda {{kohahoidjad}}
+    // Show/hide USB count field
+    const usbPortsField = document.getElementById("usb_ports");
+    const usbCountWrapper = dynamicFields.querySelector('[data-hidden-field="usb_count"]');
+
+    if (usbPortsField && usbCountWrapper) {
+      usbCountWrapper.style.display = usbPortsField.value === "Jah" ? "flex" : "none";
+    }
+
+    // Replace placeholders
     Object.keys(values).forEach(key => {
       const placeholder = new RegExp(`{{${key}}}`, 'g');
       templateText = templateText.replace(placeholder, values[key]);
     });
 
-    // USB ja AUX loogika
+    // USB text
     let usbText = '';
     if (values.usb_ports === "Jah") {
-      usbText = "Monitoril on olemas USB pesad.";
+      usbText = `Monitoril on ${values.usb_count} USB pesa.`;
     }
     templateText = templateText.replace(/{{usb_text}}/g, usbText);
 
+    // AUX text
     let auxText = '';
     if (values.aux_port === "Jah") {
       auxText = "Monitoril on olemas AUX audio pesa.";
     }
     templateText = templateText.replace(/{{aux_text}}/g, auxText);
 
-    // Eemalda liigsed tühjad read
-    templateText = templateText.replace(/\n\n\n/g, '\n\n');
+    // REMOVE LINES WHERE PLACEHOLDER WAS EMPTY
+    templateText = templateText
+      .split("\n")
+      .filter(line => !line.includes("{{") && line.trim() !== "")
+      .join("\n");
 
     outputArea.textContent = templateText.trim();
   }
 
-  // Kopeeri nupp
   copyBtn.addEventListener('click', () => {
     const text = outputArea.textContent;
     if (!text) return;
