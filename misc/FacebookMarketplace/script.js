@@ -6,11 +6,11 @@ const categories = {
       { key: "name", label: "Toote nimi / mudel", type: "text", placeholder: "nt. Dell S2721QS" },
 
       { key: "screen_size", label: "Ekraani suurus", type: "select", 
-        options: ["19 tolli", "21.5 tolli", "22 tolli", "23 tolli", "24 tolli", "27 tolli"], 
+        options: ["19 tolli", "21.5 tolli", "22 tolli", "23 tolli", "23.8 tolli", "24 tolli", "27 tolli"], 
         defaultValue: "24 tolli" },
 
       { key: "resolution", label: "Resolutsioon", type: "select", 
-        options: ["1366 x 768", "1600 x 900", "1680 x 1050", "1920x1080", "1920 x 1200", "2560 x 1080", "2560 x 1440"], 
+        options: ["1366 x 768", "1600 x 900", "1680 x 1050", "1920 x 1080", "1920 x 1200", "2560 x 1080", "2560 x 1440", "3840 x 2160"], 
         defaultValue: "1920x1080" },
 
       { key: "refresh_rate", label: "Ekraani värskendussagedus", type: "select",
@@ -19,16 +19,16 @@ const categories = {
 
       // DEFAULT = BLANK
       { key: "response_time", label: "Reageerimisaeg (ms)", type: "select",
-        options: ["", "1ms", "2ms", "4ms", "5ms", "6ms", "8ms"],
+        options: ["", "0.5ms", "1ms", "2ms", "3ms", "4ms", "5ms", "6ms", "8ms"],
         defaultValue: "" },
 
       // DEFAULT = BLANK
       { key: "panel_type", label: "Paneeli tüüp", type: "select", 
-        options: ["", "TN", "IPS", "VA", "OLED"],
+        options: ["", "TN", "IPS", "VA", "OLED", "QLED"],
         defaultValue: "" },
 
       { key: "brightness", label: "Heledus (nits)", type: "select",
-        options: ["200 nits", "250 nits", "300 nits", "350 nits", "400 nits", "450 nits"],
+        options: ["200 nits", "250 nits", "300 nits", "350 nits", "400 nits", "450 nits", "500 nits", "600 nits", "700 nits"],
         defaultValue: "250 nits" },
 
       { key: "video_ports", label: "Video pesad", type: "select", 
@@ -43,6 +43,7 @@ const categories = {
           "DisplayPort / HDMI", 
           "VGA / DVI / HDMI / DisplayPort",
           "2x HDMI / 1x DisplayPort",
+          "2x HDMI / 1x DisplayPort / 1x VGA",
           "2x HDMI",
           "HDMI / DisplayPort / USB-C"
         ] },
@@ -59,7 +60,15 @@ const categories = {
       },
 
       { key: "aux_port", label: "Kas on AUX helipesa?", type: "select", 
-        options: ["Jah", "Ei"], defaultValue: "Ei" }
+        options: ["Jah", "Ei"], defaultValue: "Ei" },
+
+      { 
+        key: "adjustable_stand", 
+        label: "Kas monitoril on reguleeritav jalg / õlg (kõrgus + pööramine)?", 
+        type: "select",
+        options: ["Ei", "Jah"],
+        defaultValue: "Ei"
+      },  
     ]
   },
 
@@ -104,6 +113,7 @@ Paneeli tüüp: {{panel_type}}
 Video pesad: {{video_ports}}
 {{usb_text}}
 {{aux_text}}
+{{stand_text}}
 
 Monitoriga tuleb kaasa ostja soovil videokaabel ning ka toitekaabel.
 
