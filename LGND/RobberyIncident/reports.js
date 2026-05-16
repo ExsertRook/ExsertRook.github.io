@@ -168,7 +168,7 @@ else {
 			text: 'The chase lasted for a bit of time until the suspects fleeing decided to surrender.',
 		},
 		'Got out of vehicle | Ran on foot | Caught': {
-			text: 'The chase lasted for a bit of time until they had stopped their car and stepped out of it. The suspects initiated a 10-81 and attempted to evade on foot. Our pursuing units eventually managed to apprehend the suspects and place them under police custody.',
+			text: 'The chase lasted for a bit of time until they had stopped their car and stepped out of it. The suspects initiated a 10-81 foot pursuit and attempted to evade on foot. Our pursuing units eventually managed to apprehend the suspects and place them under police custody.',
 		},
 		'Got out of vehicle | Ran on foot | Escaped': {
 			text: 'The chase lasted for a bit of time until they had stopped their car and stepped out of it. The suspects initiated a 10-81 and attempted to evade on foot.',
@@ -318,10 +318,10 @@ else {
 			text: 'The chase lasted for a bit of time until the suspect(s) had fallen off of their bike. The suspects then got off of the bike and ran on foot in hopes of getting away. After us losing eyes on them and performing a Code 6 of the general vicinity, the suspects eventually escaped police custody.',
 		},
 		'Fell off bike | Vehicle Swap | Caught': {
-			text: 'The chase lasted for a bit of time until the suspect(s) had fallen off of their bike. The suspects then got off of their bike and began running on foot. Shortly after a vehicle had picked up the suspects and we initiated another 10-80 with that vehicle. After pursuing the swap vehicle for a bit of time the suspects were eventually apprehended.',
+			text: 'The chase lasted for a bit of time until the suspect(s) had fallen off of their bike. The suspects then got off of their bike and began running on foot. Shortly after a vehicle had picked up the suspects and we initiated another 10-80 vehicle pursuit with that vehicle. After pursuing the swap vehicle for a bit of time the suspects were eventually apprehended.',
 		},
 		'Fell off bike | Vehicle Swap | Escaped': {
-			text: 'The chase lasted for a bit of time until the suspect(s) had fallen off of their bike. The suspects then got off of their bike and began running on foot. Shortly after a vehicle had picked up the suspects and we initiated another 10-80 with that vehicle. After pursuing the swap vehicle for a bit of time, the pursuing units managed to lose eyes on the suspects. After us losing eyes on them and performing a Code 6 of the general vicinity, the suspects eventually escaped police custody.',
+			text: 'The chase lasted for a bit of time until the suspect(s) had fallen off of their bike. The suspects then got off of their bike and began running on foot. Shortly after a vehicle had picked up the suspects and we initiated another 10-80 vehicle pursuit with that vehicle. After pursuing the swap vehicle for a bit of time, the pursuing units managed to lose eyes on the suspects. After us losing eyes on them and performing a Code 6 of the general vicinity, the suspects eventually escaped police custody.',
 		},
 		'Fell off bike | Surrendered': {
 			text: 'The chase lasted for a bit of time until the suspect(s) had fallen off of their bike. The suspects then got off of their bike and decided to surrender and they were placed under police custody.',
