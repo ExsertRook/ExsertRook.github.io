@@ -131,88 +131,45 @@
 			Plate: <span style="margin-left: 102px;"></span><input type="text2" id="vehicleplate" name="vehicleplate" placeholder="12ABC345"><br />
 			Registration: <span style="margin-left: 12px;"></span><input type="text" id="vehiclereg" name="vehiclereg" placeholder="FirstName LastName">
 		</div>
-		<div class="form-group">
-			<label>How did the chase end? Did they get caught?</label>
-			<select id="chaseend">
-				<option selected>Write Custom Ending</option>
-				<option>Units lost eyes | Escaped</option>
-				<option>Suspects caught | General Ending</option>
-				<option>Surrendered | General Ending</option>
-				<option></option>
-				<option>Got out of vehicle | Ran on foot | Caught</option>
-				<option>Got out of vehicle | Ran on foot | Escaped</option>
-				<option></option>
-				<option>Vehicle disabled | Ran on foot | Caught</option>
-				<option>Vehicle disabled | Ran on foot | Escaped</option>
-				<option>Vehicle disabled | Vehicle swap | Caught</option>
-				<option>Vehicle disabled | Vehicle swap | Escaped</option>
-				<option>Vehicle disabled | Surrendered</option>
-				<option></option>
-				<option>Vehicle Tires Popped | Ran on foot | Caught</option>
-				<option>Vehicle Tires Popped | Ran on foot | Escaped</option>
-				<option>Vehicle Tires Popped | Surrendered</option>
-				<option></option>
-				<option>Vehicle boxed in | Ran on foot | Caught</option>
-				<option>Vehicle boxed in | Ran on foot | Escaped</option>
-				<option>Vehicle boxed in | Surrendered</option>
-				<option></option>
-				<option>Attempted Vehicle swap | Caught</option>
-				<option>Vehicle swap x1 | Caught</option>
-				<option>Vehicle swap x1 | Escaped</option>
-				<option>Vehicle swap x2 | Caught</option>
-				<option>Vehicle swap x2 | Escaped</option>
-				<option>Vehicle swap x3 | Caught</option>
-				<option>Vehicle swap x3 | Escaped</option>
-				<option></option>
-				<option>Bike swap | Caught</option>
-				<option>Bike swap | Escaped</option>
-				<option></option>
-				<option>Vehicle ran out of fuel | Ran on foot | Transfer vehicle | Caught</option>
-				<option>Vehicle ran out of fuel | Ran on foot | Transfer vehicle | Escaped</option>
-				<option>Vehicle ran out of fuel | Ran on foot | Caught</option>
-				<option>Vehicle ran out of fuel | Ran on foot | Escaped</option>
-				<option>Vehicle ran out of fuel | Surrendered</option>
-				<option></option>
-				<option>Vehicle turtled | Ran on foot | Transfer vehicle | Caught</option>
-				<option>Vehicle turtled | Ran on foot | Transfer vehicle | Escaped</option>
-				<option>Vehicle turtled | Ran on foot | Caught</option>
-				<option>Vehicle turtled | Ran on foot | Escaped</option>
-				<option>Vehicle turtled | Surrendered</option>
-				<option></option>
-				<option>Vehicle Stuck | Ran on foot | Caught</option>
-				<option>Vehicle Stuck | Ran on foot | Escaped</option>
-				<option>Vehicle Stuck | Surrendered</option>
-				<option></option>
-				<option>Vehicle was sent into water | Caught</option>
-				<option>Vehicle was sent into water | Escaped</option>
-				<option></option>
-				<option>Vehicle blew up</option>
-				<option></option>
-				<option>Vehicle took a jump | Escaped</option>
-				<option></option>
-				<option>Suspects opened fire from the vehicle | Caught</option>
-				<option>Suspects opened fire from the vehicle | Escaped</option>
-				<option></option>
-				<option>Turned into a shootout | All Caught</option>
-				<option>Turned into a shootout | All Escaped</option>
-				<option></option>
-				<option>Secondary Vehicle Blocked Units | Escaped</option>
-				<option></option>
-				<option>Vehicle 10-50 | Suspects went down</option>
-				<option></option>
-				<option>Bike disabled | Ran on foot | Caught</option>
-				<option>Bike disabled | Ran on foot | Escaped</option>
-				<option>Bike disabled | Surrendered</option>
-				<option>Fell off bike | Ran on foot | Caught</option>
-				<option>Fell off bike | Ran on foot | Escaped</option>
-				<option>Fell off bike | Vehicle Swap | Caught</option>
-				<option>Fell off bike | Vehicle Swap | Escaped</option>
-				<option>Fell off bike | Surrendered</option>
-				<option></option>
-				<option>Suspects declared Code Red</option>
-				<option>Suspects Initiated a Shootout</option>
-			</select><br />
+			<div class="form-group">
+		<label>How did the chase end? Did they get caught?</label>
+
+		<!-- Visible button -->
+		<button type="button" id="openChaseSelector" class="btn" style="width: 190px;">
+			Select Chase Ending
+		</button>
+
+		<!-- Stores the selected key from chaseInformation OR 'CUSTOM' -->
+		<input type="hidden" id="chaseKey">
+
+		<!-- Stores custom text if CUSTOM is used -->
+		<input type="hidden" id="chaseCustomText">
 		</div>
+
+		<!-- Chase Ending Modal -->
+		<div id="chaseModal" class="modal">
+		<div class="modal-content" style="width: 380px;">
+			<h2>Select Chase Outcome</h2>
+
+			<!-- Step 1: Outcome type -->
+			<div id="chaseOutcomeList" style="margin-bottom: 15px;"></div>
+
+			<!-- Step 2: Scenario list (for caught/escaped) -->
+			<div id="chaseScenarioList" style="display:none; margin-top: 10px;"></div>
+
+			<!-- Custom text area (for Write Custom Ending) -->
+			<div id="chaseCustomContainer" style="display:none; margin-top: 10px;">
+				<textarea id="chaseCustomInput" class="wide" placeholder="Type your custom chase ending here..."></textarea>
+				<button id="saveCustomChaseBtn" class="btn" style="margin-top: 10px;">Save Custom Ending</button>
+			</div>
+
+			<button id="confirmChaseBtn" class="btn"
+				style="margin-top: 20px; background-color: #1f8f3a; color: white; border-color: #0f5f22; opacity: 0.4; pointer-events: none;">
+				Confirm
+			</button>
+			</div>
+		</div>
+
 		<div class="form-group">
 			<label><input type="checkbox" id="cend" name="cend" value="cend"><span></span>
 			- Only check this once they have been caught!</label>
