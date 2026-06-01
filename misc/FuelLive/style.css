@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #0d0d0d;
+    color: #e6e6e6;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.input-section {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.input-section label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.input-section input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: #262626;
+    color: #e6e6e6;
+}
+
+.stats {
+    margin: 20px 0;
+}
+
+.stat {
+    background: #1a1a1a;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    font-size: 1.3rem;
+}
+
+.stat.big {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    background: #0078ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+/* HORIZONTAL HUD */
+#horizontalHUD {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000;
+    color: #00ffea;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#hudCost {
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+#hudSmall {
+    margin-top: 20px;
+    font-size: 2rem;
+    opacity: 0.8;
+}
