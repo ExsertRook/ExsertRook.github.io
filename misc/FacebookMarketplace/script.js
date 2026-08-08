@@ -6,23 +6,21 @@ const categories = {
       { key: "name", label: "Toote nimi / mudel", type: "text", placeholder: "nt. Dell S2721QS" },
 
       { key: "screen_size", label: "Ekraani suurus", type: "select", 
-        options: ["19 tolli", "21.5 tolli", "22 tolli", "23 tolli", "23.8 tolli", "24 tolli", "27 tolli"], 
+        options: ["19 tolli", "21.5 tolli", "22 tolli", "23 tolli", "23.8 tolli", "24 tolli", "27 tolli", "32 tolli"], 
         defaultValue: "24 tolli" },
 
       { key: "resolution", label: "Resolutsioon", type: "select", 
         options: ["1366 x 768", "1600 x 900", "1680 x 1050", "1920 x 1080", "1920 x 1200", "2560 x 1080", "2560 x 1440", "3840 x 2160"], 
-        defaultValue: "1920x1080" },
+        defaultValue: "1920 x 1080" },
 
       { key: "refresh_rate", label: "Ekraani värskendussagedus", type: "select",
         options: ["60Hz", "75Hz", "100Hz", "120Hz", "144Hz", "165Hz", "240Hz"],
         defaultValue: "60Hz" },
 
-      // DEFAULT = BLANK
       { key: "response_time", label: "Reageerimisaeg (ms)", type: "select",
         options: ["", "0.5ms", "1ms", "2ms", "3ms", "4ms", "5ms", "6ms", "8ms"],
         defaultValue: "" },
 
-      // DEFAULT = BLANK
       { key: "panel_type", label: "Paneeli tüüp", type: "select", 
         options: ["", "TN", "IPS", "VA", "OLED", "QLED"],
         defaultValue: "" },
@@ -34,6 +32,7 @@ const categories = {
       { key: "video_ports", label: "Video pesad", type: "select", 
         options: [
           "VGA", 
+          "DVI", 
           "VGA / DVI", 
           "VGA / DVI / DisplayPort", 
           "VGA / HDMI", 
@@ -47,6 +46,22 @@ const categories = {
           "2x HDMI",
           "HDMI / DisplayPort / USB-C"
         ] },
+
+      // NEW FIELDS FOR DVI ADAPTER LOGIC
+      {
+        key: "adapter_included",
+        label: "Kas tuleb kaasa DisplayPort / HDMI üleminek?",
+        type: "select",
+        options: ["Ei", "Jah"],
+        hidden: true
+      },
+      {
+        key: "adapter_type",
+        label: "DisplayPort või HDMI?",
+        type: "select",
+        options: ["DisplayPort", "HDMI"],
+        hidden: true
+      },
 
       { key: "usb_ports", label: "Kas monitoril on USB pesad?", type: "select", 
         options: ["Jah", "Ei"], defaultValue: "Ei" },
@@ -68,7 +83,7 @@ const categories = {
         type: "select",
         options: ["Ei", "Jah"],
         defaultValue: "Ei"
-      },  
+      }
     ]
   },
 
@@ -101,7 +116,7 @@ const categories = {
 
 // ==================== KATEGOORIA SPETSIIFILISED MALLID ====================
 const defaultTemplates = {
-  monitor: `Müüa heas seisukorras {{name}}. Monitoril võib esineda mõningaid kasutusjälgi, kuid üldmulje on viisakas.
+  monitor: `Müüa heas seisukorras {{name}} ekraan. Monitoril võib esineda mõningaid kasutusjälgi, kuid üldmulje on viisakas.
 
 Tehnilised andmed:
 Ekraani suurus: {{screen_size}}
@@ -111,6 +126,7 @@ Reageerimisaeg: {{response_time}}
 Heledus: {{brightness}}
 Paneeli tüüp: {{panel_type}}
 Video pesad: {{video_ports}}
+{{adapter_text}}
 {{usb_text}}
 {{aux_text}}
 {{stand_text}}
@@ -203,6 +219,23 @@ document.addEventListener('DOMContentLoaded', () => {
       dynamicFields.appendChild(div);
     });
 
+    // === CONDITIONAL LOGIC FOR DVI ADAPTER ===
+    const videoSelect = document.getElementById("video_ports");
+    const adapterIncludedWrapper = dynamicFields.querySelector('[data-hidden-field="adapter_included"]');
+    const adapterTypeWrapper = dynamicFields.querySelector('[data-hidden-field="adapter_type"]');
+
+    videoSelect.addEventListener("change", () => {
+      const hasDVI = videoSelect.value.includes("DVI");
+
+      adapterIncludedWrapper.style.display = hasDVI ? "flex" : "none";
+      adapterTypeWrapper.style.display = "none";
+    });
+
+    const adapterIncludedSelect = document.getElementById("adapter_included");
+    adapterIncludedSelect.addEventListener("change", () => {
+      adapterTypeWrapper.style.display = adapterIncludedSelect.value === "Jah" ? "flex" : "none";
+    });
+
     generateOutput();
   });
 
@@ -250,7 +283,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     templateText = templateText.replace(/{{aux_text}}/g, auxText);
 
-    // REMOVE LINES WHERE PLACEHOLDER WAS EMPTY
+    // === ADAPTER TEXT ===
+    let adapterText = '';
+    if (values.adapter_included === "Jah") {
+      adapterText = `Monitoriga tuleb kaasa ${values.adapter_type} üleminek.`;
+    }
+    templateText = templateText.replace(/{{adapter_text}}/g, adapterText);
+
+    // REMOVE EMPTY PLACEHOLDER LINES
     templateText = templateText
       .split("\n")
       .filter(line => !line.includes("{{") && line.trim() !== "")
