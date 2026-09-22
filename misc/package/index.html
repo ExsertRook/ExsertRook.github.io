@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakiautomaatide Hindade Võrdlus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header-container">
+        <h1>📦 Pakiautomaatide Hindade Võrdlus</h1>
+        <button class="search-trigger-btn" onclick="openSearchModal()">🔍 Otsing</button>
+    </div>
+
+    <div class="table-container">
+        <table id="priceTable">
+            <thead>
+                <tr>
+                    <th>Suurus</th>
+                    <th>Visuaal</th>
+                    <th class="omniva">Omniva</th>
+                    <th class="smartpost">Smartpost</th>
+                    <th class="dpd">DPD</th>
+                    <th class="venipak">Venipak</th>
+                    <th class="unisend">Unisend</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- JavaScript täidab andmetega -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- PÕHILINE OTSINGUAKEN (MODAL) -->
+    <div class="modal-overlay" id="searchModal">
+        <div class="modal-window" id="modalContent">
+            <button class="close-btn" onclick="closeModal()">✕</button>
+            <div id="modalInner">
+                <!-- JavaScript juhib selle sisu (vorm vs tulemused) -->
+            </div>
+        </div>
+    </div>
+
+    <script href="script.js" src="script.js"></script>
+</body>
+</html>
