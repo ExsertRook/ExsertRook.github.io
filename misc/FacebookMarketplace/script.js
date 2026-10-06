@@ -131,7 +131,7 @@ Video pesad: {{video_ports}}
 {{aux_text}}
 {{stand_text}}
 
-Monitoriga tuleb kaasa ostja soovil videokaabel ning ka toitekaabel.
+Monitoriga tuleb kaasa toitekaabel ning ostja soovil ka videokaabel.
 
 Asub Tartus, Ropka Tööstusrajoonis.
 Ostja soovil ning kulul liigub ka pakiautomaadiga väikese lisatasu eest.`,
