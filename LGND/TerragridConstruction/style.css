@@ -1,0 +1,459 @@
+/* --- Global Resets & Variables --- */
+:root {
+    --primary-color: #ff6a00; /* Construction Safety Orange */
+    --dark-color: #1e2229;    /* Dark Slate Gray */
+    --light-bg: #f5f6f8;      /* Light Off-White */
+    --text-color: #333333;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--dark-color);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo i {
+    color: var(--primary-color);
+    margin-right: 8px;
+}
+
+.logo span {
+    font-weight: 300;
+    color: #a0a5b0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.btn-nav {
+    background-color: var(--primary-color);
+    padding: 8px 18px;
+    border-radius: 4px;
+}
+
+.btn-nav:hover {
+    background-color: #e05d00;
+    color: var(--white) !important;
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 80vh;
+    background: url('https://unsplash.com') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 34, 41, 0.75);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #d1d5db;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #e05d00;
+    border-color: #e05d00;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--dark-color);
+}
+
+/* --- Services Section --- */
+.services {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0 auto;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 6px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-bottom: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.icon-box {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* --- About Section --- */
+.about {
+    padding: 80px 0;
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.about-text ul {
+    list-style: none;
+}
+
+.about-text li {
+    margin-bottom: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.about-text i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.img-placeholder {
+    height: 350px;
+    background: url('https://unsplash.com') center center/cover;
+    border-radius: 6px;
+}
+
+/* --- Sponsors Section --- */
+.sponsors-section {
+    padding: 60px 0;
+    background-color: var(--white);
+    text-align: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.sponsors-subtitle {
+    color: #666;
+    margin-top: -15px;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.sponsors-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.sponsor-logo {
+    flex: 0 1 calc(14% - 20px);
+    min-width: 140px;
+    padding: 15px 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.sponsor-logo i {
+    font-size: 1.6rem;
+}
+
+/* Aktiveerib brändi värvid hiirega peale liikudes (GTA 5 stiilis truud toonid) */
+.sponsor-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+.brand-lifeinvader i { color: #dc2626; } /* Punane */
+.brand-weazel i { color: #2563eb; }       /* Sinine */
+.brand-fleeca i { color: #16a34a; }       /* Roheline */
+.brand-fukaru i { color: #ea580c; }       /* Oranž */
+.brand-bittersweet i { color: #9333ea; }  /* Lilla */
+.brand-upnatom i { color: #eab308; }      /* Kollane */
+.brand-ecola i { color: #cc0000; }        /* Tumepunane */
+
+/* --- Testimonials (Reviews) Section --- */
+.testimonials {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.reviews-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.review-card {
+    background-color: var(--white);
+    padding: 35px;
+    border-radius: 6px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.review-card::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 5rem;
+    color: #e5e7eb;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.stars {
+    color: #ffb703;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.review-text {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+.reviewer-info {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+.reviewer-role {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* --- Contact Form --- */
+.contact {
+    padding: 80px 0;
+    background-color: var(--dark-color);
+    color: var(--white);
+}
+
+.contact .section-title {
+    color: var(--white);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #444;
+    background-color: #2b303c;
+    color: var(--white);
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder {
+    color: #999;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.contact-form .btn {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #15181d;
+    color: #888;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9rem;
+}
+
+/* --- Responsive Design --- */
+@media(max-width: 768px) {
+    .navbar { flex-direction: column; gap: 15px; }
+    .nav-links { flex-direction: column; gap: 10px; text-align: center; }
+    .nav-links li { margin-left: 0; }
+    .hero h1 { font-size: 2.2rem; }
+    .services-grid, .reviews-grid, .about-flex { flex-direction: column; }
+    .sponsor-logo { flex: 0 1 calc(33% - 20px); }
+}
