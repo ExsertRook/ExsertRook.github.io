@@ -457,3 +457,118 @@ footer {
     .services-grid, .reviews-grid, .about-flex { flex-direction: column; }
     .sponsor-logo { flex: 0 1 calc(33% - 20px); }
 }
+
+/* --- Completed Projects Section --- */
+.projects-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.projects-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.project-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-image-box {
+    height: 240px;
+    background-color: #e5e7eb;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.project-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-placeholder-fallback {
+    display: none; /* Peidetud, kui pilt laeb edukalt */
+    flex-direction: column;
+    align-items: center;
+    color: #9ca3af;
+    gap: 10px;
+}
+
+.image-placeholder-fallback i {
+    font-size: 3rem;
+}
+
+.image-placeholder-fallback span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.project-details {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.project-badge {
+    align-self: flex-start;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+.tag-build {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.tag-demo {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    color: var(--dark-color);
+}
+
+.project-location {
+    font-size: 0.9rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.project-location i {
+    color: var(--primary-color);
+}
+
+.project-desc {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
